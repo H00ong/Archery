@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Stingray_AC
+  m_Controller: {fileID: 9100000, guid: d3ac17d136d6f134684e181d4fded1dc, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 6e970125b467ddc4087108d0d35b30cf, type: 3}
+    m_OverrideClip: {fileID: 7400000, guid: c4721bd084823ae4ca4bcd9b49c7e038, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 7f7d533bf5d310e4a9eed79f9123d2b3, type: 3}
+    m_OverrideClip: {fileID: 7400000, guid: 18d634d8115023341925aa1b2a8853ef, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: fceab751fcac30840a3e8d291cef242e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 36dfa37ae7a34aa499290cceaffb07fd, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 512bf17f997ba1d4080b30a5d06bb5f9, type: 3}
+    m_OverrideClip: {fileID: 7400000, guid: 6c26db552dee3fb429f676f4b8532571, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 62dd4068e91350c4485e3d20a2dfd941, type: 3}
+    m_OverrideClip: {fileID: 7400000, guid: c5ee4d65e8a741049a13767a80fb99b6, type: 2}
