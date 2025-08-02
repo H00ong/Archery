@@ -364,6 +364,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd4d2efcf2a7f840a9165a08a21ce26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootingPos:
+  - {fileID: 0}
 --- !u!1 &4669721543420569377
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,6 +407,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7465346326967586379}
   - component: {fileID: 2541667027789383105}
+  - component: {fileID: 709644018101506209}
   m_Layer: 3
   m_Name: Cactus
   m_TagString: Enemy
@@ -441,7 +444,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyType: 0
-  CurrentState: 0
   enemyName: 0
   debugMode: 1
   defaultIdleTime: 2
@@ -450,6 +452,19 @@ MonoBehaviour:
   defaultAttackSpeed: 1
   defaultAttackRange: 2
   defaultAttackMoveSpeed: 2
+--- !u!114 &709644018101506209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4760628656660742801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da94b494a3ab7940b4757f39b11b644, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
 --- !u!1 &5466115144946872023
 GameObject:
   m_ObjectHideFlags: 0

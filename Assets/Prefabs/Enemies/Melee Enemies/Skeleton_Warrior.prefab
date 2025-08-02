@@ -507,6 +507,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd4d2efcf2a7f840a9165a08a21ce26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootingPos:
+  - {fileID: 0}
 --- !u!1 &1298878278580171134
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,6 +519,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7451308575769406275}
   - component: {fileID: 7275882105031199705}
+  - component: {fileID: 3474602846184530057}
   m_Layer: 3
   m_Name: Skeleton_Warrior
   m_TagString: Enemy
@@ -553,7 +556,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyType: 0
-  CurrentState: 0
   enemyName: 2
   debugMode: 1
   defaultIdleTime: 2
@@ -561,7 +563,20 @@ MonoBehaviour:
   defaultMoveSpeed: 1.5
   defaultAttackSpeed: 1
   defaultAttackRange: 2
-  defaultAttackMoveSpeed: 3
+  defaultAttackMoveSpeed: 5
+--- !u!114 &3474602846184530057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298878278580171134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da94b494a3ab7940b4757f39b11b644, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
 --- !u!1 &1312949088659330210
 GameObject:
   m_ObjectHideFlags: 0

@@ -415,6 +415,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd4d2efcf2a7f840a9165a08a21ce26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootingPos:
+  - {fileID: 0}
 --- !u!1 &5839480400572552423
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,13 +520,14 @@ GameObject:
   m_Component:
   - component: {fileID: 5591624773133267364}
   - component: {fileID: 1669384088170014423}
+  - component: {fileID: 3248892475057570535}
   m_Layer: 3
   m_Name: Slime
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5591624773133267364
 Transform:
   m_ObjectHideFlags: 0
@@ -554,12 +557,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyType: 0
-  CurrentState: 0
   enemyName: 0
   debugMode: 1
   defaultIdleTime: 2
   defaultMoveTime: 8
   defaultMoveSpeed: 1.5
-  defaultAttackSpeed: 0.3
+  defaultAttackSpeed: 0.8
   defaultAttackRange: 2
-  defaultAttackMoveSpeed: 2
+  defaultAttackMoveSpeed: 0
+--- !u!114 &3248892475057570535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8805190630047661894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da94b494a3ab7940b4757f39b11b644, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100

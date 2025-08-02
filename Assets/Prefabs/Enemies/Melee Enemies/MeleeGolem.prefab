@@ -456,6 +456,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd4d2efcf2a7f840a9165a08a21ce26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootingPos:
+  - {fileID: 0}
 --- !u!1 &4455282716657328856
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,6 +467,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2011748107350291456}
+  - component: {fileID: 6420638256059060865}
   m_Layer: 3
   m_Name: Hand_R
   m_TagString: Untagged
@@ -488,6 +491,29 @@ Transform:
   - {fileID: 2049446246772712122}
   m_Father: {fileID: 9042765008870071335}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &6420638256059060865
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4455282716657328856}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 62.800896
+  m_Height: 216.59996
+  m_Direction: 0
+  m_Center: {x: -18.73, y: -0.00045229707, z: -10.518951}
 --- !u!1 &5299426309327857419
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,6 +523,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7163896113745174564}
+  - component: {fileID: 8407492113458822997}
   m_Layer: 3
   m_Name: Hand_L
   m_TagString: Untagged
@@ -520,6 +547,29 @@ Transform:
   - {fileID: 5516746718609794652}
   m_Father: {fileID: 6018227085831215001}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &8407492113458822997
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5299426309327857419}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 62.800896
+  m_Height: 216.59996
+  m_Direction: 0
+  m_Center: {x: -18.73, y: -0.00045229707, z: -10.518951}
 --- !u!1 &5476705586657703016
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,6 +678,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9153613578474499044}
   - component: {fileID: 1749219746737331792}
+  - component: {fileID: 5958019769736162663}
   m_Layer: 3
   m_Name: MeleeGolem
   m_TagString: Enemy
@@ -664,15 +715,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyType: 0
-  CurrentState: 0
   enemyName: 3
   debugMode: 1
   defaultIdleTime: 2
   defaultMoveTime: 8
   defaultMoveSpeed: 1.5
   defaultAttackSpeed: 1
+  defaultMeleeDamage: 1
   defaultAttackRange: 2
   defaultAttackMoveSpeed: 6
+--- !u!114 &5958019769736162663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6503161475904098176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da94b494a3ab7940b4757f39b11b644, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
 --- !u!1 &7635540108735875102
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,6 +841,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9042765008870071335}
+  - component: {fileID: 7895666438612511336}
   m_Layer: 3
   m_Name: Lower_Arm_R
   m_TagString: Untagged
@@ -800,6 +865,29 @@ Transform:
   - {fileID: 2011748107350291456}
   m_Father: {fileID: 6643118921247076266}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &7895666438612511336
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8495105034807151656}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 62.800896
+  m_Height: 216.59996
+  m_Direction: 0
+  m_Center: {x: -78.43654, y: -0.00045229707, z: -10.518951}
 --- !u!1 &8759111428636979318
 GameObject:
   m_ObjectHideFlags: 0

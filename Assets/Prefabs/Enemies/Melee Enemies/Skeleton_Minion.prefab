@@ -728,6 +728,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd4d2efcf2a7f840a9165a08a21ce26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootingPos:
+  - {fileID: 0}
 --- !u!1 &2162234626436295029
 GameObject:
   m_ObjectHideFlags: 0
@@ -2073,6 +2075,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6275558901257610629}
   - component: {fileID: 2999387784527447558}
+  - component: {fileID: 8786838438245522082}
   m_Layer: 3
   m_Name: Skeleton_Minion
   m_TagString: Enemy
@@ -2109,7 +2112,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyType: 0
-  CurrentState: 0
   enemyName: 2
   debugMode: 1
   defaultIdleTime: 2
@@ -2118,6 +2120,19 @@ MonoBehaviour:
   defaultAttackSpeed: 1
   defaultAttackRange: 2
   defaultAttackMoveSpeed: 3
+--- !u!114 &8786838438245522082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6985540906837910844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da94b494a3ab7940b4757f39b11b644, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
 --- !u!1 &7027916072412383922
 GameObject:
   m_ObjectHideFlags: 0

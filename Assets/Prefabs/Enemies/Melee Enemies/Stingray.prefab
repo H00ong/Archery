@@ -305,6 +305,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4154438870037912258}
   - component: {fileID: 6097762734438228225}
+  - component: {fileID: 933079759468108521}
   m_Layer: 3
   m_Name: Stingray
   m_TagString: Enemy
@@ -341,7 +342,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyType: 0
-  CurrentState: 0
   enemyName: 0
   debugMode: 1
   defaultIdleTime: 2
@@ -350,6 +350,19 @@ MonoBehaviour:
   defaultAttackSpeed: 1
   defaultAttackRange: 2
   defaultAttackMoveSpeed: 0
+--- !u!114 &933079759468108521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4416062631461227150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da94b494a3ab7940b4757f39b11b644, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
 --- !u!1 &4508928136853976210
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,6 +527,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd4d2efcf2a7f840a9165a08a21ce26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootingPos:
+  - {fileID: 0}
 --- !u!1 &5507736311130421062
 GameObject:
   m_ObjectHideFlags: 0
