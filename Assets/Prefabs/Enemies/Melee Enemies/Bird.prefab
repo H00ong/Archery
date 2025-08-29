@@ -334,15 +334,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d9373c25b439c64d997b44a3bd7024a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debugMode: 1
   EnemyType: 0
   enemyName: 0
-  debugMode: 1
   defaultIdleTime: 2
   defaultMoveTime: 8
   defaultMoveSpeed: 2
   defaultAttackSpeed: 1
+  anim: {fileID: 8572564448769001456}
+  enemyHealth: {fileID: 664569139944480825}
+  cd: {fileID: 7805503692852104726}
+  rb: {fileID: 0}
+  defaultMeleeDamage: 1
   defaultAttackRange: 2
-  defaultAttackMoveSpeed: 0
+  defaultAttackMoveSpeed: 1
 --- !u!114 &664569139944480825
 MonoBehaviour:
   m_ObjectHideFlags: 0

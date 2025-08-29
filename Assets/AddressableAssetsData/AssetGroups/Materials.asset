@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Materials
+  m_EditorClassIdentifier: 
+  m_GroupName: Materials
+  m_GUID: 00d7c4dcd5e1ff244b34552c6b87a685
+  m_SerializeEntries:
+  - m_GUID: 4bab0f95134663b4c9c3dd73939c0ff1
+    m_Address: Circle
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 616a777eb757ff14c82a79feeb35d9b1
+    m_Address: Smoke26
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 69752415b0a5f5e47a46ac173e43f5b0
+    m_Address: Silver
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 751a831d890a4b84ebf8fc262f55d1a9
+    m_Address: Player_Magic Beam
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8a2aeffcc83d5d94c873aaa81b6eadef
+    m_Address: skeleton 1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 90c05ba253a9c7d45b4b4c0402d4f3d3
+    m_Address: PolyartStandard 1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 957781e2e64d0264f970dde36a30bd93
+    m_Address: PolyartStandard
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ca32cada060cf774dbd29b2f3410086a
+    m_Address: Mat_Dungeon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e1f296a4afe50994485976eb211959b1
+    m_Address: Enemy_Fire Beam
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e546d2d7171981b468cf29388d902e99
+    m_Address: Point
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f5f7d4d2b3764ec4aa59441ec6c2697b
+    m_Address: Materials/Slime & TurtleShell/PolyartDefault
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fe8d615cbaec71545b42f9163243b02d
+    m_Address: DistortionPoint
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 856c05a54378faf41860bc411561527d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 18cf29fa982323b47926dc3c053639b5, type: 2}
+    - {fileID: 11400000, guid: 391acdd77932b454baf75f933e0876d2, type: 2}

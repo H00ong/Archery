@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Map_Config
+  m_EditorClassIdentifier: 
+  m_GroupName: Map_Config
+  m_GUID: 81e7a26942b9a0a4ca0b77a3e4210438
+  m_SerializeEntries:
+  - m_GUID: 8922302100e31e441a1f7db8ead573a5
+    m_Address: DungeonMap
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - map_config
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 856c05a54378faf41860bc411561527d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 144caa000034e194d957e5ceac2e532f, type: 2}
+    - {fileID: 11400000, guid: 1aae10a4fa81e3e43b8503ec12ca2844, type: 2}

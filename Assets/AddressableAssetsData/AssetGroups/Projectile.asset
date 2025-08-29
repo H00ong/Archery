@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Projectile
+  m_EditorClassIdentifier: 
+  m_GroupName: Projectile
+  m_GUID: 481feef88f6731e4a99879596a6e9424
+  m_SerializeEntries:
+  - m_GUID: 01167460ca7c11b47970a88125f4698e
+    m_Address: Enemy Beam_Enemy
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1737537d1f57c4645aa046547ec1f39b
+    m_Address: Arrow_Enemy
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3a7af0e9ad8d1f54a9d53bb668dee572
+    m_Address: Horn_BossEnemy
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4a79d0a9dd688dd41995d49338d2e5a7
+    m_Address: Rock_Enemy
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5d057e07ffc2ce74e9ab29e08f2046c9
+    m_Address: Enemy Beam_Boss
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5f3ad0a704bf00847a8b0691126928c1
+    m_Address: Magic Beam_Player
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5f7470d695ce7fb49ad8e6862e0b8217
+    m_Address: Rock
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 79fef9d71072152448b3ba83179eebc9
+    m_Address: Ball_BossEnemy
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f6475dc38755b5942842ad6847a3e7b1
+    m_Address: Rock_BossEnemy
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 856c05a54378faf41860bc411561527d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 164237f18eb6c2e4abdffa375a72b3a2, type: 2}
+    - {fileID: 11400000, guid: c1c224c9965837848ad1591041258c92, type: 2}
