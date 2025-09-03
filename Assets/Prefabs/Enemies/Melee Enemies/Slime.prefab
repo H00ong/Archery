@@ -159,8 +159,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1532935078908683941}
   - {fileID: 2609456568676377424}
+  - {fileID: 1532935078908683941}
   m_Father: {fileID: 8525234776064983388}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: -67.60852}
 --- !u!135 &1456042515930322807
@@ -208,8 +208,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3015535440102304918}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.627, y: -0.377, z: 0}
+  m_LocalRotation: {x: 0.39340413, y: -0.5875655, z: 0.39340413, w: 0.5875655}
+  m_LocalPosition: {x: -0.308, y: 0.118, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -650,7 +650,7 @@ MonoBehaviour:
   defaultAttackSpeed: 1
   defaultAtk: 1
   blockCheck: {fileID: 2609456568676377424}
-  sphereCastRadius: 0.5
+  sphereCastRadius: 0.7
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 64

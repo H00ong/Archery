@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4679417043953284192}
   - component: {fileID: 6677101855238291966}
   - component: {fileID: 8586638390366284270}
-  - component: {fileID: 5953313371956939300}
+  - component: {fileID: 6294857655594942426}
   m_Layer: 0
   m_Name: Enemy Beam_Boss
   m_TagString: EnemyProjectile
@@ -138,7 +138,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5953313371956939300
+--- !u!114 &6294857655594942426
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,10 +147,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 6326317567937802681}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f3a40126b495a041887318cd1d8c945, type: 3}
+  m_Script: {fileID: 11500000, guid: f2f7090944aab314f9249ee87eb0eaba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionEffect: {fileID: 725748389856807714, guid: 4bda94453d2ca7444a0fff05b2d425f5, type: 3}
+  poolManager: {fileID: 0}
+  hasExplosionEffect: 1
+  explosionEffect:
+    m_AssetGUID: 579e9f801fba7c349ba6e9520a009ec2
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  effectParent: {fileID: 0}
 --- !u!1 &8324640870092992187
 GameObject:
   m_ObjectHideFlags: 0
