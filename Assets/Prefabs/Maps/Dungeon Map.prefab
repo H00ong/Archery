@@ -25261,7 +25261,8 @@ MonoBehaviour:
   - {fileID: 3533519858144577188}
   - {fileID: 9210476267369463771}
   playerPoint: {fileID: 6927649316622403395}
-  portal: {fileID: 8987087617382350274}
+  portal: {fileID: 1346326470665864921}
+  portalCollider: {fileID: 6869042887201210524}
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 64
