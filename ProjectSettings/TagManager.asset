@@ -10,9 +10,6 @@ TagManager:
   - PlayerProjectile
   - EnemyProjectile
   - Floor
-  - EnemyPool
-  - EffectPool
-  - ProjectilePool
   layers:
   - Default
   - TransparentFX

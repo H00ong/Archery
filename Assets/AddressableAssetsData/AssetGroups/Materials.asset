@@ -65,6 +65,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8f1ff364d573f5142a4f57d0711449b3
+    m_Address: Assets/Materials/Test.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 90c05ba253a9c7d45b4b4c0402d4f3d3
     m_Address: PolyartStandard 1
     m_ReadOnly: 0
@@ -93,6 +98,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c023584165e4c574bb94d8bd3b0976f5
     m_Address: PolyArtStandardMaterial
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c8643416e437c194e8cbf167aa07dc93
+    m_Address: Assets/Materials/Venom.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
