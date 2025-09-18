@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Meteor
+  m_EditorClassIdentifier: 
+  m_GroupName: Meteor
+  m_GUID: 9b7e69492c204cd4bb53350468031534
+  m_SerializeEntries:
+  - m_GUID: aaa982682e8d5e34fb9fbb0a6a14c117
+    m_Address: Ice Meteor
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 856c05a54378faf41860bc411561527d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: c68e706f8b5b26d409be6cffe9724f72, type: 2}
+    - {fileID: 11400000, guid: 05685da612e2eb442a5d5b08abd1bab3, type: 2}

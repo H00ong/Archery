@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Barrel
+  m_EditorClassIdentifier: 
+  m_GroupName: Barrel
+  m_GUID: b11fe90da18573341acc2a786a52508b
+  m_SerializeEntries:
+  - m_GUID: 0b81e09a41794324dba6561c04beb40f
+    m_Address: Lightning Barrel
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 20750940ed579ce49a717535db5cb3cf
+    m_Address: Ice Barrel
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 856c05a54378faf41860bc411561527d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: fb15f0cfb72fe424c9c182afb14aef59, type: 2}
+    - {fileID: 11400000, guid: 99f0b6b30802bae469e067680f9b37fb, type: 2}

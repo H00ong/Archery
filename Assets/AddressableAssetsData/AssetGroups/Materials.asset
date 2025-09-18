@@ -66,7 +66,7 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8f1ff364d573f5142a4f57d0711449b3
-    m_Address: Assets/Materials/Test.mat
+    m_Address: Test
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -86,8 +86,7 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a81df4963508f8c4e9c854c919c93b67
-    m_Address: Assets/Resources_moved/VFX/JMO Assets/Cartoon FX Remaster/CFXR Assets/Graphics/cfxr
-      proc ring hdr ab.mat
+    m_Address: cfxr proc ring hdr ab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -102,7 +101,7 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c8643416e437c194e8cbf167aa07dc93
-    m_Address: Assets/Materials/Venom.mat
+    m_Address: Venom
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
