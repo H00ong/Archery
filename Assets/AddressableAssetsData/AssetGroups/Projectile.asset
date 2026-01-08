@@ -50,11 +50,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 79fef9d71072152448b3ba83179eebc9
-    m_Address: Ball_BossEnemy
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f6475dc38755b5942842ad6847a3e7b1
     m_Address: Rock_BossEnemy
     m_ReadOnly: 0
