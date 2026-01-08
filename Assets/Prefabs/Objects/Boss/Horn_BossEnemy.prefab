@@ -119,7 +119,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4104762618390308479}
   - component: {fileID: 6279101319724438173}
-  - component: {fileID: 6266189641778047480}
+  - component: {fileID: 1743063389722271084}
   m_Layer: 0
   m_Name: Horn_BossEnemy
   m_TagString: Untagged
@@ -170,7 +170,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6266189641778047480
+--- !u!114 &1743063389722271084
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -179,6 +179,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 9086765262174619431}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2f7090944aab314f9249ee87eb0eaba, type: 3}
+  m_Script: {fileID: 11500000, guid: 70c40128bc46fae4980a829f3421e80d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyOnHit: 0
+  rigidBody: {fileID: 6279101319724438173}
+  projectileCollider: {fileID: 2930000340918272445}
+  explosionEffect:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
