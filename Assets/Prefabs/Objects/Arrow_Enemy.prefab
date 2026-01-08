@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3381734259522047674}
   - component: {fileID: 1488930704786573534}
   - component: {fileID: 8540606735865856069}
-  - component: {fileID: 6346561365892337419}
+  - component: {fileID: 8992748302023563291}
   m_Layer: 0
   m_Name: Arrow_Enemy
   m_TagString: EnemyProjectile
@@ -85,7 +85,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6346561365892337419
+--- !u!114 &8992748302023563291
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,10 +94,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 4739172997798566992}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2f7090944aab314f9249ee87eb0eaba, type: 3}
+  m_Script: {fileID: 11500000, guid: 70c40128bc46fae4980a829f3421e80d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poolManager: {fileID: 0}
+  destroyOnHit: 0
+  rigidBody: {fileID: 8540606735865856069}
+  projectileCollider: {fileID: 1488930704786573534}
+  explosionEffect:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
 --- !u!1001 &2209691683944695419
 PrefabInstance:
   m_ObjectHideFlags: 0

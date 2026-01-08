@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5822142627464159678}
   - component: {fileID: 449216528547257270}
   - component: {fileID: 4356161933029992605}
-  - component: {fileID: -6424279586828928592}
+  - component: {fileID: 3235863081872022892}
   m_Layer: 0
   m_Name: Magic Beam_Player
   m_TagString: PlayerProjectile
@@ -138,7 +138,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-6424279586828928592
+--- !u!114 &3235863081872022892
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,9 +147,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 44202851997934489}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b289f5c496e4af4ea2c95175de285de, type: 3}
+  m_Script: {fileID: 11500000, guid: 70c40128bc46fae4980a829f3421e80d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyOnHit: 1
+  rigidBody: {fileID: 4356161933029992605}
+  projectileCollider: {fileID: 449216528547257270}
+  explosionEffect:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
 --- !u!1001 &6731412709080420904
 PrefabInstance:
   m_ObjectHideFlags: 0

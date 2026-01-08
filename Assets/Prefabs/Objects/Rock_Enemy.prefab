@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 7253897410938101761}
   - component: {fileID: 2042165858758265073}
   - component: {fileID: 4989139869866857489}
-  - component: {fileID: 7749039478057368641}
   - component: {fileID: 4985158055695765590}
+  - component: {fileID: 7133461355703680659}
   m_Layer: 0
   m_Name: Rock_Enemy
   m_TagString: EnemyProjectile
@@ -139,18 +139,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 1.1932504
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7749039478057368641
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7381517288714173731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2f7090944aab314f9249ee87eb0eaba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4985158055695765590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,6 +153,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 400
   rotationAxis: {x: 1, y: 0, z: 0}
+--- !u!114 &7133461355703680659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7381517288714173731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c40128bc46fae4980a829f3421e80d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyOnHit: 0
+  rigidBody: {fileID: 2042165858758265073}
+  projectileCollider: {fileID: 4989139869866857489}
+  explosionEffect:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
 --- !u!1 &7507355078667007981
 GameObject:
   m_ObjectHideFlags: 0
