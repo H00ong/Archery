@@ -194,9 +194,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03848eb655f7d2c4e987ab3bb5ff571a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _label: barrel_config
-  _barrelGenerateTime: 10
-  _atk: 1
+  addressableAssetLabel: barrel_config
+  barrelGenerateTime: 5
+  atk: 1
 --- !u!1 &250996812
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,8 +241,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcc80a5fa644947479cc8b7ce0605035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _defaultMapPosition: {x: -5.68819, y: 0, z: 10.84713}
-  _label: map_config
+  defaultMapPosition: {x: -5.6, y: 4.08, z: 12.2}
+  label: map_config
+  currentMapData:
+    mapType: 0
+    stageCount: 0
+    mapModifiers:
+      meleeEnemyHpMulPerMap: 0
+      rangedEnemyHpMulPerMap: 0
+      bossEnemyHpMulPerMap: 0
+      atkMulPerMap: 0
+      moveSpeedMul: 0
+      projectileSpeedMul: 0
+      flyingProjectileSpeedMul: 0
+      bossAtkMulPerMap: 0
+      bossMoveSpeedMulPerMap: 0
+      bossProjectileSpeedMulPerMap: 0
+      bossFlyingProjectileSpeedMulPerMap: 0
+    stageGrowth:
+      hpMulPerStage: 0
+      atkMulPerStage: 0
+      bossHpMulPerStage: 0
+      bossAtkMulPerStage: 0
+    enemyCountGrid: 
+  currentMapType: 0
+  currentMap: {fileID: 0}
 --- !u!1 &253699469
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,7 +356,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73129c64c33b4bb45857dde0b2cfbfb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapManager: {fileID: 250996814}
 --- !u!1 &449121253
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,8 +627,8 @@ GameObject:
   - component: {fileID: 845097746}
   - component: {fileID: 845097752}
   - component: {fileID: 845097753}
+  - component: {fileID: 845097757}
   - component: {fileID: 845097749}
-  - component: {fileID: 845097747}
   - component: {fileID: 845097750}
   - component: {fileID: 845097748}
   - component: {fileID: 845097755}
@@ -635,18 +657,6 @@ Transform:
   - {fileID: 3673420709985881345}
   m_Father: {fileID: 683516009}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &845097747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 845097745}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a76ca15afe7c8a49a42b5c46fd96b5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &845097748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -659,7 +669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88a5a176b26167744a8351c9329ba216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerManager: {fileID: 845097747}
+  playerManager: {fileID: 845097757}
   defaultMoveSpeed: 5
   sphereCastRadius: 0.31
   obstacleLayer:
@@ -690,8 +700,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugMode: 0
-  player: {fileID: 845097747}
-  skill: {fileID: 845097756}
   playerProjectile:
     m_AssetGUID: 5f3ad0a704bf00847a8b0691126928c1
     m_SubObjectName: 
@@ -780,7 +788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186d6c8d34188e54393529599b01a14d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerManager: {fileID: 845097747}
+  playerManager: {fileID: 845097757}
   playerHealth: {fileID: 845097754}
 --- !u!114 &845097756
 MonoBehaviour:
@@ -794,26 +802,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67b8d7525cd888344a4bfb02eeddec13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 845097747}
-  attack: {fileID: 845097750}
-  move: {fileID: 845097748}
-  _skills:
-  - {fileID: 11400000, guid: b3e91eb0a47cb604e9600bd5d643a411, type: 2}
-  - {fileID: 11400000, guid: fb0cbce25961bce4fb2806f710c17912, type: 2}
-  - {fileID: 11400000, guid: 2dcf0038436124f44a6f278e581c02b8, type: 2}
-  - {fileID: 11400000, guid: 52ec2bc9411999b4b99a769ca4c942df, type: 2}
-  - {fileID: 11400000, guid: 692bb32a300e6b4468a4a19da971441f, type: 2}
-  - {fileID: 11400000, guid: 64d603b9843a0cc4a911b8ef74edef9a, type: 2}
-  - {fileID: 11400000, guid: 1950ff710bea9ba4a968c4857acf325a, type: 2}
-  - {fileID: 11400000, guid: 9fb1e1f8df98ee14a8da72771e05da21, type: 2}
-  horizontalShotSkill: {fileID: 11400000, guid: fb0cbce25961bce4fb2806f710c17912, type: 2}
-  diagonalShotSkill: {fileID: 11400000, guid: b3e91eb0a47cb604e9600bd5d643a411, type: 2}
-  multiShotSkill: {fileID: 11400000, guid: 2dcf0038436124f44a6f278e581c02b8, type: 2}
-  attackSpeedUpgradeSkill: {fileID: 11400000, guid: 52ec2bc9411999b4b99a769ca4c942df, type: 2}
-  moveSpeedUpgradeSKill: {fileID: 11400000, guid: 692bb32a300e6b4468a4a19da971441f, type: 2}
-  iceOrb: {fileID: 11400000, guid: 1950ff710bea9ba4a968c4857acf325a, type: 2}
-  venomOrb: {fileID: 11400000, guid: 64d603b9843a0cc4a911b8ef74edef9a, type: 2}
-  iceBarrel: {fileID: 11400000, guid: 9fb1e1f8df98ee14a8da72771e05da21, type: 2}
+  skills: []
+  availableSkills: []
+--- !u!114 &845097757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845097745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26813c0792767a64e9936603b89563da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 0
 --- !u!1 &1006753236
 GameObject:
   m_ObjectHideFlags: 0
@@ -1036,7 +1039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02920a790c8566a4fa99a04718e84221, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageManager: {fileID: 351104952}
+  Enemies: []
 --- !u!1 &1279177973
 GameObject:
   m_ObjectHideFlags: 0
@@ -1183,9 +1186,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78a89b9a206baf24f832bf38c5a8636f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _skillChoicePopup: {fileID: 1983339383}
-  _popupContainer: {fileID: 1860359624}
-  _playerSkill: {fileID: 845097756}
+  skillChoicePopup: {fileID: 0}
+  popupContainer: {fileID: 0}
 --- !u!1 &1419162912
 GameObject:
   m_ObjectHideFlags: 0
@@ -1292,9 +1294,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25738a62328256b43849bc5389c8d2f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orbPivot: {fileID: 0}
-  label: orb_config
-  defaultDistance: 2
+  _orbPivot: {fileID: 253699470}
+  _label: orb_config
+  _defaultDistance: 2.5
 --- !u!1 &1782300501
 GameObject:
   m_ObjectHideFlags: 0
@@ -1523,7 +1525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aafe708c6dc161140a1b3715d696a895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _uiSkillPrefab: {fileID: 4218498138526723310, guid: 375fb73dab88deb40a8b3a62152b2a20, type: 3}
+  uiSkillPrefab: {fileID: 4218498138526723310, guid: 375fb73dab88deb40a8b3a62152b2a20, type: 3}
 --- !u!1 &2094812521
 GameObject:
   m_ObjectHideFlags: 0
@@ -1606,12 +1608,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de98c68f723308441b440c2f25fa0d8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerManager: {fileID: 845097747}
+  playerManager: {fileID: 845097757}
   MapManager: {fileID: 250996814}
   StageManager: {fileID: 351104952}
   SoundManager: {fileID: 2136971818}
   UIManager: {fileID: 2136971820}
-  PlayerManager: {fileID: 845097747}
+  PlayerManager: {fileID: 845097757}
   DataManager: {fileID: 2136971821}
   SaveManager: {fileID: 2136971819}
   InputManager: {fileID: 2136971823}
@@ -1693,7 +1695,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2331d1297273da346a72b27108e08b8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 845097747}
   MoveInput: {x: 0, y: 0}
 --- !u!33 &3639710569437973377
 MeshFilter:
