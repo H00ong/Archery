@@ -683,7 +683,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd4d2efcf2a7f840a9165a08a21ce26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 5595625628275856349}
 --- !u!1 &5920284729986328429
 GameObject:
   m_ObjectHideFlags: 0
@@ -790,13 +789,13 @@ GameObject:
   - component: {fileID: 1919092245347658010}
   - component: {fileID: 4467790697742285200}
   - component: {fileID: 5595625628275856349}
-  - component: {fileID: 5254660838736757135}
   - component: {fileID: 7038899570350105927}
   - component: {fileID: 8383436069919837533}
   - component: {fileID: 2917544491318267668}
   - component: {fileID: 1593372270641399110}
   - component: {fileID: 1607794227914812050}
   - component: {fileID: 2306048083250382193}
+  - component: {fileID: 8313429603908516969}
   m_Layer: 3
   m_Name: Boss Box
   m_TagString: Enemy
@@ -859,7 +858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64e5afd85791f514eadb39f304d51c1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugMode: 0
+  isDebugMode: 1
   enemyName: 4
   enemyTags: 364
   stats:
@@ -873,20 +872,15 @@ MonoBehaviour:
     flyingShooting:
       flyingProjectileAtk: 0
       flyingProjectileSpeed: 0
-  dataManager: {fileID: 0}
-  poolManager: {fileID: 0}
-  player: {fileID: 0}
   idle: {fileID: 7038899570350105927}
   move: {fileID: 2917544491318267668}
   hurt: {fileID: 0}
   die: {fileID: 1593372270641399110}
-  attackList:
-  - {fileID: 2306048083250382193}
-  - {fileID: 1607794227914812050}
-  health: {fileID: 5254660838736757135}
+  attacks: []
+  health: {fileID: 8313429603908516969}
   anim: {fileID: 7858815699185004940}
-  rb: {fileID: 4467790697742285200}
-  cd: {fileID: 4223965325044976831}
+  rigidBody: {fileID: 4467790697742285200}
+  enemyCollider: {fileID: 4223965325044976831}
   defaultAttackSpeed: 1
   defaultAtk: 1
   blockCheck: {fileID: 1490461795909677921}
@@ -896,21 +890,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   lastPlayerPosition: {x: 0, y: 0, z: 0}
+  player: {fileID: 0}
+  PoolManager: {fileID: 0}
   randomMove: {fileID: 2917544491318267668}
   followMove: {fileID: 8383436069919837533}
---- !u!114 &5254660838736757135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6510637841960571796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2da94b494a3ab7940b4757f39b11b644, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
 --- !u!114 &7038899570350105927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1002,6 +985,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackMoveSpeed: 0
+--- !u!114 &8313429603908516969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6510637841960571796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff5010d84058cff438cba248dff55dde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1
 --- !u!1 &7504795507417437757
 GameObject:
   m_ObjectHideFlags: 0

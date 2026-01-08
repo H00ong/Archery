@@ -243,27 +243,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultMapPosition: {x: -5.6, y: 4.08, z: 12.2}
   label: map_config
-  currentMapData:
-    mapType: 0
-    stageCount: 0
-    mapModifiers:
-      meleeEnemyHpMulPerMap: 0
-      rangedEnemyHpMulPerMap: 0
-      bossEnemyHpMulPerMap: 0
-      atkMulPerMap: 0
-      moveSpeedMul: 0
-      projectileSpeedMul: 0
-      flyingProjectileSpeedMul: 0
-      bossAtkMulPerMap: 0
-      bossMoveSpeedMulPerMap: 0
-      bossProjectileSpeedMulPerMap: 0
-      bossFlyingProjectileSpeedMulPerMap: 0
-    stageGrowth:
-      hpMulPerStage: 0
-      atkMulPerStage: 0
-      bossHpMulPerStage: 0
-      bossAtkMulPerStage: 0
-    enemyCountGrid: 
   currentMapType: 0
   currentMap: {fileID: 0}
 --- !u!1 &253699469
@@ -632,8 +611,8 @@ GameObject:
   - component: {fileID: 845097750}
   - component: {fileID: 845097748}
   - component: {fileID: 845097755}
-  - component: {fileID: 845097754}
   - component: {fileID: 845097756}
+  - component: {fileID: 845097758}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -711,7 +690,7 @@ MonoBehaviour:
   defaultAttackSpeed: 1
   defaultProjectileSpeed: 20
   defaltProjectileLifetime: 10
-  defaultPlayerAtk: 0
+  defaultPlayerAtk: 100
   multishotTimeInterval: 0.05
 --- !u!136 &845097752
 CapsuleCollider:
@@ -763,19 +742,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &845097754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 845097745}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94fe9b55b3d19d34981167a928a102cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
 --- !u!114 &845097755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -789,7 +755,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 845097757}
-  playerHealth: {fileID: 845097754}
+  playerHealth: {fileID: 0}
 --- !u!114 &845097756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -817,6 +783,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
+--- !u!114 &845097758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845097745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff5010d84058cff438cba248dff55dde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
 --- !u!1 &1006753236
 GameObject:
   m_ObjectHideFlags: 0
