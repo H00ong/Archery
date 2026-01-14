@@ -690,7 +690,7 @@ MonoBehaviour:
   defaultAttackSpeed: 1
   defaultProjectileSpeed: 20
   defaltProjectileLifetime: 10
-  defaultPlayerAtk: 100
+  defaultPlayerAtk: 0
   multishotTimeInterval: 0.05
 --- !u!136 &845097752
 CapsuleCollider:
@@ -755,7 +755,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 845097757}
-  playerHealth: {fileID: 0}
+  playerHealth: {fileID: 845097758}
 --- !u!114 &845097756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1019,6 +1019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemies: []
+  moduleConfigLabel: enemy_config
 --- !u!1 &1279177973
 GameObject:
   m_ObjectHideFlags: 0

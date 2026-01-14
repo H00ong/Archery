@@ -796,6 +796,7 @@ GameObject:
   - component: {fileID: 1607794227914812050}
   - component: {fileID: 2306048083250382193}
   - component: {fileID: 8313429603908516969}
+  - component: {fileID: 6384863458046553930}
   m_Layer: 3
   m_Name: Boss Box
   m_TagString: Enemy
@@ -881,6 +882,7 @@ MonoBehaviour:
   anim: {fileID: 7858815699185004940}
   rigidBody: {fileID: 4467790697742285200}
   enemyCollider: {fileID: 4223965325044976831}
+  enemyReference: {fileID: 0}
   defaultAttackSpeed: 1
   defaultAtk: 1
   blockCheck: {fileID: 1490461795909677921}
@@ -961,14 +963,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 869c350a5fee37648ad4b52b78d17e18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flyingProjectilePrefab:
-    m_AssetGUID: 5d057e07ffc2ce74e9ab29e08f2046c9
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_SubObjectGUID: 
-    m_EditorAssetChanged: 0
-  projectileParent: {fileID: 0}
-  shootingPoint: {fileID: 4655487101545174557}
   defaultFlyingProjectileSpeed: 10
   defaultProjectileLifetime: 10
   defaultFlyingProjectileAtk: 5
@@ -997,7 +991,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff5010d84058cff438cba248dff55dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1
+  maxHealth: 100
+--- !u!114 &6384863458046553930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6510637841960571796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07b625bc7f25b5d4d81805db481b36c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointGroups:
+  - type: 0
+    points:
+    - {fileID: 4655487101545174557}
 --- !u!1 &7504795507417437757
 GameObject:
   m_ObjectHideFlags: 0
