@@ -403,6 +403,54 @@ Transform:
   - {fileID: 1444634104}
   m_Father: {fileID: 2136971816}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &646539175
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 646539176}
+  - component: {fileID: 646539177}
+  m_Layer: 0
+  m_Name: '@LevelManager'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &646539176
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646539175}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.021440506, y: 13.885507, z: -27.281017}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1020847924}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &646539177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646539175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e92192def5384363977d0b2f2b516cbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentLevel: 1
+  maxLevel: 10
+  currentExp: 0
+  expTable: 000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!1 &667068541
 GameObject:
   m_ObjectHideFlags: 0
@@ -967,6 +1015,7 @@ Transform:
   - {fileID: 1253279065}
   - {fileID: 1746280285}
   - {fileID: 241163201}
+  - {fileID: 646539176}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1094397635 stripped
@@ -1554,7 +1603,7 @@ GameObject:
   - component: {fileID: 2136971822}
   - component: {fileID: 2136971823}
   m_Layer: 0
-  m_Name: Managers - Singleton
+  m_Name: Managers - DDL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
