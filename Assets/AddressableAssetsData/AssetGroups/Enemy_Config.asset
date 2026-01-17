@@ -15,8 +15,20 @@ MonoBehaviour:
   m_GroupName: Enemy_Config
   m_GUID: 9d10648c9c1717046b1133df71844340
   m_SerializeEntries:
+  - m_GUID: 626ef6cb0ad1e4a47b4f88aacde0acd7
+    m_Address: FollowMeleeAttackData
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - enemy_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: afaa23b3325153442844e674141cf6ba
+    m_Address: RandomMoveData
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - enemy_config
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d1dc6bf115441f14988585b553f5e175
-    m_Address: Assets/Scripts/Scriptables/Enemy Module Data/FlyingShootData.asset
+    m_Address: FlyingShootData
     m_ReadOnly: 0
     m_SerializedLabels:
     - enemy_config
