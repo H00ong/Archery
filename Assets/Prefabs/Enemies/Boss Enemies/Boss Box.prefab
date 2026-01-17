@@ -788,15 +788,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1919092245347658010}
   - component: {fileID: 4467790697742285200}
-  - component: {fileID: 5595625628275856349}
-  - component: {fileID: 7038899570350105927}
-  - component: {fileID: 8383436069919837533}
-  - component: {fileID: 2917544491318267668}
-  - component: {fileID: 1593372270641399110}
-  - component: {fileID: 1607794227914812050}
-  - component: {fileID: 2306048083250382193}
+  - component: {fileID: 6722009342495858402}
   - component: {fileID: 8313429603908516969}
   - component: {fileID: 6384863458046553930}
+  - component: {fileID: 2020880496290145362}
   m_Layer: 3
   m_Name: Boss Box
   m_TagString: Enemy
@@ -847,7 +842,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &5595625628275856349
+--- !u!114 &6722009342495858402
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -856,12 +851,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6510637841960571796}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64e5afd85791f514eadb39f304d51c1a, type: 3}
+  m_Script: {fileID: 11500000, guid: c89b3cc84aca5e74ba9c4548d1dda437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isDebugMode: 1
   enemyName: 4
-  enemyTags: 364
+  enemyTags: 804
   stats:
     baseStats:
       hp: 0
@@ -873,17 +868,17 @@ MonoBehaviour:
     flyingShooting:
       flyingProjectileAtk: 0
       flyingProjectileSpeed: 0
-  idle: {fileID: 7038899570350105927}
-  move: {fileID: 2917544491318267668}
+  brain: {fileID: 11400000, guid: 69c893b7bde8e6c49aa4b4e80547e451, type: 2}
+  idle: {fileID: 0}
+  move: {fileID: 0}
   hurt: {fileID: 0}
-  die: {fileID: 1593372270641399110}
-  attacks: []
+  die: {fileID: 0}
   health: {fileID: 8313429603908516969}
   anim: {fileID: 7858815699185004940}
   rigidBody: {fileID: 4467790697742285200}
   enemyCollider: {fileID: 4223965325044976831}
-  enemyReference: {fileID: 0}
-  defaultAttackSpeed: 1
+  enemyReference: {fileID: 6384863458046553930}
+  defaultAttackSpeed: 0.7
   defaultAtk: 1
   blockCheck: {fileID: 1490461795909677921}
   sphereCastRadius: 1
@@ -893,92 +888,6 @@ MonoBehaviour:
     m_Bits: 64
   lastPlayerPosition: {x: 0, y: 0, z: 0}
   player: {fileID: 0}
-  PoolManager: {fileID: 0}
-  randomMove: {fileID: 2917544491318267668}
-  followMove: {fileID: 8383436069919837533}
---- !u!114 &7038899570350105927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6510637841960571796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3e6c351af2a9de44ad2da99c358822c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultIdleTime: 1
---- !u!114 &8383436069919837533
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6510637841960571796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd31373d1b83f3e44bb84abb9c41dee2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultMoveTime: 4
-  defaultMoveSpeed: 1
-  defaultAttackRange: 8
---- !u!114 &2917544491318267668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6510637841960571796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf0bc9d70185a7b48bea8434fe925a08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultMoveTime: 4
-  defaultMoveSpeed: 1
-  pickDirectionTime: 7
---- !u!114 &1593372270641399110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6510637841960571796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dd7f82c60bb7e94ab4d2b18a3c7cadf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1607794227914812050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6510637841960571796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 869c350a5fee37648ad4b52b78d17e18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultFlyingProjectileSpeed: 10
-  defaultProjectileLifetime: 10
-  defaultFlyingProjectileAtk: 5
---- !u!114 &2306048083250382193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6510637841960571796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e440bd84e9c09094d8f6b9bad37c506c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackMoveSpeed: 0
 --- !u!114 &8313429603908516969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1008,6 +917,19 @@ MonoBehaviour:
   - type: 0
     points:
     - {fileID: 4655487101545174557}
+--- !u!114 &2020880496290145362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6510637841960571796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3e6c351af2a9de44ad2da99c358822c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultIdleTime: 1
 --- !u!1 &7504795507417437757
 GameObject:
   m_ObjectHideFlags: 0
