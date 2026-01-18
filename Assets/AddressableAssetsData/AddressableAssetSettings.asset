@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: 00d7c4dcd5e1ff244b34552c6b87a685
   m_currentHash:
     serializedVersion: 2
-    Hash: b2067e769a76e5fbabdb7cc3d40a63a8
+    Hash: 00000000000000000000000000000000
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 1
   m_CatalogRequestsTimeout: 0
@@ -72,6 +72,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 685dcfdaa57f0ca47860a2b13f4c8a3f, type: 2}
   - {fileID: 11400000, guid: 6ec8033b628c2c24fb82f178534229aa, type: 2}
   - {fileID: 11400000, guid: 7be36f6ee5f1fd34daff812a8b400542, type: 2}
+  - {fileID: 11400000, guid: fa667f531e5f39545ad52bc8c4646f3e, type: 2}
   - {fileID: 11400000, guid: 113b17a99167e0547866b25c797b9fac, type: 2}
   m_BuildSettings:
     m_LogResourceManagerExceptions: 1
@@ -117,6 +118,7 @@ MonoBehaviour:
     - orb_config
     - barrel_config
     - enemy_config
+    - skill_config
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 52c29343ff7ab6e4fab16389fc4a5e96, type: 2}

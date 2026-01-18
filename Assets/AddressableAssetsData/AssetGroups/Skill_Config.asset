@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Skill_Config
+  m_EditorClassIdentifier: 
+  m_GroupName: Skill_Config
+  m_GUID: dfbaf6273b1063a43b92d071cc89a8fa
+  m_SerializeEntries:
+  - m_GUID: 1950ff710bea9ba4a968c4857acf325a
+    m_Address: IceOrb
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - skill_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2dcf0038436124f44a6f278e581c02b8
+    m_Address: MultiShot
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - skill_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 52ec2bc9411999b4b99a769ca4c942df
+    m_Address: AttackSpeedIncrease
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - skill_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 64d603b9843a0cc4a911b8ef74edef9a
+    m_Address: VenomOrb
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - skill_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 692bb32a300e6b4468a4a19da971441f
+    m_Address: MoveSpeedIncrease
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - skill_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9fb1e1f8df98ee14a8da72771e05da21
+    m_Address: IceBarrelGenerate
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - skill_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b3e91eb0a47cb604e9600bd5d643a411
+    m_Address: DiagonalShot
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - skill_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fb0cbce25961bce4fb2806f710c17912
+    m_Address: HorizontalShot
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - skill_config
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 856c05a54378faf41860bc411561527d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: ccf330c44aa4ad648bacf09daae1ce78, type: 2}
+    - {fileID: 11400000, guid: 08dade3a79cba6d478236574cc7f097f, type: 2}
