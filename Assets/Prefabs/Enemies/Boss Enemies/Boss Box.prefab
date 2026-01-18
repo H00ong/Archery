@@ -878,6 +878,13 @@ MonoBehaviour:
   rigidBody: {fileID: 4467790697742285200}
   enemyCollider: {fileID: 4223965325044976831}
   enemyReference: {fileID: 6384863458046553930}
+  defaultIdleTime: 2
+  expItemPrefab:
+    m_AssetGUID: 4c0a5b1487abe67489f755abb9376c1f
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
   defaultAttackSpeed: 0.7
   defaultAtk: 1
   blockCheck: {fileID: 1490461795909677921}
@@ -900,7 +907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff5010d84058cff438cba248dff55dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 1
 --- !u!114 &6384863458046553930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -929,7 +936,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3e6c351af2a9de44ad2da99c358822c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultIdleTime: 1
 --- !u!1 &7504795507417437757
 GameObject:
   m_ObjectHideFlags: 0

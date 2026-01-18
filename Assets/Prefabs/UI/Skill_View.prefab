@@ -439,9 +439,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffb6c33d1dbd88148b01faa2f063f383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _skillName: {fileID: 4708052194698492565}
-  _skillLevel: {fileID: 4227859881614876853}
-  _skillDescription: {fileID: 2437647126480952431}
+  skillName: {fileID: 4708052194698492565}
+  skillLevel: {fileID: 4227859881614876853}
+  skillDescription: {fileID: 2437647126480952431}
 --- !u!1 &7974444996608078745
 GameObject:
   m_ObjectHideFlags: 0
