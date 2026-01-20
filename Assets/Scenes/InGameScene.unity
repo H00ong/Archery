@@ -196,7 +196,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   addressableAssetLabel: barrel_config
   barrelGenerateTime: 5
-  atk: 1
+  atk: 10
+  yOffset: 1
 --- !u!1 &250996812
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,7 +272,7 @@ Transform:
   m_GameObject: {fileID: 253699469}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.030419707, y: -3.2235155, z: -19.761288}
+  m_LocalPosition: {x: 0, y: 0.87, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -450,7 +451,7 @@ MonoBehaviour:
   currentLevel: 1
   maxLevel: 10
   currentExp: 0
-  expTable: 03000000050000000800000028000000320000003c00000046000000500000005a000000
+  expTable: 03000000030000000300000003000000030000000300000003000000500000005a000000
   skillChoicePopup: {fileID: 659576315}
 --- !u!1001 &659576313
 PrefabInstance:
@@ -791,7 +792,7 @@ Transform:
   m_GameObject: {fileID: 845097745}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -19.761288}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -852,7 +853,7 @@ MonoBehaviour:
   defaultAttackSpeed: 1
   defaultProjectileSpeed: 20
   defaltProjectileLifetime: 10
-  defaultPlayerAtk: 100
+  defaultPlayerAtk: 20
   multishotTimeInterval: 0.05
 --- !u!136 &845097752
 CapsuleCollider:
@@ -930,15 +931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67b8d7525cd888344a4bfb02eeddec13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skills:
-  - {fileID: 11400000, guid: 52ec2bc9411999b4b99a769ca4c942df, type: 2}
-  - {fileID: 11400000, guid: b3e91eb0a47cb604e9600bd5d643a411, type: 2}
-  - {fileID: 11400000, guid: fb0cbce25961bce4fb2806f710c17912, type: 2}
-  - {fileID: 11400000, guid: 9fb1e1f8df98ee14a8da72771e05da21, type: 2}
-  - {fileID: 11400000, guid: 1950ff710bea9ba4a968c4857acf325a, type: 2}
-  - {fileID: 11400000, guid: 692bb32a300e6b4468a4a19da971441f, type: 2}
-  - {fileID: 11400000, guid: 2dcf0038436124f44a6f278e581c02b8, type: 2}
-  - {fileID: 11400000, guid: 64d603b9843a0cc4a911b8ef74edef9a, type: 2}
+  skillConfigLabel: skill_config
 --- !u!114 &845097757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1336,7 +1329,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78a89b9a206baf24f832bf38c5a8636f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillChoicePopup: {fileID: 659576315}
 --- !u!1 &1419162912
 GameObject:
   m_ObjectHideFlags: 0
@@ -1446,6 +1438,7 @@ MonoBehaviour:
   _orbPivot: {fileID: 253699470}
   _label: orb_config
   _defaultDistance: 2.5
+  _orbDamage: 10
 --- !u!1 &1782300501
 GameObject:
   m_ObjectHideFlags: 0

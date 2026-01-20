@@ -92225,6 +92225,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerSpawnPoint
       objectReference: {fileID: 0}
+    - target: {fileID: 1052552732159797012, guid: a40ed7e7592111c4588f7abf55ffb739, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1136898156878624417, guid: a40ed7e7592111c4588f7abf55ffb739, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.770463
