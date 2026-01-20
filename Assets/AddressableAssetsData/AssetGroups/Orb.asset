@@ -15,13 +15,13 @@ MonoBehaviour:
   m_GroupName: Orb
   m_GUID: 639baf2912da66e44b2d772e15fbbb3a
   m_SerializeEntries:
-  - m_GUID: 6ea94a33c5e34f544a474386903e2edf
+  - m_GUID: 551640079d8749f4799e50630cfa7f80
     m_Address: Ice Orb
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 94b577467521ed748986ee00dc21b750
-    m_Address: Venom Orb
+  - m_GUID: 7f93662f8f177b04eba99ea08999a701
+    m_Address: Venom Orb Variant
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
