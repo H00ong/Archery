@@ -304,8 +304,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4154438870037912258}
-  - component: {fileID: 6097762734438228225}
-  - component: {fileID: 933079759468108521}
+  - component: {fileID: 9047135121757203291}
+  - component: {fileID: 8125030513745098297}
+  - component: {fileID: 3689596402967281046}
+  - component: {fileID: 3176092750773049730}
   m_Layer: 3
   m_Name: Stingray
   m_TagString: Enemy
@@ -329,7 +331,34 @@ Transform:
   - {fileID: 4102705543982236865}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6097762734438228225
+--- !u!54 &9047135121757203291
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4416062631461227150}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &8125030513745098297
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -338,19 +367,51 @@ MonoBehaviour:
   m_GameObject: {fileID: 4416062631461227150}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d9373c25b439c64d997b44a3bd7024a, type: 3}
+  m_Script: {fileID: 11500000, guid: c89b3cc84aca5e74ba9c4548d1dda437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyType: 0
-  enemyName: 0
-  debugMode: 1
-  defaultIdleTime: 2
-  defaultMoveTime: 8
-  defaultMoveSpeed: 1.5
-  defaultAttackSpeed: 1
-  defaultAttackRange: 2
-  defaultAttackMoveSpeed: 0
---- !u!114 &933079759468108521
+  isDebugMode: 1
+  enemyName: 13
+  enemyTags: 73
+  stats:
+    baseStats:
+      hp: 0
+      atk: 0
+      moveSpeed: 0
+    shooting:
+      projectileAtk: 0
+      projectileSpeed: 0
+    flyingShooting:
+      flyingProjectileAtk: 0
+      flyingProjectileSpeed: 0
+  brain: {fileID: 11400000, guid: bfc27aff85bad2d4ca882c5618105ad9, type: 2}
+  idle: {fileID: 0}
+  move: {fileID: 0}
+  hurt: {fileID: 0}
+  die: {fileID: 0}
+  health: {fileID: 3176092750773049730}
+  anim: {fileID: 2821942436323518329}
+  rigidBody: {fileID: 9047135121757203291}
+  enemyCollider: {fileID: 2973891044100896292}
+  enemyReference: {fileID: 0}
+  defaultIdleTime: 1
+  expItemPrefab:
+    m_AssetGUID: 4c0a5b1487abe67489f755abb9376c1f
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  defaultAttackSpeed: 0.8
+  defaultAtk: 0
+  blockCheck: {fileID: 6418542969917001512}
+  sphereCastRadius: 0.5
+  castDistance: 0.5
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  lastPlayerPosition: {x: 0, y: 0, z: 0}
+  player: {fileID: 0}
+--- !u!114 &3689596402967281046
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -359,7 +420,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 4416062631461227150}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2da94b494a3ab7940b4757f39b11b644, type: 3}
+  m_Script: {fileID: 11500000, guid: 07b625bc7f25b5d4d81805db481b36c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointGroups: []
+--- !u!114 &3176092750773049730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4416062631461227150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff5010d84058cff438cba248dff55dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
@@ -527,8 +601,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd4d2efcf2a7f840a9165a08a21ce26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootingPos:
-  - {fileID: 0}
 --- !u!1 &5507736311130421062
 GameObject:
   m_ObjectHideFlags: 0
@@ -717,6 +789,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 6418542969917001512}
   - {fileID: 6908134151217036001}
   - {fileID: 8646668478075576981}
   m_Father: {fileID: 8918397504310603557}
@@ -744,6 +817,37 @@ CapsuleCollider:
   m_Height: 1.33
   m_Direction: 0
   m_Center: {x: -0.07, y: 0, z: 0}
+--- !u!1 &8672343779893812316
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6418542969917001512}
+  m_Layer: 3
+  m_Name: Block Check
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6418542969917001512
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8672343779893812316}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.57, y: 0, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1334020093827805575}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9075323167102765734
 GameObject:
   m_ObjectHideFlags: 0
