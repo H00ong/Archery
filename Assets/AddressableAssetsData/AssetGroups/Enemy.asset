@@ -30,6 +30,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3cafb133265818a4caea63c605124a36
+    m_Address: Assets/Prefabs/Enemies/Melee Enemies/Skeleton_Warrior.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 50dec45d490007c44a7262aa5bf18c87
     m_Address: Octopus_Gray Variant
     m_ReadOnly: 0
@@ -62,6 +67,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cfbba88331a62c54eaead0ad89af02e5
     m_Address: Octopus_Black Variant
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d3729b3a9f79da947bc57fb5a4d03cc1
+    m_Address: Assets/Prefabs/Enemies/Melee Enemies/Skeleton_Minion.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

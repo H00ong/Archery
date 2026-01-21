@@ -15,11 +15,41 @@ MonoBehaviour:
   m_GroupName: Enemy_Config
   m_GUID: 9d10648c9c1717046b1133df71844340
   m_SerializeEntries:
+  - m_GUID: 13657810921ae4e4caf274d6ca08eb7b
+    m_Address: Assets/Data/Enemy Module Data/Bird - Objects/FollowMoveData.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 41800d0daab685d46a9b36cc870bfa00
+    m_Address: Assets/Data/Enemy Module Data/Melee Golem/MeleeAttackData.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 45b7b03219edc9d4ea74fe41b0ef06bb
+    m_Address: Assets/Data/Enemy Module Data/Cactus/FollowMoveData.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4cfe7dc3db3a1a74b8532aafdf447dc2
+    m_Address: Assets/Data/Enemy Module Data/Mushroom/FollowMoveData.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4e95fc8d50989f64984ef7e0ca72fc7b
+    m_Address: Assets/Data/Enemy Module Data/Orc/FollowMoveData.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 626ef6cb0ad1e4a47b4f88aacde0acd7
     m_Address: FollowMeleeAttackData
     m_ReadOnly: 0
     m_SerializedLabels:
     - enemy_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6e9c7cbca8b3ef84da5dcdcec839bea3
+    m_Address: Assets/Data/Enemy Module Data/Skeleton Minion/MeleeAttackData.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: afaa23b3325153442844e674141cf6ba
     m_Address: RandomMoveData
@@ -27,11 +57,31 @@ MonoBehaviour:
     m_SerializedLabels:
     - enemy_config
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bab5640563444664782096a376495b80
+    m_Address: Assets/Data/Enemy Module Data/Melee Golem/FollowMoveData.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d1dc6bf115441f14988585b553f5e175
     m_Address: FlyingShootData
     m_ReadOnly: 0
     m_SerializedLabels:
     - enemy_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: de58cacfc539d7541833b8452588f00f
+    m_Address: Assets/Data/Enemy Module Data/Skeleton Minion/FollowMoveData.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f206665f3f0d5394084310d48d8d961b
+    m_Address: Assets/Data/Enemy Module Data/Skeleton Warrior/MeleeAttackData.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f4448b60cf4debd44b5c695c0f328be7
+    m_Address: Assets/Data/Enemy Module Data/Skeleton Warrior/FollowMoveData.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 856c05a54378faf41860bc411561527d, type: 2}
