@@ -122,5 +122,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   expAmount: 10
-  magnetRange: 3
-  magnetSpeed: 5
+  magnetRange: 5
+  magnetSpeed: 20
