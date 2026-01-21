@@ -853,7 +853,7 @@ MonoBehaviour:
   defaultAttackSpeed: 1
   defaultProjectileSpeed: 20
   defaltProjectileLifetime: 10
-  defaultPlayerAtk: 20
+  defaultPlayerAtk: 0
   multishotTimeInterval: 0.05
 --- !u!136 &845097752
 CapsuleCollider:
@@ -3663,7 +3663,7 @@ Transform:
   m_GameObject: {fileID: 3670903822033739365}
   serializedVersion: 2
   m_LocalRotation: {x: -0.107824154, y: 0.69121265, z: 0.15394524, w: 0.6977821}
-  m_LocalPosition: {x: 0.012874603, y: 0.23109317, z: 70.61635}
+  m_LocalPosition: {x: 0.012877025, y: 0.23106933, z: 70.61635}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

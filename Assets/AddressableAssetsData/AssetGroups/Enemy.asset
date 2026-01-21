@@ -25,13 +25,33 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 19963a8c54d21c14f8917c668d251047
+    m_Address: Bird
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 50dec45d490007c44a7262aa5bf18c87
     m_Address: Octopus_Gray Variant
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7a4bb379ae33b694cb4aac44dd7034a7
+    m_Address: Assets/Prefabs/Enemies/Melee Enemies/MeleeGolem.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9e8ae310511d370449cfa7b7d8c59960
     m_Address: Slime
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a1021467db5b754468a5af1521aacd02
+    m_Address: Assets/Prefabs/Enemies/Melee Enemies/Orc.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a5bd91d07df0bd34498069c84797007c
+    m_Address: Cactus
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -52,6 +72,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e5e6c15be3ece34458dd0c972dfe5a5b
     m_Address: Octopus_Green Variant
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e7258f00ed8979f40aaadc8bece5f0e7
+    m_Address: Assets/Prefabs/Enemies/Melee Enemies/Mushroom.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
