@@ -51,6 +51,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 90003474aa28b8b44b4b6b028eb4c962
+    m_Address: Assets/Data/Enemy Module Data/Slime/FollowMoveData.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: afaa23b3325153442844e674141cf6ba
     m_Address: RandomMoveData
     m_ReadOnly: 0
