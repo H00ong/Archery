@@ -20,17 +20,12 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
   enemyList:
-  - m_AssetGUID: 17f49dd2bc9f72c418315231e1fe5bfa
+  - m_AssetGUID: a1021467db5b754468a5af1521aacd02
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
-  bossList:
-  - m_AssetGUID: 17f49dd2bc9f72c418315231e1fe5bfa
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_SubObjectGUID: 
-    m_EditorAssetChanged: 0
+  bossList: []
   bossMap:
     m_AssetGUID: f9f45ba06ea60e147bcd620308a7a820
     m_SubObjectName: 
