@@ -55,6 +55,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a04a5b2d7d8cba64e8e88417b035e749
+    m_Address: Assets/Prefabs/Enemies/Melee Enemies/TurtleShell.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a1021467db5b754468a5af1521aacd02
     m_Address: Assets/Prefabs/Enemies/Melee Enemies/Orc.prefab
     m_ReadOnly: 0

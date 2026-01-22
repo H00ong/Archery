@@ -56,6 +56,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a365a7d983e3b894fa79db7ea7ee8394
+    m_Address: Assets/Data/Enemy Module Data/Melee Enemies/Turtle Shell/FollowMoveData.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: afaa23b3325153442844e674141cf6ba
     m_Address: RandomMoveData
     m_ReadOnly: 0
