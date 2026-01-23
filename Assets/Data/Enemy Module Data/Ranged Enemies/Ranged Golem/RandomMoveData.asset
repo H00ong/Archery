@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edc552795d090c74a886bb72e45e46ff, type: 3}
-  m_Name: FollowMoveData
+  m_Script: {fileID: 11500000, guid: e17997af26a718a4c96223b970fb94e1, type: 3}
+  m_Name: RandomMoveData
   m_EditorClassIdentifier: 
   targetName: 10
-  targetTag: 8
-  duration: 0
-  defaultAttackRange: 5
+  targetTag: 32
+  duration: 10
+  pickDirectionTime: 7
