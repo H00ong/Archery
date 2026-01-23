@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 4989139869866857489}
   - component: {fileID: 4985158055695765590}
   - component: {fileID: 7133461355703680659}
-  m_Layer: 0
-  m_Name: Rock_Enemy
+  m_Layer: 9
+  m_Name: Enemy_Rock
   m_TagString: EnemyProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69,7 +69,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 957781e2e64d0264f970dde36a30bd93, type: 2}
+  - {fileID: 2100000, guid: 5626f86812bd9a042a4bebb0d357c9f7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -165,7 +165,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70c40128bc46fae4980a829f3421e80d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyOnHit: 0
+  destroyOnHit: 1
+  destroyOnFloor: 0
+  destroyOnObstacle: 1
   rigidBody: {fileID: 2042165858758265073}
   projectileCollider: {fileID: 4989139869866857489}
   explosionEffect:
