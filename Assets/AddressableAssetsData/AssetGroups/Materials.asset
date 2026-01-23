@@ -75,11 +75,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 957781e2e64d0264f970dde36a30bd93
-    m_Address: PolyartStandard
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9c4d2e4145dad3f4785bb79c88089dcf
     m_Address: Mini Simple Characters Mat Red Eyes
     m_ReadOnly: 0

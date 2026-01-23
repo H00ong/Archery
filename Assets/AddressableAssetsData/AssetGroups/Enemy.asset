@@ -35,6 +35,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1fc1d177e3260b441a868c9d31d683a1
+    m_Address: Assets/Prefabs/Enemies/Ranged Enemies/Ranged_Golem/Ranged Golem_Pink
+      Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3cafb133265818a4caea63c605124a36
     m_Address: Assets/Prefabs/Enemies/Melee Enemies/Skeleton_Warrior.prefab
     m_ReadOnly: 0
@@ -45,8 +51,20 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 68f8002251a084840b6c63c06d344682
+    m_Address: Assets/Prefabs/Enemies/Ranged Enemies/Ranged_Golem/Ranged Golem_Red
+      Variant 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7a4bb379ae33b694cb4aac44dd7034a7
     m_Address: Assets/Prefabs/Enemies/Melee Enemies/MeleeGolem.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 984bc650d8ed1734086bd66d0ecead6e
+    m_Address: Assets/Prefabs/Enemies/Ranged Enemies/Ranged_Golem/Ranged Golem_Purple
+      Variant.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -70,8 +88,19 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b570f0d2a8d8ea748b7c196abbd87898
+    m_Address: Assets/Prefabs/Enemies/Ranged Enemies/Ranged_Golem/Ranged Golem.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bc8c3c8dc3f0db34cad8de243fa11ed1
     m_Address: Octopus_Peach Variant
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cef28e163999f3d40b69ae01801d6efc
+    m_Address: Assets/Prefabs/Enemies/Ranged Enemies/Ranged_Golem/Ranged Golem_Green
+      Variant.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

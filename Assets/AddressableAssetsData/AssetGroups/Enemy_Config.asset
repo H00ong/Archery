@@ -15,6 +15,12 @@ MonoBehaviour:
   m_GroupName: Enemy_Config
   m_GUID: 9d10648c9c1717046b1133df71844340
   m_SerializeEntries:
+  - m_GUID: 00e0f4ec2ad847f42b0435e256d87783
+    m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Ranged Golem/RandomMoveData.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - enemy_config
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 07cf4b470e264d643a5e168945b5778e
     m_Address: ShootData
     m_ReadOnly: 0
@@ -99,13 +105,14 @@ MonoBehaviour:
     m_SerializedLabels:
     - enemy_config
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9dc789740d5d0a741943c5459abef685
-    m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Ranged Golem/FollowMoveData.asset
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a365a7d983e3b894fa79db7ea7ee8394
     m_Address: FollowMoveData
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - enemy_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a84dde6778542ef498916f86bc288e3c
+    m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Ranged Golem/ShootData.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - enemy_config

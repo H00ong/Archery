@@ -25,8 +25,13 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 367d0932061dbe546bc5e3858d596211
+    m_Address: Enemy_Rock Red
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 37cdc7ef5ece12345b29556a7d424d20
-    m_Address: Assets/Prefabs/Objects/Enemy/Octopus/Enemy Beam_Octopus Orange.prefab
+    m_Address: Enemy Beam_Octopus Orange
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -36,7 +41,7 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4a79d0a9dd688dd41995d49338d2e5a7
-    m_Address: Rock_Enemy
+    m_Address: Enemy_Rock
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -56,7 +61,7 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 70fa5407dd751ae43ab7fa4f090ca7d9
-    m_Address: Assets/Prefabs/Objects/Enemy/Octopus/Enemy Beam_Octopus Red.prefab
+    m_Address: Enemy Beam_Octopus Red
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
