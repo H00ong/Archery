@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9c4d2e4145dad3f4785bb79c88089dcf, type: 2}
+    - target: {fileID: 1143612434151089796, guid: 0ef1cb4bbf03fe9459627d6efaaa1ffc, type: 3}
+      propertyPath: enemyTags
+      value: 134217874
+      objectReference: {fileID: 0}
     - target: {fileID: 2809169252762156932, guid: 0ef1cb4bbf03fe9459627d6efaaa1ffc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.33
@@ -54,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7645816991700784358, guid: 0ef1cb4bbf03fe9459627d6efaaa1ffc, type: 3}
       propertyPath: m_Name
-      value: Octopus (1) Variant
+      value: Octopus_Gray Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
