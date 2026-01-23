@@ -25,6 +25,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 37cdc7ef5ece12345b29556a7d424d20
+    m_Address: Assets/Prefabs/Objects/Enemy/Octopus/Enemy Beam_Octopus Orange.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3a7af0e9ad8d1f54a9d53bb668dee572
     m_Address: Horn_BossEnemy
     m_ReadOnly: 0
@@ -50,8 +55,33 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 70fa5407dd751ae43ab7fa4f090ca7d9
+    m_Address: Assets/Prefabs/Objects/Enemy/Octopus/Enemy Beam_Octopus Red.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8daf06996d62c404fb29f108825fc925
+    m_Address: Enemy Beam_Octopus Green
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9119e60f316a62541bd942f99ff6d884
+    m_Address: Enemy Beam_Octopus Sky
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e12b9ceabe062cd4597b243404ba378c
+    m_Address: Enemy Beam_Octopus Yellow Variant
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f6475dc38755b5942842ad6847a3e7b1
     m_Address: Rock_BossEnemy
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fb9fb99aa658ff04fbd078499b5d9eed
+    m_Address: Enemy Beam_Octopus Pink Variant
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

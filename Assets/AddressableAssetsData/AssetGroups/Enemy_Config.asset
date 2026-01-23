@@ -15,30 +15,53 @@ MonoBehaviour:
   m_GroupName: Enemy_Config
   m_GUID: 9d10648c9c1717046b1133df71844340
   m_SerializeEntries:
-  - m_GUID: 13657810921ae4e4caf274d6ca08eb7b
-    m_Address: Assets/Data/Enemy Module Data/Bird - Objects/FollowMoveData.asset
+  - m_GUID: 07cf4b470e264d643a5e168945b5778e
+    m_Address: ShootData
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - enemy_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 13657810921ae4e4caf274d6ca08eb7b
+    m_Address: FollowMoveData
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - enemy_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 14370eedd9c265e438537bb897658520
+    m_Address: ShootData_lightening
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - enemy_config
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 41800d0daab685d46a9b36cc870bfa00
-    m_Address: Assets/Data/Enemy Module Data/Melee Golem/MeleeAttackData.asset
+    m_Address: MeleeAttackData
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - enemy_config
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 45b7b03219edc9d4ea74fe41b0ef06bb
-    m_Address: Assets/Data/Enemy Module Data/Cactus/FollowMoveData.asset
+    m_Address: FollowMoveData
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - enemy_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 489311d83d6b58d489475c677ce5e7e0
+    m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Octopus/ShootData_Fire.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - enemy_config
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4cfe7dc3db3a1a74b8532aafdf447dc2
-    m_Address: Assets/Data/Enemy Module Data/Mushroom/FollowMoveData.asset
+    m_Address: FollowMoveData
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - enemy_config
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4e95fc8d50989f64984ef7e0ca72fc7b
-    m_Address: Assets/Data/Enemy Module Data/Orc/FollowMoveData.asset
+    m_Address: FollowMoveData
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - enemy_config
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 626ef6cb0ad1e4a47b4f88aacde0acd7
     m_Address: FollowMeleeAttackData
@@ -46,20 +69,46 @@ MonoBehaviour:
     m_SerializedLabels:
     - enemy_config
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6e9c7cbca8b3ef84da5dcdcec839bea3
-    m_Address: Assets/Data/Enemy Module Data/Skeleton Minion/MeleeAttackData.asset
+  - m_GUID: 6a1dec3dfeee2624c95344f7f7a81c2d
+    m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Octopus/ShootData_Poison.asset
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - enemy_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6e9c7cbca8b3ef84da5dcdcec839bea3
+    m_Address: MeleeAttackData
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - enemy_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 75c8d095c5e7a7341b4ec30418e0e0fb
+    m_Address: PatternMoveData
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - enemy_config
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 90003474aa28b8b44b4b6b028eb4c962
-    m_Address: Assets/Data/Enemy Module Data/Slime/FollowMoveData.asset
+    m_Address: FollowMoveData
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - enemy_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 916bc322e6a91ab47b8bf14f4356ad6b
+    m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Octopus/ShootData_Magma.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - enemy_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9dc789740d5d0a741943c5459abef685
+    m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Ranged Golem/FollowMoveData.asset
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a365a7d983e3b894fa79db7ea7ee8394
-    m_Address: Assets/Data/Enemy Module Data/Melee Enemies/Turtle Shell/FollowMoveData.asset
+    m_Address: FollowMoveData
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - enemy_config
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: afaa23b3325153442844e674141cf6ba
     m_Address: RandomMoveData
@@ -68,14 +117,22 @@ MonoBehaviour:
     - enemy_config
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b0fae528b7175da4c839899b3cf26ee8
-    m_Address: Assets/Data/Enemy Module Data/Melee Enemies/Stingray/FollowMoveData.asset
+    m_Address: FollowMoveData
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - enemy_config
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bab5640563444664782096a376495b80
-    m_Address: Assets/Data/Enemy Module Data/Melee Golem/FollowMoveData.asset
+    m_Address: FollowMoveData
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - enemy_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c19ff0c9ce86b134898ce892357183fa
+    m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Octopus/ShootData_ice.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - enemy_config
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d1dc6bf115441f14988585b553f5e175
     m_Address: FlyingShootData
@@ -84,19 +141,22 @@ MonoBehaviour:
     - enemy_config
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: de58cacfc539d7541833b8452588f00f
-    m_Address: Assets/Data/Enemy Module Data/Skeleton Minion/FollowMoveData.asset
+    m_Address: FollowMoveData
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - enemy_config
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f206665f3f0d5394084310d48d8d961b
-    m_Address: Assets/Data/Enemy Module Data/Skeleton Warrior/MeleeAttackData.asset
+    m_Address: MeleeAttackData
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - enemy_config
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f4448b60cf4debd44b5c695c0f328be7
-    m_Address: Assets/Data/Enemy Module Data/Skeleton Warrior/FollowMoveData.asset
+    m_Address: FollowMoveData
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - enemy_config
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 856c05a54378faf41860bc411561527d, type: 2}

@@ -44692,7 +44692,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.6666667
-    functionName: HurtTrigger
+    functionName: HurtEndTrigger
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
