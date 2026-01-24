@@ -70,7 +70,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: b965be02b3e4f5d478d3885d40ff0979, type: 2}
     - target: {fileID: 7127967749902587444, guid: b570f0d2a8d8ea748b7c196abbd87898, type: 3}
       propertyPath: enemyTags
-      value: 134217890
+      value: 162
       objectReference: {fileID: 0}
     - target: {fileID: 7127967749902587444, guid: b570f0d2a8d8ea748b7c196abbd87898, type: 3}
       propertyPath: isDebugMode

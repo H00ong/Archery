@@ -16,7 +16,7 @@ MonoBehaviour:
   m_GUID: 4a9441921ce7a2f4eb3b7a648d6ca9bf
   m_SerializeEntries:
   - m_GUID: 0cf9f8ebfe3f4c54781c23d62d36d437
-    m_Address: Assets/Prefabs/Enemies/Melee Enemies/Stingray.prefab
+    m_Address: Stingray
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -36,13 +36,12 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1fc1d177e3260b441a868c9d31d683a1
-    m_Address: Assets/Prefabs/Enemies/Ranged Enemies/Ranged_Golem/Ranged Golem_Pink
-      Variant.prefab
+    m_Address: Ranged Golem_Yellow Variant
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3cafb133265818a4caea63c605124a36
-    m_Address: Assets/Prefabs/Enemies/Melee Enemies/Skeleton_Warrior.prefab
+    m_Address: Skeleton_Warrior
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -52,19 +51,17 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 68f8002251a084840b6c63c06d344682
-    m_Address: Assets/Prefabs/Enemies/Ranged Enemies/Ranged_Golem/Ranged Golem_Red
-      Variant 1.prefab
+    m_Address: Ranged Golem_Red Variant 1
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7a4bb379ae33b694cb4aac44dd7034a7
-    m_Address: Assets/Prefabs/Enemies/Melee Enemies/MeleeGolem.prefab
+    m_Address: MeleeGolem
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 984bc650d8ed1734086bd66d0ecead6e
-    m_Address: Assets/Prefabs/Enemies/Ranged Enemies/Ranged_Golem/Ranged Golem_Purple
-      Variant.prefab
+    m_Address: Ranged Golem_Purple Variant
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -74,12 +71,12 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a04a5b2d7d8cba64e8e88417b035e749
-    m_Address: Assets/Prefabs/Enemies/Melee Enemies/TurtleShell.prefab
+    m_Address: TurtleShell
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a1021467db5b754468a5af1521aacd02
-    m_Address: Assets/Prefabs/Enemies/Melee Enemies/Orc.prefab
+    m_Address: Orc
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -89,7 +86,7 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b570f0d2a8d8ea748b7c196abbd87898
-    m_Address: Assets/Prefabs/Enemies/Ranged Enemies/Ranged_Golem/Ranged Golem.prefab
+    m_Address: Ranged Golem
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -99,8 +96,7 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cef28e163999f3d40b69ae01801d6efc
-    m_Address: Assets/Prefabs/Enemies/Ranged Enemies/Ranged_Golem/Ranged Golem_Green
-      Variant.prefab
+    m_Address: Ranged Golem_Green Variant
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -110,7 +106,7 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d3729b3a9f79da947bc57fb5a4d03cc1
-    m_Address: Assets/Prefabs/Enemies/Melee Enemies/Skeleton_Minion.prefab
+    m_Address: Skeleton_Minion
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -125,7 +121,7 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e7258f00ed8979f40aaadc8bece5f0e7
-    m_Address: Assets/Prefabs/Enemies/Melee Enemies/Mushroom.prefab
+    m_Address: Mushroom
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 508d2709b69178e4fba946ac37763476, type: 2}
     - target: {fileID: 3131708911087266783, guid: b570f0d2a8d8ea748b7c196abbd87898, type: 3}
       propertyPath: m_Name
-      value: Ranged Golem_Pink Variant
+      value: Ranged Golem_Yellow Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3131708911087266783, guid: b570f0d2a8d8ea748b7c196abbd87898, type: 3}
       propertyPath: m_IsActive
@@ -70,7 +70,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 508d2709b69178e4fba946ac37763476, type: 2}
     - target: {fileID: 7127967749902587444, guid: b570f0d2a8d8ea748b7c196abbd87898, type: 3}
       propertyPath: enemyTags
-      value: 268435618
+      value: 536871074
       objectReference: {fileID: 0}
     - target: {fileID: 7127967749902587444, guid: b570f0d2a8d8ea748b7c196abbd87898, type: 3}
       propertyPath: isDebugMode

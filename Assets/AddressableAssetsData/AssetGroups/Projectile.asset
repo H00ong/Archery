@@ -85,6 +85,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d18c84eedc2e4474294d55efd772294b
+    m_Address: Assets/Prefabs/Objects/Enemy/Ranged Golem/Enemy_Rock Yellow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e12b9ceabe062cd4597b243404ba378c
     m_Address: Enemy Beam_Octopus Yellow Variant
     m_ReadOnly: 0

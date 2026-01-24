@@ -147,6 +147,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - enemy_config
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c4fa32515b0941848a82b612a5642735
+    m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Ranged Golem/ShootData_Lightning.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - enemy_config
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d1dc6bf115441f14988585b553f5e175
     m_Address: FlyingShootData
     m_ReadOnly: 0
