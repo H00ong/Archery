@@ -80,6 +80,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bb962affd651e694cb73e8140557c1a4
+    m_Address: Assets/Prefabs/Objects/Enemy/Ranged Golem/Enemy_Rock Purple.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e12b9ceabe062cd4597b243404ba378c
     m_Address: Enemy Beam_Octopus Yellow Variant
     m_ReadOnly: 0
