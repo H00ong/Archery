@@ -20,7 +20,7 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
   enemyList:
-  - m_AssetGUID: cef28e163999f3d40b69ae01801d6efc
+  - m_AssetGUID: 984bc650d8ed1734086bd66d0ecead6e
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 
