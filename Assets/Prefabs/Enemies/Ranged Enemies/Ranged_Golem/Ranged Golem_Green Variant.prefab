@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: b965be02b3e4f5d478d3885d40ff0979, type: 2}
     - target: {fileID: 3131708911087266783, guid: b570f0d2a8d8ea748b7c196abbd87898, type: 3}
       propertyPath: m_Name
-      value: Ranged Golem (2) Variant
+      value: Ranged Golem_Green Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3131708911087266783, guid: b570f0d2a8d8ea748b7c196abbd87898, type: 3}
       propertyPath: m_IsActive
@@ -68,6 +68,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: b965be02b3e4f5d478d3885d40ff0979, type: 2}
+    - target: {fileID: 7127967749902587444, guid: b570f0d2a8d8ea748b7c196abbd87898, type: 3}
+      propertyPath: enemyTags
+      value: 134217890
+      objectReference: {fileID: 0}
+    - target: {fileID: 7127967749902587444, guid: b570f0d2a8d8ea748b7c196abbd87898, type: 3}
+      propertyPath: isDebugMode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

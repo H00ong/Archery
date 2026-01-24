@@ -45,6 +45,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 54a2f8a8df3956847ad45afb9f108291
+    m_Address: Assets/Prefabs/Objects/Enemy/Ranged Golem/Enemy_Rock Sky.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5d057e07ffc2ce74e9ab29e08f2046c9
     m_Address: Enemy Beam_Boss
     m_ReadOnly: 0

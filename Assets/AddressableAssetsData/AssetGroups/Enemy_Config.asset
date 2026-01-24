@@ -16,7 +16,7 @@ MonoBehaviour:
   m_GUID: 9d10648c9c1717046b1133df71844340
   m_SerializeEntries:
   - m_GUID: 00e0f4ec2ad847f42b0435e256d87783
-    m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Ranged Golem/RandomMoveData.asset
+    m_Address: RandomMoveData
     m_ReadOnly: 0
     m_SerializedLabels:
     - enemy_config
@@ -39,6 +39,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - enemy_config
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2b5bdb0657b4818428fc6cc561b354dc
+    m_Address: ShootData_Poison
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - enemy_config
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 41800d0daab685d46a9b36cc870bfa00
     m_Address: MeleeAttackData
     m_ReadOnly: 0
@@ -52,7 +58,7 @@ MonoBehaviour:
     - enemy_config
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 489311d83d6b58d489475c677ce5e7e0
-    m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Octopus/ShootData_Fire.asset
+    m_Address: ShootData_Fire
     m_ReadOnly: 0
     m_SerializedLabels:
     - enemy_config
@@ -71,12 +77,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 626ef6cb0ad1e4a47b4f88aacde0acd7
     m_Address: FollowMeleeAttackData
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - enemy_config
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6a1dec3dfeee2624c95344f7f7a81c2d
-    m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Octopus/ShootData_Poison.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - enemy_config
@@ -100,7 +100,7 @@ MonoBehaviour:
     - enemy_config
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 916bc322e6a91ab47b8bf14f4356ad6b
-    m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Octopus/ShootData_Magma.asset
+    m_Address: ShootData_Magma
     m_ReadOnly: 0
     m_SerializedLabels:
     - enemy_config
@@ -112,7 +112,7 @@ MonoBehaviour:
     - enemy_config
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a84dde6778542ef498916f86bc288e3c
-    m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Ranged Golem/ShootData.asset
+    m_Address: ShootData
     m_ReadOnly: 0
     m_SerializedLabels:
     - enemy_config
@@ -136,7 +136,7 @@ MonoBehaviour:
     - enemy_config
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c19ff0c9ce86b134898ce892357183fa
-    m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Octopus/ShootData_ice.asset
+    m_Address: ShootData_Ice
     m_ReadOnly: 0
     m_SerializedLabels:
     - enemy_config
