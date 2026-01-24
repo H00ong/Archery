@@ -135,6 +135,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - enemy_config
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bf31b83d1f43f124da08bc005feb7c1b
+    m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Ranged Golem/ShootData_Poison.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - enemy_config
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c19ff0c9ce86b134898ce892357183fa
     m_Address: ShootData_Ice
     m_ReadOnly: 0
