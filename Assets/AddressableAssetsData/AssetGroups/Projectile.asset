@@ -20,8 +20,23 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1520a057a775a5647b776e615990f3e2
+    m_Address: Assets/Prefabs/Objects/Enemy/Rogue/Arrow_Enemy Red Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 15e73d211edc41b49af42679faa79ada
+    m_Address: Assets/Prefabs/Objects/Enemy/Rogue/Arrow_Enemy Sky Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1737537d1f57c4645aa046547ec1f39b
-    m_Address: Arrow_Enemy
+    m_Address: Assets/Prefabs/Objects/Enemy/Rogue/Arrow_Enemy.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1b3742d2592c7584e9e5a4fda3532ca1
+    m_Address: Assets/Prefabs/Objects/Enemy/Rogue/Arrow_Enemy Orange Variant.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -70,6 +85,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7265c09ef47b82546bd1eac95c9e86a4
+    m_Address: Assets/Prefabs/Objects/Enemy/Rogue/Arrow_Enemy Yellow Shiny.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8daf06996d62c404fb29f108825fc925
     m_Address: Enemy Beam_Octopus Green
     m_ReadOnly: 0
@@ -87,6 +107,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d18c84eedc2e4474294d55efd772294b
     m_Address: Assets/Prefabs/Objects/Enemy/Ranged Golem/Enemy_Rock Yellow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: da530680501c67441b04104c52f4edb2
+    m_Address: Assets/Prefabs/Objects/Enemy/Rogue/Arrow_Enemy Purple Variant.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

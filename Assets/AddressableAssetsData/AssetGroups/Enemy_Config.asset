@@ -45,6 +45,20 @@ MonoBehaviour:
     m_SerializedLabels:
     - enemy_config
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2fbbd0e74529e0f428309acef035bd23
+    m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Skeleton Rogue/ShootData
+      Magma.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - enemy_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 304ec59ad1353544985cfcbb4472c270
+    m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Skeleton Rogue/ShootData
+      Fire.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - enemy_config
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 41800d0daab685d46a9b36cc870bfa00
     m_Address: MeleeAttackData
     m_ReadOnly: 0
@@ -71,6 +85,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4e95fc8d50989f64984ef7e0ca72fc7b
     m_Address: FollowMoveData
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - enemy_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5037bb198bf70ae45babcfa91df8fc4e
+    m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Ranged Golem/ShootData_Fire.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - enemy_config
@@ -135,6 +155,13 @@ MonoBehaviour:
     m_SerializedLabels:
     - enemy_config
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bc61867b200797c4e858e3687182d24d
+    m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Skeleton Rogue/ShootData
+      Lightning.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - enemy_config
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bf31b83d1f43f124da08bc005feb7c1b
     m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Ranged Golem/ShootData_Poison.asset
     m_ReadOnly: 0
@@ -153,6 +180,19 @@ MonoBehaviour:
     m_SerializedLabels:
     - enemy_config
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d066f175d288c9f428268b2658fd1a9c
+    m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Skeleton Rogue/FollowMoveData.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - enemy_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d13df32dfa50dda4991f8b36b83f0217
+    m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Skeleton Rogue/ShootData
+      Ice.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - enemy_config
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d1dc6bf115441f14988585b553f5e175
     m_Address: FlyingShootData
     m_ReadOnly: 0
@@ -165,6 +205,13 @@ MonoBehaviour:
     m_SerializedLabels:
     - enemy_config
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ee6cd08beafb2b14da8250e29ca17a2d
+    m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Skeleton Rogue/ShootData
+      Poison.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - enemy_config
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f206665f3f0d5394084310d48d8d961b
     m_Address: MeleeAttackData
     m_ReadOnly: 0
@@ -173,6 +220,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f4448b60cf4debd44b5c695c0f328be7
     m_Address: FollowMoveData
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - enemy_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f94b421a2a69200418b68bfb5283f0b4
+    m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Skeleton Rogue/ShootData.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - enemy_config
