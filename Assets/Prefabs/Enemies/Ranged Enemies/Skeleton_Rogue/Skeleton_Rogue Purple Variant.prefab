@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1017795289285885760
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1406089669794716042, guid: 854f114f7c8a7f7479ee0ce080856ca9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 25e32ca63223f8349ad65a70312bfb03, type: 2}
+    - target: {fileID: 1816902974709275259, guid: 854f114f7c8a7f7479ee0ce080856ca9, type: 3}
+      propertyPath: enemyTags
+      value: 268435594
+      objectReference: {fileID: 0}
+    - target: {fileID: 2433671261222230077, guid: 854f114f7c8a7f7479ee0ce080856ca9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 479005e1ec884bd45b36d262644738ad, type: 2}
+    - target: {fileID: 3140918820944215272, guid: 854f114f7c8a7f7479ee0ce080856ca9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 25e32ca63223f8349ad65a70312bfb03, type: 2}
+    - target: {fileID: 3433219881546295061, guid: 854f114f7c8a7f7479ee0ce080856ca9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3433219881546295061, guid: 854f114f7c8a7f7479ee0ce080856ca9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3433219881546295061, guid: 854f114f7c8a7f7479ee0ce080856ca9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 3433219881546295061, guid: 854f114f7c8a7f7479ee0ce080856ca9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3433219881546295061, guid: 854f114f7c8a7f7479ee0ce080856ca9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3433219881546295061, guid: 854f114f7c8a7f7479ee0ce080856ca9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3433219881546295061, guid: 854f114f7c8a7f7479ee0ce080856ca9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3433219881546295061, guid: 854f114f7c8a7f7479ee0ce080856ca9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3433219881546295061, guid: 854f114f7c8a7f7479ee0ce080856ca9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3433219881546295061, guid: 854f114f7c8a7f7479ee0ce080856ca9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3945385102058550792, guid: 854f114f7c8a7f7479ee0ce080856ca9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 479005e1ec884bd45b36d262644738ad, type: 2}
+    - target: {fileID: 6094705058793812447, guid: 854f114f7c8a7f7479ee0ce080856ca9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 479005e1ec884bd45b36d262644738ad, type: 2}
+    - target: {fileID: 6578180536603425754, guid: 854f114f7c8a7f7479ee0ce080856ca9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 479005e1ec884bd45b36d262644738ad, type: 2}
+    - target: {fileID: 7011714866283513847, guid: 854f114f7c8a7f7479ee0ce080856ca9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 479005e1ec884bd45b36d262644738ad, type: 2}
+    - target: {fileID: 7318501122882325577, guid: 854f114f7c8a7f7479ee0ce080856ca9, type: 3}
+      propertyPath: m_Name
+      value: Skeleton_Rogue Purple Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8623887264747589655, guid: 854f114f7c8a7f7479ee0ce080856ca9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 479005e1ec884bd45b36d262644738ad, type: 2}
+    - target: {fileID: 8727664316995206272, guid: 854f114f7c8a7f7479ee0ce080856ca9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 479005e1ec884bd45b36d262644738ad, type: 2}
+    - target: {fileID: 8913844822483154149, guid: 854f114f7c8a7f7479ee0ce080856ca9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 479005e1ec884bd45b36d262644738ad, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 854f114f7c8a7f7479ee0ce080856ca9, type: 3}
