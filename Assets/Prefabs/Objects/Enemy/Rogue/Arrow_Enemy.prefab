@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1488930704786573534}
   - component: {fileID: 8540606735865856069}
   - component: {fileID: 8992748302023563291}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Arrow_Enemy
   m_TagString: EnemyProjectile
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
 --- !u!114 &8992748302023563291
 MonoBehaviour:
@@ -97,7 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70c40128bc46fae4980a829f3421e80d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyOnHit: 0
+  destroyOnHit: 1
+  destroyOnFloor: 1
+  destroyOnObstacle: 1
   rigidBody: {fileID: 8540606735865856069}
   projectileCollider: {fileID: 1488930704786573534}
   explosionEffect:
