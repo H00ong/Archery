@@ -10,12 +10,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 234249553462489068, guid: 45907d5c35c706b4e8b2f9e1eb1b88e7, type: 3}
       propertyPath: m_Name
-      value: Skeleton_Mage Variant
+      value: Skeleton_Mage Orange Variant
       objectReference: {fileID: 0}
     - target: {fileID: 994328499176146068, guid: 45907d5c35c706b4e8b2f9e1eb1b88e7, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 38bd75ac464d4484fa716e40e63f9831, type: 2}
+    - target: {fileID: 2249489781883047667, guid: 45907d5c35c706b4e8b2f9e1eb1b88e7, type: 3}
+      propertyPath: enemyTags
+      value: 1073741962
+      objectReference: {fileID: 0}
     - target: {fileID: 3060458633395325507, guid: 45907d5c35c706b4e8b2f9e1eb1b88e7, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
