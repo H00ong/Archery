@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 732e16018fc06c64084bb20c12ac80af, type: 2}
     - target: {fileID: 1816902974709275259, guid: 854f114f7c8a7f7479ee0ce080856ca9, type: 3}
       propertyPath: enemyTags
-      value: 1073741962
+      value: 134217866
       objectReference: {fileID: 0}
     - target: {fileID: 2433671261222230077, guid: 854f114f7c8a7f7479ee0ce080856ca9, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'

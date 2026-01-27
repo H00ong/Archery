@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edc552795d090c74a886bb72e45e46ff, type: 3}
   m_Name: FollowMoveData
   m_EditorClassIdentifier: 
-  targetName: 12
+  targetName: 15
   targetTag: 8
   duration: 0
   defaultAttackRange: 2

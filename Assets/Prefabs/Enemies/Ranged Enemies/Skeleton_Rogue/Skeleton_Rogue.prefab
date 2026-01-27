@@ -2087,7 +2087,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDebugMode: 1
   enemyName: 9
-  enemyTags: 138
+  enemyTags: 134217866
   stats:
     baseStats:
       hp: 0

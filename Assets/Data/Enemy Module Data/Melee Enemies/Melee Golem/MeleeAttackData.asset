@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41427a690dc945e2a954c577003b751b, type: 3}
   m_Name: MeleeAttackData
   m_EditorClassIdentifier: 
-  targetName: 8
+  targetName: 12
   targetTag: 64
   attackIndex: 0
   attackMoveSpeed: 2
