@@ -55,6 +55,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 47302f49ee02b5642a5fc5ab349d15f0
+    m_Address: Assets/Prefabs/Objects/Enemy/Skeleton Mage/Enemy Beam Purple.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4a79d0a9dd688dd41995d49338d2e5a7
     m_Address: Enemy_Rock
     m_ReadOnly: 0
@@ -102,6 +107,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bb962affd651e694cb73e8140557c1a4
     m_Address: Assets/Prefabs/Objects/Enemy/Ranged Golem/Enemy_Rock Purple.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bf7e99959861ce545bb12d8344a751ab
+    m_Address: Assets/Prefabs/Objects/Enemy/Ranged Golem/Enemy_Rock Orange.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

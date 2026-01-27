@@ -40,14 +40,23 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 29eb6b6019e44d84786e1db04bcc47d2
+    m_Address: Skeleton_Mage Brown Variant
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3cafb133265818a4caea63c605124a36
     m_Address: Skeleton_Warrior
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3dd2751f2ecd847428a9f1793a4346eb
-    m_Address: Assets/Prefabs/Enemies/Ranged Enemies/Skeleton_Rogue/Skeleton_Rogue
-      Blue Variant.prefab
+    m_Address: Skeleton_Rogue Blue Variant
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 45907d5c35c706b4e8b2f9e1eb1b88e7
+    m_Address: Skeleton_Mage
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -56,14 +65,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5a755a90f16057348918a9ac2c49aff3
+    m_Address: Skeleton_Mage Sky Variant
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 68f8002251a084840b6c63c06d344682
-    m_Address: Ranged Golem_Red Variant 1
+    m_Address: Ranged Golem_Red Variant
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7292c4eb381e92840bd3c4570909e7e1
-    m_Address: Assets/Prefabs/Enemies/Ranged Enemies/Skeleton_Rogue/Skeleton_Rogue
-      Red Variant.prefab
+    m_Address: Skeleton_Rogue Red Variant
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -73,7 +86,12 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 854f114f7c8a7f7479ee0ce080856ca9
-    m_Address: Assets/Prefabs/Enemies/Ranged Enemies/Skeleton_Rogue/Skeleton_Rogue.prefab
+    m_Address: Skeleton_Rogue
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 862a46647b102a34ca1d65681947261a
+    m_Address: Skeleton_Mage Taupe Variant
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -98,8 +116,7 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a27b2c9c5cd61e941807613be40ecd78
-    m_Address: Assets/Prefabs/Enemies/Ranged Enemies/Skeleton_Rogue/Skeleton_Rogue
-      Orange Variant.prefab
+    m_Address: Skeleton_Rogue Orange Variant
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -109,14 +126,12 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a775cc3bced89f840887d7ebd0ab7d24
-    m_Address: Assets/Prefabs/Enemies/Ranged Enemies/Skeleton_Rogue/Skeleton_Rogue
-      Purple Variant.prefab
+    m_Address: Skeleton_Rogue Purple Variant
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: af7b634b80fb4444e97c0294c6073527
-    m_Address: Assets/Prefabs/Enemies/Ranged Enemies/Skeleton_Rogue/Skeleton_Rogue
-      Yellow Variant.prefab
+    m_Address: Skeleton_Rogue Yellow Variant
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -131,12 +146,22 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cef28e163999f3d40b69ae01801d6efc
-    m_Address: Ranged Golem_Green Variant
+    m_Address: Ranged Golem_Orange Variant
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cfbba88331a62c54eaead0ad89af02e5
     m_Address: Octopus_Black Variant
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d209fea7be600614a87eced2e7382e96
+    m_Address: Skeleton_Mage Green Variant
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d2280ff2866a4814a9618948ae5f72d5
+    m_Address: Skeleton_Mage Red Variant
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
