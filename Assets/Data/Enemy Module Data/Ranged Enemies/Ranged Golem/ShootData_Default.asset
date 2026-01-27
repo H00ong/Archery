@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0141f23431d4bfb875814fa1fb0bc3a, type: 3}
   m_Name: ShootData_Default
   m_EditorClassIdentifier: 
-  targetName: 10
+  targetName: 13
   targetTag: 128
   attackIndex: 0
   projectilePrefab:

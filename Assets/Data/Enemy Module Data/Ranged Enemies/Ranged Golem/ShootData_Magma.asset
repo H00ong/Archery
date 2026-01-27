@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0141f23431d4bfb875814fa1fb0bc3a, type: 3}
-  m_Name: ShootData_Poison
+  m_Name: ShootData_Magma
   m_EditorClassIdentifier: 
   targetName: 13
-  targetTag: 268435584
+  targetTag: 1073741952
   attackIndex: 0
   projectilePrefab:
-    m_AssetGUID: bb962affd651e694cb73e8140557c1a4
+    m_AssetGUID: cef28e163999f3d40b69ae01801d6efc
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   playerTargeting: 1
   firePointType: 1

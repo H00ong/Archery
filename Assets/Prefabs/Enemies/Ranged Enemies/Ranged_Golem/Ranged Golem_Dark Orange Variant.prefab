@@ -51,10 +51,10 @@ PrefabInstance:
     - target: {fileID: 2262071423289543612, guid: b570f0d2a8d8ea748b7c196abbd87898, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: b965be02b3e4f5d478d3885d40ff0979, type: 2}
+      objectReference: {fileID: 2100000, guid: a352c24db180dc540b80733adcf62308, type: 2}
     - target: {fileID: 3131708911087266783, guid: b570f0d2a8d8ea748b7c196abbd87898, type: 3}
       propertyPath: m_Name
-      value: Ranged Golem_Green Variant
+      value: Ranged Golem_Dark Orange Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3131708911087266783, guid: b570f0d2a8d8ea748b7c196abbd87898, type: 3}
       propertyPath: m_IsActive
@@ -63,14 +63,14 @@ PrefabInstance:
     - target: {fileID: 4992206928252463891, guid: b570f0d2a8d8ea748b7c196abbd87898, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: b965be02b3e4f5d478d3885d40ff0979, type: 2}
+      objectReference: {fileID: 2100000, guid: a352c24db180dc540b80733adcf62308, type: 2}
     - target: {fileID: 5705654645710747199, guid: b570f0d2a8d8ea748b7c196abbd87898, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: b965be02b3e4f5d478d3885d40ff0979, type: 2}
+      objectReference: {fileID: 2100000, guid: a352c24db180dc540b80733adcf62308, type: 2}
     - target: {fileID: 7127967749902587444, guid: b570f0d2a8d8ea748b7c196abbd87898, type: 3}
       propertyPath: enemyTags
-      value: 162
+      value: 1073741986
       objectReference: {fileID: 0}
     - target: {fileID: 7127967749902587444, guid: b570f0d2a8d8ea748b7c196abbd87898, type: 3}
       propertyPath: isDebugMode
