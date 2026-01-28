@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Enemy_Identity
+  m_EditorClassIdentifier: 
+  m_GroupName: Enemy_Identity
+  m_GUID: 9094435e949b65f4caa075ab4a3258b6
+  m_SerializeEntries:
+  - m_GUID: 732144ae1393e9740810aedca282fd38
+    m_Address: Assets/Data/Enemy Identity/Wizard/Wizard_Default.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 76bb3baa9fa1d7f48a3d2d8f25079939
+    m_Address: Assets/Data/Enemy Identity/Wizard/Wizard_Lightning.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 856c05a54378faf41860bc411561527d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 44a6c5d745ce00142ac97cbec556eca3, type: 2}
+    - {fileID: 11400000, guid: e947060f5770e604a9c5761b8709c553, type: 2}
