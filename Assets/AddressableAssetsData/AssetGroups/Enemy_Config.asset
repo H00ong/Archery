@@ -27,8 +27,20 @@ MonoBehaviour:
     m_SerializedLabels:
     - enemy_config
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 12a6b2c04ef7b1849b35340787870990
+    m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Stone Monster/PatternMoveData.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - enemy_config
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 13657810921ae4e4caf274d6ca08eb7b
     m_Address: FollowMoveData
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - enemy_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 138733ff72cfca5418741ec5559a2300
+    m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Stone Monster/ShootData_Ice.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - enemy_config
@@ -69,6 +81,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - enemy_config
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3d4f8ca32417f0e4985264406fa96a7b
+    m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Stone Monster/ShootData_Poison.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - enemy_config
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 41800d0daab685d46a9b36cc870bfa00
     m_Address: MeleeAttackData
     m_ReadOnly: 0
@@ -105,6 +123,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - enemy_config
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 530309a59c19e454c92309c311a2e1c6
+    m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Stone Monster/ShootData_Lightening.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - enemy_config
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 626ef6cb0ad1e4a47b4f88aacde0acd7
     m_Address: FollowMeleeAttackData
     m_ReadOnly: 0
@@ -125,6 +149,18 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 77ad1140b921cec418b33cb3a791865f
     m_Address: ShootData Magma
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - enemy_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7815594906f4851488d2f340f01c6270
+    m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Stone Monster/ShootData_Fire.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - enemy_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 83ef1678870b1b84fbcb1f1fa99e751f
+    m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Stone Monster/ShootData_Magma.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - enemy_config

@@ -45,6 +45,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3912c7cdacaca64488e99e9a72629ad5
+    m_Address: Assets/Prefabs/Enemies/Ranged Enemies/StoneMonster/StoneMonster Black
+      Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3cafb133265818a4caea63c605124a36
     m_Address: Skeleton_Warrior
     m_ReadOnly: 0
@@ -52,6 +58,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3dd2751f2ecd847428a9f1793a4346eb
     m_Address: Skeleton_Rogue Blue Variant
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 41d1f14e7fa69584aaa3be78c581f756
+    m_Address: Assets/Prefabs/Enemies/Ranged Enemies/StoneMonster/StoneMonster White
+      Variant.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -85,6 +97,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7c64359ba17cdca428e09dc9facbbc67
+    m_Address: Assets/Prefabs/Enemies/Ranged Enemies/StoneMonster/StoneMonster Purple
+      Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 854f114f7c8a7f7479ee0ce080856ca9
     m_Address: Skeleton_Rogue
     m_ReadOnly: 0
@@ -92,6 +110,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 862a46647b102a34ca1d65681947261a
     m_Address: Skeleton_Mage Taupe Variant
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 96ad9b4cee809fe4a9079c5f1eee379b
+    m_Address: Assets/Prefabs/Enemies/Ranged Enemies/StoneMonster/StoneMonster Yellow
+      Variant.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -172,6 +196,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d93965a1ef231a04f892ebf6b8ff8f6e
     m_Address: Octopus_Orange Variant
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d9b2b4f1e43e0e247a365fec1e5a73b4
+    m_Address: Assets/Prefabs/Enemies/Ranged Enemies/StoneMonster/StoneMonster.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

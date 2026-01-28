@@ -40,6 +40,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 32997368b0e7f584695e12e26bc10900
+    m_Address: Assets/Prefabs/Objects/Enemy/Stone Monster/Enemy Beam White.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 367d0932061dbe546bc5e3858d596211
     m_Address: Enemy_Rock Red
     m_ReadOnly: 0
