@@ -30,6 +30,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 7814427552951052453}
   - {fileID: 2340802524288264490}
   - {fileID: 4338906989580505699}
   - {fileID: 7018480095049538959}
@@ -99,7 +100,7 @@ GameObject:
   m_Layer: 0
   m_Name: PatrolPoint 1
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -161,7 +162,7 @@ GameObject:
   m_Layer: 0
   m_Name: PatrolPoint 0
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -249,11 +250,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd4d2efcf2a7f840a9165a08a21ce26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootingPos:
-  - {fileID: 2645453846451033520}
-  - {fileID: 2245518245506081458}
-  - {fileID: 3466754532264284066}
-  - {fileID: 78869988079097800}
 --- !u!1 &2938373818560235014
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,14 +276,45 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.58, y: 0.58, z: 0.58}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7607158297309556266}
   - {fileID: 2903794281013841630}
   - {fileID: 9127942212764746977}
   - {fileID: 7807681621366907319}
   m_Father: {fileID: 1972659889445586928}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2982116319065764768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7814427552951052453}
+  m_Layer: 3
+  m_Name: Block Check
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7814427552951052453
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2982116319065764768}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.662, y: 0.041, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3515408748593589817}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3513330545696200709
 GameObject:
@@ -360,8 +387,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1972659889445586928}
-  - component: {fileID: 7531416084273263446}
-  - component: {fileID: -219152325267650582}
+  - component: {fileID: 2022076052495735976}
+  - component: {fileID: 3849453750142846022}
+  - component: {fileID: 5007890415694791521}
   m_Layer: 0
   m_Name: StoneMonster
   m_TagString: Enemy
@@ -387,7 +415,7 @@ Transform:
   - {fileID: 4058108581432231444}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &7531416084273263446
+--- !u!114 &2022076052495735976
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -396,27 +424,51 @@ MonoBehaviour:
   m_GameObject: {fileID: 3815456278065190502}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 021a98bc1a8ac734ca74f20aae56d30a, type: 3}
+  m_Script: {fileID: 11500000, guid: c89b3cc84aca5e74ba9c4548d1dda437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyType: 1
-  enemyName: 0
-  debugMode: 1
-  defaultIdleTime: 1
-  defaultMoveTime: 4
-  defaultMoveSpeed: 1.5
+  isDebugMode: 1
+  enemyName: 17
+  enemyTags: 67109010
+  stats:
+    baseStats:
+      hp: 0
+      atk: 0
+      moveSpeed: 0
+    shooting:
+      projectileAtk: 0
+      projectileSpeed: 0
+    flyingShooting:
+      flyingProjectileAtk: 0
+      flyingProjectileSpeed: 0
+  brain: {fileID: 11400000, guid: 7c79f1d0e8102a445a0479c0af5d4673, type: 2}
+  idle: {fileID: 0}
+  move: {fileID: 0}
+  hurt: {fileID: 0}
+  die: {fileID: 0}
+  health: {fileID: 5007890415694791521}
+  anim: {fileID: 3211433554816413568}
+  rigidBody: {fileID: 0}
+  enemyCollider: {fileID: 6379533648732626422}
+  enemyReference: {fileID: 0}
+  defaultIdleTime: 2
+  expItemPrefab:
+    m_AssetGUID: 4c0a5b1487abe67489f755abb9376c1f
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
   defaultAttackSpeed: 1
-  projectilePrefab: {fileID: 4878930140703855775, guid: 01167460ca7c11b47970a88125f4698e, type: 3}
-  defaultProjectileSpeed: 10
-  defaultRangedDamage: 1
-  defaultAttackRange: 0
-  defaultPickDirectionTime: 0
-  patrolPoints:
-  - {fileID: 7607158297309556266}
-  - {fileID: 2903794281013841630}
-  - {fileID: 9127942212764746977}
-  - {fileID: 7807681621366907319}
---- !u!114 &-219152325267650582
+  defaultAtk: 0
+  blockCheck: {fileID: 7814427552951052453}
+  sphereCastRadius: 0.4
+  castDistance: 0.5
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  lastPlayerPosition: {x: 0, y: 0, z: 0}
+  player: {fileID: 0}
+--- !u!114 &3849453750142846022
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -425,7 +477,32 @@ MonoBehaviour:
   m_GameObject: {fileID: 3815456278065190502}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2da94b494a3ab7940b4757f39b11b644, type: 3}
+  m_Script: {fileID: 11500000, guid: 07b625bc7f25b5d4d81805db481b36c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointGroups:
+  - type: 1
+    points:
+    - {fileID: 2645453846451033520}
+    - {fileID: 2245518245506081458}
+    - {fileID: 3466754532264284066}
+    - {fileID: 78869988079097800}
+  - type: 2
+    points:
+    - {fileID: 7607158297309556266}
+    - {fileID: 2903794281013841630}
+    - {fileID: 9127942212764746977}
+    - {fileID: 7807681621366907319}
+--- !u!114 &5007890415694791521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3815456278065190502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff5010d84058cff438cba248dff55dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
@@ -505,7 +582,7 @@ GameObject:
   m_Layer: 0
   m_Name: PatrolPoint 2
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -610,7 +687,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 76efd4c3dc867d841b0a4c3eccc81a15, type: 2}
+  - {fileID: 2100000, guid: 67a5afbcfc841054b91140f2ea8df858, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -760,7 +837,7 @@ GameObject:
   m_Layer: 0
   m_Name: PatrolPoint 3
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
