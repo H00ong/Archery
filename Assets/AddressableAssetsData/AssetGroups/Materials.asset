@@ -15,31 +15,6 @@ MonoBehaviour:
   m_GroupName: Materials
   m_GUID: 00d7c4dcd5e1ff244b34552c6b87a685
   m_SerializeEntries:
-  - m_GUID: 04d0f020002082e4db140d8c0954e83e
-    m_Address: cfxr spikes impact add
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 38bd75ac464d4484fa716e40e63f9831
-    m_Address: Mini Simple Characters Mat Yellow Bones
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4bab0f95134663b4c9c3dd73939c0ff1
-    m_Address: Circle
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 5b14a408ea91d4c47beba346957a3d99
-    m_Address: Polyart_Default
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 616a777eb757ff14c82a79feeb35d9b1
-    m_Address: Smoke26
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 69752415b0a5f5e47a46ac173e43f5b0
     m_Address: Silver
     m_ReadOnly: 0
@@ -47,16 +22,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 751a831d890a4b84ebf8fc262f55d1a9
     m_Address: Player_Magic Beam
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7840d900dc0a4ed4dbcd26e23f064dd8
-    m_Address: cfxr smoke cloud x4 ab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 79d0c47029980c04caed1c1327f99c17
-    m_Address: cfxr spikes impact ab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -70,78 +35,13 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 90c05ba253a9c7d45b4b4c0402d4f3d3
-    m_Address: PolyartStandard 1
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9c4d2e4145dad3f4785bb79c88089dcf
-    m_Address: Mini Simple Characters Mat Red Eyes
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a81df4963508f8c4e9c854c919c93b67
-    m_Address: cfxr proc ring hdr ab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b56ee68f36d76a648a742b6874f4d4a4
-    m_Address: MagicCircle2
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c023584165e4c574bb94d8bd3b0976f5
-    m_Address: PolyArtStandardMaterial
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c8643416e437c194e8cbf167aa07dc93
     m_Address: Venom
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ca32cada060cf774dbd29b2f3410086a
-    m_Address: Mat_Dungeon
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: dbc2ae6c61d51b04ea1a55fbeff6341e
-    m_Address: cfxr stretch trait ab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e1f296a4afe50994485976eb211959b1
     m_Address: Enemy_Fire Beam
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e546d2d7171981b468cf29388d902e99
-    m_Address: Point
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f1724eecaf9d4e7e93cc07cfcb6b4b97
-    m_Address: PolyartDefault
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f5f7d4d2b3764ec4aa59441ec6c2697b
-    m_Address: PolyartDefault
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: fdc850b0e6e352849bd7542cffd76134
-    m_Address: URP - Giant01_Texture04_Flat
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: fe8d615cbaec71545b42f9163243b02d
-    m_Address: DistortionPoint
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ffd19ad2f09725f4c88fd48c23bd0f1b
-    m_Address: Mini Simple Characters Demo Mat tertiary
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
