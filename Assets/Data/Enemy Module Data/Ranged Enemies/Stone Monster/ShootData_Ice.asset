@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0141f23431d4bfb875814fa1fb0bc3a, type: 3}
+  m_Name: ShootData_Ice
+  m_EditorClassIdentifier: 
+  targetName: 17
+  targetTag: 134217856
+  attackIndex: 0
+  projectilePrefab:
+    m_AssetGUID: 32997368b0e7f584695e12e26bc10900
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  playerTargeting: 0
+  firePointType: 1
