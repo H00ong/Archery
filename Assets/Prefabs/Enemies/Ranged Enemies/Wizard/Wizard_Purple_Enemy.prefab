@@ -106,15 +106,16 @@ GameObject:
   - component: {fileID: 8522936793963785310}
   - component: {fileID: 4526319670209505715}
   - component: {fileID: 8705479432085156787}
-  - component: {fileID: 5130291888068584174}
-  - component: {fileID: -456099222653342622}
+  - component: {fileID: 281678182398032225}
+  - component: {fileID: 1348164910137312985}
+  - component: {fileID: 3476219967002177121}
   m_Layer: 3
   m_Name: Wizard_Purple_Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8522936793963785310
 Transform:
   m_ObjectHideFlags: 0
@@ -179,7 +180,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.3834178, y: 1.248042, z: 1}
   m_Center: {x: 0, y: 0.655979, z: 0}
---- !u!114 &5130291888068584174
+--- !u!114 &281678182398032225
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -188,25 +189,51 @@ MonoBehaviour:
   m_GameObject: {fileID: 1577555699710254621}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 021a98bc1a8ac734ca74f20aae56d30a, type: 3}
+  m_Script: {fileID: 11500000, guid: c89b3cc84aca5e74ba9c4548d1dda437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyType: 3
-  enemyName: 0
-  debugMode: 1
-  defaultIdleTime: 1
-  defaultMoveTime: 2
-  defaultMoveSpeed: 1
+  isDebugMode: 1
+  enemyName: 11
+  enemyTags: 162
+  stats:
+    baseStats:
+      hp: 0
+      atk: 0
+      moveSpeed: 0
+    shooting:
+      projectileAtk: 0
+      projectileSpeed: 0
+    flyingShooting:
+      flyingProjectileAtk: 0
+      flyingProjectileSpeed: 0
+  brain: {fileID: 11400000, guid: 7c79f1d0e8102a445a0479c0af5d4673, type: 2}
+  idle: {fileID: 0}
+  move: {fileID: 0}
+  hurt: {fileID: 0}
+  die: {fileID: 0}
+  health: {fileID: 3476219967002177121}
+  anim: {fileID: 7177949410518404586}
+  rigidBody: {fileID: 4526319670209505715}
+  enemyCollider: {fileID: 8705479432085156787}
+  enemyReference: {fileID: 0}
+  defaultIdleTime: 1.5
+  expItemPrefab:
+    m_AssetGUID: 4c0a5b1487abe67489f755abb9376c1f
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 1
   defaultAttackSpeed: 1
-  projectilePrefab: {fileID: 4878930140703855775, guid: 01167460ca7c11b47970a88125f4698e, type: 3}
-  defaultProjectileSpeed: 10
-  defaultProjectileLifetime: 10
-  defaultRangedDamage: 1
-  defaultMeleeDamage: 1
-  defaultAttackRange: 0
-  defaultPickDirectionTime: 7
-  patrolPoints: []
---- !u!114 &-456099222653342622
+  defaultAtk: 0
+  blockCheck: {fileID: 6599764215932895976}
+  sphereCastRadius: 0.4
+  castDistance: 0.5
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  lastPlayerPosition: {x: 0, y: 0, z: 0}
+  player: {fileID: 0}
+--- !u!114 &1348164910137312985
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -215,7 +242,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1577555699710254621}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2da94b494a3ab7940b4757f39b11b644, type: 3}
+  m_Script: {fileID: 11500000, guid: 07b625bc7f25b5d4d81805db481b36c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointGroups:
+  - type: 1
+    points:
+    - {fileID: 5420454986262859055}
+--- !u!114 &3476219967002177121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577555699710254621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff5010d84058cff438cba248dff55dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
@@ -319,8 +362,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd4d2efcf2a7f840a9165a08a21ce26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootingPos:
-  - {fileID: 5420454986262859055}
+--- !u!1 &1735203421330282080
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6599764215932895976}
+  m_Layer: 0
+  m_Name: Block Check
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6599764215932895976
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735203421330282080}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -35, y: 45.5, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8551829882527989541}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2129217642426457162
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,6 +520,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 6599764215932895976}
   - {fileID: 3270848617631034978}
   - {fileID: 2625662212812310925}
   - {fileID: 9106868737053614845}

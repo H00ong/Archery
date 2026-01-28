@@ -8,9 +8,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 281678182398032225, guid: 8374975c91bac724a984a2e58449af64, type: 3}
+      propertyPath: enemyTags
+      value: 134217890
+      objectReference: {fileID: 0}
     - target: {fileID: 1577555699710254621, guid: 8374975c91bac724a984a2e58449af64, type: 3}
       propertyPath: m_Name
-      value: Wizard_Black_Enemy Variant
+      value: Wizard_Blue_Enemy Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5844825238864412219, guid: 8374975c91bac724a984a2e58449af64, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'

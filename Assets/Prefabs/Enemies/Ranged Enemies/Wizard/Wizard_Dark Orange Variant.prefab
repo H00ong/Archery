@@ -8,14 +8,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 281678182398032225, guid: 8374975c91bac724a984a2e58449af64, type: 3}
+      propertyPath: enemyTags
+      value: 1073741986
+      objectReference: {fileID: 0}
     - target: {fileID: 1577555699710254621, guid: 8374975c91bac724a984a2e58449af64, type: 3}
       propertyPath: m_Name
-      value: Wizard_White_Enemy Variant
+      value: Wizard_Dark Orange Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5844825238864412219, guid: 8374975c91bac724a984a2e58449af64, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 1d1befba4016a73488f734a8c31154af, type: 2}
+      objectReference: {fileID: 2100000, guid: 51091f27bdacc784fa0d7a98c64e2590, type: 2}
     - target: {fileID: 8522936793963785310, guid: 8374975c91bac724a984a2e58449af64, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.58
