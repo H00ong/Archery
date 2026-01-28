@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c8fb38413c82ac4f88d0e401552a0ea, type: 3}
+  m_Name: Wizard_Lightning
+  m_EditorClassIdentifier: 
+  Prefab:
+    m_AssetGUID: 8374975c91bac724a984a2e58449af64
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 1
+  Tag: 536871074
+  ObjectMat: {fileID: 2100000, guid: f70b961d516660f4e830b7a7a12b6781, type: 2}
+  AccessoryMat: {fileID: 0}
