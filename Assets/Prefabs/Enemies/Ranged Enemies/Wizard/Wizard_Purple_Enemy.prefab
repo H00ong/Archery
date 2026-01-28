@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 281678182398032225}
   - component: {fileID: 1348164910137312985}
   - component: {fileID: 3476219967002177121}
+  - component: {fileID: -4671891932017279617}
   m_Layer: 3
   m_Name: Wizard_Purple_Enemy
   m_TagString: Enemy
@@ -216,6 +217,7 @@ MonoBehaviour:
   rigidBody: {fileID: 4526319670209505715}
   enemyCollider: {fileID: 8705479432085156787}
   enemyReference: {fileID: 0}
+  enemyVisual: {fileID: 0}
   defaultIdleTime: 1.5
   expItemPrefab:
     m_AssetGUID: 4c0a5b1487abe67489f755abb9376c1f
@@ -262,6 +264,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+--- !u!114 &-4671891932017279617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577555699710254621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b277374b5931e9441be028e288087ac2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectRenderers:
+  - {fileID: 5844825238864412219}
+  accessoryRenderers: []
 --- !u!1 &1589188370385453152
 GameObject:
   m_ObjectHideFlags: 0
