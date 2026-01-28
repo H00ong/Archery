@@ -1181,7 +1181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemies: []
-  moduleConfigLabel: enemy_config
+  moduleConfigLabel: enemy_module
 --- !u!1 &1279177973
 GameObject:
   m_ObjectHideFlags: 0
