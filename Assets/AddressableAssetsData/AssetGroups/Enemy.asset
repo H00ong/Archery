@@ -56,6 +56,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3ccfc559cb548564da803846f1d7a917
+    m_Address: Assets/Prefabs/Enemies/Ranged Enemies/Wizard/Wizard_Blue_Enemy Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3dd2751f2ecd847428a9f1793a4346eb
     m_Address: Skeleton_Rogue Blue Variant
     m_ReadOnly: 0
@@ -69,6 +74,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 45907d5c35c706b4e8b2f9e1eb1b88e7
     m_Address: Skeleton_Mage
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4fcd0ad79d208cf40889135c4ed565ba
+    m_Address: Assets/Prefabs/Enemies/Ranged Enemies/Wizard/Wizard_Red_Enemy Variant.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -87,6 +97,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6d14c1ed8f92fc7439cd573b07cbe604
+    m_Address: Assets/Prefabs/Enemies/Ranged Enemies/Wizard/Wizard_Dark Orange.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7292c4eb381e92840bd3c4570909e7e1
     m_Address: Skeleton_Rogue Red Variant
     m_ReadOnly: 0
@@ -100,6 +115,11 @@ MonoBehaviour:
   - m_GUID: 7c64359ba17cdca428e09dc9facbbc67
     m_Address: Assets/Prefabs/Enemies/Ranged Enemies/StoneMonster/StoneMonster Purple
       Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8374975c91bac724a984a2e58449af64
+    m_Address: Assets/Prefabs/Enemies/Ranged Enemies/Wizard/Wizard_Purple_Enemy.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -144,6 +164,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a3b94776ee427d3458e53f0370481dc4
+    m_Address: Assets/Prefabs/Enemies/Ranged Enemies/Wizard/Wizard_Black_Enemy Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a5bd91d07df0bd34498069c84797007c
     m_Address: Cactus
     m_ReadOnly: 0
@@ -161,6 +186,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b570f0d2a8d8ea748b7c196abbd87898
     m_Address: Ranged Golem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bb497ae07c8674c4b9a715b46c1ef504
+    m_Address: Assets/Prefabs/Enemies/Ranged Enemies/Wizard/Wizard_Green_Enemy Variant.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

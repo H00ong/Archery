@@ -21,8 +21,20 @@ MonoBehaviour:
     m_SerializedLabels:
     - enemy_config
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 037cb5069c438b846a4226444cba1afb
+    m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Wizard/RandomMoveData.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - enemy_config
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 07cf4b470e264d643a5e168945b5778e
     m_Address: ShootData
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - enemy_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0e36af931d879124983dd84db8239f82
+    m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Wizard/ShootData_Magma.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - enemy_config
@@ -47,6 +59,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 14370eedd9c265e438537bb897658520
     m_Address: ShootData_lightening
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - enemy_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1814e7060fb9c564ea69354841bc41a5
+    m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Wizard/ShootData_Default.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - enemy_config
@@ -77,6 +95,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 305c2654e751fa04184f9cfd7e3c32c2
     m_Address: FollowMoveData
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - enemy_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3c9c739c504465a42a34abac62afcab3
+    m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Wizard/ShootData_Fire.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - enemy_config
@@ -159,6 +183,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - enemy_config
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 82693eaabed56274d8f0ed75bccc3d0c
+    m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Wizard/ShootData_Lightning.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - enemy_config
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 83ef1678870b1b84fbcb1f1fa99e751f
     m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Stone Monster/ShootData_Magma.asset
     m_ReadOnly: 0
@@ -191,6 +221,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a84dde6778542ef498916f86bc288e3c
     m_Address: ShootData
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - enemy_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aac36dc0bfc2bc34cbf5aac40a4adc80
+    m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Wizard/ShootData_Poison.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - enemy_config
@@ -251,6 +287,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c5f0c32972792f040b329ba651770a0b
     m_Address: ShootData
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - enemy_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c7a16306cab6dad4fa674fcfe0359b68
+    m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Wizard/ShootData_Ice.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - enemy_config
