@@ -279,6 +279,12 @@ MonoBehaviour:
   objectRenderers:
   - {fileID: 5844825238864412219}
   accessoryRenderers: []
+  fireEmissionColor: {r: 0.6981132, g: 0.2855751, b: 0.1040583, a: 2}
+  poisonEmissionColor: {r: 0.75, g: 0, b: 1.2, a: 1.5}
+  iceEmissionColor: {r: 0.45000002, g: 1.2, b: 1.5, a: 1.5}
+  lightningEmissionColor: {r: 2.5, g: 2.5, b: 0.5, a: 2.5}
+  magmaEmissionColor: {r: 3, g: 1.5, b: 0, a: 3}
+  darkEmissionColor: {r: 0.052525494, g: 0, b: 0.3433962, a: 1.5}
 --- !u!1 &1589188370385453152
 GameObject:
   m_ObjectHideFlags: 0

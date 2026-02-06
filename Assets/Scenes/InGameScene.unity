@@ -840,7 +840,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd5da75e0f6b76646ad90331457e6e72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugMode: 0
+  debugMode: 1
   playerProjectile:
     m_AssetGUID: 5f3ad0a704bf00847a8b0691126928c1
     m_SubObjectName: 
@@ -852,7 +852,7 @@ MonoBehaviour:
   defaultAttackSpeed: 1
   defaultProjectileSpeed: 20
   defaltProjectileLifetime: 10
-  defaultPlayerAtk: 0
+  defaultPlayerAtk: 1
   multishotTimeInterval: 0.05
 --- !u!136 &845097752
 CapsuleCollider:
@@ -1393,7 +1393,7 @@ MonoBehaviour:
   _orbPivot: {fileID: 253699470}
   _label: orb_config
   _defaultDistance: 2.5
-  _orbDamage: 10
+  _orbDamage: 1
 --- !u!1 &1782300501
 GameObject:
   m_ObjectHideFlags: 0
