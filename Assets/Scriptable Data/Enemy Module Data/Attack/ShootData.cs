@@ -20,21 +20,7 @@ public class ShootData : AttackModuleData
 
     public EffectType GetEffectType()
     {
-        EnemyTag attributeTags = targetTag & EnemyTag.AttributeMask;
-        EffectType result = EffectType.Normal;
-
-        if (Utils.HasFlag(attributeTags, EnemyTag.Fire))
-            result |= EffectType.Fire;
-        if (Utils.HasFlag(attributeTags, EnemyTag.Ice))
-            result |= EffectType.Ice;
-        if (Utils.HasFlag(attributeTags, EnemyTag.Poison))
-            result |= EffectType.Poison;
-        if (Utils.HasFlag(attributeTags, EnemyTag.Lightning))
-            result |= EffectType.Lightning;
-        if (Utils.HasFlag(attributeTags, EnemyTag.Magma))
-            result |= EffectType.Magma;
-
-        return result;
+        return EnemyTagUtil.ToEffectType(targetTag);
     }
 
     private void OnValidate()
