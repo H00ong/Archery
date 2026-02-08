@@ -56,5 +56,10 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Archery.slnx"
+    "dotnet.defaultSolution": "Archery.slnx",
+    "editor.formatOnType": true,
+    "editor.formatOnSave": true,
+    "[csharp]": {
+        "editor.defaultFormatter": "csharpier.csharpier-vscode"
+    }
 }
