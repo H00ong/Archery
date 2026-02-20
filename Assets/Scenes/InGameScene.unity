@@ -968,11 +968,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseMaxHP: 100
   baseAttackPower: 1
-  baseMoveSpeed: 5
-  baseArmor: 0
-  baseMagicResistance: 0
+  baseMoveSpeed: 4
+  baseArmor: 10
+  baseMagicResistance: 1
   baseAttackSpeed: 1
-  baseProjectileSpeed: 10
+  baseProjectileSpeed: 20
   attackEffectType: 1
 --- !u!1 &1006753236
 GameObject:
