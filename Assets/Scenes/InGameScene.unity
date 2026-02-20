@@ -196,7 +196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   addressableAssetLabel: barrel_config
   barrelGenerateTime: 5
-  atk: 10
+  meteorDamageModifier: 1
   yOffset: 1
 --- !u!1 &250996812
 GameObject:
@@ -775,6 +775,7 @@ GameObject:
   - component: {fileID: 845097755}
   - component: {fileID: 845097756}
   - component: {fileID: 845097758}
+  - component: {fileID: 845097759}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -811,7 +812,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 845097757}
-  defaultMoveSpeed: 5
   sphereCastRadius: 0.31
   obstacleLayer:
     serializedVersion: 2
@@ -849,10 +849,7 @@ MonoBehaviour:
     m_EditorAssetChanged: 0
   projectileParent: {fileID: 769062535}
   shootingPos: {fileID: 1094397635}
-  defaultAttackSpeed: 1
-  defaultProjectileSpeed: 20
   defaltProjectileLifetime: 10
-  defaultPlayerAtk: 1
   multishotTimeInterval: 0.05
 --- !u!136 &845097752
 CapsuleCollider:
@@ -957,6 +954,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+--- !u!114 &845097759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845097745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dc1ce72720165d46b36a91af3f4ee76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseMaxHP: 100
+  baseAttackPower: 1
+  baseMoveSpeed: 5
+  baseArmor: 0
+  baseMagicResistance: 0
+  baseAttackSpeed: 1
+  baseProjectileSpeed: 10
+  attackEffectType: 1
 --- !u!1 &1006753236
 GameObject:
   m_ObjectHideFlags: 0
@@ -1393,7 +1410,8 @@ MonoBehaviour:
   _orbPivot: {fileID: 253699470}
   _label: orb_config
   _defaultDistance: 2.5
-  _orbDamage: 1
+  _orbDamageModifier: 1
+  _defaultRotateSpeed: 400
 --- !u!1 &1782300501
 GameObject:
   m_ObjectHideFlags: 0
