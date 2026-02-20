@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f70d0a81870a354f80984e6c60d072f, type: 3}
   m_Name: IceOrb
   m_EditorClassIdentifier: 
-  orbType: 3
+  effectType: 8
   orb:
     m_AssetGUID: 551640079d8749f4799e50630cfa7f80
     m_SubObjectName: 
