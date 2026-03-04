@@ -15,6 +15,11 @@ MonoBehaviour:
   m_GroupName: Materials
   m_GUID: 00d7c4dcd5e1ff244b34552c6b87a685
   m_SerializeEntries:
+  - m_GUID: 070cf89826d497a4fba5ac744f4bf927
+    m_Address: Assets/Prefabs/Player/Player Container.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 69752415b0a5f5e47a46ac173e43f5b0
     m_Address: Silver
     m_ReadOnly: 0
