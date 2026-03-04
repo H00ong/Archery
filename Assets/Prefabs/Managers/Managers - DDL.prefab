@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 4230263445085000385}
   - component: {fileID: 7942274392144273177}
   - component: {fileID: 5838998061893342135}
+  - component: {fileID: 4057547474843920445}
   m_Layer: 0
   m_Name: Managers - DDL
   m_TagString: Untagged
@@ -60,7 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 0}
-  MapManager: {fileID: 0}
+  MapManager: {fileID: 4376822887146551356}
   StageManager: {fileID: 0}
   SoundManager: {fileID: 2139839742529779621}
   UIManager: {fileID: 8929094866089535935}
@@ -237,7 +238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _label: orb_config
-  _defaultDistance: 0
+  _defaultDistance: 2
   _orbDamageModifier: 1
   _defaultRotateSpeed: 40
 --- !u!114 &5838998061893342135
@@ -256,6 +257,19 @@ MonoBehaviour:
   barrelGenerateTime: 5
   meteorDamageModifier: 1
   meteorYOffset: 1
+--- !u!114 &4057547474843920445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426551961764907274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf9fb9fe93d3cc2469cd9060d441a398, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillConfigLabel: skill_config
 --- !u!1 &2148582762021574990
 GameObject:
   m_ObjectHideFlags: 0

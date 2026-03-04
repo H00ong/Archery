@@ -119,6 +119,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &351104952 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4565162978709851063, guid: 415f5d4876d37bb4fb6dbab91233626e, type: 3}
+  m_PrefabInstance: {fileID: 5631907368243006769}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73129c64c33b4bb45857dde0b2cfbfb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &659576313
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -388,6 +399,7 @@ GameObject:
   - component: {fileID: 1006753238}
   - component: {fileID: 1006753237}
   - component: {fileID: 1006753240}
+  - component: {fileID: 1006753241}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -513,6 +525,19 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &1006753241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006753236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e1b93912c396354e932e1f4878f529c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: {x: 5.770462, y: 27.96, z: -28.43}
 --- !u!1 &1279177973
 GameObject:
   m_ObjectHideFlags: 0
@@ -768,17 +793,6 @@ Transform:
   - {fileID: 659576314}
   m_Father: {fileID: 1279177977}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2136971830 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4376822887146551356, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
-  m_PrefabInstance: {fileID: 7202632381855005623}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcc80a5fa644947479cc8b7ce0605035, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &157378092749086775
 GameObject:
   m_ObjectHideFlags: 0
@@ -1029,9 +1043,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2805369977755260655, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
-      propertyPath: MapManager
+      propertyPath: StageManager
       value: 
-      objectReference: {fileID: 2136971830}
+      objectReference: {fileID: 351104952}
     - target: {fileID: 2805369977755260655, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
       propertyPath: PlayerManager
       value: 
@@ -1040,10 +1054,6 @@ PrefabInstance:
       propertyPath: playerManager
       value: 
       objectReference: {fileID: 845097757}
-    - target: {fileID: 7942274392144273177, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
-      propertyPath: _defaultDistance
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
