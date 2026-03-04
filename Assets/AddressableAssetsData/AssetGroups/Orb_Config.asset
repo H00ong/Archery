@@ -22,7 +22,7 @@ MonoBehaviour:
     - orb_config
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: eb21ef8b5cf82b042970f7d243795820
-    m_Address: Venom Orb
+    m_Address: PoisonOrb
     m_ReadOnly: 0
     m_SerializedLabels:
     - orb_config

@@ -59,7 +59,11 @@
     "dotnet.defaultSolution": "Archery.slnx",
     "editor.formatOnType": true,
     "editor.formatOnSave": true,
+    "editor.mouseWheelZoom": true,
     "[csharp]": {
         "editor.defaultFormatter": "csharpier.csharpier-vscode"
+    },
+    "[json]": {
+        "editor.formatOnSave": false
     }
 }

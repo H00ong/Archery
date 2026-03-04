@@ -6,7 +6,7 @@ using Players.SkillModule;
 using UnityEditor;
 using UnityEngine.EventSystems;
 
-[CreateAssetMenu(fileName = "PlayerSkillScriptable", menuName = "Scriptable Objects/PlayerSkillScriptable")]
+[CreateAssetMenu(fileName = "PlayerSkillScriptable", menuName = "PlayerSkill")]
 public class SkillDefinition : ScriptableObject
 {
     public PlayerSkillId id;

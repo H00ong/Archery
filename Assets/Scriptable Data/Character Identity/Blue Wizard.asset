@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53694e3761a9c1e4b842f0b7deba9db3, type: 3}
+  m_Name: Blue Wizard
+  m_EditorClassIdentifier: 
+  characterName: 0
+  characterPrefab:
+    m_AssetGUID: 93ef7c3672bd64b4ab62e66e4f5c3675
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  projectilePrefab:
+    m_AssetGUID: 5f3ad0a704bf00847a8b0691126928c1
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 1
+  baseStat:
+    maxHP: 100
+    attackPower: 10
+    moveSpeed: 3
+    armor: 10
+    magicResistance: 2
+    attackSpeed: 1
+    projectileSpeed: 15
+    attackEffectType: 1
