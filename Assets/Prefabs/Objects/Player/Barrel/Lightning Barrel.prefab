@@ -134,6 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _lifeTime: 20
+  _type: 16
 --- !u!135 &-1453074973312743604
 SphereCollider:
   m_ObjectHideFlags: 0
