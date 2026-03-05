@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26b1186b63cc2fd4eb5c170749bbf4c5, type: 3}
   m_Name: IceBarrel
   m_EditorClassIdentifier: 
-  type: 3
+  type: 8
   barrelPrefab:
     m_AssetGUID: 20750940ed579ce49a717535db5cb3cf
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   meteorPrefab:
     m_AssetGUID: aaa982682e8d5e34fb9fbb0a6a14c117
     m_SubObjectName: 
