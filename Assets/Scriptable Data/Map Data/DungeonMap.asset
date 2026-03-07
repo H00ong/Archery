@@ -19,14 +19,12 @@ MonoBehaviour:
     m_SubObjectType: 
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
-  enemyIdentityList:
-  - {fileID: 11400000, guid: 76bb3baa9fa1d7f48a3d2d8f25079939, type: 2}
-  bossIdentityList: []
-  enemyList: []
-  bossList: []
   bossMap:
     m_AssetGUID: f9f45ba06ea60e147bcd620308a7a820
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
+  enemyIdentityList:
+  - {fileID: 11400000, guid: 76bb3baa9fa1d7f48a3d2d8f25079939, type: 2}
+  bossIdentityList: []

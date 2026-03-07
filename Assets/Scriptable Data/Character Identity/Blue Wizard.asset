@@ -33,4 +33,4 @@ MonoBehaviour:
     magicResistance: 2
     attackSpeed: 1
     projectileSpeed: 30
-    attackEffectType: 8
+    attackEffectType: 1
