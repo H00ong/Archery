@@ -19,7 +19,6 @@ GameObject:
   - component: {fileID: 5094469895600898340}
   - component: {fileID: 2453641308444037407}
   - component: {fileID: 8894359464752876839}
-  - component: {fileID: 6616652035447550836}
   - component: {fileID: 4376822887146551356}
   - component: {fileID: 4230263445085000385}
   - component: {fileID: 7942274392144273177}
@@ -60,15 +59,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de98c68f723308441b440c2f25fa0d8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerManager: {fileID: 0}
-  MapManager: {fileID: 4376822887146551356}
-  StageManager: {fileID: 0}
-  SoundManager: {fileID: 2139839742529779621}
-  UIManager: {fileID: 8929094866089535935}
-  PlayerManager: {fileID: 0}
-  DataManager: {fileID: 669232086221643465}
-  SaveManager: {fileID: 4797467311159358218}
-  InputManager: {fileID: 6720549801405957016}
 --- !u!114 &2139839742529779621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,6 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94110b43b76e81a4ba9a169a5f748d29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillChoicePopupPrefab: {fileID: 4721568526014840684, guid: 2583603b9c6d43e4a969c5d2064ad864, type: 3}
 --- !u!114 &669232086221643465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,18 +173,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3d92c1ba426a8c4aa718ee16f415b09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &6616652035447550836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 426551961764907274}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73129c64c33b4bb45857dde0b2cfbfb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &4376822887146551356
