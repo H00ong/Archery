@@ -92193,6 +92193,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6173569358697885391, guid: 8a89041e537b429448668d1daa0fed82, type: 3}
+      propertyPath: m_Size.y
+      value: 2.4005888
+      objectReference: {fileID: 0}
+    - target: {fileID: 6173569358697885391, guid: 8a89041e537b429448668d1daa0fed82, type: 3}
+      propertyPath: m_Size.z
+      value: 1.0068488
+      objectReference: {fileID: 0}
+    - target: {fileID: 6173569358697885391, guid: 8a89041e537b429448668d1daa0fed82, type: 3}
+      propertyPath: m_Center.x
+      value: -0.07962322
+      objectReference: {fileID: 0}
+    - target: {fileID: 6173569358697885391, guid: 8a89041e537b429448668d1daa0fed82, type: 3}
+      propertyPath: m_Center.y
+      value: -0.1244584
+      objectReference: {fileID: 0}
+    - target: {fileID: 6173569358697885391, guid: 8a89041e537b429448668d1daa0fed82, type: 3}
+      propertyPath: m_Center.z
+      value: 0.29307202
+      objectReference: {fileID: 0}
+    - target: {fileID: 8974083024930483507, guid: 8a89041e537b429448668d1daa0fed82, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
