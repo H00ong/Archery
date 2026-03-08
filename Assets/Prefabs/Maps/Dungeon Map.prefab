@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6170596009922105096}
   m_Layer: 6
   m_Name: Column_Half (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -86817,7 +86817,7 @@ GameObject:
   - component: {fileID: 2683169492213820922}
   m_Layer: 6
   m_Name: Column_Half
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
