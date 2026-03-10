@@ -25,6 +25,16 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8a86e88414659254ca19d70daf2e1971
+    m_Address: Assets/Scriptable Data/Enemy Identity/Octopus/Octopus-Default.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: be355f4d31bf08a4f85b1db7e8f0834b
+    m_Address: Assets/Scriptable Data/Enemy Identity/Octopus/Octopus-Fire.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 856c05a54378faf41860bc411561527d, type: 2}
   m_SchemaSet:
