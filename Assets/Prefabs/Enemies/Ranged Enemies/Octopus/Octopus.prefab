@@ -1712,7 +1712,7 @@ GameObject:
   - component: {fileID: 1143612434151089796}
   - component: {fileID: 6761727978524723400}
   - component: {fileID: 1872485494706790530}
-  - component: {fileID: 4825159722481791202}
+  - component: {fileID: 3735243423549721621}
   m_Layer: 0
   m_Name: Octopus
   m_TagString: Enemy
@@ -1789,7 +1789,7 @@ MonoBehaviour:
   rigidBody: {fileID: 2535514842468952447}
   enemyCollider: {fileID: 7401207874667788413}
   enemyReference: {fileID: 6761727978524723400}
-  enemyVisual: {fileID: 4825159722481791202}
+  enemyVisual: {fileID: 0}
   defaultIdleTime: 2
   expItemPrefab:
     m_AssetGUID: 4c0a5b1487abe67489f755abb9376c1f
@@ -1832,7 +1832,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
---- !u!114 &4825159722481791202
+--- !u!114 &3735243423549721621
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1847,12 +1847,13 @@ MonoBehaviour:
   objectRenderers:
   - {fileID: 376870213440075830}
   accessoryRenderers: []
-  fireEmissionColor: {r: 2, g: 0.6, b: 0, a: 2}
-  poisonEmissionColor: {r: 0.75, g: 0, b: 1.2, a: 1.5}
-  iceEmissionColor: {r: 0.45000002, g: 1.2, b: 1.5, a: 1.5}
-  lightningEmissionColor: {r: 2.5, g: 2.5, b: 0.5, a: 2.5}
-  magmaEmissionColor: {r: 3, g: 1.5, b: 0, a: 3}
-  darkEmissionColor: {r: 0.3, g: 0, b: 0.45000002, a: 1.5}
+  fireEmissionColor: {r: 0.20784314, g: 0.03529412, b: 0, a: 1}
+  poisonEmissionColor: {r: 0.05882353, g: 0, b: 0.15294118, a: 1}
+  iceEmissionColor: {r: 0, g: 0.0627451, b: 0.15294118, a: 1}
+  lightningEmissionColor: {r: 0.09411765, g: 0.05882353, b: 0, a: 1}
+  magmaEmissionColor: {r: 0.15294118, g: 0.047058824, b: 0.003921569, a: 1}
+  darkEmissionColor: {r: 0.09411765, g: 0.09411765, b: 0.09411765, a: 1}
+  intensity: 1
 --- !u!1 &7714796438773702146
 GameObject:
   m_ObjectHideFlags: 0
