@@ -26,5 +26,5 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
   enemyIdentityList:
-  - {fileID: 11400000, guid: 76bb3baa9fa1d7f48a3d2d8f25079939, type: 2}
+  - {fileID: 11400000, guid: be355f4d31bf08a4f85b1db7e8f0834b, type: 2}
   bossIdentityList: []
