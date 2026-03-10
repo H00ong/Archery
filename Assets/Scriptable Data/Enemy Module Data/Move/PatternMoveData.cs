@@ -5,24 +5,21 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PatternMoveData", menuName = "Enemy/ModuleData/PatternMove")]
 public class PatternMoveData : MoveModuleData
 {
-    [Header("Pattern Move Settings")]
-    public EnemyPointType patrolPointType;
-    
     private void OnEnable()
     {
         targetTag = EnemyTag.PatternMove;
+    }
+
+
+    public List<Vector3> GetPoints(EnemyController controller)
+    {
+        return controller.enemyReference != null
+            ? controller.enemyReference.GetPatrolPoints()
+            : null;
     }
     
     private void OnValidate()
     {
         targetTag = EnemyTag.PatternMove;
-        patrolPointType = EnemyPointType.PatrolPoint;
-    }
-    
-    public List<Transform> GetPoints(EnemyController controller)
-    {
-        return controller.enemyReference != null 
-            ? controller.enemyReference.GetPoints(EnemyPointType.PatrolPoint) 
-            : null;
     }
 }

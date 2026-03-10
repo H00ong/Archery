@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c8fb38413c82ac4f88d0e401552a0ea, type: 3}
-  m_Name: Wizard_Lightning
+  m_Name: Octopus-Default
   m_EditorClassIdentifier: 
   Prefab:
-    m_AssetGUID: 8374975c91bac724a984a2e58449af64
+    m_AssetGUID: 0ef1cb4bbf03fe9459627d6efaaa1ffc
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 
     m_EditorAssetChanged: 1
-  Tag: 162
-  ObjectMat: {fileID: 2100000, guid: f70b961d516660f4e830b7a7a12b6781, type: 2}
+  Tag: 146
+  ObjectMat: {fileID: 0}
   AccessoryMat: {fileID: 0}
