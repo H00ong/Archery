@@ -1321,6 +1321,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8929094866089535935, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
+      propertyPath: gameOverPopupPrefab
+      value: 
+      objectReference: {fileID: 6234819476053690857, guid: c40bbf552f6d6ad4482384f74433d29a, type: 3}
+    - target: {fileID: 8929094866089535935, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
+      propertyPath: gameClearPopupPrefab
+      value: 
+      objectReference: {fileID: 6234819476053690857, guid: ae2e64b9cd0a7a7408b6ed8be0668eae, type: 3}
+    - target: {fileID: 8929094866089535935, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
       propertyPath: skillChoicePopupView
       value: 
       objectReference: {fileID: 0}

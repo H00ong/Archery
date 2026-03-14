@@ -29,7 +29,7 @@ MonoBehaviour:
     maxHP: 100
     attackPower: 10
     moveSpeed: 6
-    armor: 10
+    armor: 0
     magicResistance: 2
     attackSpeed: 1
     projectileSpeed: 30
