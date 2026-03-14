@@ -21,3 +21,6 @@ MonoBehaviour:
   Tag: 162
   ObjectMat: {fileID: 2100000, guid: f70b961d516660f4e830b7a7a12b6781, type: 2}
   AccessoryMat: {fileID: 0}
+  moveModule: {fileID: 11400000, guid: 037cb5069c438b846a4226444cba1afb, type: 2}
+  attackModules:
+  - {fileID: 11400000, guid: 82693eaabed56274d8f0ed75bccc3d0c, type: 2}

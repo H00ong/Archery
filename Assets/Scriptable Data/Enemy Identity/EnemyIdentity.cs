@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Enemy;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -9,4 +10,8 @@ public class EnemyIdentity : ScriptableObject
     public EnemyTag Tag;
     public Material ObjectMat;
     public Material AccessoryMat;
+    
+    [Header("Modules")]
+    public BaseModuleData moveModule;
+    public List<BaseModuleData> attackModules;
 }
