@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 909256328010994180}
   - component: {fileID: 7685263572134769831}
-  - component: {fileID: 6388746871439230285}
+  - component: {fileID: 3904875464907298963}
   m_Layer: 5
   m_Name: SkillChoicePopup
   m_TagString: Untagged
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &6388746871439230285
+--- !u!114 &3904875464907298963
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
