@@ -18,7 +18,7 @@ MonoBehaviour:
     m_SubObjectType: 
     m_SubObjectGUID: 
     m_EditorAssetChanged: 1
-  Tag: 162
+  Tag: 536871074
   ObjectMat: {fileID: 2100000, guid: f70b961d516660f4e830b7a7a12b6781, type: 2}
   AccessoryMat: {fileID: 0}
   moveModule: {fileID: 11400000, guid: 037cb5069c438b846a4226444cba1afb, type: 2}
