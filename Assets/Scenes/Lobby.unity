@@ -432,6 +432,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: {x: 5.770462, y: 27.96, z: -28.43}
+  horizontalSmoothTime: 0.2
+  verticalSmoothTime: 0.05
+  lookAheadDistance: 1.5
+  lookAheadSmoothTime: 0.25
+  useSimpleFollow: 0
 --- !u!1 &1148753308
 GameObject:
   m_ObjectHideFlags: 0
