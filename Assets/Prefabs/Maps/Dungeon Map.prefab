@@ -20520,6 +20520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ade4188ae87121448d37178610dce87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  floor: {fileID: 258643804250490649}
   surface: {fileID: 7898625294778373735}
   playerSpawnPoint: {fileID: 6927649316622403395}
   bossSpawnPoint: {fileID: 3422969009280550901}
