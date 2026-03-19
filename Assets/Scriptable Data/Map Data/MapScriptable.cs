@@ -1,12 +1,11 @@
 using System.Collections.Generic;
-using Map;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
-[CreateAssetMenu(fileName = "MapData", menuName = "MapData")]
-public abstract class MapScriptable : ScriptableObject
+[CreateAssetMenu(fileName = "MapConfig", menuName = "MapData/MapConfig")]
+public class MapScriptable : ScriptableObject
 {
-    public MapType mapType;
+    [RegistryKey("mapIds")] public string mapId;
     public List<AssetReferenceGameObject> mapList;
     public AssetReferenceGameObject bossMap;
     

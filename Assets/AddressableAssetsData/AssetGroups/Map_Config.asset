@@ -15,8 +15,8 @@ MonoBehaviour:
   m_GroupName: Map_Config
   m_GUID: 81e7a26942b9a0a4ca0b77a3e4210438
   m_SerializeEntries:
-  - m_GUID: 8922302100e31e441a1f7db8ead573a5
-    m_Address: DungeonMap
+  - m_GUID: e011c0295231c3b4a968471d80cb36c8
+    m_Address: Assets/Scriptable Data/Map Data/MapConfig.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - map_config
