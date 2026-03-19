@@ -5,6 +5,6 @@ using UnityEngine;
 public class BaseModuleData : ScriptableObject
 {
     [Header("Identification")]
-    public EnemyName targetName;    
+    [RegistryKey("enemyNames")] public string targetName;    
     public EnemyTag targetTag;
 }

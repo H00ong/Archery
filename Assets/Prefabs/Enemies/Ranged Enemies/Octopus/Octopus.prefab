@@ -1777,7 +1777,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDebugMode: 0
-  enemyName: 3
+  enemyName: Octopus
   enemyTags: 536871058
   brain: {fileID: 11400000, guid: 7c79f1d0e8102a445a0479c0af5d4673, type: 2}
   idle: {fileID: 0}

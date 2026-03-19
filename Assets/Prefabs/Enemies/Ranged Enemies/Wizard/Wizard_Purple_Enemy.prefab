@@ -194,19 +194,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDebugMode: 0
-  enemyName: 11
+  enemyName: Wizard
   enemyTags: 162
-  stats:
-    baseStats:
-      hp: 0
-      atk: 0
-      moveSpeed: 0
-    shooting:
-      projectileAtk: 0
-      projectileSpeed: 0
-    flyingShooting:
-      flyingProjectileAtk: 0
-      flyingProjectileSpeed: 0
   brain: {fileID: 11400000, guid: 7c79f1d0e8102a445a0479c0af5d4673, type: 2}
   idle: {fileID: 0}
   move: {fileID: 0}
@@ -226,13 +215,6 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_EditorAssetChanged: 1
   defaultAttackSpeed: 1
-  defaultAtk: 0
-  blockCheck: {fileID: 6599764215932895976}
-  sphereCastRadius: 0.4
-  castDistance: 0.5
-  obstacleLayer:
-    serializedVersion: 2
-    m_Bits: 64
   lastPlayerPosition: {x: 0, y: 0, z: 0}
   player: {fileID: 0}
 --- !u!114 &1348164910137312985
@@ -285,6 +267,7 @@ MonoBehaviour:
   lightningEmissionColor: {r: 2.5, g: 2.5, b: 0.5, a: 2.5}
   magmaEmissionColor: {r: 3, g: 1.5, b: 0, a: 3}
   darkEmissionColor: {r: 0.052525494, g: 0, b: 0.3433962, a: 1.5}
+  intensity: 1
 --- !u!1 &1589188370385453152
 GameObject:
   m_ObjectHideFlags: 0
