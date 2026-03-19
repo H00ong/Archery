@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1501eb0a2cddc3b41a86938de77ca2ee, type: 3}
   m_Name: HorizontalShot
   m_EditorClassIdentifier: 
-  id: 1
+  id: HorizontalShot
   rarity: 0
   maxLevel: 2
   moduleScript: {fileID: 11500000, guid: 2235c40e6d87f484cbd8c71b0888bb4c, type: 3}

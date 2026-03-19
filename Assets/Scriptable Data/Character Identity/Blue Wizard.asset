@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53694e3761a9c1e4b842f0b7deba9db3, type: 3}
   m_Name: Blue Wizard
   m_EditorClassIdentifier: 
-  characterName: 0
+  characterName: BlueWizard
   characterPrefab:
     m_AssetGUID: 93ef7c3672bd64b4ab62e66e4f5c3675
     m_SubObjectName: 
@@ -33,4 +33,4 @@ MonoBehaviour:
     magicResistance: 2
     attackSpeed: 1
     projectileSpeed: 30
-    attackEffectType: 2
+    attackEffectType: 1

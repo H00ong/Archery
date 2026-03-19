@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1501eb0a2cddc3b41a86938de77ca2ee, type: 3}
   m_Name: DiagonalShot
   m_EditorClassIdentifier: 
-  id: 0
+  id: DiagonalShot
   rarity: 0
   maxLevel: 2
   moduleScript: {fileID: 11500000, guid: b98f3ca660709d241a6b50ead5402757, type: 3}

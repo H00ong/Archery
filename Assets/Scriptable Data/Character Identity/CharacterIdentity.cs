@@ -7,7 +7,7 @@ namespace Players
     public class CharacterIdentity : ScriptableObject
     {
         [Header("캐릭터 식별")]
-        public CharacterName characterName;
+        [RegistryKey("characterNames")] public string characterName;
 
         [Header("Addressable 프리팹")]
         public AssetReferenceGameObject characterPrefab;

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1501eb0a2cddc3b41a86938de77ca2ee, type: 3}
   m_Name: VenomOrb
   m_EditorClassIdentifier: 
-  id: 5
+  id: VenomOrb
   rarity: 0
   maxLevel: 2
   moduleScript: {fileID: 11500000, guid: 0ddeb5cbf8922514e903355af63d3cd5, type: 3}

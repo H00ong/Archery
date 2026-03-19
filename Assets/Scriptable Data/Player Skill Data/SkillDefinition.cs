@@ -9,7 +9,7 @@ using UnityEngine.EventSystems;
 [CreateAssetMenu(fileName = "PlayerSkillScriptable", menuName = "PlayerSkill")]
 public class SkillDefinition : ScriptableObject
 {
-    public PlayerSkillId id;
+    [RegistryKey("skillIds")] public string id;
     public SkillRarity rarity;
     public int maxLevel;
     public MonoScript moduleScript;

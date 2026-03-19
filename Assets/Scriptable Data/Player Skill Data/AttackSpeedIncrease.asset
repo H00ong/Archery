@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1501eb0a2cddc3b41a86938de77ca2ee, type: 3}
   m_Name: AttackSpeedIncrease
   m_EditorClassIdentifier: 
-  id: 4
+  id: AttackSpeedIncrease
   rarity: 0
   maxLevel: 2
   moduleScript: {fileID: 11500000, guid: ba566e132c5343b42b215f01e7be8f9a, type: 3}

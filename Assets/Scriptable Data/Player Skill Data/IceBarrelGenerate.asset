@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1501eb0a2cddc3b41a86938de77ca2ee, type: 3}
   m_Name: IceBarrelGenerate
   m_EditorClassIdentifier: 
-  id: 7
+  id: IceBarrelGenerate
   rarity: 0
   maxLevel: 2
   moduleScript: {fileID: 11500000, guid: 7f07fe0b743c2b9428f276b2cb55d90f, type: 3}

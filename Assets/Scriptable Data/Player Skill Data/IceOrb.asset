@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1501eb0a2cddc3b41a86938de77ca2ee, type: 3}
   m_Name: IceOrb
   m_EditorClassIdentifier: 
-  id: 6
+  id: IceOrb
   rarity: 0
   maxLevel: 2
   moduleScript: {fileID: 11500000, guid: 7a5b6c1823ec8c74e9b7398b3e84b127, type: 3}
