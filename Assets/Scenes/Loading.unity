@@ -1307,8 +1307,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5596661649833680477, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
+      propertyPath: fadeDuration
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5596661649833680477, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
       propertyPath: stageTextHoldDuration
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 8162772049706525936, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
       propertyPath: m_fontColor.b
