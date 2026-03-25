@@ -1298,6 +1298,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3698489137114504438, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
+      propertyPath: yOffset
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3698489137114504438, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
+      propertyPath: mapParent
+      value: 
+      objectReference: {fileID: 7202632381855005624}
     - target: {fileID: 3814756980873615948, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -1335,6 +1343,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
+--- !u!4 &7202632381855005624 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 724446694076974005, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
+  m_PrefabInstance: {fileID: 7202632381855005623}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
