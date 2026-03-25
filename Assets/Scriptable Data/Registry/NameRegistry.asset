@@ -17,6 +17,10 @@ MonoBehaviour:
   - Wizard
   mapIds:
   - Dungeon
+  - Jungle
+  - Ocean
+  - Lava
+  - Forest
   characterNames:
   - BlueWizard
   skillIds:

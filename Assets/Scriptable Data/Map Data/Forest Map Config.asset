@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21516b5710d4f94459b8b89a8aa59c25, type: 3}
+  m_Name: Forest Map Config
+  m_EditorClassIdentifier: 
+  mapId: Forest
+  mapList:
+  - m_AssetGUID: f9f45ba06ea60e147bcd620308a7a820
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  bossMap:
+    m_AssetGUID: f9f45ba06ea60e147bcd620308a7a820
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  lobbyMapDummy:
+    m_AssetGUID: 63b54f9f8e3443e418622819b36ee744
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  enemyIdentityList:
+  - {fileID: 11400000, guid: 8a86e88414659254ca19d70daf2e1971, type: 2}
+  - {fileID: 11400000, guid: be355f4d31bf08a4f85b1db7e8f0834b, type: 2}
+  - {fileID: 11400000, guid: 732144ae1393e9740810aedca282fd38, type: 2}
+  - {fileID: 11400000, guid: 76bb3baa9fa1d7f48a3d2d8f25079939, type: 2}
+  bossIdentityList: []
