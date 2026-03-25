@@ -15,6 +15,30 @@ MonoBehaviour:
   m_GroupName: Map_Config
   m_GUID: 81e7a26942b9a0a4ca0b77a3e4210438
   m_SerializeEntries:
+  - m_GUID: 480761603cbff2b4db408242502242f3
+    m_Address: Assets/Scriptable Data/Map Data/Forest Map Config.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - map_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4dfd92f246bb9b849bcd7f20de1d6412
+    m_Address: Assets/Scriptable Data/Map Data/Ocean Map Config.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - map_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 919a2bf976dfccf4db713eab3903e981
+    m_Address: Assets/Scriptable Data/Map Data/Jungle Map Config.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - map_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ab83575e0756218438ca6d8054d53d2b
+    m_Address: Assets/Scriptable Data/Map Data/Lava Map Config.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - map_config
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e011c0295231c3b4a968471d80cb36c8
     m_Address: Assets/Scriptable Data/Map Data/MapConfig.asset
     m_ReadOnly: 0

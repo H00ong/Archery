@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 7942274392144273177}
   - component: {fileID: 5838998061893342135}
   - component: {fileID: 4057547474843920445}
+  - component: {fileID: 3698489137114504438}
   m_Layer: 0
   m_Name: Managers - DDL
   m_TagString: Untagged
@@ -129,6 +130,7 @@ MonoBehaviour:
   projectilePool: {fileID: 8067121333084470126}
   enemyPool: {fileID: 6747434615550884328}
   mapPool: {fileID: 5287965650095423540}
+  lobbyMapPool: {fileID: 724446694076974005}
   extra: {fileID: 7758831328834275736}
 --- !u!114 &6720549801405957016
 MonoBehaviour:
@@ -252,6 +254,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillConfigLabel: skill_config
+--- !u!114 &3698489137114504438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426551961764907274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e25a9f67033e19241b96fde0e33f681f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yOffset: 30
+  mapParent: {fileID: 0}
+  lockedTint: {r: 0.35, g: 0.35, b: 0.35, a: 1}
 --- !u!1 &1961741986016463748
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,6 +450,7 @@ Transform:
   - {fileID: 6747434615550884328}
   - {fileID: 7758831328834275736}
   - {fileID: 2239883802244721152}
+  - {fileID: 724446694076974005}
   m_Father: {fileID: 797612243193601549}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3132643591792452126
@@ -764,6 +782,37 @@ Transform:
   m_GameObject: {fileID: 5815819400599792675}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8745823815320721819}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7788696162077407542
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 724446694076974005}
+  m_Layer: 0
+  m_Name: LobbyMapPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &724446694076974005
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7788696162077407542}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

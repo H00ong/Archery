@@ -15,6 +15,31 @@ MonoBehaviour:
   m_GroupName: Map_Prefab
   m_GUID: 78d728c3c43848242b0e020e42e5c036
   m_SerializeEntries:
+  - m_GUID: 169e0762322e8a941b6bd894a8afd07f
+    m_Address: Assets/Prefabs/Test Map Dummy3.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 63b54f9f8e3443e418622819b36ee744
+    m_Address: Assets/Prefabs/Test Map Dummy.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6be2d641e77d55849a224f12d629ab1a
+    m_Address: Assets/Prefabs/Dummy Maps/DungeonMap Dummy.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b580322824cd0744caf7fcd9201014e8
+    m_Address: Assets/Prefabs/Test Map Dummy4.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ece9364a751eb0e4caab50363905e115
+    m_Address: Assets/Prefabs/Test Map Dummy2.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f9f45ba06ea60e147bcd620308a7a820
     m_Address: Dungeon Map
     m_ReadOnly: 0
