@@ -1,5 +1,4 @@
-{
-  "maps": [
+[
     {
       "mapId": "Dungeon",
       "stageCount": 3,
@@ -276,5 +275,4 @@
         }
       ]
     }
-  ]
-}
+]
