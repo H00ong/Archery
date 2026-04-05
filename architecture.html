@@ -1,0 +1,1618 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archery - Project Architecture</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card: #161b22;
+            --border: #30363d;
+            --text: #e6edf3;
+            --text-dim: #8b949e;
+            --accent-blue: #58a6ff;
+            --accent-green: #3fb950;
+            --accent-purple: #bc8cff;
+            --accent-orange: #d29922;
+            --accent-red: #f85149;
+            --accent-cyan: #39d2c0;
+            --accent-pink: #f778ba;
+            --accent-yellow: #e3b341;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+
+        .header .subtitle {
+            color: var(--text-dim);
+            font-size: 1.1rem;
+        }
+
+        .header .badge-row {
+            margin-top: 16px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border: 1px solid;
+        }
+
+        .badge.unity {
+            border-color: var(--accent-green);
+            color: var(--accent-green);
+        }
+
+        .badge.csharp {
+            border-color: var(--accent-purple);
+            color: var(--accent-purple);
+        }
+
+        .badge.singleton {
+            border-color: var(--accent-orange);
+            color: var(--accent-orange);
+        }
+
+        .badge.eventbus {
+            border-color: var(--accent-cyan);
+            color: var(--accent-cyan);
+        }
+
+        .badge.mvp {
+            border-color: var(--accent-pink);
+            color: var(--accent-pink);
+        }
+
+        .badge.addressables {
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
+        }
+
+        /* Section */
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title .icon {
+            font-size: 1.3rem;
+        }
+
+        /* Architecture Layers */
+        .layer-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        .layer {
+            border-radius: 12px;
+            padding: 24px 28px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        .layer:hover {
+            transform: scale(1.01);
+        }
+
+        .layer::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+        }
+
+        .layer.entry {
+            background: rgba(88, 166, 255, 0.08);
+            border: 1px solid rgba(88, 166, 255, 0.2);
+        }
+
+        .layer.entry::before {
+            background: var(--accent-blue);
+        }
+
+        .layer.manager {
+            background: rgba(188, 140, 255, 0.08);
+            border: 1px solid rgba(188, 140, 255, 0.2);
+        }
+
+        .layer.manager::before {
+            background: var(--accent-purple);
+        }
+
+        .layer.event {
+            background: rgba(57, 210, 192, 0.08);
+            border: 1px solid rgba(57, 210, 192, 0.2);
+        }
+
+        .layer.event::before {
+            background: var(--accent-cyan);
+        }
+
+        .layer.data {
+            background: rgba(210, 153, 34, 0.08);
+            border: 1px solid rgba(210, 153, 34, 0.2);
+        }
+
+        .layer.data::before {
+            background: var(--accent-orange);
+        }
+
+        .layer.pool {
+            background: rgba(63, 185, 80, 0.08);
+            border: 1px solid rgba(63, 185, 80, 0.2);
+        }
+
+        .layer.pool::before {
+            background: var(--accent-green);
+        }
+
+        .layer.ui {
+            background: rgba(247, 120, 186, 0.08);
+            border: 1px solid rgba(247, 120, 186, 0.2);
+        }
+
+        .layer.ui::before {
+            background: var(--accent-pink);
+        }
+
+        .layer-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+
+        .layer-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .layer-tag {
+            font-size: 0.7rem;
+            padding: 2px 10px;
+            border-radius: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .layer.entry .layer-tag {
+            background: rgba(88, 166, 255, 0.2);
+            color: var(--accent-blue);
+        }
+
+        .layer.manager .layer-tag {
+            background: rgba(188, 140, 255, 0.2);
+            color: var(--accent-purple);
+        }
+
+        .layer.event .layer-tag {
+            background: rgba(57, 210, 192, 0.2);
+            color: var(--accent-cyan);
+        }
+
+        .layer.data .layer-tag {
+            background: rgba(210, 153, 34, 0.2);
+            color: var(--accent-orange);
+        }
+
+        .layer.pool .layer-tag {
+            background: rgba(63, 185, 80, 0.2);
+            color: var(--accent-green);
+        }
+
+        .layer.ui .layer-tag {
+            background: rgba(247, 120, 186, 0.2);
+            color: var(--accent-pink);
+        }
+
+        .layer-desc {
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+
+        /* Arrow between layers */
+        .layer-arrow {
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 1.4rem;
+            line-height: 1;
+            padding: 4px 0;
+        }
+
+        /* Manager Grid */
+        .manager-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 16px;
+        }
+
+        .manager-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px;
+            transition: border-color 0.2s, transform 0.15s;
+        }
+
+        .manager-card:hover {
+            border-color: var(--accent-blue);
+            transform: translateY(-2px);
+        }
+
+        .manager-card .name {
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--accent-blue);
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .manager-card .name .emoji {
+            font-size: 1.1rem;
+        }
+
+        .manager-card .desc {
+            color: var(--text-dim);
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+        }
+
+        .manager-card .details {
+            font-size: 0.8rem;
+            color: var(--text);
+        }
+
+        .manager-card .details li {
+            list-style: none;
+            padding: 2px 0;
+        }
+
+        .manager-card .details li::before {
+            content: '▸ ';
+            color: var(--accent-purple);
+        }
+
+        /* EventBus Section */
+        .event-flow {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 28px;
+        }
+
+        .event-types-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        .event-type-item {
+            background: rgba(57, 210, 192, 0.06);
+            border: 1px solid rgba(57, 210, 192, 0.15);
+            border-radius: 8px;
+            padding: 10px 14px;
+            font-size: 0.85rem;
+            font-family: 'Cascadia Code', 'Fira Code', monospace;
+            color: var(--accent-cyan);
+            transition: background 0.2s;
+        }
+
+        .event-type-item:hover {
+            background: rgba(57, 210, 192, 0.12);
+        }
+
+        /* Data Flow Diagram */
+        .flow-diagram {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0;
+            padding: 30px 0;
+        }
+
+        .flow-node {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px 22px;
+            text-align: center;
+            min-width: 140px;
+            transition: transform 0.2s;
+        }
+
+        .flow-node:hover {
+            transform: scale(1.05);
+        }
+
+        .flow-node .step {
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .flow-node .label {
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        .flow-node .sub {
+            font-size: 0.75rem;
+            color: var(--text-dim);
+            margin-top: 4px;
+        }
+
+        .flow-arrow-right {
+            font-size: 1.6rem;
+            color: var(--accent-blue);
+            padding: 0 8px;
+            flex-shrink: 0;
+        }
+
+        /* File Tree */
+        .file-tree {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px 28px;
+            font-family: 'Cascadia Code', 'Fira Code', monospace;
+            font-size: 0.85rem;
+            overflow-x: auto;
+        }
+
+        .file-tree .dir {
+            color: var(--accent-blue);
+            font-weight: 600;
+        }
+
+        .file-tree .file {
+            color: var(--text-dim);
+        }
+
+        .file-tree .comment {
+            color: var(--accent-green);
+            font-style: italic;
+        }
+
+        .tree-line {
+            padding: 2px 0;
+            white-space: nowrap;
+        }
+
+        /* Patterns */
+        .pattern-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 16px;
+        }
+
+        .pattern-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 22px;
+            transition: border-color 0.2s;
+        }
+
+        .pattern-card:hover {
+            border-color: var(--accent-purple);
+        }
+
+        .pattern-card .pattern-name {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--accent-purple);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .pattern-card .pattern-desc {
+            color: var(--text-dim);
+            font-size: 0.85rem;
+            margin-bottom: 12px;
+        }
+
+        .code-block {
+            background: #0d1117;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 14px 16px;
+            font-family: 'Cascadia Code', 'Fira Code', monospace;
+            font-size: 0.8rem;
+            overflow-x: auto;
+            color: var(--text-dim);
+        }
+
+        .code-block .keyword {
+            color: var(--accent-purple);
+        }
+
+        .code-block .type {
+            color: var(--accent-cyan);
+        }
+
+        .code-block .string {
+            color: var(--accent-green);
+        }
+
+        .code-block .comment-code {
+            color: #6a737d;
+        }
+
+        /* Enemy System */
+        .component-diagram {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .component-row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .component-box {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 14px 18px;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .component-box h4 {
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .component-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .component-box ul li {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            padding: 2px 0;
+            font-family: 'Cascadia Code', 'Fira Code', monospace;
+        }
+
+        /* UI MVP Section */
+        .mvp-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 14px;
+        }
+
+        .mvp-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 18px;
+        }
+
+        .mvp-card h4 {
+            color: var(--accent-pink);
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+
+        .mvp-card .mvp-layer {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 4px 0;
+            font-size: 0.8rem;
+        }
+
+        .mvp-card .mvp-layer .mvp-tag {
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: 600;
+            min-width: 70px;
+            text-align: center;
+        }
+
+        .mvp-tag.presenter {
+            background: rgba(188, 140, 255, 0.2);
+            color: var(--accent-purple);
+        }
+
+        .mvp-tag.view {
+            background: rgba(247, 120, 186, 0.2);
+            color: var(--accent-pink);
+        }
+
+        .mvp-tag.popup {
+            background: rgba(88, 166, 255, 0.2);
+            color: var(--accent-blue);
+        }
+
+        /* Scriptable Data */
+        .scriptable-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 10px;
+        }
+
+        .scriptable-item {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 14px;
+            text-align: center;
+            transition: border-color 0.2s;
+        }
+
+        .scriptable-item:hover {
+            border-color: var(--accent-orange);
+        }
+
+        .scriptable-item .so-icon {
+            font-size: 1.5rem;
+            margin-bottom: 6px;
+        }
+
+        .scriptable-item .so-name {
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: var(--accent-orange);
+        }
+
+        /* Skills */
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 10px;
+        }
+
+        .skill-item {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-size: 0.85rem;
+            font-family: 'Cascadia Code', 'Fira Code', monospace;
+            color: var(--accent-green);
+            text-align: center;
+        }
+
+        .skill-item .inherits {
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            margin-top: 4px;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        /* Summary Stats */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 14px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .stat-card .stat-num {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-card .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            margin-top: 4px;
+        }
+
+        /* Effects */
+        .effects-row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .effect-item {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 14px 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .effect-item .effect-icon {
+            font-size: 1.4rem;
+        }
+
+        .effect-item .effect-name {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .effect-item .effect-type {
+            font-size: 0.75rem;
+            color: var(--text-dim);
+            font-family: monospace;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 0.8rem;
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .manager-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .flow-diagram {
+                flex-direction: column;
+            }
+
+            .flow-arrow-right {
+                transform: rotate(90deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Header -->
+        <div class="header">
+            <h1>🏹 Archery</h1>
+            <div class="subtitle">Unity Project Architecture Overview</div>
+            <div class="badge-row">
+                <span class="badge unity">Unity 2D</span>
+                <span class="badge csharp">C#</span>
+                <span class="badge singleton">Singleton Managers</span>
+                <span class="badge eventbus">Event Bus</span>
+                <span class="badge mvp">MVP Pattern</span>
+                <span class="badge addressables">Addressables</span>
+            </div>
+        </div>
+
+        <!-- Summary Stats -->
+        <div class="stats-row">
+            <div class="stat-card">
+                <div class="stat-num">15</div>
+                <div class="stat-label">Singleton Managers</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-num">11</div>
+                <div class="stat-label">Event Types</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-num">8</div>
+                <div class="stat-label">Skill Modules</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-num">8</div>
+                <div class="stat-label">Scriptable Data Types</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-num">13</div>
+                <div class="stat-label">Script Folders</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-num">100+</div>
+                <div class="stat-label">C# Scripts</div>
+            </div>
+        </div>
+
+        <!-- ===== Architecture Layers ===== -->
+        <div class="section">
+            <div class="section-title"><span class="icon">🏗️</span> Architecture Layers</div>
+            <div class="layer-stack">
+                <div class="layer entry">
+                    <div class="layer-header">
+                        <span class="layer-name">Entry Point</span>
+                        <span class="layer-tag">InitManager</span>
+                    </div>
+                    <div class="layer-desc">앱 초기화 진입점. 모든 Manager의 초기화를 순차적으로 조율하며 Progress 추적 제공. Async/Await 기반.</div>
+                </div>
+                <div class="layer-arrow">▼</div>
+                <div class="layer manager">
+                    <div class="layer-header">
+                        <span class="layer-name">Manager Layer</span>
+                        <span class="layer-tag">15 Singletons</span>
+                    </div>
+                    <div class="layer-desc">게임의 핵심 로직을 담당하는 싱글톤 매니저들. DontDestroyOnLoad로 씬 전환 시에도 유지. 각자의 도메인(UI, Sound,
+                        Pool, Save 등)을 관리.</div>
+                </div>
+                <div class="layer-arrow">▼</div>
+                <div class="layer event">
+                    <div class="layer-header">
+                        <span class="layer-name">Event Bus</span>
+                        <span class="layer-tag">Observer Pattern</span>
+                    </div>
+                    <div class="layer-desc">매니저 간 느슨한 결합(Loose Coupling)을 위한 이벤트 버스. Priority 기반 실행 순서 보장. Subscribe /
+                        Unsubscribe / Publish.</div>
+                </div>
+                <div class="layer-arrow">▼</div>
+                <div class="layer data">
+                    <div class="layer-header">
+                        <span class="layer-name">Data Layer</span>
+                        <span class="layer-tag">JSON + ScriptableObject</span>
+                    </div>
+                    <div class="layer-desc">JSON 파일 기반 데이터 로딩 (mapData, enemyData, playerData) + ScriptableObject로 설정
+                        데이터 관리. Addressables 라벨로 비동기 로드.</div>
+                </div>
+                <div class="layer-arrow">▼</div>
+                <div class="layer pool">
+                    <div class="layer-header">
+                        <span class="layer-name">Object Pooling</span>
+                        <span class="layer-tag">PoolManager + Addressables</span>
+                    </div>
+                    <div class="layer-desc">적, 투사체, 이펙트, 맵 오브젝트의 풀링을 통한 성능 최적화. Addressable 기반 Lazy Loading + HashSet
+                        추적. Async Prewarming 지원.</div>
+                </div>
+                <div class="layer-arrow">▼</div>
+                <div class="layer ui">
+                    <div class="layer-header">
+                        <span class="layer-name">UI Layer</span>
+                        <span class="layer-tag">MVP Pattern</span>
+                    </div>
+                    <div class="layer-desc">Presenter가 로직 담당, View(UI_*)가 화면 표시 담당. Popup 시스템 (GameOver, SkillChoice,
+                        MapClear). Lobby / InGame / Loading 분리.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== Data Flow ===== -->
+        <div class="section">
+            <div class="section-title"><span class="icon">🔄</span> Data Flow (Initialization)</div>
+            <div class="flow-diagram">
+                <div class="flow-node">
+                    <div class="step">Step 1</div>
+                    <div class="label">InitManager</div>
+                    <div class="sub">Entry Point</div>
+                </div>
+                <span class="flow-arrow-right">→</span>
+                <div class="flow-node">
+                    <div class="step">Step 2</div>
+                    <div class="label">DataManager</div>
+                    <div class="sub">JSON 로딩</div>
+                </div>
+                <span class="flow-arrow-right">→</span>
+                <div class="flow-node">
+                    <div class="step">Step 3</div>
+                    <div class="label">PoolManager</div>
+                    <div class="sub">Prefab 프리로딩</div>
+                </div>
+                <span class="flow-arrow-right">→</span>
+                <div class="flow-node">
+                    <div class="step">Step 4</div>
+                    <div class="label">Managers</div>
+                    <div class="sub">Dictionary 캐시</div>
+                </div>
+                <span class="flow-arrow-right">→</span>
+                <div class="flow-node">
+                    <div class="step">Step 5</div>
+                    <div class="label">Game Loop</div>
+                    <div class="sub">EventBus 기반 통신</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== Managers ===== -->
+        <div class="section">
+            <div class="section-title"><span class="icon">⚙️</span> Manager Layer (15 Singletons)</div>
+            <div class="manager-grid">
+                <div class="manager-card">
+                    <div class="name"><span class="emoji">🎮</span> GameManager</div>
+                    <div class="desc">전체 게임 상태 관리 및 씬 전환</div>
+                    <ul class="details">
+                        <li>Scene 로딩 / 전환</li>
+                        <li>게임 일시정지 / 재개</li>
+                        <li>Game State 관리</li>
+                    </ul>
+                </div>
+                <div class="manager-card">
+                    <div class="name"><span class="emoji">🗺️</span> MapManager</div>
+                    <div class="desc">맵 로딩, 활성화, 적 스포닝</div>
+                    <ul class="details">
+                        <li>맵 데이터 캐싱</li>
+                        <li>적 스폰 포인트 관리</li>
+                        <li>맵 활성화/비활성화</li>
+                    </ul>
+                </div>
+                <div class="manager-card">
+                    <div class="name"><span class="emoji">📦</span> DataManager</div>
+                    <div class="desc">JSON 기반 게임 데이터 로딩</div>
+                    <ul class="details">
+                        <li>mapData, enemyData 로드</li>
+                        <li>playerData 로드</li>
+                        <li>싱글톤 데이터 접근</li>
+                    </ul>
+                </div>
+                <div class="manager-card">
+                    <div class="name"><span class="emoji">♻️</span> PoolManager</div>
+                    <div class="desc">오브젝트 풀링 + Addressable 관리</div>
+                    <ul class="details">
+                        <li>Enemy/Projectile/Effect 풀</li>
+                        <li>Addressable Lazy Loading</li>
+                        <li>Async Prewarming</li>
+                    </ul>
+                </div>
+                <div class="manager-card">
+                    <div class="name"><span class="emoji">🧑</span> CharacterManager</div>
+                    <div class="desc">캐릭터 Identity 로딩 및 선택</div>
+                    <ul class="details">
+                        <li>CharacterIdentity ScriptableObject</li>
+                        <li>플레이어 프리팹 관리</li>
+                    </ul>
+                </div>
+                <div class="manager-card">
+                    <div class="name"><span class="emoji">🚀</span> InitManager</div>
+                    <div class="desc">초기화 시퀀싱 및 프로그레스 트래킹</div>
+                    <ul class="details">
+                        <li>매니저 순차 초기화</li>
+                        <li>Unity.Awaitable 사용</li>
+                        <li>Progress Callback</li>
+                    </ul>
+                </div>
+                <div class="manager-card">
+                    <div class="name"><span class="emoji">🖥️</span> UIManager</div>
+                    <div class="desc">UI 표시 및 팝업 관리</div>
+                    <ul class="details">
+                        <li>InGame / Lobby / Loading Canvas</li>
+                        <li>Popup 시스템</li>
+                    </ul>
+                </div>
+                <div class="manager-card">
+                    <div class="name"><span class="emoji">📊</span> StageManager</div>
+                    <div class="desc">스테이지 진행 관리</div>
+                    <ul class="details">
+                        <li>스테이지 클리어 조건</li>
+                        <li>스테이지 전환</li>
+                    </ul>
+                </div>
+                <div class="manager-card">
+                    <div class="name"><span class="emoji">📈</span> LevelManager</div>
+                    <div class="desc">레벨 업 및 경험치 관리</div>
+                    <ul class="details">
+                        <li>경험치 시스템</li>
+                        <li>레벨 업 이벤트 발행</li>
+                    </ul>
+                </div>
+                <div class="manager-card">
+                    <div class="name"><span class="emoji">⚔️</span> SkillManager</div>
+                    <div class="desc">스킬 목록 및 선택 관리</div>
+                    <ul class="details">
+                        <li>Player Skill Data</li>
+                        <li>스킬 선택 팝업 연동</li>
+                    </ul>
+                </div>
+                <div class="manager-card">
+                    <div class="name"><span class="emoji">🔮</span> OrbManager</div>
+                    <div class="desc">오브 아이템 관리</div>
+                    <ul class="details">
+                        <li>OrbConfiguration 데이터</li>
+                        <li>오브 생성/관리</li>
+                    </ul>
+                </div>
+                <div class="manager-card">
+                    <div class="name"><span class="emoji">🛢️</span> BarrelManager</div>
+                    <div class="desc">배럴 아이템 관리</div>
+                    <ul class="details">
+                        <li>Barrel Data</li>
+                        <li>배럴 생성/관리</li>
+                    </ul>
+                </div>
+                <div class="manager-card">
+                    <div class="name"><span class="emoji">🏃</span> PlayerManager</div>
+                    <div class="desc">플레이어 엔티티 로직</div>
+                    <ul class="details">
+                        <li>플레이어 스탯 관리</li>
+                        <li>플레이어 상태 추적</li>
+                    </ul>
+                </div>
+                <div class="manager-card">
+                    <div class="name"><span class="emoji">👾</span> EnemyManager</div>
+                    <div class="desc">적 엔티티 관리</div>
+                    <ul class="details">
+                        <li>적 스폰/디스폰</li>
+                        <li>적 데이터 관리</li>
+                    </ul>
+                </div>
+                <div class="manager-card">
+                    <div class="name"><span class="emoji">🔊</span> SoundManager</div>
+                    <div class="desc">오디오 재생 관리</div>
+                    <ul class="details">
+                        <li>BGM / SFX 관리</li>
+                        <li>사운드 풀링</li>
+                    </ul>
+                </div>
+                <div class="manager-card">
+                    <div class="name"><span class="emoji">💾</span> SaveManager</div>
+                    <div class="desc">저장 / 불러오기</div>
+                    <ul class="details">
+                        <li>게임 진행 상태 저장</li>
+                        <li>로컬 데이터 관리</li>
+                    </ul>
+                </div>
+                <div class="manager-card">
+                    <div class="name"><span class="emoji">🕹️</span> InputManager</div>
+                    <div class="desc">입력 처리</div>
+                    <ul class="details">
+                        <li>PlayerInput 시스템</li>
+                        <li>입력 이벤트 중계</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== Event Bus ===== -->
+        <div class="section">
+            <div class="section-title"><span class="icon">📡</span> Event Bus System</div>
+            <div class="event-flow">
+                <div style="margin-bottom: 12px;">
+                    <span style="color: var(--accent-cyan); font-weight: 700;">Static EventBus</span>
+                    <span style="color: var(--text-dim);"> — Priority 기반 Observer Pattern. Dictionary&lt;EventType,
+                        List&lt;(int Priority, Action Callback)&gt;&gt; 구조</span>
+                </div>
+                <div style="margin-bottom: 16px;">
+                    <div class="code-block">
+                        <span class="keyword">public static</span> <span class="keyword">void</span> <span
+                            class="type">Subscribe</span>(EventType type, Action callback, <span
+                            class="keyword">int</span> priority = 0)
+                        <span class="keyword">public static</span> <span class="keyword">void</span> <span
+                            class="type">Unsubscribe</span>(EventType type, Action callback)
+                        <span class="keyword">public static</span> <span class="keyword">void</span> <span
+                            class="type">Publish</span>(EventType type) <span class="comment-code">// snapshot 기반 안전한
+                            순회</span>
+                    </div>
+                </div>
+                <div style="font-weight: 600; margin-bottom: 8px; color: var(--accent-cyan);">Registered Event Types:
+                </div>
+                <div class="event-types-grid">
+                    <div class="event-type-item">LevelUp</div>
+                    <div class="event-type-item">SkillChosen</div>
+                    <div class="event-type-item">StageCombatStarted</div>
+                    <div class="event-type-item">StageCleared</div>
+                    <div class="event-type-item">StageLoadingStarted</div>
+                    <div class="event-type-item">MapCleared</div>
+                    <div class="event-type-item">PlayerSpawned</div>
+                    <div class="event-type-item">PlayerDied</div>
+                    <div class="event-type-item">Retry</div>
+                    <div class="event-type-item">TransitionToLobby</div>
+                    <div class="event-type-item">AllCollectiblesCollected</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== Design Patterns ===== -->
+        <div class="section">
+            <div class="section-title"><span class="icon">🧩</span> Design Patterns</div>
+            <div class="pattern-grid">
+                <div class="pattern-card">
+                    <div class="pattern-name">🔒 Singleton Pattern</div>
+                    <div class="pattern-desc">모든 매니저가 Thread-safe Singleton 사용. DontDestroyOnLoad로 씬 전환 시 유지.</div>
+                    <div class="code-block">
+                        <span class="keyword">public static</span> <span class="type">[Manager]</span> Instance { <span
+                            class="keyword">get</span>; <span class="keyword">private set</span>; }
+                        <span class="keyword">if</span> (Instance == <span class="keyword">null</span>) {
+                        Instance = <span class="keyword">this</span>;
+                        DontDestroyOnLoad(gameObject);
+                        }
+                    </div>
+                </div>
+                <div class="pattern-card">
+                    <div class="pattern-name">📡 Observer (Event Bus)</div>
+                    <div class="pattern-desc">EventType enum으로 타입 안전성 확보. Priority 기반 실행 순서. Snapshot 기반 안전한 순회.</div>
+                    <div class="code-block">
+                        EventBus.<span class="type">Subscribe</span>(EventType.LevelUp, OnLevelUp, priority: 0);
+                        EventBus.<span class="type">Publish</span>(EventType.LevelUp);
+                        EventBus.<span class="type">Unsubscribe</span>(EventType.LevelUp, OnLevelUp);
+                    </div>
+                </div>
+                <div class="pattern-card">
+                    <div class="pattern-name">🏭 Factory + Object Pool</div>
+                    <div class="pattern-desc">PoolManager가 Factory 역할. Addressable 기반 Lazy Loading + HashSet 추적으로 효율적
+                        관리.</div>
+                    <div class="code-block">
+                        <span class="comment-code">// Addressable 기반 Lazy Loading</span>
+                        <span class="keyword">await</span> PoolManager.Instance.<span
+                            class="type">GetAsync</span>&lt;Enemy&gt;(key);
+                        PoolManager.Instance.<span class="type">Return</span>(enemy);
+                    </div>
+                </div>
+                <div class="pattern-card">
+                    <div class="pattern-name">🖥️ MVP (Model-View-Presenter)</div>
+                    <div class="pattern-desc">UI에 MVP 패턴 적용. Presenter가 로직 담당, View(UI_*)가 표시 담당.</div>
+                    <div class="code-block">
+                        <span class="comment-code">// Presenter: 로직</span>
+                        <span class="type">SkillViewPresenter</span> → 스킬 데이터 가공
+                        <span class="comment-code">// View: 표시</span>
+                        <span class="type">UI_SkillView</span> → 화면에 렌더링
+                    </div>
+                </div>
+                <div class="pattern-card">
+                    <div class="pattern-name">⚡ Async/Await</div>
+                    <div class="pattern-desc">Unity.Awaitable 기반 비동기 초기화. CancellationToken으로 씬 전환 시 취소 지원.</div>
+                    <div class="code-block">
+                        <span class="keyword">async</span> <span class="type">Awaitable</span> Initialize() {
+                        <span class="keyword">await</span> DataManager.Instance.<span class="type">LoadAsync</span>();
+                        <span class="keyword">await</span> PoolManager.Instance.<span
+                            class="type">PrewarmAsync</span>();
+                        }
+                    </div>
+                </div>
+                <div class="pattern-card">
+                    <div class="pattern-name">🧱 Strategy (Enemy Behavior)</div>
+                    <div class="pattern-desc">IEnemyBehavior 인터페이스로 적 행동 전략 패턴 구현. Factory가 행동 모듈 조립.</div>
+                    <div class="code-block">
+                        <span class="keyword">interface</span> <span class="type">IEnemyBehavior</span>
+                        <span class="type">EnemyBehaviorFactory</span>.<span class="type">Create</span>(data)
+                        <span class="comment-code">// Move: Follow, Random, Pattern</span>
+                        <span class="comment-code">// Attack: Melee, Shoot, FollowMelee</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== Enemy System ===== -->
+        <div class="section">
+            <div class="section-title"><span class="icon">👾</span> Enemy Component System</div>
+            <div class="component-diagram">
+                <div class="component-row">
+                    <div class="component-box">
+                        <h4 style="color: var(--accent-red);">🎯 Core</h4>
+                        <ul>
+                            <li>EnemyController</li>
+                            <li>EnemyReferenceHub</li>
+                            <li>EnemyVisual</li>
+                            <li>EnemyStat / EnemyStatUtil</li>
+                            <li>EnemyData</li>
+                            <li>EnemyEnum / EnemyTagUtil</li>
+                            <li>EnemyAnimationEvent</li>
+                        </ul>
+                    </div>
+                    <div class="component-box">
+                        <h4 style="color: var(--accent-orange);">🏃 Move Strategies</h4>
+                        <ul>
+                            <li>FollowMove</li>
+                            <li>RandomMove</li>
+                            <li>PatternMove</li>
+                        </ul>
+                    </div>
+                    <div class="component-box">
+                        <h4 style="color: var(--accent-red);">⚔️ Attack Strategies</h4>
+                        <ul>
+                            <li>MeleeAttack</li>
+                            <li>FollowMeleeAttack</li>
+                            <li>Shoot</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="component-row">
+                    <div class="component-box">
+                        <h4 style="color: var(--accent-purple);">💀 Die</h4>
+                        <ul>
+                            <li>EnemyDie</li>
+                        </ul>
+                    </div>
+                    <div class="component-box">
+                        <h4 style="color: var(--accent-pink);">💥 Hurt</h4>
+                        <ul>
+                            <li>EnemyHurt (folder)</li>
+                        </ul>
+                    </div>
+                    <div class="component-box">
+                        <h4 style="color: var(--accent-yellow);">😴 Idle</h4>
+                        <ul>
+                            <li>EnemyIdle (folder)</li>
+                        </ul>
+                    </div>
+                    <div class="component-box">
+                        <h4 style="color: var(--accent-cyan);">🔧 Factory</h4>
+                        <ul>
+                            <li>EnemyBehaviorFactory</li>
+                            <li>IEnemyBehavior</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== Player System ===== -->
+        <div class="section">
+            <div class="section-title"><span class="icon">🏃</span> Player System</div>
+            <div class="component-diagram">
+                <div class="component-row">
+                    <div class="component-box">
+                        <h4 style="color: var(--accent-blue);">🎮 Player Modules</h4>
+                        <ul>
+                            <li>PlayerController</li>
+                            <li>PlayerMovement</li>
+                            <li>PlayerAttack</li>
+                            <li>PlayerHurt</li>
+                            <li>PlayerSkill</li>
+                        </ul>
+                    </div>
+                    <div class="component-box">
+                        <h4 style="color: var(--accent-green);">📦 Data / Visual</h4>
+                        <ul>
+                            <li>PlayerData</li>
+                            <li>PlayerContainer</li>
+                            <li>PlayerVisual</li>
+                            <li>PlayerAnimationEvent</li>
+                            <li>PlayerEnum</li>
+                            <li>CharacterBaseStatData</li>
+                        </ul>
+                    </div>
+                    <div class="component-box">
+                        <h4 style="color: var(--accent-purple);">⚡ Skill Modules</h4>
+                        <ul>
+                            <li>PlayerSkillModuleBase (base)</li>
+                            <li>MultiShot</li>
+                            <li>DiagonalShot</li>
+                            <li>HorizontalShot</li>
+                            <li>AttackSpeedIncrease</li>
+                            <li>MoveSpeedIncrease</li>
+                            <li>VenomOrb</li>
+                            <li>IceOrb</li>
+                            <li>IceBarrel</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== Skill Modules ===== -->
+        <div class="section">
+            <div class="section-title"><span class="icon">⚡</span> Skill Module Hierarchy</div>
+            <div class="skill-grid">
+                <div class="skill-item">
+                    <div>PlayerSkillModuleBase</div>
+                    <div class="inherits">Abstract Base Class</div>
+                </div>
+                <div class="skill-item">
+                    <div>MultiShot</div>
+                    <div class="inherits">: PlayerSkillModuleBase</div>
+                </div>
+                <div class="skill-item">
+                    <div>DiagonalShot</div>
+                    <div class="inherits">: PlayerSkillModuleBase</div>
+                </div>
+                <div class="skill-item">
+                    <div>HorizontalShot</div>
+                    <div class="inherits">: PlayerSkillModuleBase</div>
+                </div>
+                <div class="skill-item">
+                    <div>AttackSpeedIncrease</div>
+                    <div class="inherits">: PlayerSkillModuleBase</div>
+                </div>
+                <div class="skill-item">
+                    <div>MoveSpeedIncrease</div>
+                    <div class="inherits">: PlayerSkillModuleBase</div>
+                </div>
+                <div class="skill-item">
+                    <div>VenomOrb</div>
+                    <div class="inherits">: PlayerSkillModuleBase</div>
+                </div>
+                <div class="skill-item">
+                    <div>IceOrb</div>
+                    <div class="inherits">: PlayerSkillModuleBase</div>
+                </div>
+                <div class="skill-item">
+                    <div>IceBarrel</div>
+                    <div class="inherits">: PlayerSkillModuleBase</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== Effects System ===== -->
+        <div class="section">
+            <div class="section-title"><span class="icon">✨</span> Effect System</div>
+            <div class="effects-row">
+                <div class="effect-item">
+                    <div class="effect-icon">🧊</div>
+                    <div>
+                        <div class="effect-name">IceEffectHandler</div>
+                        <div class="effect-type">: IEffectHandler</div>
+                    </div>
+                </div>
+                <div class="effect-item">
+                    <div class="effect-icon">☠️</div>
+                    <div>
+                        <div class="effect-name">DotEffectHandler</div>
+                        <div class="effect-type">: IEffectHandler</div>
+                    </div>
+                </div>
+                <div class="effect-item">
+                    <div class="effect-icon">📋</div>
+                    <div>
+                        <div class="effect-name">IEffectHandler</div>
+                        <div class="effect-type">interface</div>
+                    </div>
+                </div>
+                <div class="effect-item">
+                    <div class="effect-icon">📊</div>
+                    <div>
+                        <div class="effect-name">EffectData</div>
+                        <div class="effect-type">Stats/EffectData.cs</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== UI MVP ===== -->
+        <div class="section">
+            <div class="section-title"><span class="icon">🖥️</span> UI Structure (MVP)</div>
+            <div class="mvp-row">
+                <div class="mvp-card">
+                    <h4>🎯 Skill Choice</h4>
+                    <div class="mvp-layer">
+                        <span class="mvp-tag popup">Popup</span>
+                        <span>SkillChoicePopup</span>
+                    </div>
+                    <div class="mvp-layer">
+                        <span class="mvp-tag presenter">Presenter</span>
+                        <span>SkillChoicePopupPresenter</span>
+                    </div>
+                    <div class="mvp-layer">
+                        <span class="mvp-tag presenter">Presenter</span>
+                        <span>SkillViewPresenter</span>
+                    </div>
+                    <div class="mvp-layer">
+                        <span class="mvp-tag view">View</span>
+                        <span>UI_SkillView</span>
+                    </div>
+                </div>
+                <div class="mvp-card">
+                    <h4>💀 Game Over</h4>
+                    <div class="mvp-layer">
+                        <span class="mvp-tag popup">Popup</span>
+                        <span>GameOverPopup</span>
+                    </div>
+                    <div class="mvp-layer">
+                        <span class="mvp-tag presenter">Presenter</span>
+                        <span>GameOverPopupPresenter</span>
+                    </div>
+                    <div class="mvp-layer">
+                        <span class="mvp-tag presenter">Presenter</span>
+                        <span>GameOverViewPresenter</span>
+                    </div>
+                    <div class="mvp-layer">
+                        <span class="mvp-tag view">View</span>
+                        <span>UI_GameOverView</span>
+                    </div>
+                </div>
+                <div class="mvp-card">
+                    <h4>🏆 Map Clear</h4>
+                    <div class="mvp-layer">
+                        <span class="mvp-tag popup">Popup</span>
+                        <span>MapClearPopup</span>
+                    </div>
+                    <div class="mvp-layer">
+                        <span class="mvp-tag presenter">Presenter</span>
+                        <span>MapClearPopupPresenter</span>
+                    </div>
+                    <div class="mvp-layer">
+                        <span class="mvp-tag presenter">Presenter</span>
+                        <span>MapClearViewPresenter</span>
+                    </div>
+                    <div class="mvp-layer">
+                        <span class="mvp-tag view">View</span>
+                        <span>UI_MapClearView</span>
+                    </div>
+                </div>
+                <div class="mvp-card">
+                    <h4>🏠 Lobby</h4>
+                    <div class="mvp-layer">
+                        <span class="mvp-tag popup">Canvas</span>
+                        <span>LobbyCanvas</span>
+                    </div>
+                    <div class="mvp-layer">
+                        <span class="mvp-tag view">View</span>
+                        <span>UI_Character</span>
+                    </div>
+                    <div class="mvp-layer">
+                        <span class="mvp-tag view">View</span>
+                        <span>UI_Map</span>
+                    </div>
+                </div>
+                <div class="mvp-card">
+                    <h4>⏳ Loading</h4>
+                    <div class="mvp-layer">
+                        <span class="mvp-tag view">View</span>
+                        <span>UI_ProgressBar</span>
+                    </div>
+                </div>
+                <div class="mvp-card">
+                    <h4>🔄 Transition</h4>
+                    <div class="mvp-layer">
+                        <span class="mvp-tag view">View</span>
+                        <span>UI_StageTransition</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== Scriptable Data ===== -->
+        <div class="section">
+            <div class="section-title"><span class="icon">📑</span> Scriptable Data (ScriptableObjects)</div>
+            <div class="scriptable-grid">
+                <div class="scriptable-item">
+                    <div class="so-icon">🗺️</div>
+                    <div class="so-name">Map Data</div>
+                </div>
+                <div class="scriptable-item">
+                    <div class="so-icon">🧑</div>
+                    <div class="so-name">Character Identity</div>
+                </div>
+                <div class="scriptable-item">
+                    <div class="so-icon">👾</div>
+                    <div class="so-name">Enemy Identity</div>
+                </div>
+                <div class="scriptable-item">
+                    <div class="so-icon">🧩</div>
+                    <div class="so-name">Enemy Module Data</div>
+                </div>
+                <div class="scriptable-item">
+                    <div class="so-icon">🔮</div>
+                    <div class="so-name">Orb Data</div>
+                </div>
+                <div class="scriptable-item">
+                    <div class="so-icon">🛢️</div>
+                    <div class="so-name">Barrel Data</div>
+                </div>
+                <div class="scriptable-item">
+                    <div class="so-icon">⚡</div>
+                    <div class="so-name">Player Skill Data</div>
+                </div>
+                <div class="scriptable-item">
+                    <div class="so-icon">📋</div>
+                    <div class="so-name">Registry</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== Map System ===== -->
+        <div class="section">
+            <div class="section-title"><span class="icon">🗺️</span> Map System</div>
+            <div class="component-row">
+                <div class="component-box">
+                    <h4 style="color: var(--accent-blue);">📍 Map Components</h4>
+                    <ul>
+                        <li>GameMap</li>
+                        <li>MapSetter</li>
+                        <li>MapData</li>
+                        <li>PatrolPointGenerator</li>
+                    </ul>
+                </div>
+                <div class="component-box">
+                    <h4 style="color: var(--accent-green);">🏠 Lobby Map</h4>
+                    <ul>
+                        <li>LobbyMapSetter</li>
+                        <li>LobbyMapController</li>
+                    </ul>
+                </div>
+                <div class="component-box">
+                    <h4 style="color: var(--accent-orange);">📦 Objects</h4>
+                    <ul>
+                        <li>SceneObject</li>
+                        <li>Projectile / FlyingProjectile</li>
+                        <li>PlayerWeapon / PlayerPortal</li>
+                        <li>CollectItem / ExpItem</li>
+                        <li>ParticleEffect</li>
+                        <li>ObjectRotation / OrbPivot</li>
+                    </ul>
+                </div>
+                <div class="component-box">
+                    <h4 style="color: var(--accent-purple);">🎥 Camera</h4>
+                    <ul>
+                        <li>CameraController</li>
+                        <li>LobbyCameraController</li>
+                        <li>BackgroundScroll</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== Stats System ===== -->
+        <div class="section">
+            <div class="section-title"><span class="icon">📊</span> Stats & Data</div>
+            <div class="component-row">
+                <div class="component-box">
+                    <h4 style="color: var(--accent-yellow);">📈 Stats</h4>
+                    <ul>
+                        <li>BaseStat (base class)</li>
+                        <li>PlayerStat : BaseStat</li>
+                        <li>EnemyStat : BaseStat</li>
+                        <li>EffectData</li>
+                    </ul>
+                </div>
+                <div class="component-box">
+                    <h4 style="color: var(--accent-red);">💥 Combat</h4>
+                    <ul>
+                        <li>DamageInfo</li>
+                        <li>Health</li>
+                    </ul>
+                </div>
+                <div class="component-box">
+                    <h4 style="color: var(--accent-cyan);">🔧 Utils</h4>
+                    <ul>
+                        <li>EventBus (static)</li>
+                        <li>Utils</li>
+                        <li>AwaitableExtensions</li>
+                        <li>AnimHashes</li>
+                    </ul>
+                </div>
+                <div class="component-box">
+                    <h4 style="color: var(--accent-purple);">🏷️ Attributes</h4>
+                    <ul>
+                        <li>RegistryKeyAttribute</li>
+                        <li>RegistryKeyDrawer (Editor)</li>
+                        <li>EnumTagDrawer (Editor)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== Folder Structure ===== -->
+        <div class="section">
+            <div class="section-title"><span class="icon">📂</span> Scripts Folder Structure</div>
+            <div class="file-tree">
+                <div class="tree-line"><span class="dir">Assets/Scripts/</span></div>
+                <div class="tree-line">├── <span class="dir">Attributes/</span> <span class="comment">— Custom
+                        attributes (RegistryKey)</span></div>
+                <div class="tree-line">├── <span class="dir">Camera/</span> <span class="comment">— Camera controllers
+                        (Game, Lobby, BG Scroll)</span></div>
+                <div class="tree-line">├── <span class="dir">Editor/</span> <span class="comment">— Custom drawers
+                        (RegistryKey, EnumTag)</span></div>
+                <div class="tree-line">├── <span class="dir">Effects/</span> <span class="comment">— IEffectHandler,
+                        Ice, DoT</span></div>
+                <div class="tree-line">├── <span class="dir">Enemy/</span> <span class="comment">— Enemy system</span>
+                </div>
+                <div class="tree-line">│ ├── <span class="dir">Enemy Components/</span></div>
+                <div class="tree-line">│ │ ├── <span class="dir">EnemyAttack/</span> <span class="comment">—
+                        MeleeAttack, Shoot, FollowMelee</span></div>
+                <div class="tree-line">│ │ ├── <span class="dir">EnemyDie/</span></div>
+                <div class="tree-line">│ │ ├── <span class="dir">EnemyHurt/</span></div>
+                <div class="tree-line">│ │ ├── <span class="dir">EnemyIdle/</span></div>
+                <div class="tree-line">│ │ ├── <span class="dir">EnemyMove/</span> <span class="comment">— Follow,
+                        Random, Pattern</span></div>
+                <div class="tree-line">│ │ └── <span class="file">EnemyBehaviorFactory.cs</span></div>
+                <div class="tree-line">│ ├── <span class="file">EnemyController.cs</span></div>
+                <div class="tree-line">│ ├── <span class="file">EnemyData.cs / EnemyStat.cs / EnemyVisual.cs</span>
+                </div>
+                <div class="tree-line">│ └── <span class="file">IEnemyBehavior.cs</span></div>
+                <div class="tree-line">├── <span class="dir">Managers/</span> <span class="comment">— 15 Singleton
+                        managers</span></div>
+                <div class="tree-line">├── <span class="dir">Map/</span> <span class="comment">— GameMap, MapSetter,
+                        LobbyMap</span></div>
+                <div class="tree-line">├── <span class="dir">Objects/</span> <span class="comment">— Projectile, Weapon,
+                        CollectItem, etc.</span></div>
+                <div class="tree-line">│ └── <span class="dir">PlayerObjects/</span> <span class="comment">— Orb,
+                        Barrel, Meteor</span></div>
+                <div class="tree-line">├── <span class="dir">Players/</span> <span class="comment">— Player
+                        system</span></div>
+                <div class="tree-line">│ ├── <span class="dir">Player Module/</span> <span class="comment">— Controller,
+                        Movement, Attack, Hurt, Skill</span></div>
+                <div class="tree-line">│ └── <span class="dir">Skill Module/</span> <span class="comment">— 8 skill
+                        implementations</span></div>
+                <div class="tree-line">├── <span class="dir">Stats/</span> <span class="comment">— BaseStat, PlayerStat,
+                        EnemyStat, EffectData</span></div>
+                <div class="tree-line">├── <span class="dir">UI/</span> <span class="comment">— MVP pattern UI</span>
+                </div>
+                <div class="tree-line">│ ├── <span class="dir">InGame/</span></div>
+                <div class="tree-line">│ │ ├── <span class="dir">Game Over/</span> <span class="comment">— Popup +
+                        Presenter + View</span></div>
+                <div class="tree-line">│ │ ├── <span class="dir">Map Clear/</span> <span class="comment">— Popup +
+                        Presenter + View</span></div>
+                <div class="tree-line">│ │ └── <span class="dir">Skill/</span> <span class="comment">— Popup + Presenter
+                        + View</span></div>
+                <div class="tree-line">│ ├── <span class="dir">Loading/</span> <span class="comment">—
+                        UI_ProgressBar</span></div>
+                <div class="tree-line">│ └── <span class="dir">Lobby/</span> <span class="comment">— LobbyCanvas,
+                        UI_Character, UI_Map</span></div>
+                <div class="tree-line">├── <span class="dir">Utils/</span> <span class="comment">— EventBus, AnimHashes,
+                        Extensions</span></div>
+                <div class="tree-line">├── <span class="file">DamageInfo.cs</span></div>
+                <div class="tree-line">└── <span class="file">Health.cs</span></div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            Archery Project Architecture Document &nbsp;·&nbsp; Generated April 2026 &nbsp;·&nbsp; Unity + C#
+        </div>
+
+    </div>
+</body>
+
+</html>

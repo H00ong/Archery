@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1456, height=816">
+    <title>캡스톤디자인(1) 1차 발표 - Archery</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+            background: #fff;
+        }
+
+        .slide {
+            width: 1456px;
+            height: 816px;
+            background: #e8e4f0;
+            position: relative;
+            page-break-after: always;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .header-bar {
+            position: absolute;
+            top: 30px;
+            left: 40px;
+            right: 40px;
+            height: 50px;
+            background: #7b6fa6;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .slide-title {
+            color: #5b4f8a;
+            font-weight: 900;
+            font-size: 52px;
+            text-align: center;
+            margin-top: 200px;
+            line-height: 1.4;
+        }
+
+        .slide-subtitle {
+            color: #5b4f8a;
+            font-weight: 900;
+            font-size: 52px;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        .content-area {
+            position: absolute;
+            top: 100px;
+            left: 60px;
+            right: 60px;
+            bottom: 40px;
+        }
+
+        .section-title {
+            color: #5b4f8a;
+            font-weight: 900;
+            font-size: 38px;
+            margin-bottom: 30px;
+        }
+
+        .section-subtitle {
+            color: #5b4f8a;
+            font-weight: 700;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .toc-box {
+            background: #fff;
+            border: 2px solid #d0cce0;
+            border-radius: 12px;
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 50px 60px;
+        }
+
+        .toc-box .item {
+            color: #3a3560;
+            font-weight: 700;
+            font-size: 28px;
+            margin-bottom: 35px;
+        }
+
+        .toc-box .item:last-child {
+            margin-bottom: 0;
+        }
+
+        .bg-text {
+            color: #3a3560;
+            font-size: 20px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .bg-highlight {
+            color: #5b4f8a;
+            font-weight: 700;
+            font-size: 22px;
+            text-align: center;
+            line-height: 1.8;
+            margin: 20px 0;
+        }
+
+        .arrow-down {
+            text-align: center;
+            color: #b0a8d0;
+            font-size: 36px;
+            margin: 10px 0;
+        }
+
+        .feature-item {
+            color: #3a3560;
+            font-size: 20px;
+            margin-left: 40px;
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .feature-item::before {
+            content: "- ";
+            color: #7b6fa6;
+            font-weight: 700;
+        }
+
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 16px;
+        }
+
+        .schedule-table th {
+            background: #7b6fa6;
+            color: #fff;
+            padding: 12px 16px;
+            font-weight: 700;
+            text-align: center;
+            border: 1px solid #9b8fc6;
+        }
+
+        .schedule-table td {
+            padding: 10px 16px;
+            text-align: center;
+            border: 1px solid #d0cce0;
+            font-size: 15px;
+            color: #3a3560;
+        }
+
+        .schedule-table tr:nth-child(even) td {
+            background: rgba(123, 111, 166, 0.08);
+        }
+
+        .filled {
+            background: #7b6fa6 !important;
+            color: #7b6fa6;
+        }
+
+        .filled-light {
+            background: #b0a8d0 !important;
+            color: #b0a8d0;
+        }
+
+        .req-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        .req-table th {
+            background: #7b6fa6;
+            color: #fff;
+            padding: 10px 12px;
+            font-weight: 700;
+            text-align: center;
+            border: 1px solid #9b8fc6;
+        }
+
+        .req-table td {
+            padding: 8px 12px;
+            border: 1px solid #d0cce0;
+            color: #3a3560;
+            text-align: center;
+            vertical-align: top;
+            line-height: 1.5;
+        }
+
+        .req-table td.left {
+            text-align: left;
+        }
+
+        .two-col {
+            display: flex;
+            gap: 60px;
+            align-items: flex-start;
+        }
+
+        .two-col .col {
+            flex: 1;
+        }
+
+        .tech-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .tech-table td {
+            padding: 12px 20px;
+            border: 1px solid #d0cce0;
+            color: #3a3560;
+            font-size: 18px;
+            background: rgba(255, 255, 255, 0.6);
+        }
+
+        .tech-table td:first-child {
+            font-weight: 700;
+            width: 180px;
+            text-align: center;
+            background: rgba(123, 111, 166, 0.12);
+        }
+
+        .code-block {
+            background: #2d2640;
+            color: #c8c0e0;
+            padding: 20px 25px;
+            border-radius: 10px;
+            font-family: 'Consolas', monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            white-space: pre;
+            overflow: hidden;
+        }
+
+        .diagram-box {
+            background: #fff;
+            border: 2px solid #d0cce0;
+            border-radius: 12px;
+            padding: 25px 30px;
+            font-family: 'Consolas', monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #3a3560;
+            white-space: pre;
+        }
+
+        .mgr-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        .mgr-table th {
+            background: #7b6fa6;
+            color: #fff;
+            padding: 8px 12px;
+            font-weight: 700;
+            text-align: center;
+            border: 1px solid #9b8fc6;
+        }
+
+        .mgr-table td {
+            padding: 6px 12px;
+            border: 1px solid #d0cce0;
+            color: #3a3560;
+            line-height: 1.4;
+        }
+
+        .mgr-table td:first-child {
+            text-align: center;
+            font-weight: 700;
+            font-size: 13px;
+            background: rgba(123, 111, 166, 0.06);
+            white-space: nowrap;
+        }
+
+        .thankyou {
+            color: #b0a8d0;
+            font-size: 72px;
+            font-weight: 900;
+            text-align: center;
+            margin-top: 300px;
+        }
+
+        /* 추가 스타일 */
+        .white-box {
+            background: #fff;
+            border-radius: 12px;
+            padding: 30px 35px;
+            border: 2px solid #d0cce0;
+        }
+
+        .compare-box {
+            background: #fff;
+            border-radius: 12px;
+            padding: 25px 30px;
+            border: 2px solid #d0cce0;
+            margin-bottom: 20px;
+        }
+
+        .problem-badge {
+            display: inline-block;
+            background: #e74c3c;
+            color: #fff;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .solution-badge {
+            display: inline-block;
+            background: #27ae60;
+            color: #fff;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .img-placeholder {
+            background: #d5d0e3;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #7b6fa6;
+            font-size: 16px;
+            font-weight: 700;
+            border: 2px dashed #b0a8d0;
+        }
+
+        .system-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 25px 30px;
+            border: 2px solid #d0cce0;
+            height: 100%;
+        }
+
+        .system-card h3 {
+            color: #5b4f8a;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .system-card p,
+        .system-card li {
+            color: #3a3560;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        .system-card ul {
+            padding-left: 20px;
+        }
+
+        .system-card li {
+            margin-bottom: 6px;
+        }
+
+        .num-circle {
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
+            background: #5b4f8a;
+            color: #fff;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 700;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+
+        .flow-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+
+        .flow-step-text {
+            color: #3a3560;
+            font-size: 19px;
+            line-height: 1.5;
+        }
+
+        .flow-step-text b {
+            color: #5b4f8a;
+        }
+
+        @media print {
+            @page {
+                size: 1456px 816px;
+                margin: 0;
+            }
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                width: 1456px;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+
+            .slide {
+                page-break-after: always;
+                page-break-inside: avoid;
+                margin: 0;
+                box-shadow: none;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            .slide:last-child {
+                page-break-after: avoid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ==================== Slide 1: Title ==================== -->
+    <div class="slide">
+        <div class="header-bar">캡스톤디자인(1) 1차 발표</div>
+        <div class="slide-title">Unity 기반 로그라이크</div>
+        <div class="slide-subtitle">아처 서바이벌 게임</div>
+        <p style="text-align:center; color:#7b6fa6; font-size:24px; margin-top:30px; font-weight:700;">
+            🏹 Archery — 궁수의 전설 2 모티브
+        </p>
+    </div>
+
+    <!-- ==================== Slide 2: TOC ==================== -->
+    <div class="slide">
+        <div class="header-bar">캡스톤디자인(1) 1차 발표</div>
+        <div class="content-area" style="display:flex; flex-direction:column; align-items:center; padding-top:60px;">
+            <div class="section-title" style="text-align:center;">목차</div>
+            <div class="toc-box">
+                <div class="item">1. 배경 — 게임 목표</div>
+                <div class="item">2. 배경 — 기술적 목표 · Addressable Assets</div>
+                <div class="item">3. 게임 시스템 소개</div>
+                <div class="item">4. 개발 예정 일정</div>
+                <div class="item">5. 요구사항 기술서</div>
+                <div class="item">6. 아키텍처 개요</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== Slide 3: 게임 목표 ==================== -->
+    <div class="slide">
+        <div class="header-bar">캡스톤디자인(1) 1차 발표</div>
+        <div class="content-area">
+            <div class="section-title">배경 — 게임 목표</div>
+            <div class="two-col" style="margin-top: 20px; gap: 40px;">
+                <div class="col" style="flex: 1.2;">
+                    <!-- 궁수의 전설 2 인게임 스크린샷 영역 -->
+                    <div class="img-placeholder" style="width:100%; height:480px; flex-direction:column; gap:10px;">
+                        <p style="font-size:20px;">📱 궁수의 전설 2 인게임 플레이 화면</p>
+                        <p style="font-size:14px; color:#9b8fc6;">(이 영역에 궁수의 전설 2 인게임 스크린샷을 넣어주세요)</p>
+                        <p style="font-size:14px; color:#9b8fc6;">img 태그의 src에 이미지 경로를 지정하면 됩니다</p>
+                        <!-- <img src="archery_legend2_screenshot.png" style="width:100%; height:100%; object-fit:contain; border-radius:8px;"> -->
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="white-box" style="min-height: 480px;">
+                        <p style="color:#5b4f8a; font-weight:700; font-size:24px; margin-bottom:25px;">🎮 이런 게임을 만들고
+                            싶었습니다</p>
+                        <p class="bg-text" style="font-size:19px;">
+                            「궁수의 전설 2」 같은 <b>캐주얼 로그라이크 게임</b>을<br>
+                            직접 만들어보고 싶다는 목표에서 시작했습니다.
+                        </p>
+                        <div style="height:20px;"></div>
+                        <p class="bg-text" style="font-size:19px;">
+                            <b>탑다운 시점</b>에서 자동으로 공격하며,<br>
+                            스테이지를 클리어할 때마다<br>
+                            <b>스킬을 골라 캐릭터를 강화</b>해 나가는<br>
+                            중독성 높은 게임 구조를 목표로 합니다.
+                        </p>
+                        <div style="height:20px;"></div>
+                        <p class="bg-text" style="font-size:19px;">
+                            다양한 <b>맵, 캐릭터, 스킬</b>을 조합하여<br>
+                            매번 다른 플레이 경험을 제공합니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== Slide 4: 기술적 목표 - 문제점 ==================== -->
+    <div class="slide">
+        <div class="header-bar">캡스톤디자인(1) 1차 발표</div>
+        <div class="content-area">
+            <div class="section-title">배경 — 기술적 목표</div>
+            <div class="two-col" style="margin-top: 15px; gap: 40px;">
+                <div class="col">
+                    <div class="compare-box" style="min-height: 520px;">
+                        <span class="problem-badge">❌ 기존 방식의 문제</span>
+                        <h3 style="color:#e74c3c; font-size:22px; margin: 15px 0 12px;">SerializeField 직접 바인딩</h3>
+                        <p class="bg-text" style="font-size:17px; line-height:1.7;">
+                            일반적으로 Unity에서 적(Enemy)이나 플레이어(Player) 같은<br>
+                            프리팹을 사용하려면 <b>[SerializeField]</b>로 Inspector에<br>
+                            직접 드래그해서 연결합니다.
+                        </p>
+                        <div style="background:#f8e8e8; border-radius:8px; padding:15px 20px; margin:15px 0;">
+                            <p style="color:#c0392b; font-size:16px; line-height:1.7; font-weight:700;">
+                                🚨 새로운 적 종류를 추가할 때마다<br>
+                                → 스크립트에 새 필드를 만들고<br>
+                                → Inspector에서 일일이 다시 연결해야 하고<br>
+                                → 실수로 빠뜨리면 런타임 에러 발생<br><br>
+                                적 10종, 투사체 5종, 이펙트 8종...<br>
+                                <span style="font-size:20px;">콘텐츠가 늘어날수록 관리 비용이 폭발적으로 증가!</span>
+                            </p>
+                        </div>
+                        <p class="bg-text" style="font-size:16px;">
+                            게임의 규모가 커질수록 이 방식은<br>
+                            <b>유지보수가 불가능한 수준</b>이 됩니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="compare-box" style="min-height: 520px;">
+                        <span class="problem-badge">❌ 다른 대안들도 불편</span>
+                        <h3 style="color:#e74c3c; font-size:22px; margin: 15px 0 12px;">Resources 폴더 / Asset Bundle</h3>
+                        <p class="bg-text" style="font-size:17px; line-height:1.7;">
+                            Unity에는 기존에도 에셋을 불러오는 다른 방법이 있지만,<br>
+                            각각 단점이 있습니다.
+                        </p>
+                        <div style="background:#fff8e1; border-radius:8px; padding:15px 20px; margin:12px 0;">
+                            <p style="color:#e67e22; font-size:16px; line-height:1.8;">
+                                <b>📁 Resources 폴더</b><br>
+                                · 문자열로 경로를 써서 로드 → 오타 시 에러<br>
+                                · Resources 안의 모든 파일이 빌드에 포함<br>
+                                · 안 쓰는 파일도 포함되어 <b>앱 용량 증가</b><br>
+                                · 공식적으로 Unity도 <b>"사용을 지양하라"</b>고 권고
+                            </p>
+                        </div>
+                        <div style="background:#fff8e1; border-radius:8px; padding:15px 20px; margin:12px 0;">
+                            <p style="color:#e67e22; font-size:16px; line-height:1.8;">
+                                <b>📦 Asset Bundle</b><br>
+                                · 번들 생성·관리·버전 관리를 전부 직접 구현<br>
+                                · 의존성 관리가 매우 복잡<br>
+                                · 로드/언로드 코드를 직접 작성해야 함<br>
+                                · <b>설정과 코드량이 많아</b> 소규모 팀에 부담
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== Slide 5: Addressable Assets 소개 ==================== -->
+    <div class="slide">
+        <div class="header-bar">캡스톤디자인(1) 1차 발표</div>
+        <div class="content-area">
+            <div class="section-title">배경 — Addressable Assets 도입</div>
+            <div style="margin-top: 10px;">
+                <div class="compare-box" style="border-color: #27ae60;">
+                    <span class="solution-badge">✅ 해결책: Addressable Assets</span>
+                    <p style="color:#3a3560; font-size:20px; margin-top:12px; line-height:1.7;">
+                        Unity의 <b>Addressable Assets</b>은 쉽게 말해
+                        <b>"이름표(라벨)를 붙여놓고, 필요할 때 이름만 불러서 가져오는 시스템"</b>입니다.
+                    </p>
+                </div>
+            </div>
+            <div class="two-col" style="margin-top: 10px; gap: 40px;">
+                <div class="col">
+                    <div class="white-box">
+                        <h3 style="color:#27ae60; font-size:22px; margin-bottom:15px;">✨ 왜 도입하는가?</h3>
+                        <div style="font-size:17px; color:#3a3560; line-height:1.9;">
+                            <p style="margin-bottom:12px;">
+                                <b>1. 콘텐츠 추가가 간편</b><br>
+                                　새로운 적 프리팹을 만들면 "enemy" 라벨만 붙이면 끝.<br>
+                                　코드 수정 없이 자동으로 게임에 포함됩니다.
+                            </p>
+                            <p style="margin-bottom:12px;">
+                                <b>2. 메모리 효율적</b><br>
+                                　필요한 순간에만 로드하고, 안 쓰면 자동 해제.<br>
+                                　게임이 무거워지는 것을 방지합니다.
+                            </p>
+                            <p style="margin-bottom:12px;">
+                                <b>3. 라벨 기반 일괄 로드</b><br>
+                                　"skill_config" 라벨이 붙은 에셋을 한 번에 전부 로드.<br>
+                                　개별 경로를 외울 필요가 없습니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="white-box">
+                        <h3 style="color:#5b4f8a; font-size:22px; margin-bottom:15px;">📋 프로젝트 적용 예시</h3>
+                        <div class="code-block" style="font-size:14px; margin-bottom:15px;">
+                            // 기존: 일일이 연결
+                            [SerializeField] GameObject slime;
+                            [SerializeField] GameObject goblin;
+                            [SerializeField] GameObject dragon;
+                            // 적 추가될 때마다 필드 추가...</div>
+                        <div style="text-align:center; color:#b0a8d0; font-size:28px; margin: 8px 0;">▼</div>
+                        <div class="code-block" style="font-size:14px;">
+                            // Addressable: 라벨만 지정하면 끝
+                            Addressables.LoadAssetsAsync&lt;GameObject&gt;(
+                            "enemy", // ← 이 라벨만 붙이면 됨
+                            (prefab) =&gt; { pool.Register(prefab); }
+                            );
+                            // 새 적을 추가해도 코드 변경 불필요!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== Slide 6: 게임 시스템 - 전체 흐름 ==================== -->
+    <div class="slide">
+        <div class="header-bar">캡스톤디자인(1) 1차 발표</div>
+        <div class="content-area">
+            <div class="section-title">게임 시스템 ① — 전체 게임 흐름</div>
+            <div style="margin-top: 15px;">
+                <div class="white-box" style="padding: 35px 50px;">
+                    <div class="flow-step">
+                        <span class="num-circle">1</span>
+                        <div class="flow-step-text">
+                            <b>로딩 화면</b> — 게임 시작 시 모든 데이터(적 정보, 맵 정보, 스킬 정보)를<br>
+                            미리 불러와 준비합니다. 로딩 진행률이 화면에 표시됩니다.
+                        </div>
+                    </div>
+                    <div style="text-align:center; color:#b0a8d0; font-size:24px; margin: 5px 0 5px 50px;">▼</div>
+                    <div class="flow-step">
+                        <span class="num-circle">2</span>
+                        <div class="flow-step-text">
+                            <b>로비 화면</b> — 플레이할 <b>캐릭터</b>를 고르고, 도전할 <b>맵</b>을 선택합니다.<br>
+                            장비(배럴, 오브)를 변경하여 캐릭터를 세팅할 수 있습니다.
+                        </div>
+                    </div>
+                    <div style="text-align:center; color:#b0a8d0; font-size:24px; margin: 5px 0 5px 50px;">▼</div>
+                    <div class="flow-step">
+                        <span class="num-circle">3</span>
+                        <div class="flow-step-text">
+                            <b>인게임 (전투)</b> — 스테이지별로 몰려오는 적을 물리치고,<br>
+                            레벨업 시 <b>스킬을 선택</b>하여 캐릭터를 점점 강화해 나갑니다.
+                        </div>
+                    </div>
+                    <div style="text-align:center; color:#b0a8d0; font-size:24px; margin: 5px 0 5px 50px;">▼</div>
+                    <div class="flow-step">
+                        <span class="num-circle">4</span>
+                        <div class="flow-step-text">
+                            <b>스테이지 클리어</b> — 모든 적을 처치하면 포탈이 나타나고,<br>
+                            포탈에 진입하면 다음 스테이지로 이동합니다.
+                        </div>
+                    </div>
+                    <div style="text-align:center; color:#b0a8d0; font-size:24px; margin: 5px 0 5px 50px;">▼</div>
+                    <div class="flow-step">
+                        <span class="num-circle">5</span>
+                        <div class="flow-step-text">
+                            <b>맵 클리어 또는 사망</b> — 모든 스테이지를 클리어하면 로비로 복귀.<br>
+                            사망 시 <b>재도전</b> 또는 <b>로비 복귀</b>를 선택할 수 있습니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== Slide 7: 게임 시스템 - 로비 ==================== -->
+    <div class="slide">
+        <div class="header-bar">캡스톤디자인(1) 1차 발표</div>
+        <div class="content-area">
+            <div class="section-title">게임 시스템 ② — 로비 · 캐릭터 선택</div>
+            <div class="two-col" style="margin-top: 15px; gap: 40px;">
+                <div class="col">
+                    <div class="img-placeholder" style="width:100%; height:510px; flex-direction:column; gap:10px;">
+                        <p style="font-size:18px;">🖼 로비 화면 · 캐릭터 선택 UI 스크린샷</p>
+                        <p style="font-size:14px; color:#9b8fc6;">(로비 화면 캡처 이미지를 넣어주세요)</p>
+                        <!-- <img src="lobby_screenshot.png" style="width:100%; height:100%; object-fit:contain; border-radius:8px;"> -->
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="system-card">
+                        <h3>🏠 로비 시스템</h3>
+                        <p style="margin-bottom:18px;">게임 시작 전 캐릭터와 맵을 선택하는 준비 화면입니다.</p>
+                        <ul>
+                            <li><b>캐릭터 선택</b> — 좌우 버튼으로 캐릭터를 넘기며 선택. 3D 모델 미리보기 제공</li>
+                            <li><b>캐릭터 해금</b> — 조건을 달성하면 새로운 캐릭터가 해금됩니다</li>
+                            <li><b>맵 선택</b> — 여러 맵 중 도전할 맵을 선택. 맵마다 스테이지 수와 적 구성이 다릅니다</li>
+                            <li><b>장비 세팅</b> — 배럴(특수 공격)과 오브(공전 투사체) 등 장비를 변경할 수 있습니다</li>
+                        </ul>
+                        <div style="height:15px;"></div>
+                        <div style="background:rgba(123,111,166,0.08); border-radius:8px; padding:15px 18px;">
+                            <p style="color:#5b4f8a; font-size:15px; line-height:1.6;">
+                                💡 캐릭터 정보는 <b>Addressable Assets</b>의 라벨 기반 로딩으로<br>
+                                새 캐릭터 추가 시 코드 수정 없이 자동 반영됩니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== Slide 8: 게임 시스템 - 전투 ==================== -->
+    <div class="slide">
+        <div class="header-bar">캡스톤디자인(1) 1차 발표</div>
+        <div class="content-area">
+            <div class="section-title">게임 시스템 ③ — 전투 시스템</div>
+            <div class="two-col" style="margin-top: 15px; gap: 40px;">
+                <div class="col">
+                    <div class="system-card">
+                        <h3>⚔️ 자동 전투</h3>
+                        <ul>
+                            <li>플레이어는 <b>가장 가까운 적을 자동으로 탐지</b>하여 투사체를 발사합니다</li>
+                            <li>플레이어는 <b>이동만 조작</b>하면 되므로 직관적인 조작감을 제공합니다</li>
+                            <li>공격 속도, 투사체 수 등은 스킬에 의해 강화됩니다</li>
+                        </ul>
+                        <div style="height:20px;"></div>
+                        <h3>💀 피격 · 사망</h3>
+                        <ul>
+                            <li>적에게 닿으면 데미지를 받고, 짧은 <b>무적 시간</b>이 부여됩니다</li>
+                            <li>체력이 0이 되면 <b>게임오버 팝업</b>이 표시됩니다</li>
+                            <li>재도전 또는 로비 복귀를 선택할 수 있습니다</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="system-card">
+                        <h3>🎯 투사체 시스템</h3>
+                        <ul>
+                            <li>기본 화살 투사체를 발사하며, 스킬에 따라 다양하게 변형됩니다</li>
+                            <li><b>멀티샷</b> — 여러 발을 동시에 발사</li>
+                            <li><b>대각선샷</b> — 좌우 대각선 방향으로 추가 발사</li>
+                            <li><b>수평샷</b> — 좌우로 추가 투사체 발사</li>
+                        </ul>
+                        <div style="height:20px;"></div>
+                        <h3>🔥 속성 · 상태이상 효과</h3>
+                        <ul>
+                            <li><b>화염(Fire)</b> — 일정 시간 동안 지속 데미지</li>
+                            <li><b>독(Poison)</b> — 느린 지속 데미지</li>
+                            <li><b>빙결(Ice)</b> — 이동 속도 감소</li>
+                            <li><b>번개(Lightning)</b> · <b>마그마(Magma)</b></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== Slide 9: 게임 시스템 - 스킬 ==================== -->
+    <div class="slide">
+        <div class="header-bar">캡스톤디자인(1) 1차 발표</div>
+        <div class="content-area">
+            <div class="section-title">게임 시스템 ④ — 스킬 · 레벨업 시스템</div>
+            <div class="two-col" style="margin-top: 15px; gap: 40px;">
+                <div class="col">
+                    <div class="img-placeholder" style="width:100%; height:510px; flex-direction:column; gap:10px;">
+                        <p style="font-size:18px;">🖼 레벨업 스킬 선택 팝업 스크린샷</p>
+                        <p style="font-size:14px; color:#9b8fc6;">(스킬 선택 UI 캡처 이미지를 넣어주세요)</p>
+                        <!-- <img src="skill_popup.png" style="width:100%; height:100%; object-fit:contain; border-radius:8px;"> -->
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="system-card">
+                        <h3>📈 레벨업</h3>
+                        <ul>
+                            <li>적을 처치하면 <b>경험치 보석</b>이 드롭됩니다</li>
+                            <li>경험치가 가득 차면 레벨업하며, 게임이 <b>일시정지</b>됩니다</li>
+                            <li>3개의 스킬 중 <b>1개를 선택</b>하여 캐릭터를 강화합니다</li>
+                        </ul>
+                        <div style="height:20px;"></div>
+                        <h3>🧩 스킬 종류 <span style="font-size:15px; color:#7b6fa6; font-weight:400;">(예시 — Addressable 라벨
+                                기반으로 자유롭게 추가 가능)</span></h3>
+                        <ul>
+                            <li><b>공격속도 증가</b> — 투사체 발사 간격 감소</li>
+                            <li><b>이동속도 증가</b> — 캐릭터 이동 속도 증가</li>
+                            <li><b>멀티샷</b> — 기본 공격 화살 수 증가</li>
+                            <li><b>대각선샷</b> — 좌우 대각선 방향 추가 투사체</li>
+                            <li><b>수평샷</b> — 좌우 수평 방향 추가 투사체</li>
+                            <li><b>아이스 배럴</b> — 범위 공격 (투하형)</li>
+                            <li><b>아이스 오브</b> — 캐릭터 주위를 도는 빙결 투사체</li>
+                            <li><b>베놈 오브</b> — 독 속성 공전 투사체</li>
+                        </ul>
+                        <div
+                            style="background:rgba(123,111,166,0.08); border-radius:8px; padding:8px 14px; margin-top:8px;">
+                            <p style="color:#5b4f8a; font-size:14px;">💡 스킬은 ScriptableObject로 정의되어 새 스킬 추가 시 코드 수정 불필요
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== Slide 10: 게임 시스템 - 적 시스템 ==================== -->
+    <div class="slide">
+        <div class="header-bar">캡스톤디자인(1) 1차 발표</div>
+        <div class="content-area">
+            <div class="section-title">게임 시스템 ⑤ — 적 시스템</div>
+            <div class="two-col" style="margin-top: 15px; gap: 40px;">
+                <div class="col">
+                    <div class="system-card">
+                        <h3>👾 적의 태그 시스템 (Bit Flag)</h3>
+                        <p style="margin-bottom:12px; font-size:16px;">적은 <b>비트 플래그 기반 태그</b>를 조합하여 정의됩니다. 하나의 적이 여러 태그를
+                            동시에 가질 수 있습니다.</p>
+                        <p style="color:#5b4f8a; font-weight:700; font-size:16px; margin-bottom:6px;">🏷 유형 태그
+                            (Identity)</p>
+                        <table class="mgr-table" style="margin-bottom:12px;">
+                            <tr>
+                                <th>태그</th>
+                                <th>설명</th>
+                            </tr>
+                            <tr>
+                                <td style="font-family:inherit;">Melee</td>
+                                <td>근접형 적</td>
+                            </tr>
+                            <tr>
+                                <td style="font-family:inherit;">Ranged</td>
+                                <td>원거리형 적</td>
+                            </tr>
+                            <tr>
+                                <td style="font-family:inherit;">Boss</td>
+                                <td>보스 — 높은 체력, 특수 패턴</td>
+                            </tr>
+                        </table>
+                        <p style="color:#5b4f8a; font-weight:700; font-size:16px; margin-bottom:6px;">🦶 이동 모듈 (Move)
+                        </p>
+                        <table class="mgr-table" style="margin-bottom:12px;">
+                            <tr>
+                                <th>모듈</th>
+                                <th>설명</th>
+                            </tr>
+                            <tr>
+                                <td style="font-family:inherit;">FollowMove</td>
+                                <td>플레이어를 향해 추적 이동</td>
+                            </tr>
+                            <tr>
+                                <td style="font-family:inherit;">PatternMove</td>
+                                <td>정해진 경로를 순회하며 이동</td>
+                            </tr>
+                            <tr>
+                                <td style="font-family:inherit;">RandomMove</td>
+                                <td>랜덤 방향으로 이동</td>
+                            </tr>
+                        </table>
+                        <div style="background:rgba(123,111,166,0.08); border-radius:8px; padding:10px 16px;">
+                            <p style="color:#5b4f8a; font-size:14px; line-height:1.5;">
+                                💡 예: Boss + FollowMove + Shoot + Fire → 화염 원거리 보스
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="system-card">
+                        <p style="color:#5b4f8a; font-weight:700; font-size:16px; margin-bottom:6px;">⚔️ 공격 모듈 (Attack)
+                        </p>
+                        <table class="mgr-table" style="margin-bottom:12px;">
+                            <tr>
+                                <th>모듈</th>
+                                <th>설명</th>
+                            </tr>
+                            <tr>
+                                <td style="font-family:inherit;">MeleeAttack</td>
+                                <td>근접 타격 공격</td>
+                            </tr>
+                            <tr>
+                                <td style="font-family:inherit;">FollowMeleeAttack</td>
+                                <td>추적 후 근접 공격 (돌진형)</td>
+                            </tr>
+                            <tr>
+                                <td style="font-family:inherit;">Shoot</td>
+                                <td>투사체 발사 (원거리)</td>
+                            </tr>
+                            <tr>
+                                <td style="font-family:inherit;">FlyingShoot</td>
+                                <td>공중 투사체 발사</td>
+                            </tr>
+                        </table>
+                        <p style="color:#5b4f8a; font-weight:700; font-size:16px; margin-bottom:6px;">🔥 속성 태그
+                            (Attribute)</p>
+                        <table class="mgr-table" style="margin-bottom:12px;">
+                            <tr>
+                                <th>속성</th>
+                                <th>효과</th>
+                            </tr>
+                            <tr>
+                                <td style="font-family:inherit;">Fire</td>
+                                <td>화염 — 지속 데미지</td>
+                            </tr>
+                            <tr>
+                                <td style="font-family:inherit;">Ice</td>
+                                <td>빙결 — 이동속도 감소</td>
+                            </tr>
+                            <tr>
+                                <td style="font-family:inherit;">Poison</td>
+                                <td>독 — 느린 지속 데미지</td>
+                            </tr>
+                            <tr>
+                                <td style="font-family:inherit;">Lightning</td>
+                                <td>번개</td>
+                            </tr>
+                            <tr>
+                                <td style="font-family:inherit;">Magma</td>
+                                <td>마그마</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== Slide 10-2: 적 FSM (EnemyBrain) ==================== -->
+    <div class="slide">
+        <div class="header-bar">캡스톤디자인(1) 1차 발표</div>
+        <div class="content-area">
+            <div class="section-title">게임 시스템 ⑤-2 — 적 FSM (상태 머신)</div>
+            <div class="two-col" style="margin-top: 10px; gap: 40px;">
+                <div class="col" style="flex: 1.3;">
+                    <!-- FSM 다이어그램 (CSS 기반) -->
+                    <div class="white-box"
+                        style="min-height: 520px; position:relative; display:flex; align-items:center; justify-content:center;">
+                        <svg width="560" height="480" viewBox="0 0 560 480" style="overflow:visible;">
+                            <!-- Idle 원 -->
+                            <circle cx="110" cy="100" r="70" fill="#b0c4e8" stroke="#7b9fd0" stroke-width="3" />
+                            <text x="110" y="108" text-anchor="middle" font-size="28" font-weight="700"
+                                fill="#2c3e6b">Idle</text>
+
+                            <!-- Move 원 -->
+                            <circle cx="450" cy="100" r="70" fill="#b0c4e8" stroke="#7b9fd0" stroke-width="3" />
+                            <text x="450" y="108" text-anchor="middle" font-size="28" font-weight="700"
+                                fill="#2c3e6b">Move</text>
+
+                            <!-- Attack 원 -->
+                            <circle cx="280" cy="400" r="70" fill="#b0c4e8" stroke="#7b9fd0" stroke-width="3" />
+                            <text x="280" y="408" text-anchor="middle" font-size="28" font-weight="700"
+                                fill="#2c3e6b">Attack</text>
+
+                            <!-- Idle → Move 화살표 (위) -->
+                            <defs>
+                                <marker id="arrowR" markerWidth="10" markerHeight="7" refX="10" refY="3.5"
+                                    orient="auto">
+                                    <polygon points="0 0, 10 3.5, 0 7" fill="#5b4f8a" />
+                                </marker>
+                                <marker id="arrowL" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+                                    <polygon points="10 0, 0 3.5, 10 7" fill="#5b4f8a" />
+                                </marker>
+                            </defs>
+                            <!-- Idle → Move -->
+                            <line x1="185" y1="72" x2="375" y2="72" stroke="#5b4f8a" stroke-width="2.5"
+                                marker-end="url(#arrowR)" />
+                            <text x="280" y="62" text-anchor="middle" font-size="13" fill="#5b4f8a"
+                                font-weight="700">플레이어 발견</text>
+
+                            <!-- Move → Idle -->
+                            <line x1="375" y1="128" x2="185" y2="128" stroke="#5b4f8a" stroke-width="2.5"
+                                marker-end="url(#arrowL)" />
+                            <text x="280" y="150" text-anchor="middle" font-size="13" fill="#5b4f8a"
+                                font-weight="700">플레이어를 찾지 못함</text>
+
+                            <!-- Idle → Attack (좌하) -->
+                            <line x1="85" y1="168" x2="230" y2="345" stroke="#5b4f8a" stroke-width="2.5"
+                                marker-end="url(#arrowR)" />
+                            <text x="120" y="270" text-anchor="middle" font-size="12" fill="#5b4f8a" font-weight="700"
+                                transform="rotate(-55, 120, 270)">플레이어가 사정거리 안에 있음</text>
+
+                            <!-- Attack → Idle (좌상) -->
+                            <line x1="215" y1="365" x2="125" y2="175" stroke="#5b4f8a" stroke-width="2.5"
+                                marker-end="url(#arrowR)" />
+                            <text x="200" y="250" text-anchor="middle" font-size="12" fill="#5b4f8a" font-weight="700"
+                                transform="rotate(-55, 200, 250)">플레이어를 찾지 못함</text>
+
+                            <!-- Move → Attack (우하) -->
+                            <line x1="425" y1="168" x2="335" y2="345" stroke="#5b4f8a" stroke-width="2.5"
+                                marker-end="url(#arrowR)" />
+                            <text x="420" y="270" text-anchor="middle" font-size="12" fill="#5b4f8a" font-weight="700"
+                                transform="rotate(55, 420, 270)">플레이어가 사정거리 안에 있음</text>
+
+                            <!-- Attack → Move (우상) -->
+                            <line x1="345" y1="365" x2="440" y2="175" stroke="#5b4f8a" stroke-width="2.5"
+                                marker-end="url(#arrowR)" />
+                            <text x="360" y="250" text-anchor="middle" font-size="12" fill="#5b4f8a" font-weight="700"
+                                transform="rotate(55, 360, 250)">플레이어가 사정거리를 벗어남</text>
+                        </svg>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="system-card" style="min-height: 520px;">
+                        <h3>🤖 적 상태 머신 (FSM)</h3>
+                        <p style="margin-bottom:15px; line-height:1.7;">
+                            각 적은 <b>Idle · Move · Attack · Hurt · Die</b><br>
+                            5가지 상태를 가지며, 조건에 따라 전이합니다.
+                        </p>
+                        <div style="height:10px;"></div>
+                        <h3>📋 EnemyBrain (ScriptableObject)</h3>
+                        <p style="margin-top:10px; margin-bottom:12px; line-height:1.7;">
+                            상태 전이 흐름은 <b>EnemyBrain</b>이라는<br>
+                            <b>ScriptableObject</b>에 정의됩니다.
+                        </p>
+                        <div class="code-block" style="font-size:13px; margin-bottom:15px;">
+                            [Header("State Flow")]
+                            [SerializeField] EnemyState afterIdle;
+                            [SerializeField] EnemyState afterMove;
+                            [SerializeField] EnemyState afterAttack;
+                            [SerializeField] EnemyState afterHurt;</div>
+                        <div
+                            style="background:rgba(123,111,166,0.08); border-radius:8px; padding:14px 18px; margin-top:12px;">
+                            <p style="color:#3a3560; font-size:15px; line-height:1.8;">
+                                💡 각 적마다 <b>서로 다른 EnemyBrain SO</b>를<br>
+                                할당하여 상태 흐름을 다르게 설정할 수 있습니다.<br><br>
+                                예시:<br>
+                                · 근접 적: Idle → <b>Move</b> → Attack<br>
+                                · 원거리 적: Idle → <b>Attack</b> (이동 없이 즉시 공격)<br>
+                                · 보스: Idle → <b>Move</b> → Attack (특수 패턴)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== Slide 11: 게임 시스템 - 스테이지·맵 ==================== -->
+    <div class="slide">
+        <div class="header-bar">캡스톤디자인(1) 1차 발표</div>
+        <div class="content-area">
+            <div class="section-title">게임 시스템 ⑥ — 스테이지 · 맵 시스템</div>
+            <div class="two-col" style="margin-top: 15px; gap: 40px;">
+                <div class="col">
+                    <div class="system-card">
+                        <h3>🗺️ 맵 구성</h3>
+                        <ul>
+                            <li>각 맵은 <b>여러 개의 스테이지</b>로 구성됩니다</li>
+                            <li>맵마다 등장하는 <b>적의 종류와 수</b>가 다릅니다</li>
+                            <li>맵 데이터는 JSON 파일로 관리하여, 새로운 맵 추가가 용이합니다</li>
+                            <li>맵 프리팹은 <b>오브젝트 풀링</b>으로 재사용하여 성능을 최적화합니다</li>
+                        </ul>
+                        <div style="height:20px;"></div>
+                        <h3>📊 스탯 시스템</h3>
+                        <p style="margin-bottom:10px;">캐릭터 스탯은 3개 계층으로 나뉩니다:</p>
+                        <ul>
+                            <li><b>기본(Base)</b> — 캐릭터 고유 능력치</li>
+                            <li><b>장비(Equipment)</b> — 장비 착용 시 영구 보너스</li>
+                            <li><b>인게임 버프(Buff)</b> — 스킬 선택 시 해당 판 한정 효과</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="system-card">
+                        <h3>🔄 스테이지 진행 사이클</h3>
+                        <div style="background:#f4f2f8; border-radius:10px; padding:25px; margin-top:10px;">
+                            <div class="flow-step">
+                                <span class="num-circle" style="width:34px; height:34px; font-size:16px;">1</span>
+                                <div class="flow-step-text" style="font-size:17px;">
+                                    <b>전투 시작</b> — 적들이 스폰되어 플레이어를 공격
+                                </div>
+                            </div>
+                            <div style="text-align:center; color:#b0a8d0; font-size:20px; margin: 4px 0 4px 40px;">▼
+                            </div>
+                            <div class="flow-step">
+                                <span class="num-circle" style="width:34px; height:34px; font-size:16px;">2</span>
+                                <div class="flow-step-text" style="font-size:17px;">
+                                    <b>적 전멸</b> — 모든 적을 처치하면 클리어
+                                </div>
+                            </div>
+                            <div style="text-align:center; color:#b0a8d0; font-size:20px; margin: 4px 0 4px 40px;">▼
+                            </div>
+                            <div class="flow-step">
+                                <span class="num-circle" style="width:34px; height:34px; font-size:16px;">3</span>
+                                <div class="flow-step-text" style="font-size:17px;">
+                                    <b>포탈 등장</b> — 포탈에 진입하여 다음 스테이지로 이동
+                                </div>
+                            </div>
+                            <div style="text-align:center; color:#b0a8d0; font-size:20px; margin: 4px 0 4px 40px;">▼
+                            </div>
+                            <div class="flow-step">
+                                <span class="num-circle" style="width:34px; height:34px; font-size:16px;">4</span>
+                                <div class="flow-step-text" style="font-size:17px;">
+                                    <b>다음 스테이지 준비</b> — 새로운 맵·적 로드 후 반복
+                                </div>
+                            </div>
+                            <div style="text-align:center; color:#b0a8d0; font-size:20px; margin: 4px 0 4px 40px;">▼
+                            </div>
+                            <div class="flow-step">
+                                <span class="num-circle" style="width:34px; height:34px; font-size:16px;">5</span>
+                                <div class="flow-step-text" style="font-size:17px;">
+                                    <b>맵 클리어!</b> — 모든 스테이지 완료 시 로비 복귀
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== Slide 12: 개발 일정 ==================== -->
+    <div class="slide">
+        <div class="header-bar">캡스톤디자인(1) 1차 발표</div>
+        <div class="content-area">
+            <div class="section-title">개발 예정 일정</div>
+            <div style="margin-top:20px;">
+                <table class="schedule-table">
+                    <tr>
+                        <th rowspan="2" style="width:200px;">주요내용</th>
+                        <th colspan="3">추진일정</th>
+                        <th rowspan="2" style="width:100px;">기간</th>
+                    </tr>
+                    <tr>
+                        <th>3월</th>
+                        <th>4월</th>
+                        <th>5월</th>
+                    </tr>
+                    <tr>
+                        <td>주제 선정</td>
+                        <td class="filled">■</td>
+                        <td></td>
+                        <td></td>
+                        <td>1주</td>
+                    </tr>
+                    <tr>
+                        <td>자료조사/분석</td>
+                        <td class="filled">■■</td>
+                        <td></td>
+                        <td></td>
+                        <td>2주</td>
+                    </tr>
+                    <tr>
+                        <td>졸업작품 제안서</td>
+                        <td class="filled">■■</td>
+                        <td></td>
+                        <td></td>
+                        <td>2주</td>
+                    </tr>
+                    <tr>
+                        <td>1차 발표</td>
+                        <td class="filled">■</td>
+                        <td></td>
+                        <td></td>
+                        <td>1주</td>
+                    </tr>
+                    <tr>
+                        <td>아키텍처 설계</td>
+                        <td class="filled-light">■■</td>
+                        <td class="filled">■■■■</td>
+                        <td class="filled-light">■■■</td>
+                        <td>9주</td>
+                    </tr>
+                    <tr>
+                        <td>설계 기술서</td>
+                        <td></td>
+                        <td class="filled">■■■</td>
+                        <td></td>
+                        <td>3주</td>
+                    </tr>
+                    <tr>
+                        <td>2차 발표</td>
+                        <td></td>
+                        <td class="filled">■</td>
+                        <td></td>
+                        <td>1주</td>
+                    </tr>
+                    <tr>
+                        <td>코딩 및 구현</td>
+                        <td></td>
+                        <td class="filled-light">■■</td>
+                        <td class="filled">■■</td>
+                        <td>4주</td>
+                    </tr>
+                    <tr>
+                        <td>3차 발표</td>
+                        <td></td>
+                        <td></td>
+                        <td class="filled">■</td>
+                        <td>1주</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== Slide 13: 요구사항 기술서 - 로비 ==================== -->
+    <div class="slide">
+        <div class="header-bar">캡스톤디자인(1) 1차 발표</div>
+        <div class="content-area">
+            <div class="section-title">요구사항 기술서 — 로비 시스템</div>
+            <div style="margin-top:10px;">
+                <table class="req-table">
+                    <tr>
+                        <th style="width:100px;">구분</th>
+                        <th style="width:140px;">기능</th>
+                        <th style="width:160px;">세부기능</th>
+                        <th>기능 설명</th>
+                        <th style="width:350px;">참고</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="5">로비</td>
+                        <td rowspan="2">캐릭터 선택</td>
+                        <td>캐릭터 미리보기</td>
+                        <td class="left">3D 캐릭터 모델을 RenderTexture로 로비 화면에 표시</td>
+                        <td class="left">좌/우 버튼으로 캐릭터 전환, 선택 버튼으로 확정</td>
+                    </tr>
+                    <tr>
+                        <td>캐릭터 해금</td>
+                        <td class="left">특정 조건 달성 시 새로운 캐릭터를 해금</td>
+                        <td class="left">잠금 상태의 캐릭터는 잠금 아이콘 표시</td>
+                    </tr>
+                    <tr>
+                        <td>맵 선택</td>
+                        <td>맵 정보 표시</td>
+                        <td class="left">선택 가능한 맵 목록을 보여주고, 맵별 스테이지 수·난이도 제공</td>
+                        <td class="left">맵 데이터는 ScriptableObject + JSON으로 관리</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">장비 세팅</td>
+                        <td>배럴 장착</td>
+                        <td class="left">특수 공격 유형(투하형 범위 공격) 배럴 선택</td>
+                        <td class="left">장비 보너스가 Equipment 스탯 계층에 반영</td>
+                    </tr>
+                    <tr>
+                        <td>오브 장착</td>
+                        <td class="left">캐릭터 주변을 도는 공전형 투사체 선택</td>
+                        <td class="left">아이스 오브, 베놈 오브 등 다양한 속성</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== Slide 14: 요구사항 기술서 - 인게임 ==================== -->
+    <div class="slide">
+        <div class="header-bar">캡스톤디자인(1) 1차 발표</div>
+        <div class="content-area">
+            <div class="section-title">요구사항 기술서 — 인게임 전투</div>
+            <div style="margin-top:10px;">
+                <table class="req-table">
+                    <tr>
+                        <th style="width:100px;">구분</th>
+                        <th style="width:140px;">기능</th>
+                        <th style="width:160px;">세부기능</th>
+                        <th>기능 설명</th>
+                        <th style="width:350px;">참고</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="7">인게임</td>
+                        <td>이동</td>
+                        <td>조이스틱 이동</td>
+                        <td class="left">화면 터치 조이스틱으로 8방향 이동</td>
+                        <td class="left">Unity New Input System으로 구현</td>
+                    </tr>
+                    <tr>
+                        <td>공격</td>
+                        <td>자동 공격</td>
+                        <td class="left">가장 가까운 적을 자동 탐지하여 일정 간격으로 투사체 발사</td>
+                        <td class="left">공격 속도는 스킬/장비에 의해 변동</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">스킬 시스템</td>
+                        <td>레벨업 스킬 선택</td>
+                        <td class="left">경험치 보석 획득 → 레벨업 시 게임 일시정지, 3개 스킬 중 택 1</td>
+                        <td class="left">선택한 스킬은 즉시 캐릭터에 적용 (해당 판 한정)</td>
+                    </tr>
+                    <tr>
+                        <td>스킬 효과</td>
+                        <td class="left">공속 증가, 이속 증가, 멀티샷, 대각선샷, 수평샷, 배럴, 오브 등 (예시)</td>
+                        <td class="left">스킬별 독립 모듈(ScriptableObject) — 추가 시 코드 수정 불필요</td>
+                    </tr>
+                    <tr>
+                        <td>피격</td>
+                        <td>데미지 · 무적</td>
+                        <td class="left">적과 접촉 시 데미지, 피격 후 짧은 무적 시간 부여</td>
+                        <td class="left">방어력 공식: 피해 × 100/(100+방어력)</td>
+                    </tr>
+                    <tr>
+                        <td>사망</td>
+                        <td>게임오버</td>
+                        <td class="left">체력 0 시 게임오버 팝업 → 재도전 / 로비 복귀 선택</td>
+                        <td class="left">재도전 시 같은 맵의 첫 스테이지부터 재시작</td>
+                    </tr>
+                    <tr>
+                        <td>상태이상</td>
+                        <td>속성 효과</td>
+                        <td class="left">화염(Fire), 독(Poison), 빙결(Ice), 번개(Lightning), 마그마(Magma)</td>
+                        <td class="left">적·플레이어에게 동일하게 적용 가능</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== Slide 15: 요구사항 기술서 - 스테이지/적 ==================== -->
+    <div class="slide">
+        <div class="header-bar">캡스톤디자인(1) 1차 발표</div>
+        <div class="content-area">
+            <div class="section-title">요구사항 기술서 — 스테이지 · 적 · 데이터</div>
+            <div style="margin-top:10px;">
+                <table class="req-table">
+                    <tr>
+                        <th style="width:100px;">구분</th>
+                        <th style="width:140px;">기능</th>
+                        <th style="width:160px;">세부기능</th>
+                        <th>기능 설명</th>
+                        <th style="width:350px;">참고</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">스테이지</td>
+                        <td>전투 단계</td>
+                        <td>적 스폰</td>
+                        <td class="left">맵 데이터에 정의된 적 종류·수에 따라 자동 스폰</td>
+                        <td class="left">오브젝트 풀에서 꺼내어 재사용</td>
+                    </tr>
+                    <tr>
+                        <td>클리어 단계</td>
+                        <td>포탈 생성</td>
+                        <td class="left">모든 적 처치 시 다음 스테이지로 이동하는 포탈 등장</td>
+                        <td class="left">포탈 진입 시 자동 씬 전환</td>
+                    </tr>
+                    <tr>
+                        <td>로딩 단계</td>
+                        <td>스테이지 준비</td>
+                        <td class="left">다음 스테이지의 맵·적 데이터를 로드하고 배치</td>
+                        <td class="left">이전 스테이지의 오브젝트를 풀에 반환</td>
+                    </tr>
+                    <tr>
+                        <td>맵 클리어</td>
+                        <td>결과 표시</td>
+                        <td class="left">모든 스테이지 완료 시 맵 클리어 팝업 → 로비 복귀</td>
+                        <td class="left">클리어 정보 저장 (예정)</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="5">적</td>
+                        <td>유형 태그</td>
+                        <td>Identity</td>
+                        <td class="left">Melee(근접), Ranged(원거리), Boss(보스) 3종 분류</td>
+                        <td class="left">비트 플래그 조합 — 예: Boss + Ranged</td>
+                    </tr>
+                    <tr>
+                        <td>이동 모듈</td>
+                        <td>Move Tag</td>
+                        <td class="left">FollowMove(추적), PatternMove(순회), RandomMove(랜덤) 3종</td>
+                        <td class="left">태그에 따라 이동 모듈 자동 할당</td>
+                    </tr>
+                    <tr>
+                        <td>공격 모듈</td>
+                        <td>Attack Tag</td>
+                        <td class="left">MeleeAttack, FollowMeleeAttack, Shoot, FlyingShoot 4종</td>
+                        <td class="left">복수 공격 모듈 동시 장착 가능</td>
+                    </tr>
+                    <tr>
+                        <td>AI 행동</td>
+                        <td>상태 머신</td>
+                        <td class="left">Idle → Move → Attack → Hurt → Die 상태 전이</td>
+                        <td class="left">EnemyBrain(ScriptableObject)이 상태 흐름 정의</td>
+                    </tr>
+                    <tr>
+                        <td>데이터 관리</td>
+                        <td>JSON 정의</td>
+                        <td class="left">적의 체력, 공격력, 이동속도 등을 JSON 파일로 관리</td>
+                        <td class="left">밸런싱 시 코드 수정 없이 JSON만 수정</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== Slide 16: 아키텍처 개요 (간략) ==================== -->
+    <div class="slide">
+        <div class="header-bar">캡스톤디자인(1) 1차 발표</div>
+        <div class="content-area">
+            <div class="section-title">아키텍처 개요</div>
+            <div class="two-col" style="margin-top: 10px; gap: 40px;">
+                <div class="col">
+                    <div class="white-box" style="min-height: 500px;">
+                        <h3 style="color:#5b4f8a; font-size:22px; margin-bottom:18px;">📐 전체 구조</h3>
+                        <p style="color:#3a3560; font-size:17px; line-height:1.8; margin-bottom:20px;">
+                            게임의 모든 핵심 기능은 <b>매니저(Manager)</b>라는 단위로 분리되어 있고,<br>
+                            매니저들끼리는 <b>이벤트 버스(EventBus)</b>를 통해 서로 소통합니다.<br>
+                            이를 통해 각 기능이 독립적으로 동작하며, 수정이 쉬운 구조를 만듭니다.
+                        </p>
+                        <div style="background:#f4f2f8; border-radius:10px; padding:16px 24px;">
+                            <p style="color:#3a3560; font-size:16px; line-height:2;">
+                                <b style="color:#5b4f8a;">UI 계층</b> — 화면에 보이는 모든 팝업·버튼<br>
+                                <b style="color:#5b4f8a;">매니저 계층</b> — 게임 흐름을 제어하는 16개 매니저<br>
+                                <b style="color:#5b4f8a;">게임플레이 계층</b> — 플레이어·적의 실제 동작<br>
+                                <b style="color:#5b4f8a;">데이터 계층</b> — JSON, Addressable로 데이터 관리<br>
+                                <b style="color:#5b4f8a;">인프라 계층</b> — 오브젝트 풀, 이벤트 버스, 입력 처리
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="white-box" style="min-height: 500px;">
+                        <h3 style="color:#5b4f8a; font-size:22px; margin-bottom:18px;">🧬 핵심 기술 요소</h3>
+                        <table class="mgr-table">
+                            <tr>
+                                <th>기술</th>
+                                <th>역할</th>
+                            </tr>
+                            <tr>
+                                <td style="font-family:inherit;">Addressables</td>
+                                <td>에셋을 라벨로 관리, 콘텐츠 추가 시 코드 수정 불필요</td>
+                            </tr>
+                            <tr>
+                                <td style="font-family:inherit;">오브젝트 풀링</td>
+                                <td>적·투사체·이펙트를 재사용하여 성능 최적화</td>
+                            </tr>
+                            <tr>
+                                <td style="font-family:inherit;">이벤트 버스</td>
+                                <td>매니저 간 통신을 느슨하게 연결</td>
+                            </tr>
+                            <tr>
+                                <td style="font-family:inherit;">상태 머신</td>
+                                <td>적의 행동과 스테이지 진행을 상태로 관리</td>
+                            </tr>
+                            <tr>
+                                <td style="font-family:inherit;">MVP 패턴</td>
+                                <td>UI 로직과 화면 표시를 분리하여 유지보수 용이</td>
+                            </tr>
+                            <tr>
+                                <td style="font-family:inherit;">Async/Await</td>
+                                <td>데이터 로딩을 비동기로 처리, 로딩 화면 구현</td>
+                            </tr>
+                        </table>
+                        <div style="height:15px;"></div>
+                        <div style="background:rgba(123,111,166,0.08); border-radius:8px; padding:12px 18px;">
+                            <p style="color:#5b4f8a; font-size:15px; line-height:1.6;">
+                                💡 2차 발표에서 각 기술의 상세 설계를 소개할 예정입니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== Slide 17: 감사합니다 ==================== -->
+    <div class="slide">
+        <div class="header-bar">캡스톤디자인(1) 1차 발표</div>
+        <div class="thankyou">감사합니다</div>
+    </div>
+
+    <!-- PPTX 다운로드 버튼 (인쇄/발표 시 숨김) -->
+    <div id="pptx-export-area" style="position:fixed; bottom:20px; right:20px; z-index:9999;">
+        <button id="export-btn" style="
+            background:#7b6fa6; color:#fff; border:none; border-radius:8px;
+            padding:12px 24px; font-size:16px; font-weight:700; cursor:pointer;
+            box-shadow:0 4px 12px rgba(0,0,0,0.3); font-family:'Noto Sans KR',sans-serif;
+        ">📥 PPTX 다운로드</button>
+        <div id="export-status" style="
+            color:#5b4f8a; font-size:13px; text-align:center; margin-top:6px;
+            font-family:'Noto Sans KR',sans-serif; display:none;
+        ">변환 중...</div>
+    </div>
+    <style>
+        @media print {
+            #pptx-export-area {
+                display: none !important;
+            }
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/dom-to-pptx@latest/dist/dom-to-pptx.bundle.js"></script>
+    <script>
+        document.getElementById('export-btn').addEventListener('click', async () => {
+            const btn = document.getElementById('export-btn');
+            const status = document.getElementById('export-status');
+            btn.disabled = true;
+            btn.style.opacity = '0.6';
+            status.style.display = 'block';
+            status.textContent = '변환 중... 잠시만 기다려주세요.';
+            try {
+                const slides = Array.from(document.querySelectorAll('.slide'));
+                await domToPptx.exportToPptx(slides, {
+                    fileName: 'presentation.pptx',
+                });
+                status.textContent = '✅ 다운로드 완료!';
+            } catch (e) {
+                console.error(e);
+                status.textContent = '❌ 오류 발생: ' + e.message;
+            } finally {
+                btn.disabled = false;
+                btn.style.opacity = '1';
+                setTimeout(() => { status.style.display = 'none'; }, 3000);
+            }
+        });
+    </script>
+
+</body>
+
+</html>
