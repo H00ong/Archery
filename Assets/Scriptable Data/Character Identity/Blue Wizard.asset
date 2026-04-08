@@ -25,6 +25,12 @@ MonoBehaviour:
     m_SubObjectType: 
     m_SubObjectGUID: 
     m_EditorAssetChanged: 1
+  lobbyCharacterDummy:
+    m_AssetGUID: 60005f3e55b36d2408ed6f4fa67ac12b
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 1
   baseStat:
     maxHP: 100
     attackPower: 10

@@ -12,6 +12,7 @@ namespace Players
         [Header("Addressable 프리팹")]
         public AssetReferenceGameObject characterPrefab;
         public AssetReferenceGameObject projectilePrefab;
+        public AssetReferenceGameObject lobbyCharacterDummy;
 
         [Header("기본 능력치")]
         public CharacterBaseStatData baseStat;

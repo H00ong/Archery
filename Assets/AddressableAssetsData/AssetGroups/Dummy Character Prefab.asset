@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Dummy Character Prefab
+  m_EditorClassIdentifier: 
+  m_GroupName: Dummy Character Prefab
+  m_GUID: 8a8d0f39354be9f47906df828f2b89fe
+  m_SerializeEntries:
+  - m_GUID: 60005f3e55b36d2408ed6f4fa67ac12b
+    m_Address: Assets/Prefabs/Player/Character/Blue Wizard - Dummy.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 856c05a54378faf41860bc411561527d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 1893664df276074408df04c78271785c, type: 2}
+    - {fileID: 11400000, guid: a251e09a5da7e4e479e7676f0317ca88, type: 2}
