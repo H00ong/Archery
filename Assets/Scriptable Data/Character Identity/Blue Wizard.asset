@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Blue Wizard
   m_EditorClassIdentifier: 
   characterName: BlueWizard
+  characterIcon: {fileID: 21300000, guid: 5434000b6b38448438c38c0e24d1cbc4, type: 3}
   characterPrefab:
     m_AssetGUID: 93ef7c3672bd64b4ab62e66e4f5c3675
     m_SubObjectName: 
@@ -40,3 +41,14 @@ MonoBehaviour:
     attackSpeed: 1
     projectileSpeed: 30
     attackEffectType: 1
+  maxLevel: 10
+  levelStatGrowth:
+    maxHP: 0
+    attackPower: 0
+    moveSpeed: 0
+    armor: 0
+    magicResistance: 0
+    attackSpeed: 0
+    projectileSpeed: 0
+  levelUpCosts: 64000000c80000005e01000026020000200300004c040000dc050000d0070000f00a0000
+  purchasePrice: 1000

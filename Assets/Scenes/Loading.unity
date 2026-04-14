@@ -1254,6 +1254,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Managers - DDL
       objectReference: {fileID: 0}
+    - target: {fileID: 669232086221643465, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
+      propertyPath: mapDataJson
+      value: 
+      objectReference: {fileID: 4900000, guid: a6f4ef1ddcf6ad349a296045e8797619, type: 3}
+    - target: {fileID: 669232086221643465, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
+      propertyPath: enemyDataJson
+      value: 
+      objectReference: {fileID: 4900000, guid: 8a34a6b3bb1ecf14f93570f33e6038ae, type: 3}
     - target: {fileID: 797612243193601549, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
       propertyPath: m_LocalPosition.x
       value: 36.61181

@@ -23,6 +23,7 @@ MonoBehaviour:
   - Forest
   characterNames:
   - BlueWizard
+  - Archer
   skillIds:
   - DiagonalShot
   - HorizontalShot

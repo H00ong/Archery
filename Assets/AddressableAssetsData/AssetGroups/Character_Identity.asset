@@ -15,8 +15,14 @@ MonoBehaviour:
   m_GroupName: Character_Identity
   m_GUID: bde066584f69dc54ebf62cbb39e48226
   m_SerializeEntries:
+  - m_GUID: 3afde16ba7f584b41bc2aec7a55c73e9
+    m_Address: Archer
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - character_identity
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 90abebda91c063145b5721e925e86c59
-    m_Address: Assets/Scriptable Data/Character/CharacterIdentity.asset
+    m_Address: Blue Wizard
     m_ReadOnly: 0
     m_SerializedLabels:
     - character_identity
