@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53694e3761a9c1e4b842f0b7deba9db3, type: 3}
+  m_Name: Archer
+  m_EditorClassIdentifier: 
+  characterName: Archer
+  index: 1
+  characterIcon: {fileID: 21300000, guid: d8cbee47409f2dd45bc81a148276ba2f, type: 3}
+  characterPrefab:
+    m_AssetGUID: 93ef7c3672bd64b4ab62e66e4f5c3675
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  projectilePrefab:
+    m_AssetGUID: 5f3ad0a704bf00847a8b0691126928c1
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 1
+  lobbyCharacterDummy:
+    m_AssetGUID: 3378a9df3cd2ca84598b1f1511cb9acb
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  baseStat:
+    maxHP: 100
+    attackPower: 10
+    moveSpeed: 6
+    armor: 0
+    magicResistance: 2
+    attackSpeed: 1
+    projectileSpeed: 30
+    attackEffectType: 1
+  maxLevel: 10
+  levelStatGrowth:
+    maxHP: 0
+    attackPower: 0
+    moveSpeed: 0
+    armor: 0
+    magicResistance: 0
+    attackSpeed: 0
+    projectileSpeed: 0
+  levelUpCosts: 64000000c80000005e01000026020000200300004c040000dc050000d0070000f00a0000
+  purchasePrice: 1000
