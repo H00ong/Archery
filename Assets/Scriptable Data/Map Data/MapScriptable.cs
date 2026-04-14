@@ -10,7 +10,7 @@ public class MapScriptable : ScriptableObject
     public AssetReferenceGameObject bossMap;
 
     [Header("Lobby")]
-    public AssetReferenceGameObject lobbyMapDummy;
+    public AssetReferenceGameObject lobbyDummyMap;
     
     [Header("Enemy (EnemyIdentity 기반)")]
     public List<EnemyIdentity> enemyIdentityList;
