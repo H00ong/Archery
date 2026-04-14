@@ -25,8 +25,8 @@ MonoBehaviour:
     m_SubObjectType: 
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
-  lobbyMapDummy:
-    m_AssetGUID: 63b54f9f8e3443e418622819b36ee744
+  lobbyDummyMap:
+    m_AssetGUID: ece9364a751eb0e4caab50363905e115
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 
