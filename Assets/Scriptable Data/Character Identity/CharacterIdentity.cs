@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using Stat;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
@@ -24,6 +26,12 @@ namespace Players
         public CharacterLevelStatGrowth levelStatGrowth;
         public int[] levelUpCosts = { 100, 200, 350, 550, 800, 1100, 1500, 2000, 2800 };
 
+        [Header("이펙트 데이터 (Lv1 기준)")]
+        public CharacterEffectConfig[] effectConfigs;
+
+        [Header("이펙트 레벨 성장")]
+        public CharacterEffectGrowth[] effectGrowths;
+
         [Header("구매")]
         public int purchasePrice = 1000;
 
@@ -46,6 +54,51 @@ namespace Players
                 projectileSpeed = baseStat.projectileSpeed + levelStatGrowth.projectileSpeed * growth,
                 attackEffectType = baseStat.attackEffectType,
             };
+        }
+
+        /// <summary>
+        /// 지정 레벨에 해당하는 EffectData 맵을 반환한다.
+        /// Base + Growth * (level - 1) 로 계산.
+        /// </summary>
+        public Dictionary<EffectType, EffectData> GetEffectDataAtLevel(int level)
+        {
+            int lv = Mathf.Clamp(level, 1, maxLevel);
+            int growth = lv - 1;
+
+            var result = new Dictionary<EffectType, EffectData>();
+
+            if (effectConfigs == null) return result;
+
+            // growth lookup
+            Dictionary<EffectType, CharacterEffectGrowth> growthMap = null;
+            if (effectGrowths != null && effectGrowths.Length > 0)
+            {
+                growthMap = new Dictionary<EffectType, CharacterEffectGrowth>();
+                foreach (var g in effectGrowths)
+                    growthMap[g.effectType] = g;
+            }
+
+            foreach (var cfg in effectConfigs)
+            {
+                if (cfg.baseEffect == null) continue;
+
+                float dur = cfg.baseEffect.duration;
+                float val = cfg.baseEffect.value;
+                float dot = cfg.baseEffect.dotDamage;
+                float tick = cfg.baseEffect.tickInterval;
+
+                if (growthMap != null && growthMap.TryGetValue(cfg.effectType, out var g))
+                {
+                    dur += g.durationGrowth * growth;
+                    val += g.valueGrowth * growth;
+                    dot += g.dotDamageGrowth * growth;
+                    tick += g.tickIntervalGrowth * growth;
+                }
+
+                result[cfg.effectType] = new EffectData(dur, val, dot, tick);
+            }
+
+            return result;
         }
 
         /// <summary>
