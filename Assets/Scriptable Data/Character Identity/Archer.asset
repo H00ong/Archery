@@ -41,15 +41,28 @@ MonoBehaviour:
     magicResistance: 2
     attackSpeed: 1
     projectileSpeed: 30
-    attackEffectType: 1
+    attackEffectType: 2
   maxLevel: 10
   levelStatGrowth:
-    maxHP: 0
-    attackPower: 0
-    moveSpeed: 0
-    armor: 0
-    magicResistance: 0
-    attackSpeed: 0
-    projectileSpeed: 0
+    maxHP: 1
+    attackPower: 1
+    moveSpeed: 1
+    armor: 1
+    magicResistance: 1
+    attackSpeed: 1
+    projectileSpeed: 1
   levelUpCosts: 64000000c80000005e01000026020000200300004c040000dc050000d0070000f00a0000
+  effectConfigs:
+  - effectType: 2
+    baseEffect:
+      duration: 1
+      value: 1
+      dotDamage: 1
+      tickInterval: 1
+  effectGrowths:
+  - effectType: 2
+    durationGrowth: 0.1
+    valueGrowth: 0.1
+    dotDamageGrowth: 0.1
+    tickIntervalGrowth: 0.1
   purchasePrice: 1000
