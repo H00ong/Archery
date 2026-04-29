@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Equipment_Identity
+  m_EditorClassIdentifier: 
+  m_GroupName: Equipment_Identity
+  m_GUID: 93d81e89caf83a14a89838c2b29e54cb
+  m_SerializeEntries:
+  - m_GUID: 0b35f409de1424d40b54531e90654cd1
+    m_Address: Assets/Scriptable Data/Equipment Identity/Shoes/Old Shoes.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - equipment_identity
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2347493899083854e83a497b21489075
+    m_Address: Assets/Scriptable Data/Equipment Identity/Weapon/Normal Magic Wand.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - equipment_identity
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cc9aaa2701754f94a9cd2dd78403e63d
+    m_Address: Assets/Scriptable Data/Equipment Identity/Armor/Old Armor.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - equipment_identity
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 856c05a54378faf41860bc411561527d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 8bf441a1246743c4eb06fbf2370567d0, type: 2}
+    - {fileID: 11400000, guid: 4db213e15f15b904ba5472936a098d0a, type: 2}

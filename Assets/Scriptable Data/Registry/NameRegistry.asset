@@ -33,3 +33,9 @@ MonoBehaviour:
   - VenomOrb
   - IceOrb
   - IceBarrelGenerate
+  weaponNames:
+  - Normal Magic Staff
+  armorNames:
+  - Old Armor
+  shoesNames:
+  - Old Shoes
