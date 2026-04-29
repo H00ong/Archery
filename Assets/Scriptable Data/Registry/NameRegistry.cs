@@ -16,6 +16,11 @@ public class NameRegistry : ScriptableObject
     [Header("Skill IDs")]
     public List<string> skillIds = new();
 
+    [Header("Equipment Names")]
+    public List<string> weaponNames = new();
+    public List<string> armorNames = new();
+    public List<string> shoesNames = new();
+
 #if UNITY_EDITOR
     private static NameRegistry _instance;
 
