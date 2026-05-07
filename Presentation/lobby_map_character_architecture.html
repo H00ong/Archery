@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1456, height=816">
+    <title>Archery 로비 Map + 캐릭터 선택 아키텍처</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700;900&family=JetBrains+Mono:wght@500;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+            background: #fff;
+        }
+
+        .slide {
+            width: 1456px;
+            height: 816px;
+            background: #f1eef8;
+            position: relative;
+            page-break-after: always;
+            overflow: hidden;
+            margin: 0 auto;
+            color: #282345;
+        }
+
+        .header-bar {
+            position: absolute;
+            top: 28px;
+            left: 42px;
+            right: 42px;
+            height: 48px;
+            background: #665a96;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 17px;
+            font-weight: 800;
+            letter-spacing: .5px;
+        }
+
+        .content-area {
+            position: absolute;
+            top: 102px;
+            left: 60px;
+            right: 60px;
+            bottom: 44px;
+        }
+
+        .section-title {
+            color: #4f457e;
+            font-weight: 900;
+            font-size: 38px;
+            line-height: 1.22;
+            margin-bottom: 22px;
+        }
+
+        .section-title small {
+            display: block;
+            color: #766ca0;
+            font-size: 19px;
+            font-weight: 700;
+            margin-top: 8px;
+        }
+
+        .slide-title {
+            color: #4f457e;
+            font-weight: 900;
+            font-size: 56px;
+            text-align: center;
+            margin-top: 176px;
+            line-height: 1.25;
+        }
+
+        .slide-subtitle {
+            color: #4f457e;
+            font-weight: 900;
+            font-size: 38px;
+            text-align: center;
+            margin-top: 14px;
+            line-height: 1.25;
+        }
+
+        .presenter {
+            text-align: center;
+            color: #665a96;
+            font-size: 21px;
+            margin-top: 28px;
+            font-weight: 800;
+        }
+
+        .two-col,
+        .three-col,
+        .four-col {
+            display: grid;
+            gap: 24px;
+            align-items: stretch;
+        }
+
+        .two-col {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .three-col {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .four-col {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .card,
+        .note-box,
+        .image-slot,
+        .diagram-panel,
+        .metric {
+            background: #fff;
+            border: 2px solid #d2cce5;
+            border-radius: 8px;
+        }
+
+        .card {
+            padding: 22px 24px;
+        }
+
+        .card h3 {
+            color: #4f457e;
+            font-size: 23px;
+            font-weight: 900;
+            line-height: 1.28;
+            margin-bottom: 12px;
+        }
+
+        .card p,
+        .card li {
+            color: #302b52;
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        .card ul {
+            padding-left: 20px;
+        }
+
+        .card li {
+            margin-bottom: 6px;
+        }
+
+        .lead {
+            color: #302b52;
+            font-size: 22px;
+            line-height: 1.58;
+            font-weight: 700;
+        }
+
+        .accent {
+            color: #4f457e;
+            font-weight: 900;
+        }
+
+        .muted {
+            color: #70688f;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 14px;
+            border-radius: 999px;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 900;
+            margin-bottom: 12px;
+        }
+
+        .badge.purple {
+            background: #665a96;
+        }
+
+        .badge.green {
+            background: #18865e;
+        }
+
+        .badge.blue {
+            background: #2b78b8;
+        }
+
+        .badge.orange {
+            background: #c66b1f;
+        }
+
+        .badge.red {
+            background: #c9493f;
+        }
+
+        .note-box {
+            padding: 18px 22px;
+            border-left: 7px solid #665a96;
+            background: #fbfaff;
+        }
+
+        .note-box p {
+            color: #302b52;
+            font-size: 18px;
+            line-height: 1.6;
+            font-weight: 700;
+        }
+
+        .flow {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .flow.vertical {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 10px;
+        }
+
+        .flow-card {
+            background: #fff;
+            border: 2px solid #d2cce5;
+            border-radius: 8px;
+            padding: 15px 16px;
+            color: #302b52;
+            font-size: 17px;
+            line-height: 1.42;
+            font-weight: 900;
+            text-align: center;
+            min-height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .flow-card small {
+            display: block;
+            color: #70688f;
+            font-size: 13px;
+            margin-top: 5px;
+            font-weight: 700;
+        }
+
+        .arrow {
+            color: #8d83b5;
+            font-size: 27px;
+            font-weight: 900;
+            text-align: center;
+            line-height: 1;
+        }
+
+        .chip-row {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 34px;
+            padding: 5px 12px;
+            border-radius: 999px;
+            background: #eee9fa;
+            border: 1px solid #cec6e6;
+            color: #4f457e;
+            font-size: 15px;
+            font-weight: 900;
+            white-space: nowrap;
+        }
+
+        .chip.green {
+            background: #e8f5ef;
+            border-color: #9bd3bd;
+            color: #18865e;
+        }
+
+        .chip.blue {
+            background: #eaf3fb;
+            border-color: #a8cdeb;
+            color: #2b78b8;
+        }
+
+        .chip.orange {
+            background: #fff2e6;
+            border-color: #ecc39a;
+            color: #b65d17;
+        }
+
+        .chip.red {
+            background: #fae9e7;
+            border-color: #e5aaa5;
+            color: #b93c34;
+        }
+
+        .mini-code {
+            background: #28233e;
+            border-radius: 8px;
+            padding: 16px 18px;
+            color: #f3eeff;
+            font-family: 'JetBrains Mono', 'Consolas', monospace;
+            font-size: 15px;
+            line-height: 1.52;
+            font-weight: 700;
+            border: 2px solid #40375c;
+            white-space: pre-line;
+        }
+
+        .mini-code .dim {
+            color: #9c93b8;
+        }
+
+        .mini-code .key {
+            color: #b9e088;
+        }
+
+        .mini-code .type {
+            color: #87c5ff;
+        }
+
+        .mini-code .call {
+            color: #d9b2ff;
+        }
+
+        .mini-code .hot {
+            color: #ffbd86;
+        }
+
+        .diagram-panel {
+            padding: 22px;
+            min-height: 480px;
+        }
+
+        .image-slot {
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: #fbfaff;
+            border-style: dashed;
+            text-align: center;
+            padding: 24px;
+        }
+
+        .image-slot strong {
+            color: #4f457e;
+            font-size: 24px;
+            font-weight: 900;
+        }
+
+        .image-slot span {
+            color: #70688f;
+            font-size: 16px;
+            line-height: 1.5;
+            font-weight: 700;
+        }
+
+        .metric {
+            padding: 20px 22px;
+            min-height: 154px;
+        }
+
+        .metric b {
+            display: block;
+            color: #4f457e;
+            font-size: 30px;
+            font-weight: 900;
+            margin-bottom: 8px;
+        }
+
+        .metric span {
+            color: #302b52;
+            font-size: 17px;
+            line-height: 1.5;
+            font-weight: 700;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border: 2px solid #d2cce5;
+            border-radius: 8px;
+            overflow: hidden;
+            font-size: 15px;
+        }
+
+        .table th {
+            background: #665a96;
+            color: #fff;
+            padding: 10px 12px;
+            text-align: center;
+            font-weight: 900;
+            border: 1px solid #857ab0;
+        }
+
+        .table td {
+            color: #302b52;
+            padding: 9px 12px;
+            border: 1px solid #d2cce5;
+            line-height: 1.45;
+            vertical-align: middle;
+        }
+
+        .table td:first-child {
+            color: #4f457e;
+            font-weight: 900;
+            text-align: center;
+            background: #f7f4ff;
+            white-space: nowrap;
+        }
+
+        .system-map {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+            align-items: stretch;
+        }
+
+        .layer-box {
+            border: 2px solid #d2cce5;
+            border-left: 8px solid #665a96;
+            border-radius: 8px;
+            background: #fff;
+            padding: 15px 16px;
+            min-height: 118px;
+        }
+
+        .layer-box b {
+            display: block;
+            color: #4f457e;
+            font-size: 18px;
+            font-weight: 900;
+            margin-bottom: 6px;
+        }
+
+        .layer-box span {
+            display: block;
+            color: #70688f;
+            font-size: 14px;
+            line-height: 1.42;
+            font-weight: 700;
+        }
+
+        .footer-note {
+            position: absolute;
+            left: 60px;
+            right: 60px;
+            bottom: 24px;
+            color: #766ca0;
+            font-size: 14px;
+            font-weight: 700;
+            text-align: right;
+        }
+
+        .compact-slide .section-title {
+            margin-bottom: 16px;
+        }
+
+        .compact-slide .diagram-panel {
+            min-height: 0;
+            padding: 18px;
+        }
+
+        .compact-slide .flow.vertical {
+            gap: 7px;
+        }
+
+        .compact-slide .flow-card {
+            min-height: 55px;
+            padding: 8px 12px;
+            font-size: 15px;
+        }
+
+        .compact-slide .flow-card small {
+            font-size: 12px;
+            margin-top: 3px;
+        }
+
+        .compact-slide .arrow {
+            font-size: 16px;
+        }
+
+        .compact-slide .card {
+            padding: 17px 19px;
+        }
+
+        .compact-slide .card h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .compact-slide .card p,
+        .compact-slide .card li {
+            font-size: 15px;
+            line-height: 1.48;
+        }
+
+        .compact-slide .mini-code {
+            font-size: 12.4px;
+            line-height: 1.35;
+            padding: 11px 13px;
+        }
+
+        .compact-slide .image-slot {
+            min-height: 0;
+        }
+
+        @media print {
+            @page {
+                size: 1456px 816px;
+                margin: 0;
+            }
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                width: 1456px;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            .slide {
+                page-break-after: always;
+                page-break-inside: avoid;
+                margin: 0;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            .slide:last-child {
+                page-break-after: avoid;
+            }
+
+            #pptx-export-area {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ============== Slide 1: Title ============== -->
+    <div class="slide">
+        <div class="header-bar">캡스톤디자인(1) 로비 시스템 발표</div>
+        <div class="slide-title">Lobby System Architecture</div>
+        <div class="slide-subtitle">매니저 역할 분리로 본 로비 화면의 동작 구조</div>
+        <p class="presenter">InitManager · LobbyMapManager · LobbyCharacterManager · SettingPopupPresenter</p>
+        <div class="content-area" style="top:430px;">
+            <div class="three-col">
+                <div class="metric"><b>Data Layer</b><span>DataManager / MapManager / CharacterManager가 JSON·Addressable
+                        SO를 미리 로드해 캐시를 만듭니다.</span></div>
+                <div class="metric"><b>Lobby Layer</b><span>LobbyMapManager·LobbyCharacterManager가 캐시 데이터를 읽어 더미
+                        프리팹을 풀링·배치·표시합니다.</span></div>
+                <div class="metric"><b>UI / Scene Layer</b><span>SettingPopupPresenter와 LobbyCameraController가 입력을 받아
+                        선택값을 PlayerData·MapManager에 기록합니다.</span></div>
+            </div>
+        </div>
+        <div class="footer-note">핵심 문장: 로비는 콘텐츠를 생성하지 않습니다. 미리 캐싱된 데이터 위에 더미를 배치하고, 선택값(index·이름)만 인게임으로 넘깁니다.</div>
+    </div>
+
+    <!-- ============== Slide 2: 시스템 레이어 ============== -->
+    <div class="slide">
+        <div class="header-bar">캡스톤디자인(1) 로비 시스템 발표</div>
+        <div class="content-area">
+            <div class="section-title">로비 시스템 레이어 구성 <small>책임 단위로 매니저를 나눠 데이터·표현·입력이 서로 침범하지 않도록 분리</small></div>
+
+            <div class="system-map" style="margin-top: 18px;">
+                <div class="layer-box">
+                    <b>① Data Layer (전역 캐시)</b>
+                    <span>DataManager · MapManager · CharacterManager · PoolManager. JSON 수치와 Addressable SO를 메모리에 올리고
+                        풀을 준비합니다.</span>
+                </div>
+                <div class="layer-box" style="border-left-color:#18865e;">
+                    <b>② Lobby Layer (씬 전용 매니저)</b>
+                    <span>LobbyMapManager · LobbyCharacterManager. 캐시된 데이터를 읽어 lobbyDummyMap / lobbyCharacterDummy를
+                        풀에서 꺼내 로비 화면을 구성합니다.</span>
+                </div>
+                <div class="layer-box" style="border-left-color:#2b78b8;">
+                    <b>③ UI · Input Layer</b>
+                    <span>SettingPopupPresenter · CharacterTabPresenter · LobbyCameraController. 입력을 받아 매니저에 명령을 전달하고,
+                        선택 결과를 PlayerData·MapManager에 기록합니다.</span>
+                </div>
+            </div>
+
+            <div class="two-col" style="margin-top: 28px; grid-template-columns: 1.1fr .9fr;">
+                <div class="card">
+                    <span class="badge purple">설계 원칙</span>
+                    <h3>“데이터 매니저는 전역, 로비 매니저는 화면 전용”</h3>
+                    <ul>
+                        <li><b>Data Layer</b>는 씬에 종속되지 않고 게임 시작 시 한 번 캐시를 채웁니다.</li>
+                        <li><b>Lobby Layer</b>는 그 캐시만 참조하므로 런타임에 Resources/Addressables 검색이 발생하지 않습니다.</li>
+                        <li><b>UI Layer</b>는 매니저의 public 메서드만 호출하고, 데이터 자체는 만지지 않습니다.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <span class="badge green">통신 방식</span>
+                    <h3>EventBus로 씬 전이를 알림</h3>
+                    <p>GameManager가 씬을 바꾸면 <b>LobbySceneLoaded</b> 이벤트가 Publish 됩니다. 두 로비 매니저는 이 이벤트만 듣고 자신의 더미 풀을
+                        켜거나 꺼서, 로비 외 씬에서는 어떤 더미도 보이지 않게 합니다.</p>
+                    <div class="chip-row" style="margin-top: 14px;">
+                        <span class="chip">EventBus.Subscribe</span>
+                        <span class="chip green">LobbySceneLoaded</span>
+                        <span class="chip orange">MapCleared</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============== Slide 3: Loading 단계 ============== -->
+    <div class="slide">
+        <div class="header-bar">캡스톤디자인(1) 로비 시스템 발표</div>
+        <div class="content-area">
+            <div class="section-title">Loading 단계: InitManager가 의존성 캐시를 채운다 <small>로비 매니저는 캐시 위에서만 동작 — 그래서 캐시가 먼저
+                    채워져야 함</small></div>
+
+            <div class="flow" style="margin-top: 20px;">
+                <div class="flow-card" style="flex:1;">DataManager.Init()<small>JSON 로드 (mapDataJson,
+                        PlayerData)</small>
+                </div>
+                <div class="arrow">→</div>
+                <div class="flow-card" style="flex:1;">MapManager<small>map_config 라벨 로드</small></div>
+                <div class="arrow">→</div>
+                <div class="flow-card" style="flex:1;">CharacterManager<small>character_identity 라벨 로드</small></div>
+                <div class="arrow">→</div>
+                <div class="flow-card" style="flex:1;">LobbyMapManager.InitLobbyAsync()<small>맵 더미 풀링</small></div>
+                <div class="arrow">→</div>
+                <div class="flow-card" style="flex:1;">LobbyCharacterManager.InitLobbyAsync()<small>캐릭터 더미 풀링</small>
+                </div>
+            </div>
+
+            <div class="two-col" style="margin-top: 28px; grid-template-columns: 1fr 1fr;">
+                <div class="card">
+                    <span class="badge purple">왜 이 순서인가</span>
+                    <h3>로비 매니저는 “이미 로드된 SO”만 읽는다</h3>
+                    <ul>
+                        <li>LobbyMapManager는 <b>MapManager.GetMapScriptable(mapId)</b>를 호출해 lobbyDummyMap을 얻습니다.</li>
+                        <li>LobbyCharacterManager는 <b>CharacterManager.GetCharacterMap()</b>으로 모든 CharacterIdentity를
+                            받습니다.
+                        </li>
+                        <li>따라서 두 데이터 매니저의 로드가 끝난 뒤에야 로비 매니저를 초기화할 수 있습니다.</li>
+                    </ul>
+                </div>
+                <div class="mini-code"><span class="dim">// InitManager.InitAsync()</span>
+                    dataManager.Init();
+                    await <span class="call">mapManager.LoadMapConfigAsync</span>();
+                    await <span class="call">characterManager.LoadCharacterIdentitiesAsync</span>();
+                    <span class="dim">// ↑ 캐시 완성 → ↓ 로비 매니저 초기화 가능</span>
+                    await <span class="call">lobbyMapManager.InitLobbyAsync</span>();
+                    await <span class="call">lobbyCharacterManager.InitLobbyAsync</span>();
+                    IsLoaded = <span class="key">true</span>;
+                </div>
+            </div>
+
+            <table class="table" style="margin-top: 22px;">
+                <tr>
+                    <th>매니저</th>
+                    <th>로드하는 캐시</th>
+                    <th>로비에서 꺼내 쓰는 항목</th>
+                </tr>
+                <tr>
+                    <td>DataManager</td>
+                    <td>mapDataJson, PlayerData</td>
+                    <td>맵 개수, 해금 정보, 보유 캐릭터·골드</td>
+                </tr>
+                <tr>
+                    <td>MapManager</td>
+                    <td>map_config (MapScriptable)</td>
+                    <td>lobbyDummyMap (AssetReferenceGameObject)</td>
+                </tr>
+                <tr>
+                    <td>CharacterManager</td>
+                    <td>character_identity (CharacterIdentity)</td>
+                    <td>lobbyCharacterDummy, icon, price, level 정보</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- ============== Slide 4: LobbyMapManager 역할 ============== -->
+    <div class="slide">
+        <div class="header-bar">캡스톤디자인(1) 로비 시스템 발표</div>
+        <div class="content-area">
+            <div class="section-title">LobbyMapManager 가 하는 일 <small>“맵 미리보기 더미를 세로로 쌓고, 잠금 표시와 카메라를 셋업한다”</small>
+            </div>
+
+            <div class="two-col" style="grid-template-columns: 1.05fr .95fr;">
+                <div class="card">
+                    <span class="badge purple">책임 1 — 더미 풀링 & 배치</span>
+                    <h3>CacheDummyRefs → BuildLobbyMapsAsync</h3>
+                    <ul>
+                        <li><b>CacheDummyRefs()</b>: DataManager의 맵 개수만큼 돌며 각 MapScriptable의 lobbyDummyMap 레퍼런스를
+                            모읍니다.</li>
+                        <li><b>BuildLobbyMapsAsync()</b>: PoolManager.lobbyMapPool에서 더미를 꺼내 (0, i × yOffset, 0) 위치에 배치
+                            합니다.</li>
+                        <li>풀에 없으면 <b>GetObjectAsync</b>로 Addressable에서 비동기 로드 후 풀에 등록합니다.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <span class="badge orange">책임 2 — 잠금 시각화 & 갱신</span>
+                    <h3>ApplyVisual + MapCleared 구독</h3>
+                    <ul>
+                        <li>해금된 인덱스(<b>_firstUnlockedMapIndex</b>) 이후의 더미는 <b>lockedAlpha</b>로 반투명 처리합니다.</li>
+                        <li>원래 색상은 <b>_originalBaseColors / _originalUrpColors</b> 딕셔너리에 저장해 두고 복구할 때 사용합니다.</li>
+                        <li><b>MapCleared</b> 이벤트를 받으면 다음 맵을 해금하고, 해당 더미에 대해 ApplyVisual(locked: false)를 호출합니다.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="two-col" style="margin-top: 22px; grid-template-columns: 1.05fr .95fr;">
+                <div class="card">
+                    <span class="badge blue">책임 3 — 카메라 셋업 & 선택 확정</span>
+                    <h3>SetLobbyCamera / SelectFocusedMap</h3>
+                    <ul>
+                        <li><b>LobbySceneLoaded</b> 이벤트에서 LobbyCameraController를 찾아 더미 수·yOffset·해금 인덱스를 넘겨 Setup
+                            합니다.</li>
+                        <li><b>F3 / 선택 입력</b>이 들어오면 SelectFocusedMap()이 잠금 검사를 한 뒤
+                            MapManager.SetCurrentMapIndex()를 호출하고 InGame 씬으로 전환합니다.</li>
+                    </ul>
+                </div>
+                <div class="mini-code" style="font-size:13.5px;"><span class="dim">//
+                        LobbyMapManager.SelectFocusedMap()</span>
+                    int index = FocusedMapIndex;
+                    if (index &gt; _firstUnlockedMapIndex) <span class="key">return</span>; <span class="dim">// 잠금
+                        컷</span>
+                    _mapManager.<span class="call">SetCurrentMapIndex</span>(index);
+                    GameManager.Instance.<span class="call">ChangeScene</span>(SceneState.InGame);
+                    SetDummyPoolActive(<span class="key">false</span>);</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============== Slide 5: Map 선택 흐름 ============== -->
+    <div class="slide compact-slide">
+        <div class="header-bar">캡스톤디자인(1) 로비 시스템 발표</div>
+        <div class="content-area">
+            <div class="section-title">Map 선택 흐름 <small>입력은 LobbyCameraController, 결정과 씬 전환은 LobbyMapManager</small>
+            </div>
+            <div class="two-col" style="grid-template-columns: 1.05fr .95fr;">
+                <div class="diagram-panel">
+                    <div class="flow vertical">
+                        <div class="flow-card">EventBus: LobbySceneLoaded<small>로비 씬 로드 완료 시 Publish</small></div>
+                        <div class="arrow">↓</div>
+                        <div class="flow-card">LobbyMapManager.SetLobbyCamera()<small>맵 수·yOffset·해금 index를 카메라에
+                                Setup</small></div>
+                        <div class="arrow">↓</div>
+                        <div class="flow-card">LobbyCameraController<small>↑/↓ 입력으로 CurrentStageIndex 변경 +
+                                Lerp 이동</small></div>
+                        <div class="arrow">↓</div>
+                        <div class="flow-card">LobbyMapManager.SelectFocusedMap()<small>잠금 검사 →
+                                SetCurrentMapIndex</small>
+                        </div>
+                        <div class="arrow">↓</div>
+                        <div class="flow-card">GameManager.ChangeScene(InGame)<small>선택된 인덱스로 전투 씬 시작</small></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="image-slot" style="height: 230px;"><strong>사진 배치 추천: 로비 맵 선택 화면</strong><span>세로로 쌓인 맵
+                            더미와 카메라 포커스, 잠금된 맵의 반투명 처리가 같이 보이는 캡처가 가장 효과적입니다.</span></div>
+                    <div class="card" style="margin-top: 20px;">
+                        <span class="badge blue">핵심 포인트</span>
+                        <h3>로비는 “인덱스”만 결정한다</h3>
+                        <p>로비에서 mapId나 프리팹을 직접 다루지 않습니다. 카메라가 보고 있는 <b>FocusedMapIndex</b>를 MapManager에 저장하면, 인게임
+                            로딩 때 DataManager가 그 index로 mapId·MapScriptable을 다시 조회합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============== Slide 6: LobbyCharacterManager + UI ============== -->
+    <div class="slide compact-slide">
+        <div class="header-bar">캡스톤디자인(1) 로비 시스템 발표</div>
+        <div class="content-area">
+            <div class="section-title">LobbyCharacterManager + SettingPopupPresenter <small>매니저는 더미 상태를 관리, Presenter는
+                    팝업 UI와 입력을 담당</small></div>
+
+            <div class="two-col" style="grid-template-columns: 1.05fr .95fr;">
+                <div class="card">
+                    <span class="badge purple">LobbyCharacterManager 역할</span>
+                    <h3>캐릭터 더미의 풀링 · 표시 · 선택 확정</h3>
+                    <ul>
+                        <li><b>CacheDummyRefs()</b>: CharacterManager의 캐릭터 맵을 돌며 lobbyCharacterDummy 레퍼런스를 index 순으로 정렬해
+                            저장.</li>
+                        <li><b>Show()/Hide()</b>: 풀을 켜고 현재 인덱스 캐릭터만 활성화 (잠금 상태는 ApplyVisual로 반투명).</li>
+                        <li><b>ChangeCharacter(±1)</b>: 좌우 입력 시 이전 더미 비활성화 → 새 더미 활성화.</li>
+                        <li><b>SelectCurrent()</b>: 잠금 검사 후 CharacterManager.SyncCharacterIdentity()로 현재 캐릭터를 확정.</li>
+                    </ul>
+                </div>
+                <div class="diagram-panel">
+                    <div class="flow vertical">
+                        <div class="flow-card">설정 버튼 클릭<small>UIManager → SettingPopupPresenter.Show()</small></div>
+                        <div class="arrow">↓</div>
+                        <div class="flow-card">LobbyCharacterCamera 활성화<small>RenderTexture 생성 → RawImage에 출력</small>
+                        </div>
+                        <div class="arrow">↓</div>
+                        <div class="flow-card">LobbyCharacterManager.Show()<small>현재 더미만 활성, ApplyVisual 적용</small>
+                        </div>
+                        <div class="arrow">↓</div>
+                        <div class="flow-card">CharacterTabPresenter.Activate()<small>좌/우/Action 버튼 상태 갱신</small>
+                        </div>
+                        <div class="arrow">↓</div>
+                        <div class="flow-card">SelectCurrent → SetCurrentCharacter<small>PlayerData.currentCharacterName
+                                갱신</small></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="two-col" style="margin-top: 14px; grid-template-columns: 1fr 1fr;">
+                <div class="card">
+                    <span class="badge green">SettingPopupPresenter 역할</span>
+                    <h3>UI · 카메라 · 매니저를 묶는 컨트롤러</h3>
+                    <p>SettingPopup(View)와 LobbyCharacterCamera, LobbyCharacterManager 인스턴스를 보관하고, Show/Hide와 탭 전환
+                        시점에 카메라·매니저·CharacterTabPresenter를 한 번에 켜고 끕니다.</p>
+                </div>
+                <div class="mini-code" style="font-size:13.5px;"><span class="dim">//
+                        SettingPopupPresenter.Show()</span>
+                    _characterCamera.<span class="call">GetOrCreateRenderTexture</span>();
+                    _characterCamera.<span class="call">SetActive</span>(<span class="key">true</span>);
+                    _lobbyCharacterManager.<span class="call">Show</span>();
+                    _characterTabPresenter.<span class="call">Activate</span>();</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============== Slide 7: InGame 핸드오프 + 정리 ============== -->
+    <div class="slide">
+        <div class="header-bar">캡스톤디자인(1) 로비 시스템 발표</div>
+        <div class="content-area">
+            <div class="section-title">선택값이 InGame 씬으로 넘어가는 방식 <small>로비는 “index + 캐릭터 이름”만 남기고, 실제 생성은
+                    StageManager가 수행</small></div>
+
+            <div class="flow" style="margin-top: 18px;">
+                <div class="flow-card" style="flex:1;">로비에서 선택<small>CurrentMapIndex / currentCharacterName 저장</small>
+                </div>
+                <div class="arrow">→</div>
+                <div class="flow-card" style="flex:1;">InGameSceneLoaded<small>StageManager.Init</small></div>
+                <div class="arrow">→</div>
+                <div class="flow-card" style="flex:1;">MapManager.RefreshMapData()<small>index → MapData + MapScriptable
+                    </small></div>
+                <div class="arrow">→</div>
+                <div class="flow-card" style="flex:1;">CharacterManager.LoadAndSpawnCharacterAsync()<small>이름 기반 플레이어
+                        스폰</small></div>
+            </div>
+
+            <div class="two-col" style="margin-top: 26px;">
+                <div class="card">
+                    <span class="badge blue">Map handoff</span>
+                    <h3>CurrentMapIndex 가 전투 맵 구성을 결정</h3>
+                    <ul>
+                        <li>DataManager.GetMapData(index)로 stageCount와 enemyCountGrid 확보.</li>
+                        <li>MapData.mapId로 MapScriptable을 조회 → mapList / bossMap / enemyIdentityList 연결.</li>
+                        <li>스테이지마다 ActivateRandomMap이 일반 맵 또는 보스 맵을 활성화.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <span class="badge orange">Character handoff</span>
+                    <h3>currentCharacterName 이 플레이어 생성 · 스탯을 결정</h3>
+                    <ul>
+                        <li>이름으로 CharacterIdentity 조회 → characterPrefab을 풀에서 인스턴스화.</li>
+                        <li>projectilePrefab 등록 + 캐릭터 레벨 기반 스탯 적용.</li>
+                        <li>EquipmentManager가 장비 스탯 추가 후 PlayerSpawned 이벤트 Publish.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="two-col" style="margin-top: 22px; grid-template-columns: 1.05fr .95fr;">
+                <div class="mini-code"><span class="dim">// StageManager 진입 시퀀스</span>
+                    MapManager.Instance.<span class="call">RefreshMapData</span>();
+                    await MapManager.Instance.<span class="call">PreloadMapsAsync</span>();
+                    await CharacterManager.Instance.<span class="call">LoadAndSpawnCharacterAsync</span>();
+                    LoadMap();
+                    PositionPlayer();
+                    await SpawnEnemyAsync();</div>
+                <div class="note-box">
+                    <p><b>요약</b> — 로비는 콘텐츠 생산자가 아니라 <b>선택 계층</b>입니다. 매니저는 책임별로 분리되어 있어, 새 맵·캐릭터를 추가해도 SO만 등록하면 로비
+                        UI 코드를 건드리지 않고 자동으로 더미와 선택 흐름에 편입됩니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="pptx-export-area" style="position:fixed; bottom:20px; right:20px; z-index:9999;">
+        <button id="export-btn"
+            style="background:#665a96; color:#fff; border:none; border-radius:8px; padding:12px 24px; font-size:16px; font-weight:900; cursor:pointer; box-shadow:0 4px 12px rgba(0,0,0,0.25); font-family:'Noto Sans KR',sans-serif;">PPTX
+            다운로드</button>
+        <div id="export-status"
+            style="color:#4f457e; font-size:13px; text-align:center; margin-top:6px; font-family:'Noto Sans KR',sans-serif; display:none; font-weight:800;">
+            변환 중...</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/dom-to-pptx@latest/dist/dom-to-pptx.bundle.js"></script>
+    <script>
+        document.getElementById('export-btn').addEventListener('click', async () => {
+            const btn = document.getElementById('export-btn');
+            const status = document.getElementById('export-status');
+            btn.disabled = true;
+            btn.style.opacity = '0.6';
+            status.style.display = 'block';
+            status.textContent = '변환 중... 잠시만 기다려주세요.';
+
+            try {
+                const slides = Array.from(document.querySelectorAll('.slide'));
+                await domToPptx.exportToPptx(slides, {
+                    fileName: 'lobby_map_character_architecture.pptx',
+                });
+                status.textContent = '다운로드 완료';
+            } catch (e) {
+                console.error(e);
+                status.textContent = '오류 발생: ' + e.message;
+            } finally {
+                btn.disabled = false;
+                btn.style.opacity = '1';
+                setTimeout(() => { status.style.display = 'none'; }, 3000);
+            }
+        });
+    </script>
+</body>
+
+</html>
