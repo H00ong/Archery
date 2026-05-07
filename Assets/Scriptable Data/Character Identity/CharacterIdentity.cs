@@ -19,18 +19,18 @@ namespace Players
         public AssetReferenceGameObject lobbyCharacterDummy;
 
         [Header("기본 능력치 (Lv1)")]
-        public CharacterBaseStatData baseStat;
+        public BaseStatData baseStat;
 
         [Header("레벨 성장")]
         public int maxLevel = 10;
-        public CharacterLevelStatGrowth levelStatGrowth;
+        public LevelStatGrowth levelStatGrowth;
         public int[] levelUpCosts = { 100, 200, 350, 550, 800, 1100, 1500, 2000, 2800 };
 
         [Header("이펙트 데이터 (Lv1 기준)")]
-        public CharacterEffectConfig[] effectConfigs;
+        public EffectConfig[] effectConfigs;
 
         [Header("이펙트 레벨 성장")]
-        public CharacterEffectGrowth[] effectGrowths;
+        public EffectGrowth[] effectGrowths;
 
         [Header("구매")]
         public int purchasePrice = 1000;
@@ -38,12 +38,12 @@ namespace Players
         /// <summary>
         /// 지정 레벨의 스탯을 계산한다. Level N = BaseStat + Growth * (N - 1)
         /// </summary>
-        public CharacterBaseStatData GetStatsAtLevel(int level)
+        public BaseStatData GetStatsAtLevel(int level)
         {
             int lv = Mathf.Clamp(level, 1, maxLevel);
             int growth = lv - 1;
 
-            return new CharacterBaseStatData
+            return new BaseStatData
             {
                 maxHP = baseStat.maxHP + levelStatGrowth.maxHP * growth,
                 attackPower = baseStat.attackPower + levelStatGrowth.attackPower * growth,
@@ -70,10 +70,10 @@ namespace Players
             if (effectConfigs == null) return result;
 
             // growth lookup
-            Dictionary<EffectType, CharacterEffectGrowth> growthMap = null;
+            Dictionary<EffectType, EffectGrowth> growthMap = null;
             if (effectGrowths != null && effectGrowths.Length > 0)
             {
-                growthMap = new Dictionary<EffectType, CharacterEffectGrowth>();
+                growthMap = new Dictionary<EffectType, EffectGrowth>();
                 foreach (var g in effectGrowths)
                     growthMap[g.effectType] = g;
             }
