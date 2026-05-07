@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c8fb38413c82ac4f88d0e401552a0ea, type: 3}
+  m_Name: BossBox
+  m_EditorClassIdentifier: 
+  Prefab:
+    m_AssetGUID: 17f49dd2bc9f72c418315231e1fe5bfa
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  Tag: 804
+  ObjectMat: {fileID: 0}
+  AccessoryMat: {fileID: 0}
+  brain: {fileID: 11400000, guid: 69c893b7bde8e6c49aa4b4e80547e451, type: 2}
+  moveModule: {fileID: 11400000, guid: afaa23b3325153442844e674141cf6ba, type: 2}
+  attackModules:
+  - {fileID: 11400000, guid: d1dc6bf115441f14988585b553f5e175, type: 2}
+  - {fileID: 11400000, guid: 626ef6cb0ad1e4a47b4f88aacde0acd7, type: 2}
