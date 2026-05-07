@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b97cc697d146d1e428d917b73d4a2a7c, type: 3}
   m_Name: BossBox_FollowMeleeAttackData
   m_EditorClassIdentifier: 
-  targetName: 4
+  targetName: Box
   targetTag: 512
   attackIndex: 1
   attackMoveSpeed: 0

@@ -15,6 +15,7 @@ MonoBehaviour:
   enemyNames:
   - Octopus
   - Wizard
+  - Box
   mapIds:
   - Dungeon
   - Jungle

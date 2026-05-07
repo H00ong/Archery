@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c26db3dd6e288745b49510accb8451e, type: 3}
   m_Name: BossBox_FlyingShootData
   m_EditorClassIdentifier: 
-  targetName: 4
-  linkedTag: 256
+  targetName: Box
+  targetTag: 256
+  attackIndex: 0
   projectilePrefab:
     m_AssetGUID: 5d057e07ffc2ce74e9ab29e08f2046c9
     m_SubObjectName: 

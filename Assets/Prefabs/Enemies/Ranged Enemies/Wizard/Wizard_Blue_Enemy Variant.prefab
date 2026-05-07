@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 281678182398032225, guid: 8374975c91bac724a984a2e58449af64, type: 3}
       propertyPath: enemyTags
-      value: 134217890
+      value: 162
       objectReference: {fileID: 0}
     - target: {fileID: 1577555699710254621, guid: 8374975c91bac724a984a2e58449af64, type: 3}
       propertyPath: m_Name

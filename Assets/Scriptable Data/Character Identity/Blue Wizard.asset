@@ -35,7 +35,7 @@ MonoBehaviour:
     m_EditorAssetChanged: 1
   baseStat:
     maxHP: 100
-    attackPower: 10
+    attackPower: 100
     moveSpeed: 6
     armor: 0
     magicResistance: 2
@@ -52,4 +52,6 @@ MonoBehaviour:
     attackSpeed: 0.02
     projectileSpeed: 0.5
   levelUpCosts: 64000000c80000005e01000026020000200300004c040000dc050000d0070000f00a0000
+  effectConfigs: []
+  effectGrowths: []
   purchasePrice: 1000

@@ -361,19 +361,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDebugMode: 1
-  enemyName: 2
+  enemyName: Octopus
   enemyTags: 73
-  stats:
-    baseStats:
-      hp: 0
-      atk: 0
-      moveSpeed: 0
-    shooting:
-      projectileAtk: 0
-      projectileSpeed: 0
-    flyingShooting:
-      flyingProjectileAtk: 0
-      flyingProjectileSpeed: 0
   brain: {fileID: 11400000, guid: bfc27aff85bad2d4ca882c5618105ad9, type: 2}
   idle: {fileID: 0}
   move: {fileID: 0}
@@ -384,6 +373,7 @@ MonoBehaviour:
   rigidBody: {fileID: 7645161806128579247}
   enemyCollider: {fileID: 6830129245748897892}
   enemyReference: {fileID: 1317046124616405867}
+  enemyVisual: {fileID: 0}
   defaultIdleTime: 2
   expItemPrefab:
     m_AssetGUID: 4c0a5b1487abe67489f755abb9376c1f
@@ -392,13 +382,6 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
   defaultAttackSpeed: 1
-  defaultAtk: 1
-  blockCheck: {fileID: 6835311420649658723}
-  sphereCastRadius: 1
-  castDistance: 0.5
-  obstacleLayer:
-    serializedVersion: 2
-    m_Bits: 64
   lastPlayerPosition: {x: 0, y: 0, z: 0}
   player: {fileID: 0}
 --- !u!114 &1317046124616405867
