@@ -670,7 +670,7 @@
             color: #d8d1ef;
             border-radius: 8px;
             padding: 16px 18px;
-            font-family: 'Consolas', 'D2Coding', 'Noto Sans KR', 'Malgun Gothic', monospace;
+            font-family: 'Consolas', 'D2Coding', 'Noto Sans KR', 'Malgun Gothic';
             font-size: 14px;
             line-height: 1.65;
             font-weight: 600;
@@ -1018,6 +1018,136 @@
             </div>
             <div class="note-box">
                 <p>로비 세팅은 복잡한 빌드 계산보다 “이번 판을 어떤 감각으로 시작할 것인가”를 빠르게 정하게 하는 역할을 합니다.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 9-A. Lobby Detail · Character -->
+    <div class="slide">
+        <div class="header-bar">캡스톤 디자인 최종 쇼케이스 · ARCHERY</div>
+        <div class="step-pill">로비 상세 · 캐릭터</div>
+        <div class="content-area">
+            <div class="section-title">캐릭터 선택: 플레이 스타일의 기초를 결정합니다 <small>Identity SO를 통해 외형과 기초 스탯(HP, 속도, 공속)을
+                    정의합니다</small></div>
+            <div class="two-col wide-left">
+                <div class="photo-slot" style="min-height: 500px;">
+                    <strong>사진 위치 02-A · 캐릭터 선택 UI</strong>
+                    <span>좌측 캐릭터 리스트, 중앙 프리뷰, 우측 상세 스탯창이 포함된 화면</span>
+                </div>
+                <div>
+                    <div class="card" style="margin-bottom: 20px;">
+                        <span class="badge dark">IDENTITY SO</span>
+                        <h3>데이터 기반 캐릭터 설정</h3>
+                        <p>모든 캐릭터는 ScriptableObject로 관리되어, 새로운 캐릭터 추가 시 별도의 코드 수정 없이 스탯과 프리뷰 에셋만 등록하면 즉시 반영됩니다.</p>
+                    </div>
+                    <div class="table-wrap">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>구분</th>
+                                    <th>주요 스탯</th>
+                                    <th>특징</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Archer</td>
+                                    <td>Atk Speed: High</td>
+                                    <td>가장 빠른 연사 속도로 단일 대상 제압에 특화</td>
+                                </tr>
+                                <tr>
+                                    <td>Knight</td>
+                                    <td>Max HP: High</td>
+                                    <td>높은 체력과 무적 시간을 활용한 안정적 운영</td>
+                                </tr>
+                                <tr>
+                                    <td>Wizard</td>
+                                    <td>Move Speed: High</td>
+                                    <td>빠른 기동성으로 원거리 투사체 회피에 최적화</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="note-box" style="margin-top: 20px;">
+                        <p>선택된 캐릭터 데이터는 <b>CharacterManager</b>로 전달되어 인게임 진입 시 플레이어 오브젝트에 실시간으로 주입됩니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 9-B. Lobby Detail · Settings -->
+    <div class="slide">
+        <div class="header-bar">캡스톤 디자인 최종 쇼케이스 · ARCHERY</div>
+        <div class="step-pill">로비 상세 · 세팅</div>
+        <div class="content-area">
+            <div class="section-title">인벤토리: 장비와 보조 무기의 조합 <small>기본 능력치를 보강하는 '장비'와 보조 화력을 담당하는 '오브/배럴'을 세팅합니다</small>
+            </div>
+            <div class="three-col" style="margin-bottom: 24px;">
+                <div class="card tech">
+                    <span class="badge blue">GEAR SLOT</span>
+                    <h3>메인 장비</h3>
+                    <p>공격력, 방어력 등 캐릭터의 기초 체급을 결정하는 슬롯입니다. 장착된 장비의 스탯은 캐릭터 기본 스탯에 합산되어 인게임에 반영됩니다.</p>
+                </div>
+                <div class="card tech">
+                    <span class="badge green">ORB SLOT</span>
+                    <h3>회전 오브</h3>
+                    <p>캐릭터 주변을 공전하며 근접하는 적을 타격합니다. 플레이어가 이동하는 경로상의 안전을 확보하는 '근접 견제' 역할을 수행합니다.</p>
+                </div>
+                <div class="card tech">
+                    <span class="badge orange">BARREL SLOT</span>
+                    <h3>고정 배럴</h3>
+                    <p>일정 주기로 가장 가까운 적에게 탄을 발사합니다. 플레이어의 주 공격이 닿지 않는 사각지대를 보완하거나 화력을 집중시킵니다.</p>
+                </div>
+            </div>
+            <div class="two-col wide-right">
+                <div class="note-box tech">
+                    <p class="accent-blue">로드아웃 시스템 (Loadout System)</p>
+                    <p style="font-size: 16px; margin-top: 8px;">플레이어는 각 슬롯에 원하는 모듈을 자유롭게 탈착할 수 있으며, 이 설정값은 JSON 형태로
+                        저장되어 재접속 시에도 유지됩니다.</p>
+                </div>
+                <div class="photo-slot" style="min-height: 230px;">
+                    <strong>사진 위치 02-B · 인벤토리 UI</strong>
+                    <span>장비 인벤토리 리스트와 현재 장착 중인 슬롯(장비/오브/배럴) 인터페이스</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 9-C. Lobby Detail · Map -->
+    <div class="slide">
+        <div class="header-bar">캡스톤 디자인 최종 쇼케이스 · ARCHERY</div>
+        <div class="step-pill">로비 상세 · 지역</div>
+        <div class="content-area">
+            <div class="section-title">맵 선택: 도전할 전장을 결정합니다 <small>각 지역은 고유의 테마와 Enemy 리스트, 난이도 계수를 가집니다</small></div>
+            <div class="two-col wide-left">
+                <div class="photo-slot new" style="min-height: 480px;">
+                    <strong>사진 위치 02-C · 지역 선택 화면</strong>
+                    <span>세계 지도 형태의 UI와 각 지역(Dungeon, Jungle 등) 노드가 표시된 화면</span>
+                </div>
+                <div>
+                    <div class="card new" style="margin-bottom: 16px;">
+                        <span class="badge red">MAP NAVIGATION</span>
+                        <h3>단계적 지역 해금</h3>
+                        <p>이전 지역의 보스를 처치해야 다음 지역으로 넘어갈 수 있는 선형적 진행 구조를 지원합니다. 각 지역 선택 시 해당 지역의 특징과 출현 몬스터 정보가 표시됩니다.</p>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-num" style="background:#c9493f">!</div>
+                        <div>
+                            <h3>지역별 환경 데이터</h3>
+                            <p>선택된 지역에 따라 <b>MapManager</b>가 해당 지역의 Map Object Pool을 활성화하고, 배경 음악과 포스트 프로세싱 효과를 변경하여
+                                몰입감을 높입니다.</p>
+                        </div>
+                    </div>
+                    <div class="step-row" style="margin-top:10px;">
+                        <div class="step-num" style="background:#c9493f">GO</div>
+                        <div>
+                            <h3>전투 진입 프로세스</h3>
+                            <p>캐릭터, 세팅, 맵 선택이 모두 완료된 상태에서 '출발' 버튼을 누르면 <b>Loading Manager</b>를 거쳐 인게임 씬으로 모든 선택 데이터가
+                                전달됩니다.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -1438,32 +1568,114 @@
         </div>
     </div>
 
-    <!-- 20. Boss and Result -->
+    <!-- 20. Stage Clear → Portal -->
+    <div class="slide">
+        <div class="header-bar">캡스톤 디자인 최종 쇼케이스 · ARCHERY</div>
+        <div class="step-pill">스테이지 클리어</div>
+        <div class="content-area">
+            <div class="section-title">스테이지 클리어 → 포탈 진입 <small>스테이지의 적을 모두 정리하면 다음 단계로 넘어갑니다</small></div>
+            <div class="arrow-flow" style="margin-bottom: 20px;">
+                <div class="step"><b>적 처치</b><span>스테이지 모든 적 제거</span></div>
+                <div class="arrow">&#8250;</div>
+                <div class="step"><b>오브 회수</b><span>경험치·아이템 수집</span></div>
+                <div class="arrow">&#8250;</div>
+                <div class="step new"><b>포탈 활성화</b><span>수집 완료 시 출현</span></div>
+                <div class="arrow">&#8250;</div>
+                <div class="step"><b>포탈 진입</b><span>플레이어가 직접 이동</span></div>
+                <div class="arrow">&#8250;</div>
+                <div class="step"><b>다음 스테이지</b><span>인덱스 갱신 + 로딩</span></div>
+            </div>
+            <div class="two-col">
+                <div class="card">
+                    <h3>클리어 조건과 처리 흐름</h3>
+                    <ul>
+                        <li>스테이지에 등장한 모든 적을 처치합니다.</li>
+                        <li>맵에 흩어진 경험치 오브 등 수집 요소를 모두 회수하면 <span class="accent">포탈이 활성화</span>됩니다.</li>
+                        <li>플레이어가 포탈에 진입하면 다음 스테이지로 전환됩니다.</li>
+                        <li>전환 사이에는 짧은 로딩 / 스테이지 인덱스 갱신이 있습니다.</li>
+                    </ul>
+                    <div class="note-box" style="margin-top: 18px;">
+                        <p>클리어 조건이 단순하기 때문에 플레이어는 "다음으로 가는 흐름"을 바로 이해할 수 있습니다.</p>
+                    </div>
+                </div>
+                <div class="photo-slot new" style="min-height: 360px;">
+                    <strong>사진 위치 · 활성화된 포탈</strong>
+                    <span>적을 모두 처치한 뒤 빛나는 포탈이 등장한 장면</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 21. 난이도 상승 -->
+    <div class="slide">
+        <div class="header-bar">캡스톤 디자인 최종 쇼케이스 · ARCHERY</div>
+        <div class="step-pill">난이도 상승</div>
+        <div class="content-area">
+            <div class="section-title">다음 스테이지 — 난이도 상승 <small>같은 흐름이 반복되며 점점 어려워집니다</small></div>
+            <div class="two-col" style="margin-bottom: 18px;">
+                <div class="card"><span class="badge orange">적 수</span>
+                    <h3>등장 수 증가</h3>
+                    <p>스테이지가 진행될수록 한 번에 등장하는 적의 수가 늘어납니다.</p>
+                </div>
+                <div class="card"><span class="badge red">스탯</span>
+                    <h3>체력·공격력 상승</h3>
+                    <p>같은 종류의 적이라도 뒤로 갈수록 더 단단하고 더 큰 피해를 줍니다.</p>
+                </div>
+                <div class="card"><span class="badge dark">스탯 종류</span>
+                    <h3>스탯 종류</h3>
+                    <ul>
+                        <li><b>기본(Base)</b> — 적의 고유 능력치</li>
+                        <li><b>맵 배율(Map Modifier)</b> — 맵마다 적용되는 고유한 배율. 상위 맵일수록 증가해 난이도 상승.</li>
+                        <li><b>스테이지 배율(Stage Growth)</b> — 스테이지마다 적용되는 배율. 진행될수록 난이도 상승.</li>
+                    </ul>
+                </div>
+                <div class="card tech"><span class="badge blue">스탯 계산</span>
+                    <h3>스탯 계산</h3>
+                    <ul>
+                        <li><b>최종 스탯</b> = 기본 스탯 × 맵 배율 × 스테이지 배율</li>
+                        <li>후반 맵의 높은 스테이지일수록 자연스럽게 <span class="accent-blue">난이도가 상승</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="note-box">
+                <p>매 스테이지를 도는 동안 캐릭터도 레벨업으로 강해지지만, 적도 동시에 강해집니다. 플레이어가 어떤 스킬을 골랐느냐에 따라 이 균형이 달라집니다.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 22. Boss Stage -->
     <div class="slide">
         <div class="header-bar">캡스톤 디자인 최종 쇼케이스 · ARCHERY</div>
         <div class="step-pill">STEP 7 · 보스</div>
         <div class="content-area">
-            <div class="section-title">한 지역의 끝은 보스와 결과 화면입니다 <small>빌드를 검증하고, 클리어 또는 게임 오버 이후 다시 로비로 돌아갑니다</small></div>
-            <div class="two-col" style="margin-bottom: 18px;">
-                <div class="card"><span class="badge dark">Boss Stage</span>
-                    <h3>지역의 마지막 관문</h3>
-                    <ul>
-                        <li>일반 적 대신 단일 보스가 등장합니다.</li>
-                        <li>높은 체력과 공격력, 고유 패턴으로 선택한 스킬 조합을 시험합니다.</li>
-                        <li>보스 처치 시 해당 Map의 한 사이클이 종료됩니다.</li>
-                    </ul>
+            <div class="section-title">보스 스테이지 <small>지역의 마지막 관문 — 쌓아온 빌드를 검증합니다</small></div>
+            <div class="two-col wide-left">
+                <div class="photo-slot dark" style="min-height: 440px;">
+                    <strong>사진 위치 09 · 보스 등장 컷</strong>
+                    <span>보스가 화면 중앙에 자리잡고 패턴을 사용하는 장면</span>
                 </div>
-                <div class="card"><span class="badge green">Result</span>
-                    <h3>두 가지 결과</h3>
-                    <ul>
-                        <li>맵 클리어: 처치 수와 보상 요약 후 로비 복귀.</li>
-                        <li>게임 오버: 진행 중인 스테이지 중단 후 결과 정리.</li>
-                        <li>다음 판에서는 다른 캐릭터, 장비, 지역, 스킬 조합을 시도합니다.</li>
-                    </ul>
+                <div>
+                    <div class="card" style="margin-bottom: 16px;">
+                        <h3>일반 스테이지와 다른 점</h3>
+                        <ul>
+                            <li>일반 적 대신 <span class="accent">단일 보스</span>가 등장합니다.</li>
+                            <li>보스는 일반 적보다 <span class="accent">체력과 공격력이 매우 높고</span>, 2개의 공격 패턴이 혼합되어 있습니다.</li>
+                            <li>보스를 처치하면 더 큰 경험치와 골드를 획득합니다.</li>
+                            <li>한 사이클로 진행되고, 마지막 최종 보스 클리어 시 해당 맵을 클리어하게 됩니다.</li>
+                        </ul>
+                    </div>
+                    <div class="note-box">
+                        <p>보스 스테이지는 그 지역에서 쌓아온 빌드를 검증하는 단계입니다.</p>
+                    </div>
+                    <div class="card" style="margin-top: 14px;"><span class="badge green">Result</span>
+                        <h3>두 가지 결과</h3>
+                        <ul>
+                            <li>맵 클리어: 처치 수와 보상 요약 후 로비 복귀.</li>
+                            <li>게임 오버: 진행 중인 스테이지 중단 후 결과 정리.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="photo-slot" style="min-height: 180px;"><strong>사진 위치 09 · 보스 + 결과 화면</strong><span>보스 등장 컷, 맵
-                    클리어 화면, 게임 오버 화면을 함께 준비</span></div>
         </div>
     </div>
 
