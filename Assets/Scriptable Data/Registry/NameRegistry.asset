@@ -16,6 +16,9 @@ MonoBehaviour:
   - Octopus
   - Wizard
   - Box
+  - Slime
+  - Melee Golem
+  - Bird
   mapIds:
   - Dungeon
   - Jungle
@@ -36,7 +39,10 @@ MonoBehaviour:
   - IceBarrelGenerate
   weaponNames:
   - Normal Magic Staff
+  - Fire Staff
   armorNames:
   - Old Armor
+  - Iron Armor
   shoesNames:
   - Old Shoes
+  - Hermes Shoes

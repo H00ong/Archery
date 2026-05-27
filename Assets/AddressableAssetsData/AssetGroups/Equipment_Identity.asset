@@ -27,8 +27,26 @@ MonoBehaviour:
     m_SerializedLabels:
     - equipment_identity
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 34d173f64721af84ea4c94be7e8e2890
+    m_Address: Assets/Scriptable Data/Equipment Identity/Shoes/Hermes Shoes.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - equipment_identity
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7adb33448d9c4ba4c97edde57c980ef4
+    m_Address: Assets/Scriptable Data/Equipment Identity/Armor/Iron Armor.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - equipment_identity
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cc9aaa2701754f94a9cd2dd78403e63d
     m_Address: Assets/Scriptable Data/Equipment Identity/Armor/Old Armor.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - equipment_identity
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d130e1ffdf7df924398efb316d1d1725
+    m_Address: Assets/Scriptable Data/Equipment Identity/Weapon/Fire Staff.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - equipment_identity

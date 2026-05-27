@@ -34,8 +34,8 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
   baseStat:
-    maxHP: 150
-    attackPower: 8
+    maxHP: 1000
+    attackPower: 500
     moveSpeed: 6
     armor: 0
     magicResistance: 2
