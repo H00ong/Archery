@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Octopus_ShootData_Poison
   m_EditorClassIdentifier: 
   targetName: Octopus
-  targetTag: 67108992
+  targetTag: 268435584
   attackIndex: 0
   projectilePrefab:
     m_AssetGUID: 8daf06996d62c404fb29f108825fc925

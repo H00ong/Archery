@@ -298,6 +298,7 @@ GameObject:
   - component: {fileID: 7154696502123613539}
   - component: {fileID: 1317046124616405867}
   - component: {fileID: 9197043031268476017}
+  - component: {fileID: 6785470748178717786}
   m_Layer: 3
   m_Name: Bird
   m_TagString: Enemy
@@ -346,7 +347,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!114 &7154696502123613539
 MonoBehaviour:
@@ -360,10 +361,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c89b3cc84aca5e74ba9c4548d1dda437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDebugMode: 1
-  enemyName: Octopus
-  enemyTags: 73
-  brain: {fileID: 11400000, guid: bfc27aff85bad2d4ca882c5618105ad9, type: 2}
+  isDebugMode: 0
+  enemyName: Bird
+  enemyTags: 0
   idle: {fileID: 0}
   move: {fileID: 0}
   hurt: {fileID: 0}
@@ -373,7 +373,7 @@ MonoBehaviour:
   rigidBody: {fileID: 7645161806128579247}
   enemyCollider: {fileID: 6830129245748897892}
   enemyReference: {fileID: 1317046124616405867}
-  enemyVisual: {fileID: 0}
+  enemyVisual: {fileID: 6785470748178717786}
   defaultIdleTime: 2
   expItemPrefab:
     m_AssetGUID: 4c0a5b1487abe67489f755abb9376c1f
@@ -410,6 +410,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+--- !u!114 &6785470748178717786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5038519034919362971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b277374b5931e9441be028e288087ac2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectRenderers: []
+  accessoryRenderers: []
+  fireEmissionColor: {r: 0.20784314, g: 0.03529412, b: 0, a: 1}
+  poisonEmissionColor: {r: 0.05882353, g: 0, b: 0.15294118, a: 1}
+  iceEmissionColor: {r: 0, g: 0.0627451, b: 0.15294118, a: 1}
+  lightningEmissionColor: {r: 0.09411765, g: 0.05882353, b: 0, a: 1}
+  magmaEmissionColor: {r: 0.15294118, g: 0.047058824, b: 0.003921569, a: 1}
+  darkEmissionColor: {r: 0.09411765, g: 0.09411765, b: 0.09411765, a: 1}
+  intensity: 1
 --- !u!1 &5158060882425251735
 GameObject:
   m_ObjectHideFlags: 0

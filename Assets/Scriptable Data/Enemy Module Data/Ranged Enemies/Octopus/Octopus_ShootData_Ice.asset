@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Octopus_ShootData_Ice
   m_EditorClassIdentifier: 
   targetName: Octopus
-  targetTag: 67108992
+  targetTag: 134217856
   attackIndex: 0
   projectilePrefab:
     m_AssetGUID: 9119e60f316a62541bd942f99ff6d884
