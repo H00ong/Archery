@@ -5708,7 +5708,7 @@ MonoBehaviour:
   floor: {fileID: 258643804250490649}
   surface: {fileID: 7898625294778373735}
   playerSpawnPoint: {fileID: 6927649316622403395}
-  bossSpawnPoint: {fileID: 8780727531697828059}
+  bossSpawnPoint: {fileID: 4973748578030810742}
   enemySpawnPoints:
   - {fileID: 8785391941126640610}
   - {fileID: 1256705451489251407}
@@ -12498,7 +12498,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.83, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3758801748660972423}

@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4226e9cbd4fbb7b458d81891f93254cd, type: 3}
   m_Name: Octopus_PatternMoveData
   m_EditorClassIdentifier: 
-  targetName: 3
+  targetName: Octopus
   targetTag: 16
   duration: 5
-  patrolPointType: 2

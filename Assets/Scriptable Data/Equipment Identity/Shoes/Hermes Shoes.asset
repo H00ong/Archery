@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb539e09902918848b1d814a57083e49, type: 3}
+  m_Name: Hermes Shoes
+  m_EditorClassIdentifier: 
+  equipmentName: Hermes Shoes
+  equipmentType: 2
+  index: 1
+  equipmentIcon: {fileID: 21300000, guid: f9e51673cdd12be4b8197020d77e19b4, type: 3}
+  baseStat:
+    maxHP: 3
+    attackPower: 0
+    moveSpeed: 2.5
+    armor: 2
+    magicResistance: 2
+    attackSpeed: 0
+    projectileSpeed: 0
+    attackEffectType: 0
+  maxLevel: 10
+  levelStatGrowth:
+    maxHP: 1
+    attackPower: 0
+    moveSpeed: 0.5
+    armor: 1
+    magicResistance: 1
+    attackSpeed: 0
+    projectileSpeed: 0
+  levelUpCosts: 64000000c80000005e01000026020000200300004c040000dc050000d0070000f00a0000
+  effectConfigs: []
+  effectGrowths: []
+  purchasePrice: 500

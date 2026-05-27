@@ -552,6 +552,7 @@ GameObject:
   - component: {fileID: 7272602529922382973}
   - component: {fileID: 4039259610997466428}
   - component: {fileID: 8229233503528448360}
+  - component: {fileID: 1720975755969374210}
   - component: {fileID: 8066314967143547211}
   m_Layer: 3
   m_Name: Slime
@@ -601,7 +602,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!114 &4039259610997466428
 MonoBehaviour:
@@ -615,21 +616,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c89b3cc84aca5e74ba9c4548d1dda437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDebugMode: 1
-  enemyName: 1
-  enemyTags: 73
-  stats:
-    baseStats:
-      hp: 0
-      atk: 0
-      moveSpeed: 0
-    shooting:
-      projectileAtk: 0
-      projectileSpeed: 0
-    flyingShooting:
-      flyingProjectileAtk: 0
-      flyingProjectileSpeed: 0
-  brain: {fileID: 11400000, guid: bfc27aff85bad2d4ca882c5618105ad9, type: 2}
+  isDebugMode: 0
+  enemyName: Slime
+  enemyTags: 0
   idle: {fileID: 0}
   move: {fileID: 0}
   hurt: {fileID: 0}
@@ -638,7 +627,8 @@ MonoBehaviour:
   anim: {fileID: 5595454432852353845}
   rigidBody: {fileID: 7272602529922382973}
   enemyCollider: {fileID: 1456042515930322807}
-  enemyReference: {fileID: 0}
+  enemyReference: {fileID: 8229233503528448360}
+  enemyVisual: {fileID: 1720975755969374210}
   defaultIdleTime: 2
   expItemPrefab:
     m_AssetGUID: 4c0a5b1487abe67489f755abb9376c1f
@@ -647,13 +637,6 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
   defaultAttackSpeed: 0.8
-  defaultAtk: 1
-  blockCheck: {fileID: 2609456568676377424}
-  sphereCastRadius: 0.7
-  castDistance: 0.5
-  obstacleLayer:
-    serializedVersion: 2
-    m_Bits: 64
   lastPlayerPosition: {x: 0, y: 0, z: 0}
   player: {fileID: 0}
 --- !u!114 &8229233503528448360
@@ -669,6 +652,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointGroups: []
+--- !u!114 &1720975755969374210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8805190630047661894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b277374b5931e9441be028e288087ac2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectRenderers: []
+  accessoryRenderers: []
+  fireEmissionColor: {r: 0.20784314, g: 0.03529412, b: 0, a: 1}
+  poisonEmissionColor: {r: 0.05882353, g: 0, b: 0.15294118, a: 1}
+  iceEmissionColor: {r: 0, g: 0.0627451, b: 0.15294118, a: 1}
+  lightningEmissionColor: {r: 0.09411765, g: 0.05882353, b: 0, a: 1}
+  magmaEmissionColor: {r: 0.15294118, g: 0.047058824, b: 0.003921569, a: 1}
+  darkEmissionColor: {r: 0.09411765, g: 0.09411765, b: 0.09411765, a: 1}
+  intensity: 1
 --- !u!114 &8066314967143547211
 MonoBehaviour:
   m_ObjectHideFlags: 0

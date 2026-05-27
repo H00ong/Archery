@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0141f23431d4bfb875814fa1fb0bc3a, type: 3}
   m_Name: Octopus_ShootData_Lightening
   m_EditorClassIdentifier: 
-  targetName: 3
-  targetTag: 67108992
+  targetName: Octopus
+  targetTag: 536871040
   attackIndex: 0
   projectilePrefab:
     m_AssetGUID: e12b9ceabe062cd4597b243404ba378c

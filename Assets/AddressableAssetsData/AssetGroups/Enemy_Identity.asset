@@ -15,6 +15,21 @@ MonoBehaviour:
   m_GroupName: Enemy_Identity
   m_GUID: 9094435e949b65f4caa075ab4a3258b6
   m_SerializeEntries:
+  - m_GUID: 1bdd1743f645dcc478d7c1766e98456c
+    m_Address: Assets/Scriptable Data/Enemy Identity/Octopus/Octopus-Ice.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 358ab601604366a40ac4e29958dd937e
+    m_Address: Assets/Scriptable Data/Enemy Identity/Melee Golem/Melee Golem.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 372aa20ca5877654e92e5c06d1790666
+    m_Address: Assets/Scriptable Data/Enemy Identity/Octopus/Octopus-Poison.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 732144ae1393e9740810aedca282fd38
     m_Address: Assets/Data/Enemy Identity/Wizard/Wizard_Default.asset
     m_ReadOnly: 0
@@ -27,6 +42,16 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8a86e88414659254ca19d70daf2e1971
     m_Address: Assets/Scriptable Data/Enemy Identity/Octopus/Octopus-Default.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 92d8fcd67320a2f48bba6772265ffcf1
+    m_Address: Assets/Scriptable Data/Enemy Identity/BIrd/Bird.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ab495f45e4c70b0419e59753ee996647
+    m_Address: Assets/Scriptable Data/Enemy Identity/Slime/Slime.asset
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

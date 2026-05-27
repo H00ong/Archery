@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb539e09902918848b1d814a57083e49, type: 3}
+  m_Name: Fire Staff
+  m_EditorClassIdentifier: 
+  equipmentName: Fire Staff
+  equipmentType: 0
+  index: 1
+  equipmentIcon: {fileID: 21300000, guid: b3d38255f8105694cbd712ff3dd42a89, type: 3}
+  baseStat:
+    maxHP: 0
+    attackPower: 10
+    moveSpeed: 0
+    armor: 0
+    magicResistance: 0
+    attackSpeed: 0.15
+    projectileSpeed: 1
+    attackEffectType: 2
+  maxLevel: 10
+  levelStatGrowth:
+    maxHP: 0
+    attackPower: 2
+    moveSpeed: 0
+    armor: 0
+    magicResistance: 0
+    attackSpeed: 0.05
+    projectileSpeed: 0.5
+  levelUpCosts: 64000000c80000005e01000026020000200300004c040000dc050000d0070000f00a0000
+  effectConfigs:
+  - effectType: 2
+    baseEffect:
+      duration: 3
+      value: 0
+      dotDamage: 2
+      tickInterval: 1
+  effectGrowths:
+  - effectType: 2
+    durationGrowth: 0.2
+    valueGrowth: 0
+    dotDamageGrowth: 0.5
+    tickIntervalGrowth: 0
+  purchasePrice: 500

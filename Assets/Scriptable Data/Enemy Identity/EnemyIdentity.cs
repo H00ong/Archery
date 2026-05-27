@@ -10,8 +10,9 @@ public class EnemyIdentity : ScriptableObject
     public EnemyTag Tag;
     public Material ObjectMat;
     public Material AccessoryMat;
-    
+
     [Header("Modules")]
+    public EnemyBrain brain;
     public BaseModuleData moveModule;
     public List<BaseModuleData> attackModules;
 }

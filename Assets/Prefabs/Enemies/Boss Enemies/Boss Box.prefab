@@ -792,6 +792,7 @@ GameObject:
   - component: {fileID: 8313429603908516969}
   - component: {fileID: 6384863458046553930}
   - component: {fileID: 2020880496290145362}
+  - component: {fileID: -8814757371351752677}
   m_Layer: 3
   m_Name: Boss Box
   m_TagString: Enemy
@@ -823,7 +824,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6510637841960571796}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 1000
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -840,7 +841,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!114 &6722009342495858402
 MonoBehaviour:
@@ -854,21 +855,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c89b3cc84aca5e74ba9c4548d1dda437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDebugMode: 1
-  enemyName: 4
+  isDebugMode: 0
+  enemyName: Box
   enemyTags: 804
-  stats:
-    baseStats:
-      hp: 0
-      atk: 0
-      moveSpeed: 0
-    shooting:
-      projectileAtk: 0
-      projectileSpeed: 0
-    flyingShooting:
-      flyingProjectileAtk: 0
-      flyingProjectileSpeed: 0
-  brain: {fileID: 11400000, guid: 69c893b7bde8e6c49aa4b4e80547e451, type: 2}
   idle: {fileID: 0}
   move: {fileID: 0}
   hurt: {fileID: 0}
@@ -878,6 +867,7 @@ MonoBehaviour:
   rigidBody: {fileID: 4467790697742285200}
   enemyCollider: {fileID: 4223965325044976831}
   enemyReference: {fileID: 6384863458046553930}
+  enemyVisual: {fileID: -8814757371351752677}
   defaultIdleTime: 2
   expItemPrefab:
     m_AssetGUID: 4c0a5b1487abe67489f755abb9376c1f
@@ -886,13 +876,6 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
   defaultAttackSpeed: 0.7
-  defaultAtk: 1
-  blockCheck: {fileID: 1490461795909677921}
-  sphereCastRadius: 1
-  castDistance: 0.5
-  obstacleLayer:
-    serializedVersion: 2
-    m_Bits: 64
   lastPlayerPosition: {x: 0, y: 0, z: 0}
   player: {fileID: 0}
 --- !u!114 &8313429603908516969
@@ -936,6 +919,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3e6c351af2a9de44ad2da99c358822c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-8814757371351752677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6510637841960571796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b277374b5931e9441be028e288087ac2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectRenderers: []
+  accessoryRenderers: []
+  fireEmissionColor: {r: 0.20784314, g: 0.03529412, b: 0, a: 1}
+  poisonEmissionColor: {r: 0.05882353, g: 0, b: 0.15294118, a: 1}
+  iceEmissionColor: {r: 0, g: 0.0627451, b: 0.15294118, a: 1}
+  lightningEmissionColor: {r: 0.09411765, g: 0.05882353, b: 0, a: 1}
+  magmaEmissionColor: {r: 0.15294118, g: 0.047058824, b: 0.003921569, a: 1}
+  darkEmissionColor: {r: 0.09411765, g: 0.09411765, b: 0.09411765, a: 1}
+  intensity: 1
 --- !u!1 &7504795507417437757
 GameObject:
   m_ObjectHideFlags: 0

@@ -72,6 +72,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 458752e571e0f8c4e9ba5bc625231804
+    m_Address: Assets/Prefabs/Enemies/Melee Enemies/Box.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 45907d5c35c706b4e8b2f9e1eb1b88e7
     m_Address: Skeleton_Mage
     m_ReadOnly: 0

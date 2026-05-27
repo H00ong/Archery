@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c8fb38413c82ac4f88d0e401552a0ea, type: 3}
+  m_Name: Melee Golem
+  m_EditorClassIdentifier: 
+  Prefab:
+    m_AssetGUID: 7a4bb379ae33b694cb4aac44dd7034a7
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  Tag: 73
+  ObjectMat: {fileID: 0}
+  AccessoryMat: {fileID: 0}
+  brain: {fileID: 11400000, guid: bfc27aff85bad2d4ca882c5618105ad9, type: 2}
+  moveModule: {fileID: 11400000, guid: 471be3c2c6283b84e9024edc130bc587, type: 2}
+  attackModules: []

@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1456, height=816">
-    <title>캡스톤디자인(1) 2차 발표 - Archery 아키텍처</title>
+    <title>캡스톤 디자인 2차발표 - Archery 게임 구성 설명</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700;900&family=JetBrains+Mono:wght@500;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700;900&display=swap');
 
         * {
             margin: 0;
@@ -17,17 +17,33 @@
         body {
             font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
             background: #fff;
+            color: #302b52;
         }
 
         .slide {
             width: 1456px;
             height: 816px;
-            background: #f1eef8;
             position: relative;
             page-break-after: always;
             overflow: hidden;
             margin: 0 auto;
-            color: #282345;
+            background: #eeeaf7;
+        }
+
+        .slide:nth-child(4n + 1) {
+            background: #f2eef8;
+        }
+
+        .slide:nth-child(4n + 2) {
+            background: #eef4f1;
+        }
+
+        .slide:nth-child(4n + 3) {
+            background: #f7f1ea;
+        }
+
+        .slide:nth-child(4n) {
+            background: #eef2f7;
         }
 
         .header-bar {
@@ -43,8 +59,26 @@
             justify-content: center;
             color: #fff;
             font-size: 17px;
-            font-weight: 800;
-            letter-spacing: .5px;
+            font-weight: 900;
+            letter-spacing: .3px;
+        }
+
+        .step-pill {
+            position: absolute;
+            top: 28px;
+            right: 60px;
+            height: 48px;
+            min-width: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 900;
+            padding: 0 18px;
+            background: #4f457e;
+            border-radius: 8px;
+            z-index: 2;
         }
 
         .content-area {
@@ -52,39 +86,39 @@
             top: 102px;
             left: 60px;
             right: 60px;
-            bottom: 44px;
+            bottom: 46px;
         }
 
         .slide-title {
             color: #4f457e;
             font-weight: 900;
-            font-size: 58px;
+            font-size: 62px;
             text-align: center;
-            margin-top: 198px;
-            line-height: 1.25;
+            margin-top: 185px;
+            line-height: 1.24;
         }
 
         .slide-subtitle {
             color: #4f457e;
             font-weight: 900;
-            font-size: 44px;
+            font-size: 43px;
             text-align: center;
-            margin-top: 12px;
-            line-height: 1.25;
+            margin-top: 16px;
+            line-height: 1.28;
         }
 
         .presenter {
             text-align: center;
             color: #665a96;
             font-size: 22px;
-            margin-top: 32px;
+            margin-top: 34px;
             font-weight: 800;
         }
 
         .section-title {
             color: #4f457e;
             font-weight: 900;
-            font-size: 38px;
+            font-size: 39px;
             line-height: 1.22;
             margin-bottom: 22px;
         }
@@ -93,71 +127,22 @@
             display: block;
             color: #766ca0;
             font-size: 19px;
-            font-weight: 700;
+            font-weight: 800;
             margin-top: 8px;
-        }
-
-        .two-col,
-        .three-col,
-        .four-col {
-            display: grid;
-            gap: 24px;
-            align-items: stretch;
-        }
-
-        .two-col {
-            grid-template-columns: 1fr 1fr;
-        }
-
-        .three-col {
-            grid-template-columns: repeat(3, 1fr);
-        }
-
-        .four-col {
-            grid-template-columns: repeat(4, 1fr);
-        }
-
-        .card,
-        .note-box,
-        .image-slot,
-        .diagram-panel {
-            background: #fff;
-            border: 2px solid #d2cce5;
-            border-radius: 8px;
-        }
-
-        .card {
-            padding: 22px 24px;
-        }
-
-        .card h3 {
-            color: #4f457e;
-            font-size: 23px;
-            font-weight: 900;
-            line-height: 1.28;
-            margin-bottom: 12px;
-        }
-
-        .card p,
-        .card li {
-            color: #302b52;
-            font-size: 17px;
-            line-height: 1.62;
-        }
-
-        .card ul {
-            padding-left: 20px;
-        }
-
-        .card li {
-            margin-bottom: 6px;
         }
 
         .lead {
             color: #302b52;
             font-size: 22px;
             line-height: 1.58;
-            font-weight: 700;
+            font-weight: 800;
+        }
+
+        .body-text {
+            color: #302b52;
+            font-size: 18px;
+            line-height: 1.62;
+            font-weight: 600;
         }
 
         .muted {
@@ -169,18 +154,103 @@
             font-weight: 900;
         }
 
-        .badge {
-            display: inline-block;
-            padding: 5px 14px;
-            border-radius: 999px;
-            color: #fff;
-            font-size: 14px;
+        .two-col,
+        .three-col,
+        .four-col,
+        .five-col {
+            display: grid;
+            gap: 24px;
+            align-items: stretch;
+        }
+
+        .two-col {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .two-col.wide-left {
+            grid-template-columns: 1.18fr .82fr;
+        }
+
+        .two-col.wide-right {
+            grid-template-columns: .88fr 1.12fr;
+        }
+
+        .three-col {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .four-col {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .five-col {
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
+        }
+
+        .card,
+        .note-box,
+        .photo-slot,
+        .table-wrap {
+            background: #fff;
+            border: 2px solid #d2cce5;
+            border-radius: 8px;
+        }
+
+        .card {
+            padding: 22px 24px;
+        }
+
+        .card h3 {
+            color: #4f457e;
+            font-size: 24px;
             font-weight: 900;
+            line-height: 1.3;
             margin-bottom: 12px;
         }
 
-        .badge.purple {
+        .card p,
+        .card li {
+            color: #302b52;
+            font-size: 17px;
+            line-height: 1.62;
+            font-weight: 600;
+        }
+
+        .card ul {
+            padding-left: 20px;
+        }
+
+        .card li {
+            margin-bottom: 7px;
+        }
+
+        .note-box {
+            padding: 18px 22px;
+            border-left: 7px solid #665a96;
+            background: #fbfaff;
+        }
+
+        .note-box p {
+            color: #302b52;
+            font-size: 18px;
+            line-height: 1.58;
+            font-weight: 800;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 31px;
+            padding: 4px 13px;
+            border-radius: 999px;
+            color: #fff;
             background: #665a96;
+            font-size: 14px;
+            font-weight: 900;
+            margin-bottom: 12px;
+            white-space: nowrap;
         }
 
         .badge.green {
@@ -199,26 +269,17 @@
             background: #c9493f;
         }
 
-        .note-box {
-            padding: 18px 22px;
-            border-left: 7px solid #665a96;
-            background: #fbfaff;
-        }
-
-        .note-box p {
-            color: #302b52;
-            font-size: 18px;
-            line-height: 1.6;
-            font-weight: 700;
+        .badge.dark {
+            background: #302b52;
         }
 
         .toc-box {
+            width: 880px;
+            margin: 0 auto;
             background: #fff;
             border: 2px solid #d2cce5;
             border-radius: 8px;
-            width: 860px;
-            padding: 34px 48px;
-            margin: 0 auto;
+            padding: 32px 46px;
         }
 
         .toc-item {
@@ -226,9 +287,9 @@
             gap: 18px;
             align-items: center;
             color: #302b52;
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 900;
-            margin-bottom: 18px;
+            margin-bottom: 14px;
         }
 
         .toc-item:last-child {
@@ -249,93 +310,87 @@
             flex: 0 0 auto;
         }
 
-        .flow {
+        .photo-slot {
+            min-height: 0;
             display: flex;
-            align-items: center;
-            gap: 14px;
-        }
-
-        .flow.vertical {
             flex-direction: column;
-            align-items: stretch;
+            justify-content: center;
+            align-items: center;
+            gap: 11px;
+            text-align: center;
+            padding: 26px;
+            background: repeating-linear-gradient(135deg, #ffffff 0, #ffffff 16px, #f6f3ff 16px, #f6f3ff 32px);
+            border-style: dashed;
         }
 
-        .flow-card {
+        .photo-slot strong {
+            color: #4f457e;
+            font-size: 24px;
+            line-height: 1.25;
+            font-weight: 900;
+        }
+
+        .photo-slot span {
+            color: #70688f;
+            font-size: 15px;
+            line-height: 1.5;
+            font-weight: 800;
+            max-width: 92%;
+        }
+
+        .photo-slot.dark {
+            background: #252238;
+            border-color: #5d547c;
+        }
+
+        .photo-slot.dark strong {
+            color: #fff;
+        }
+
+        .photo-slot.dark span {
+            color: #d8d1ef;
+        }
+
+        .map-card {
+            min-height: 158px;
+            border-radius: 8px;
+            padding: 18px 18px;
             background: #fff;
             border: 2px solid #d2cce5;
-            border-radius: 8px;
-            padding: 16px 18px;
-            color: #302b52;
-            font-size: 18px;
-            line-height: 1.45;
-            font-weight: 800;
-            text-align: center;
-            min-height: 76px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
         }
 
-        .flow-card small {
-            display: block;
-            color: #70688f;
-            font-size: 14px;
-            margin-top: 5px;
+        .map-card h3 {
+            color: #4f457e;
+            font-size: 22px;
+            font-weight: 900;
+            margin-bottom: 8px;
+        }
+
+        .map-card p {
+            color: #302b52;
+            font-size: 15px;
+            line-height: 1.5;
             font-weight: 700;
         }
 
-        .arrow {
-            color: #8d83b5;
-            font-size: 28px;
-            font-weight: 900;
-            text-align: center;
+        .map-card.dungeon {
+            border-left: 8px solid #6b5b95;
         }
 
-        .chip-row {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            align-items: center;
+        .map-card.jungle {
+            border-left: 8px solid #18865e;
         }
 
-        .chip {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 34px;
-            padding: 5px 12px;
-            border-radius: 999px;
-            background: #eee9fa;
-            border: 1px solid #cec6e6;
-            color: #4f457e;
-            font-size: 15px;
-            font-weight: 900;
-            white-space: nowrap;
+        .map-card.lava {
+            border-left: 8px solid #c9493f;
         }
 
-        .chip.green {
-            background: #e8f5ef;
-            border-color: #9bd3bd;
-            color: #18865e;
+        .map-card.forest {
+            border-left: 8px solid #4e8b43;
         }
 
-        .chip.blue {
-            background: #eaf3fb;
-            border-color: #a8cdeb;
-            color: #2b78b8;
-        }
-
-        .chip.orange {
-            background: #fff2e6;
-            border-color: #ecc39a;
-            color: #b65d17;
-        }
-
-        .chip.red {
-            background: #fae9e7;
-            border-color: #e5aaa5;
-            color: #b93c34;
+        .map-card.ocean {
+            border-left: 8px solid #2b78b8;
         }
 
         .table {
@@ -345,13 +400,13 @@
             border: 2px solid #d2cce5;
             border-radius: 8px;
             overflow: hidden;
-            font-size: 15px;
+            font-size: 16px;
         }
 
         .table th {
             background: #665a96;
             color: #fff;
-            padding: 10px 12px;
+            padding: 11px 12px;
             text-align: center;
             font-weight: 900;
             border: 1px solid #857ab0;
@@ -359,10 +414,11 @@
 
         .table td {
             color: #302b52;
-            padding: 9px 12px;
+            padding: 10px 12px;
             border: 1px solid #d2cce5;
-            line-height: 1.45;
+            line-height: 1.5;
             vertical-align: middle;
+            font-weight: 700;
         }
 
         .table td:first-child {
@@ -372,348 +428,94 @@
             background: #f7f4ff;
         }
 
-        .mini-code {
-            background: #28233e;
+        .compact-table td {
+            padding: 5px 10px;
+            line-height: 1.35;
+        }
+
+        .compact-table th {
+            padding: 6px 10px;
+        }
+
+        .arrow-flow {
+            display: flex;
+            align-items: stretch;
+            gap: 10px;
+            flex-wrap: nowrap;
+        }
+
+        .arrow-flow .step {
+            flex: 1;
+            min-height: 110px;
+            background: #fff;
+            border: 2px solid #d2cce5;
             border-radius: 8px;
-            padding: 18px 20px;
-            color: #f3eeff;
-            font-family: 'JetBrains Mono', 'Consolas', monospace;
-            font-size: 17px;
-            line-height: 1.58;
-            font-weight: 700;
-            border: 2px solid #40375c;
-        }
-
-        .mini-code .dim {
-            color: #9c93b8;
-        }
-
-        .mini-code .key {
-            color: #b9e088;
-        }
-
-        .mini-code .type {
-            color: #87c5ff;
-        }
-
-        .mini-code .call {
-            color: #d9b2ff;
-        }
-
-        .mini-code .hot {
-            color: #ffbd86;
-        }
-
-        .image-slot {
-            min-height: 280px;
+            padding: 14px 12px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            background: linear-gradient(135deg, #fff 0%, #f6f2ff 100%);
-            border-style: dashed;
             text-align: center;
-            padding: 24px;
         }
 
-        .image-slot strong {
+        .arrow-flow .step b {
             color: #4f457e;
-            font-size: 25px;
+            font-size: 18px;
             font-weight: 900;
+            line-height: 1.25;
         }
 
-        .image-slot span {
+        .arrow-flow .step span {
             color: #70688f;
-            font-size: 16px;
-            line-height: 1.5;
-            font-weight: 700;
+            font-size: 13px;
+            font-weight: 800;
+            margin-top: 6px;
+            line-height: 1.35;
         }
 
-        .enemy-comparison {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 18px;
-            align-items: end;
-        }
-
-        .enemy-card {
-            background: #fff;
-            border: 2px solid #d2cce5;
-            border-radius: 8px;
-            padding: 16px;
-            min-height: 430px;
-        }
-
-        .enemy-card h3 {
-            color: #4f457e;
-            font-size: 21px;
-            font-weight: 900;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-
-        .enemy-figure {
-            height: 225px;
-            border: 2px dashed #c9c1df;
-            border-radius: 8px;
+        .arrow-flow .arrow {
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #70688f;
-            font-size: 15px;
-            line-height: 1.45;
-            font-weight: 800;
-            text-align: center;
-            padding: 14px;
-            margin-bottom: 14px;
-            background: #f8f6ff;
-        }
-
-        .enemy-card.fire .enemy-figure {
-            background: #fff0e8;
-            border-color: #ecc39a;
-            color: #9f4f16;
-        }
-
-        .enemy-card.ice .enemy-figure {
-            background: #eaf3fb;
-            border-color: #a8cdeb;
-            color: #2b6fa7;
-        }
-
-        .enemy-card.boss .enemy-figure {
-            height: 275px;
-            background: #eee9fa;
-            border-color: #bcb1dc;
-            color: #4f457e;
-        }
-
-        .enemy-key-line {
-            font-family: 'JetBrains Mono', 'Consolas', monospace;
-            font-size: 13px;
-            line-height: 1.45;
-            color: #302b52;
-            background: #f7f4ff;
-            border-radius: 6px;
-            padding: 9px 10px;
-            min-height: 58px;
-        }
-
-        .mock-screen {
-            height: 420px;
-            background: #211f31;
-            border-radius: 8px;
-            border: 8px solid #3a3356;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .mock-map {
-            position: absolute;
-            inset: 28px;
-            border-radius: 8px;
-            background:
-                linear-gradient(90deg, rgba(255, 255, 255, .08) 1px, transparent 1px),
-                linear-gradient(rgba(255, 255, 255, .08) 1px, transparent 1px),
-                #4a7654;
-            background-size: 54px 54px;
-        }
-
-        .player-dot,
-        .enemy-dot,
-        .boss-dot,
-        .portal-dot {
-            position: absolute;
-            width: 34px;
-            height: 34px;
-            border-radius: 50%;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, .28);
-        }
-
-        .player-dot {
-            background: #f4d35e;
-            left: 47%;
-            top: 48%;
-        }
-
-        .enemy-dot {
-            background: #d94d3f;
-        }
-
-        .boss-dot {
-            background: #7444a6;
-            width: 58px;
-            height: 58px;
-        }
-
-        .portal-dot {
-            background: #64d2ff;
-            width: 46px;
-            height: 46px;
-        }
-
-        .diagram-panel {
-            padding: 22px;
-            min-height: 520px;
-        }
-
-        .arch-grid {
-            display: grid;
-            grid-template-columns: 1.15fr .9fr 1.15fr;
-            gap: 18px;
-            align-items: center;
-        }
-
-        .layer-stack {
-            display: grid;
-            gap: 11px;
-        }
-
-        .layer {
-            background: #fff;
-            border: 2px solid #d2cce5;
-            border-left: 8px solid #665a96;
-            border-radius: 8px;
-            padding: 13px 16px;
-        }
-
-        .layer b {
-            color: #4f457e;
-            font-size: 18px;
-        }
-
-        .layer span {
-            display: block;
-            color: #70688f;
-            font-size: 14px;
-            line-height: 1.35;
-            margin-top: 3px;
-            font-weight: 700;
-        }
-
-        .big-number {
             color: #665a96;
-            font-size: 88px;
-            line-height: .9;
+            font-size: 28px;
+            font-weight: 900;
+            flex: 0 0 22px;
+        }
+
+        .step-row {
+            display: grid;
+            grid-template-columns: 58px 1fr;
+            gap: 16px;
+            align-items: start;
+            margin-bottom: 16px;
+        }
+
+        .step-row .step-num {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #665a96;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 21px;
             font-weight: 900;
         }
 
-        .metric {
-            padding: 20px 22px;
-            background: #fff;
-            border: 2px solid #d2cce5;
-            border-radius: 8px;
-            min-height: 160px;
-        }
-
-        .metric b {
-            display: block;
+        .step-row h3 {
             color: #4f457e;
-            font-size: 31px;
+            font-size: 22px;
             font-weight: 900;
-            margin-bottom: 8px;
+            margin-bottom: 5px;
         }
 
-        .metric span {
+        .step-row p {
             color: #302b52;
             font-size: 17px;
-            line-height: 1.5;
-            font-weight: 700;
-        }
-
-        .state-diagram {
-            width: 100%;
-            height: 492px;
-        }
-
-        .legend {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 10px;
-            margin-top: 12px;
-        }
-
-        .legend .chip {
-            border-radius: 8px;
-            white-space: normal;
-            text-align: center;
-            min-height: 52px;
-            font-size: 14px;
-        }
-
-        .compact-flow .diagram-panel {
-            min-height: 0;
-        }
-
-        .compact-flow .flow.vertical {
-            gap: 8px;
-        }
-
-        .compact-flow .flow-card {
-            min-height: 56px;
-            padding: 10px 14px;
-            font-size: 16px;
-        }
-
-        .compact-flow .arrow {
-            font-size: 18px;
-            line-height: 1;
-        }
-
-        .enemy-config-slide .card,
-        .demo-slide .card {
-            padding: 16px 18px;
-        }
-
-        .enemy-config-slide .card h3,
-        .demo-slide .card h3 {
-            font-size: 20px;
-            margin-bottom: 8px;
-        }
-
-        .enemy-config-slide .mini-code {
-            font-size: 12.5px !important;
-            line-height: 1.34 !important;
-            padding: 12px 14px;
-        }
-
-        .enemy-config-slide .flow.vertical,
-        .demo-slide .flow.vertical {
-            gap: 7px;
-        }
-
-        .enemy-config-slide .flow-card,
-        .demo-slide .flow-card {
-            min-height: 50px;
-            padding: 8px 12px;
-            font-size: 15px;
-        }
-
-        .enemy-config-slide .arrow,
-        .demo-slide .arrow {
-            font-size: 16px;
-            line-height: 1;
-        }
-
-        .enemy-config-slide .note-box {
-            padding: 11px 14px;
-            margin-top: 12px !important;
-        }
-
-        .enemy-config-slide .note-box p {
-            font-size: 15px;
-            line-height: 1.42;
-        }
-
-        .demo-slide .image-slot {
-            height: 176px !important;
-            margin-top: 14px !important;
-        }
-
-        .demo-slide li {
-            margin-bottom: 4px;
-            line-height: 1.45;
+            line-height: 1.55;
+            font-weight: 600;
         }
 
         .footer-note {
@@ -723,7 +525,7 @@
             bottom: 24px;
             color: #766ca0;
             font-size: 14px;
-            font-weight: 700;
+            font-weight: 800;
             text-align: right;
         }
 
@@ -761,1074 +563,903 @@
             .slide:last-child {
                 page-break-after: avoid;
             }
-
-            #pptx-export-area {
-                display: none !important;
-            }
         }
     </style>
 </head>
 
 <body>
 
+    <!-- 1. Title -->
     <div class="slide">
-        <div class="header-bar">캡스톤디자인(1) 2차 발표</div>
-        <div class="slide-title">Archery 아키텍처</div>
-        <div class="slide-subtitle">데이터 기반 콘텐츠 확장 구조</div>
+        <div class="header-bar">캡스톤 디자인 2차발표</div>
+        <div class="slide-title">Archery 게임 구성 설명</div>
+        <div class="slide-subtitle">한 번의 플레이 흐름을 따라가며 소개</div>
         <p class="presenter">23101177 컴퓨터공학과 박재홍</p>
-        <div class="footer-note">Map · Enemy · Addressables · FSM</div>
+        <div class="footer-note">게임을 켠 순간부터 결과 화면까지 순서대로 구성을 설명합니다</div>
     </div>
 
+    <!-- 2. 목차 (linear) -->
     <div class="slide">
-        <div class="header-bar">캡스톤디자인(1) 2차 발표</div>
-        <div class="content-area" style="padding-top: 34px;">
-            <div class="section-title" style="text-align:center; margin-bottom:28px;">목차</div>
+        <div class="header-bar">캡스톤 디자인 2차발표</div>
+        <div class="content-area" style="padding-top: 30px;">
+            <div class="section-title" style="text-align:center; margin-bottom:24px;">목차 <small>플레이어가 게임을 한 번 진행하는 순서
+                    그대로 구성됩니다</small></div>
             <div class="toc-box">
-                <div class="toc-item"><span class="num">1</span><span>1차 발표 회고와 2차 발표의 초점</span></div>
-                <div class="toc-item"><span class="num">2</span><span>전체 아키텍처와 초기화 흐름</span></div>
-                <div class="toc-item"><span class="num">3</span><span>Addressable Assets와 Object Pool</span></div>
-                <div class="toc-item"><span class="num">4</span><span>Map System: JSON + ScriptableObject 결합</span>
-                </div>
-                <div class="toc-item"><span class="num">5</span><span>Enemy System: 비트 플래그 + Factory</span></div>
-                <div class="toc-item"><span class="num">6</span><span>Enemy FSM: State 패턴 + EnemyBrain</span></div>
-                <div class="toc-item"><span class="num">7</span><span>정리, 시연 포인트, 향후 계획</span></div>
+                <div class="toc-item"><span class="num">1</span><span>게임 소개와 전체 흐름</span></div>
+                <div class="toc-item"><span class="num">2</span><span>시작 화면, 로딩, 로비 진입</span></div>
+                <div class="toc-item"><span class="num">3</span><span>캐릭터 선택과 장비 세팅</span></div>
+                <div class="toc-item"><span class="num">4</span><span>지역 선택과 스테이지 진입</span></div>
+                <div class="toc-item"><span class="num">5</span><span>전투, 적, 레벨업, 스킬 선택</span></div>
+                <div class="toc-item"><span class="num">6</span><span>스테이지 클리어, 보스, 결과 화면</span></div>
             </div>
         </div>
     </div>
 
+    <!-- 3. 게임 한 문장 -->
     <div class="slide">
-        <div class="header-bar">캡스톤디자인(1) 2차 발표</div>
+        <div class="header-bar">캡스톤 디자인 2차발표</div>
+        <div class="step-pill">STEP 0 · 게임 소개</div>
         <div class="content-area">
-            <div class="section-title">1차 발표 회고 <small>무엇을 만들 것인가에서, 어떻게 확장 가능하게 만들 것인가로</small></div>
-            <div class="two-col">
-                <div class="card" style="min-height: 520px;">
-                    <span class="badge purple">1차 발표</span>
-                    <h3>게임 콘셉트와 기능 목표</h3>
-                    <ul>
-                        <li>궁수의 전설 2를 모티브로 한 캐주얼 로그라이크</li>
-                        <li>플레이어는 이동에 집중하고, 공격은 자동으로 수행</li>
-                        <li>스테이지 클리어와 레벨업을 반복하며 스킬을 선택</li>
-                        <li>캐릭터, 맵, 적, 스킬, 장비를 계속 추가할 수 있는 게임</li>
-                    </ul>
-                    <div class="note-box" style="margin-top: 28px;">
-                        <p>1차 발표의 핵심 질문: 어떤 게임 경험을 만들 것인가?</p>
-                    </div>
-                </div>
-                <div class="card" style="min-height: 520px; border-color:#9bd3bd;">
-                    <span class="badge green">2차 발표</span>
-                    <h3>구현 구조와 확장 전략</h3>
-                    <ul>
-                        <li>새 콘텐츠를 추가할 때 스크립트 수정량을 줄이는 구조</li>
-                        <li>JSON은 수치, ScriptableObject는 에셋 참조로 역할 분리</li>
-                        <li>Addressables 라벨로 프리팹과 설정 에셋을 일괄 로드</li>
-                        <li>적 행동을 태그와 상태 데이터로 조합하는 구조</li>
-                    </ul>
-                    <div class="note-box" style="margin-top: 28px; border-left-color:#18865e;">
-                        <p>2차 발표의 핵심 질문: 콘텐츠가 늘어나도 구조가 버틸 수 있는가?</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="slide">
-        <div class="header-bar">캡스톤디자인(1) 2차 발표</div>
-        <div class="content-area">
-            <div class="section-title">이번 발표의 한 문장 <small>코드가 아니라 데이터와 라벨을 추가하는 방식으로 확장한다</small></div>
-            <div class="three-col" style="margin-top: 28px;">
-                <div class="metric"><b>Label</b><span>에셋에 라벨을 붙이면 매니저가 자동으로 로드하고 캐싱한다.</span></div>
-                <div class="metric"><b>ID Join</b><span>JSON의 수치 데이터와 SO의 에셋 참조를 같은 id로 결합한다.</span></div>
-                <div class="metric"><b>Tag</b><span>적의 이동, 공격, 속성을 비트 플래그 조합으로 표현한다.</span></div>
-            </div>
-            <div class="note-box" style="margin-top: 42px;">
-                <p>목표는 “새 맵, 새 적, 새 스킬을 넣을 때 기존 코드를 거의 건드리지 않는 것”입니다. 발표에서는 이 목표가 실제 코드 구조에서 어떻게 구현됐는지 설명합니다.</p>
-            </div>
-            <div class="image-slot" style="height: 210px; margin-top: 22px;"><strong>대표 게임 화면 배치 추천</strong><span>인게임 전투
-                    또는 로비 화면 스크린샷을 넣으면, 이후 아키텍처 설명이 실제 화면과 연결됩니다.</span></div>
-        </div>
-    </div>
-
-    <div class="slide">
-        <div class="header-bar">캡스톤디자인(1) 2차 발표</div>
-        <div class="content-area">
-            <div class="section-title">전체 아키텍처 개요 <small>게임 실행 전 준비 단계와 실행 중 반응 단계를 분리</small></div>
-            <div class="arch-grid">
-                <div class="layer-stack">
-                    <div class="layer"><b>UI Layer</b><span>MVP 패턴: View는 표시, Presenter는 로직 담당</span></div>
-                    <div class="layer"><b>Manager Layer</b><span>Game, Map, Enemy, Character, Skill 등 싱글톤 매니저</span>
-                    </div>
-                    <div class="layer"><b>Event Bus</b><span>매니저 간 직접 참조를 줄이는 Pub/Sub 통신</span></div>
-                </div>
-                <div class="diagram-panel"
-                    style="min-height: 496px; display:flex; align-items:center; justify-content:center;">
-                    <div style="text-align:center;">
-                        <div class="big-number">16</div>
-                        <p class="lead" style="font-size:25px;">Singleton Managers</p>
-                        <p class="muted" style="font-size:17px; line-height:1.55; margin-top:14px; font-weight:700;">각
-                            매니저는 한 책임을 맡고,<br>EventBus로 장면 전환과 전투 흐름에 반응합니다.</p>
-                    </div>
-                </div>
-                <div class="layer-stack">
-                    <div class="layer"><b>Object Pool</b><span>적, 투사체, 이펙트, 맵 프리팹 재사용</span></div>
-                    <div class="layer"><b>Addressables</b><span>라벨 기반 비동기 로드와 원격 콘텐츠 확장 기반</span></div>
-                    <div class="layer"><b>Data Layer</b><span>JSON 수치 데이터 + ScriptableObject 에셋 데이터</span></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="slide">
-        <div class="header-bar">캡스톤디자인(1) 2차 발표</div>
-        <div class="content-area">
-            <div class="section-title">초기화 파이프라인 <small>InitManager가 게임 시작 전에 필요한 데이터를 순서대로 준비</small></div>
-            <div class="flow" style="margin-top: 28px;">
-                <div class="flow-card" style="flex:1;">DataManager<small>JSON 로드</small></div>
-                <div class="arrow">→</div>
-                <div class="flow-card" style="flex:1;">MapManager<small>map_config</small></div>
-                <div class="arrow">→</div>
-                <div class="flow-card" style="flex:1;">Character<small>character</small></div>
-                <div class="arrow">→</div>
-                <div class="flow-card" style="flex:1;">Equipment<small>equipment</small></div>
-            </div>
-            <div class="flow" style="margin-top: 18px;">
-                <div class="flow-card" style="flex:1;">Orb<small>orb_config</small></div>
-                <div class="arrow">→</div>
-                <div class="flow-card" style="flex:1;">Barrel<small>barrel_config</small></div>
-                <div class="arrow">→</div>
-                <div class="flow-card" style="flex:1;">Skill<small>skill_config</small></div>
-                <div class="arrow">→</div>
-                <div class="flow-card" style="flex:1;">Lobby Ready<small>Space로 진입</small></div>
-            </div>
-            <div class="two-col" style="margin-top: 34px;">
-                <div class="mini-code"><span class="dim">InitAsync()</span><br>DataManager.Init()<br>await <span
-                        class="call">LoadMapConfigAsync</span>()<br>await <span
-                        class="call">LoadCharacterIdentitiesAsync</span>()<br>await <span
-                        class="call">LoadAllSkillsAsync</span>()<br>IsLoaded = <span class="key">true</span></div>
-                <div class="card">
-                    <h3>슬라이드에 담을 내용</h3>
-                    <p>초기화가 한 곳에서 순서대로 진행되기 때문에, 로딩바 진행률을 표시하기 쉽고 Addressables 로드 실패 지점도 추적하기 쉽습니다.</p>
-                    <div class="chip-row" style="margin-top: 20px;"><span class="chip green">순차 await</span><span
-                            class="chip blue">진행률 표시</span><span class="chip orange">로드 실패 로그</span><span
-                            class="chip">Lobby 준비</span></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="slide">
-        <div class="header-bar">캡스톤디자인(1) 2차 발표</div>
-        <div class="content-area">
-            <div class="section-title">EventBus 역할 <small>매니저 간 직접 호출을 줄이고 게임 이벤트 중심으로 흐름 구성</small></div>
-            <div class="two-col">
-                <div class="diagram-panel">
-                    <div class="flow vertical">
-                        <div class="flow-card">LevelUp 발생</div>
-                        <div class="arrow">↓</div>
-                        <div class="flow-card">GameManager: PauseGame</div>
-                        <div class="arrow">↓</div>
-                        <div class="flow-card">InputManager: PlayerInput 비활성화</div>
-                        <div class="arrow">↓</div>
-                        <div class="flow-card">UIManager: Skill 선택 UI 표시</div>
-                    </div>
-                </div>
-                <div class="card"><span class="badge purple">왜 필요한가</span>
-                    <h3>하나의 사건에 여러 시스템이 반응</h3>
-                    <p>레벨업, 맵 클리어, 플레이어 사망 같은 사건은 UI, 입력, 게임 상태, 캐릭터 상태가 동시에 반응해야 합니다.</p>
-                    <p style="margin-top: 14px;">EventBus는 이 반응을 직접 참조 대신 구독 구조로 묶어, 매니저 간 결합도를 낮춥니다.</p>
-                    <table class="table" style="margin-top: 20px;">
-                        <tr>
-                            <th>이벤트</th>
-                            <th>주요 반응</th>
-                        </tr>
-                        <tr>
-                            <td>StageCombatStarted</td>
-                            <td>입력 활성화, 적 스폰, 전투 시작</td>
-                        </tr>
-                        <tr>
-                            <td>MapCleared</td>
-                            <td>일시정지, 보상/클리어 처리</td>
-                        </tr>
-                        <tr>
-                            <td>TransitionToLobby</td>
-                            <td>맵, 캐릭터, 적 오브젝트 정리</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="slide">
-        <div class="header-bar">캡스톤디자인(1) 2차 발표</div>
-        <div class="content-area">
-            <div class="section-title">Addressable Assets 도입 배경 <small>SerializeField 직접 연결 방식의 확장 한계</small></div>
-            <div class="two-col">
-                <div class="card" style="border-color:#e5aaa5;"><span class="badge red">기존 방식</span>
-                    <h3>프리팹을 코드와 Inspector에 직접 연결</h3>
-                    <div class="mini-code" style="font-size:16px; margin: 18px 0;">[SerializeField]
-                        slimePrefab<br>[SerializeField] fireProjectile<br>[SerializeField] iceEffect</div>
-                    <ul>
-                        <li>새 콘텐츠마다 필드와 Inspector 연결이 증가</li>
-                        <li>연결 누락 시 런타임 오류 발생 가능</li>
-                        <li>프리팹 종류가 많아질수록 관리 비용 상승</li>
-                    </ul>
-                </div>
-                <div class="card" style="border-color:#9bd3bd;"><span class="badge green">개선 방식</span>
-                    <h3>라벨을 붙이고, 라벨 단위로 일괄 로드</h3>
-                    <div class="mini-code" style="font-size:16px; margin: 18px 0;">LoadAssetsAsync&lt;<span
-                            class="type">GameObject</span>&gt;(<span
-                            class="key">"enemy"</span>)<br>LoadAssetsAsync&lt;<span
-                            class="type">SkillDefinition</span>&gt;(<span class="key">"skill_config"</span>)</div>
-                    <ul>
-                        <li>콘텐츠 추가 시 SO/프리팹에 라벨만 부여</li>
-                        <li>매니저는 라벨 결과를 딕셔너리에 캐싱</li>
-                        <li>추후 원격 콘텐츠 패치 구조로 확장 가능</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="slide">
-        <div class="header-bar">캡스톤디자인(1) 2차 발표</div>
-        <div class="content-area">
-            <div class="section-title">Addressable 적용 현황 <small>매니저별 라벨과 로드 대상 타입을 통일된 패턴으로 관리</small></div>
-            <table class="table" style="font-size:16px;">
-                <tr>
-                    <th>라벨</th>
-                    <th>로드 타입</th>
-                    <th>담당 매니저</th>
-                    <th>캐싱 키</th>
-                    <th>발표 설명</th>
-                </tr>
-                <tr>
-                    <td>map_config</td>
-                    <td>MapScriptable</td>
-                    <td>MapManager</td>
-                    <td>mapId</td>
-                    <td>맵 프리팹, 보스 맵, 등장 적 구성을 로드</td>
-                </tr>
-                <tr>
-                    <td>character</td>
-                    <td>CharacterIdentity</td>
-                    <td>CharacterManager</td>
-                    <td>characterId</td>
-                    <td>캐릭터 선택과 생성에 필요한 데이터 로드</td>
-                </tr>
-                <tr>
-                    <td>equipment</td>
-                    <td>EquipmentIdentity</td>
-                    <td>EquipmentManager</td>
-                    <td>equipmentId</td>
-                    <td>장비 슬롯과 스탯 보너스 구성</td>
-                </tr>
-                <tr>
-                    <td>orb_config</td>
-                    <td>OrbScriptable</td>
-                    <td>OrbManager</td>
-                    <td>orb type</td>
-                    <td>캐릭터 주변을 도는 오브 공격 구성</td>
-                </tr>
-                <tr>
-                    <td>barrel_config</td>
-                    <td>BarrelScriptable</td>
-                    <td>BarrelManager</td>
-                    <td>barrel type</td>
-                    <td>투하형 특수 공격 구성</td>
-                </tr>
-                <tr>
-                    <td>skill_config</td>
-                    <td>SkillDefinition</td>
-                    <td>SkillManager</td>
-                    <td>skillId</td>
-                    <td>레벨업 선택지와 스킬 효과 구성</td>
-                </tr>
-            </table>
-            <div class="note-box" style="margin-top: 28px;">
-                <p>표를 통해 “라벨 → 타입 → 매니저 → 딕셔너리 캐싱”이라는 반복 패턴을 보여주면, 코드보다 구조가 먼저 보입니다.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="slide">
-        <div class="header-bar">캡스톤디자인(1) 2차 발표</div>
-        <div class="content-area">
-            <div class="section-title">Object Pool + Addressables <small>필요한 프리팹을 비동기로 가져오고, 반복 생성 비용은 풀링으로 줄임</small>
-            </div>
-            <div class="two-col">
-                <div class="diagram-panel">
-                    <div class="flow vertical">
-                        <div class="flow-card">Addressable AssetReference</div>
-                        <div class="arrow">↓</div>
-                        <div class="flow-card">PoolManager.GetObjectAsync()</div>
-                        <div class="arrow">↓</div>
-                        <div class="flow-card">인스턴스 생성 또는 풀에서 재사용</div>
-                        <div class="arrow">↓</div>
-                        <div class="flow-card">전투 종료 후 ReturnObject()</div>
-                    </div>
-                </div>
-                <div class="card">
-                    <h3>이 구조가 필요한 이유</h3>
-                    <ul>
-                        <li>적, 투사체, 맵 프리팹은 전투 중 반복적으로 등장합니다.</li>
-                        <li>매번 Instantiate/Destroy를 반복하면 프레임 드랍이 발생할 수 있습니다.</li>
-                        <li>Addressables는 로드 위치를 유연하게 만들고, PoolManager는 런타임 성능을 안정화합니다.</li>
-                    </ul>
-                    <div class="image-slot" style="height: 236px; margin-top: 24px;"><strong>Addressables Groups 캡처
-                            추천</strong><span>Unity Addressables 창에서 enemy, map_config, skill_config 라벨이 보이는 화면을 배치하면 설명이
-                            매우 직관적입니다.</span></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="slide">
-        <div class="header-bar">캡스톤디자인(1) 2차 발표</div>
-        <div class="content-area">
-            <div class="section-title">Map System 설계 <small>수치 데이터와 에셋 참조를 분리하고 mapId로 결합</small></div>
-            <div class="two-col">
-                <div class="card"><span class="badge blue">JSON</span>
-                    <h3>기획자가 자주 조정하는 수치</h3>
-                    <div class="mini-code" style="font-size:15px;">mapId: <span
-                            class="key">moonlight_forest</span><br>stageCount: <span
-                            class="hot">50</span><br>hpMulPerStage: <span class="hot">1.05</span><br>atkMulPerStage:
-                        <span class="hot">1.04</span>
-                    </div>
-                    <p style="margin-top:18px;">맵 배율, 스테이지 성장률, 난이도 수치처럼 자주 바뀌는 값을 텍스트 데이터로 관리합니다.</p>
-                </div>
-                <div class="card"><span class="badge green">ScriptableObject</span>
-                    <h3>Unity 에셋 참조가 필요한 구성</h3>
-                    <div class="mini-code" style="font-size:15px;">mapId: <span
-                            class="key">moonlight_forest</span><br>mapList: <span
-                            class="type">MapPrefabRef[]</span><br>bossMap: <span
-                            class="type">MapPrefabRef</span><br>enemyIdentityList: <span
-                            class="type">EnemyIdentity[]</span></div>
-                    <p style="margin-top:18px;">맵 프리팹, 보스 맵, 등장 적 목록처럼 Unity 에디터에서 연결해야 하는 값을 SO로 관리합니다.</p>
-                </div>
-            </div>
-            <div class="note-box" style="margin-top: 26px;">
-                <p>MapManager는 현재 맵 index로 JSON을 찾고, JSON 안의 mapId로 MapScriptable을 조회하여 두 데이터를 하나의 런타임 맵 설정으로 합칩니다.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="slide">
-        <div class="header-bar">캡스톤디자인(1) 2차 발표</div>
-        <div class="content-area">
-            <div class="section-title">MapManager 조인 흐름 <small>코드는 짧게, 핵심 흐름은 크게</small></div>
-            <div class="flow" style="margin-top: 28px;">
-                <div class="flow-card" style="flex:1;">CurrentMapIndex<small>로비에서 선택한 맵</small></div>
-                <div class="arrow">→</div>
-                <div class="flow-card" style="flex:1;">GetMapData(index)<small>JSON 조회</small></div>
-                <div class="arrow">→</div>
-                <div class="flow-card" style="flex:1;">mapId 추출<small>조인 키</small></div>
-                <div class="arrow">→</div>
-                <div class="flow-card" style="flex:1;">_mapDict[mapId]<small>SO 조회</small></div>
-            </div>
-            <div class="two-col" style="margin-top: 34px;">
-                <div class="mini-code">CurrentMapData = DataManager.<span class="call">GetMapData</span>(index)<br>mapId
-                    = CurrentMapData.mapId<br>mapSo = mapDict[mapId]<br>currentMapList = mapSo.mapList<br>bossMapRef =
-                    mapSo.bossMap</div>
-                <div class="card">
-                    <h3>청중에게 이렇게 설명</h3>
-                    <p>엑셀처럼 바꿀 수 있는 수치 데이터는 JSON에 두고, Unity 에셋 연결은 SO에 둡니다. 두 파일은 mapId라는 같은 이름표로 합쳐지므로, 작업자가 서로 다른 파일을
-                        담당해도 충돌이 줄어듭니다.</p>
-                    <div class="chip-row" style="margin-top:22px;"><span class="chip blue">수치 수정</span><span
-                            class="chip green">에셋 교체</span><span class="chip orange">mapId 조인</span></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="slide">
-        <div class="header-bar">캡스톤디자인(1) 2차 발표</div>
-        <div class="content-area">
-            <div class="section-title">스테이지 진행 구조 <small>일반 맵, 지정 스폰 맵, 보스 맵을 같은 흐름 안에서 처리</small></div>
-            <div class="two-col">
-                <div class="mock-screen">
-                    <div class="mock-map"></div>
-                    <div class="player-dot"></div>
-                    <div class="enemy-dot" style="left:18%; top:30%;"></div>
-                    <div class="enemy-dot" style="left:74%; top:24%;"></div>
-                    <div class="enemy-dot" style="left:24%; top:68%;"></div>
-                    <div class="boss-dot" style="left:70%; top:62%;"></div>
-                    <div class="portal-dot" style="left:45%; top:18%;"></div>
-                </div>
-                <div class="card">
-                    <h3>스테이지 루프</h3>
-                    <div class="flow vertical" style="margin-top: 14px;">
-                        <div class="flow-card">1. 맵 활성화와 플레이어 스폰</div>
-                        <div class="arrow">↓</div>
-                        <div class="flow-card">2. 랜덤 또는 지정 위치에 적 스폰</div>
-                        <div class="arrow">↓</div>
-                        <div class="flow-card">3. 모든 적 처치 시 포탈 활성화</div>
-                        <div class="arrow">↓</div>
-                        <div class="flow-card">4. 다음 스테이지 또는 보스 맵 진행</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="slide">
-        <div class="header-bar">캡스톤디자인(1) 2차 발표</div>
-        <div class="content-area">
-            <div class="section-title">Map System 발표용 시각 자료 <small>실제 Unity 화면을 넣으면 설계가 훨씬 선명해지는 위치</small></div>
-            <div class="three-col">
-                <div class="image-slot" style="height: 465px;"><strong>MapScriptable Inspector</strong><span>mapId,
-                        mapList, bossMap, enemyIdentityList가 보이도록 캡처</span></div>
-                <div class="image-slot" style="height: 465px;"><strong>mapData JSON</strong><span>stageCount,
-                        stageGrowth, mapModifier가 보이는 코드 편집기 화면</span></div>
-                <div class="image-slot" style="height: 465px;"><strong>인게임 맵 화면</strong><span>실제 스테이지 또는 보스 맵 화면을
-                        배치</span></div>
-            </div>
-            <div class="note-box" style="margin-top: 24px;">
-                <p>이 슬라이드는 발표 직전 실제 스크린샷으로 교체하기 좋은 “사진 배치용” 슬라이드입니다. 현재는 위치와 설명을 잡아두었습니다.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="slide">
-        <div class="header-bar">캡스톤디자인(1) 2차 발표</div>
-        <div class="content-area">
-            <div class="section-title">Enemy System 설계 <small>적 종류를 새 클래스로 늘리지 않고 태그 조합으로 표현</small></div>
-            <div class="card" style="padding: 28px;">
-                <div class="chip-row" style="justify-content:center; gap:14px; margin-bottom: 26px;"><span
-                        class="chip">Ranged</span><span class="chip blue">RandomMove</span><span
-                        class="chip orange">Shoot</span><span class="chip red">Fire</span></div>
-                <p class="lead" style="text-align:center;">이 조합은 “랜덤하게 움직이며 화염 투사체를 발사하는 원거리 적”이 됩니다.</p>
-            </div>
-            <div class="four-col" style="margin-top: 26px;">
-                <div class="card">
-                    <h3>Identity</h3>
-                    <p>Melee, Ranged, Boss처럼 적의 기본 성격을 정의합니다.</p>
-                </div>
-                <div class="card">
-                    <h3>Move</h3>
-                    <p>FollowMove, PatternMove, RandomMove처럼 이동 방식을 정의합니다.</p>
-                </div>
-                <div class="card">
-                    <h3>Attack</h3>
-                    <p>MeleeAttack, Shoot, FlyingShoot처럼 공격 방식을 정의합니다.</p>
-                </div>
-                <div class="card">
-                    <h3>Attribute</h3>
-                    <p>Fire, Ice, Poison, Lightning, Magma처럼 속성을 정의합니다.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="slide">
-        <div class="header-bar">캡스톤디자인(1) 2차 발표</div>
-        <div class="content-area">
-            <div class="section-title">EnemyTag 비트 플래그 <small>하나의 int 값 안에 여러 능력을 동시에 담는 방식</small></div>
-            <div class="two-col">
-                <table class="table">
-                    <tr>
-                        <th>분류</th>
-                        <th>태그</th>
-                        <th>설명</th>
-                    </tr>
-                    <tr>
-                        <td>Identity</td>
-                        <td>Melee</td>
-                        <td>근접형 적</td>
-                    </tr>
-                    <tr>
-                        <td>Identity</td>
-                        <td>Ranged</td>
-                        <td>원거리형 적</td>
-                    </tr>
-                    <tr>
-                        <td>Identity</td>
-                        <td>Boss</td>
-                        <td>보스 패턴 대상</td>
-                    </tr>
-                    <tr>
-                        <td>Move</td>
-                        <td>FollowMove</td>
-                        <td>플레이어 추적</td>
-                    </tr>
-                    <tr>
-                        <td>Move</td>
-                        <td>PatternMove</td>
-                        <td>순찰 지점 기반 이동</td>
-                    </tr>
-                    <tr>
-                        <td>Move</td>
-                        <td>RandomMove</td>
-                        <td>랜덤 방향 이동</td>
-                    </tr>
-                </table>
-                <table class="table">
-                    <tr>
-                        <th>분류</th>
-                        <th>태그</th>
-                        <th>설명</th>
-                    </tr>
-                    <tr>
-                        <td>Attack</td>
-                        <td>MeleeAttack</td>
-                        <td>근접 타격</td>
-                    </tr>
-                    <tr>
-                        <td>Attack</td>
-                        <td>FollowMeleeAttack</td>
-                        <td>추적 후 돌진 타격</td>
-                    </tr>
-                    <tr>
-                        <td>Attack</td>
-                        <td>Shoot</td>
-                        <td>투사체 발사</td>
-                    </tr>
-                    <tr>
-                        <td>Attack</td>
-                        <td>FlyingShoot</td>
-                        <td>공중 투사체 발사</td>
-                    </tr>
-                    <tr>
-                        <td>Attribute</td>
-                        <td>Fire, Ice, Poison</td>
-                        <td>상태이상 또는 추가 효과</td>
-                    </tr>
-                    <tr>
-                        <td>Attribute</td>
-                        <td>Lightning, Magma</td>
-                        <td>속성 기반 공격 확장</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="note-box" style="margin-top: 24px;">
-                <p>청중에게는 “체크박스 여러 개를 켜서 적을 만드는 방식”이라고 설명하면 비트 플래그 개념이 쉽게 전달됩니다.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="slide">
-        <div class="header-bar">캡스톤디자인(1) 2차 발표</div>
-        <div class="content-area">
-            <div class="section-title">Enemy Key 설계 <small>EnemyName + EnemyTag가 스탯 데이터를 구분하는 실제 키</small></div>
-            <div class="two-col">
-                <div class="card">
-                    <h3>왜 Name만으로는 부족한가?</h3>
-                    <p>같은 외형과 이름을 가진 적이라도 태그가 다르면 완전히 다른 적으로 취급되어야 합니다.</p>
-                    <div class="flow vertical" style="margin-top: 18px;">
-                        <div class="flow-card">Octopus + Ranged | Shoot | PatternMove<small>일반 원거리 문어</small></div>
-                        <div class="flow-card">Octopus + Ranged | Shoot | PatternMove | Fire<small>같은 이름, 다른 속성</small>
-                        </div>
-                        <div class="flow-card">Box + Boss | FlyingShoot | FollowMove<small>보스 여부까지 Tag로 구분</small></div>
-                    </div>
-                    <div class="note-box" style="margin-top: 18px;">
-                        <p>발표에서는 “이름은 외형 계열, Tag는 역할과 속성”이라고 설명하면 좋습니다.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <h3>실제 코드 발췌: DataManager.cs</h3>
-                    <div class="mini-code" style="font-size:14px; line-height:1.48;">private Dictionary&lt;EnemyKey,
-                        EnemyData&gt; enemyDataDict;
-
-                        EnemyTag mask = EnemyTag.None;
-                        foreach (var tag in enemyData.enemyTags)
-                        mask |= tag;
-
-                        var key = new EnemyKey {
-                        Name = enemyData.enemyName,
-                        Tag = mask
-                        };
-
-                        enemyDataDict.TryAdd(key, enemyData);</div>
-                    <div class="mini-code" style="font-size:13px; line-height:1.42; margin-top:12px;">public EnemyData
-                        GetEnemyData(string enemyName, EnemyTag enemyTag)
-                        {
-                        var key = new EnemyKey { Name = enemyName, Tag = enemyTag };
-
-                        if (enemyDataDict.TryGetValue(key, out var data))
-                        return data;
-
-                        Debug.LogWarning($"No data found for enemy: {enemyName} with tag {enemyTag}");
-                        return null;
-                        }</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="slide">
-        <div class="header-bar">캡스톤디자인(1) 2차 발표</div>
-        <div class="content-area">
-            <div class="section-title">EnemyKey와 런타임 스탯 조회 <small>EnemyController의 이름과 EnemyIdentity의 Tag가 합쳐져 최종 스탯을
-                    찾음</small></div>
-            <div class="two-col">
-                <div class="card">
-                    <h3>실제 코드 발췌: EnemyKey</h3>
-                    <div class="mini-code" style="font-size:13.4px; line-height:1.42;">public struct EnemyKey :
-                        IEquatable&lt;EnemyKey&gt;
-                        {
-                        public string Name;
-                        public EnemyTag Tag;
-
-                        public bool Equals(EnemyKey other)
-                        {
-                        return string.Equals(Name, other.Name,
-                        System.StringComparison.Ordinal) &amp;&amp; Tag == other.Tag;
-                        }
-
-                        public override int GetHashCode()
-                        {
-                        return ((Name != null ? Name.GetHashCode() : 0) * 397)
-                        ^ (int)Tag;
-                        }
-                        }</div>
-                </div>
-                <div class="card">
-                    <h3>실제 코드 발췌: EnemyController → EnemyManager</h3>
-                    <div class="mini-code" style="font-size:13.2px; line-height:1.38;">private void
-                        SetIdentity(EnemyIdentity identity)
-                        {
-                        _identity = identity;
-                        enemyTags = identity.Tag;
-
-                        if (enemyVisual != null)
-                        {
-                        enemyVisual.ApplyMaterials(identity.ObjectMat, identity.AccessoryMat);
-                        enemyVisual.Initialize();
-                        }
-                        }
-
-                        private void SetStat()
-                        {
-                        if (!isDebugMode)
-                        {
-                        _stat = gameObject.GetOrAddComponent&lt;EnemyStat&gt;();
-                        EnemyManager.Instance.SetEnemyStat(enemyName, enemyTags, _stat);
-                        return;
-                        }
-                        }</div>
-                    <div class="flow" style="margin-top: 17px;">
-                        <div class="flow-card" style="flex:1;">enemyName<small>Prefab/Controller</small></div>
-                        <div class="arrow">+</div>
-                        <div class="flow-card" style="flex:1;">enemyTags<small>EnemyIdentity.Tag</small></div>
-                        <div class="arrow">→</div>
-                        <div class="flow-card" style="flex:1;">EnemyData<small>JSON stat</small></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="slide">
-        <div class="header-bar">캡스톤디자인(1) 2차 발표</div>
-        <div class="content-area">
-            <div class="section-title">Enemy Config Addressable 흐름 <small>map_config가 EnemyIdentity와 모듈 데이터를 함께 끌고 오는
-                    구조</small></div>
-            <div class="two-col enemy-config-slide">
-                <div class="card">
-                    <h3>실제 코드 발췌: EnemyIdentity.cs</h3>
-                    <div class="mini-code" style="font-size:14px; line-height:1.5;">public class EnemyIdentity :
-                        ScriptableObject
-                        {
-                        public AssetReferenceGameObject Prefab;
-                        public EnemyTag Tag;
-                        public Material ObjectMat;
-                        public Material AccessoryMat;
-
-                        public BaseModuleData moveModule;
-                        public List&lt;BaseModuleData&gt; attackModules;
-                        }</div>
-                    <h3 style="margin-top:18px;">실제 코드 발췌: BaseModuleData.cs</h3>
-                    <div class="mini-code" style="font-size:14px; line-height:1.5;">public class BaseModuleData :
-                        ScriptableObject
-                        {
-                        [RegistryKey("enemyNames")] public string targetName;
-                        public EnemyTag targetTag;
-                        }</div>
-                </div>
-                <div class="card">
-                    <h3>데이터가 들어오는 순서</h3>
-                    <div class="flow vertical" style="margin-top: 12px;">
-                        <div class="flow-card">Addressables.LoadAssetsAsync&lt;MapScriptable&gt;(label)</div>
-                        <div class="arrow">↓</div>
-                        <div class="flow-card">MapScriptable.enemyIdentityList</div>
-                        <div class="arrow">↓</div>
-                        <div class="flow-card">EnemyIdentity: Prefab + Tag + Material + ModuleData</div>
-                        <div class="arrow">↓</div>
-                        <div class="flow-card">EnemyBehaviorFactory가 targetTag에 맞는 모듈 데이터 주입</div>
-                    </div>
-                    <div class="note-box" style="margin-top: 18px;">
-                        <p>즉, EnemyKey는 JSON 스탯 dict를 찾고, Addressable map_config는 EnemyIdentity와 모듈 SO 참조를 연결합니다.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="slide">
-        <div class="header-bar">캡스톤디자인(1) 2차 발표</div>
-        <div class="content-area">
-            <div class="section-title">같은 Name, 다른 Tag와 Material <small>첨부할 적 외형 비교 사진을 넣기 좋은 슬라이드</small></div>
-            <div class="enemy-comparison">
-                <div class="enemy-card normal">
-                    <h3>Normal</h3>
-                    <div class="enemy-figure">일반 속성 적 이미지<br>Normal material</div>
-                    <div class="enemy-key-line">Key = Octopus<br>Ranged | Shoot | PatternMove</div>
-                </div>
-                <div class="enemy-card fire">
-                    <h3>Fire</h3>
-                    <div class="enemy-figure">화염 속성 적 이미지<br>Fire material</div>
-                    <div class="enemy-key-line">Key = Octopus<br>Ranged | Shoot | PatternMove | Fire</div>
-                </div>
-                <div class="enemy-card ice">
-                    <h3>Ice</h3>
-                    <div class="enemy-figure">빙결 속성 적 이미지<br>Ice material</div>
-                    <div class="enemy-key-line">Key = Octopus<br>Ranged | Shoot | PatternMove | Ice</div>
-                </div>
-                <div class="enemy-card boss">
-                    <h3>Boss</h3>
-                    <div class="enemy-figure">보스 적 이미지<br>더 큰 스케일로 배치</div>
-                    <div class="enemy-key-line">Key = 같은 계열 Name<br>Boss | FlyingShoot | PatternMove</div>
-                </div>
-            </div>
-            <div class="note-box" style="margin-top: 20px;">
-                <p>사진을 넣을 때는 같은 구도에서 Normal, Fire, Ice를 나란히 두고 Boss만 더 크게 배치하면 같은 이름이어도 Tag로 역할과 속성이 갈리는 구조가 바로 전달됩니다.
+            <div class="section-title">게임 한 문장 소개 <small>Archery는 어떤 게임인가</small></div>
+            <div class="card" style="padding: 36px 50px; min-height: 200px; display:flex; align-items:center;">
+                <p class="lead" style="font-size:28px; text-align:center; width:100%; line-height:1.6;">
+                    Archery는 짧은 스테이지를 반복해서 클리어하고, 레벨업마다 얻는 스킬 조합으로 캐릭터를 강화해 다음 전투를 돌파하는 <span class="accent">탑다운 아처
+                        서바이벌</span> 게임입니다.
                 </p>
             </div>
-        </div>
-    </div>
-
-    <div class="slide">
-        <div class="header-bar">캡스톤디자인(1) 2차 발표</div>
-        <div class="content-area">
-            <div class="section-title">EnemyBehaviorFactory <small>태그를 읽고 필요한 컴포넌트만 붙이는 조립 공장</small></div>
-            <div class="two-col compact-flow">
-                <div class="diagram-panel">
-                    <div class="flow vertical">
-                        <div class="flow-card">EnemyIdentity.Tag 확인</div>
-                        <div class="arrow">↓</div>
-                        <div class="flow-card">MoveModuleRegistry 순회</div>
-                        <div class="arrow">↓</div>
-                        <div class="flow-card">AttackModuleRegistry 순회</div>
-                        <div class="arrow">↓</div>
-                        <div class="flow-card">GetOrAddComponent로 모듈 부착</div>
-                        <div class="arrow">↓</div>
-                        <div class="flow-card">각 모듈 Init 후 FSM에 연결</div>
-                    </div>
+            <div class="three-col" style="margin-top: 24px;">
+                <div class="card">
+                    <span class="badge blue">조작</span>
+                    <h3>이동 중심</h3>
+                    <p>플레이어는 이동과 회피에만 집중합니다. 공격은 가장 가까운 적을 향해 자동으로 발사됩니다.</p>
                 </div>
                 <div class="card">
-                    <h3>실제 코드 발췌: EnemyBehaviorFactory.cs</h3>
-                    <div class="mini-code" style="font-size:13.5px; line-height:1.45; margin: 14px 0;">foreach (var kvp
-                        in AttackModuleRegistry)
-                        {
-                        EnemyTag attackTag = kvp.Key;
-                        Type type = kvp.Value;
-
-                        if (!EnemyTagUtil.Has(tags, attackTag))
-                        continue;
-
-                        var foundData = attackModuleDataList
-                        ?.Find(data =&gt; data &amp;&amp; EnemyTagUtil.Has(data.targetTag, attackTag));
-
-                        ProcessAttackModule(c, attackTag, type, foundData, outDict, outList);
-                        }</div>
-                    <p>Registry는 “태그 → 컴포넌트 타입” 표이고, ModuleData는 targetTag가 맞는 것을 찾아 해당 컴포넌트 Init에 전달합니다.</p>
-                    <div class="chip-row" style="margin-top:20px;"><span class="chip green">Factory</span><span
-                            class="chip blue">Component Composition</span><span class="chip orange">OCP</span></div>
+                    <span class="badge green">진행</span>
+                    <h3>짧은 스테이지 반복</h3>
+                    <p>한 지역은 여러 스테이지로 구성되며, 매 스테이지마다 적을 처치해 포탈을 열고 다음 스테이지로 이동합니다.</p>
+                </div>
+                <div class="card">
+                    <span class="badge orange">성장</span>
+                    <h3>매 판마다 다른 빌드</h3>
+                    <p>경험치를 모아 레벨업하면 무작위 스킬 후보 중에서 고르며, 그때그때 성장 방향이 달라집니다.</p>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- 4. 전체 플레이 흐름 (linear arrow flow) -->
     <div class="slide">
-        <div class="header-bar">캡스톤디자인(1) 2차 발표</div>
+        <div class="header-bar">캡스톤 디자인 2차발표</div>
+        <div class="step-pill">STEP 0 · 전체 흐름</div>
         <div class="content-area">
-            <div class="section-title">적 조합 예시 <small>발표자가 바로 말로 설명하기 쉬운 3가지 샘플</small></div>
-            <div class="three-col">
-                <div class="card" style="min-height: 500px;"><span class="badge orange">근접 추적형</span>
-                    <h3>추적 후 근접 공격</h3>
-                    <div class="chip-row" style="margin: 18px 0;"><span class="chip">Melee</span><span
-                            class="chip blue">FollowMove</span><span class="chip orange">MeleeAttack</span></div>
-                    <p>플레이어를 따라오다가 사정거리 안에 들어오면 근접 공격합니다. 가장 기본적인 적으로 초반 스테이지에 적합합니다.</p>
-                </div>
-                <div class="card" style="min-height: 500px;"><span class="badge blue">원거리 랜덤형</span>
-                    <h3>움직이며 투사체 발사</h3>
-                    <div class="chip-row" style="margin: 18px 0;"><span class="chip">Ranged</span><span
-                            class="chip blue">RandomMove</span><span class="chip orange">Shoot</span><span
-                            class="chip red">Fire</span></div>
-                    <p>랜덤 이동으로 위치를 바꾸며 투사체를 발사합니다. Fire 속성을 붙이면 지속 피해를 주는 화염 원거리 적이 됩니다.</p>
-                </div>
-                <div class="card" style="min-height: 500px;"><span class="badge purple">보스형</span>
-                    <h3>다중 공격 모듈</h3>
-                    <div class="chip-row" style="margin: 18px 0;"><span class="chip">Boss</span><span
-                            class="chip blue">PatternMove</span><span class="chip orange">Shoot</span><span
-                            class="chip orange">FlyingShoot</span></div>
-                    <p>보스는 여러 공격 모듈을 가질 수 있고, 공격 상태에 진입할 때 모듈을 선택하도록 확장할 수 있습니다.</p>
-                </div>
+            <div class="section-title">한 번의 플레이는 이렇게 진행됩니다 <small>게임 시작부터 결과 화면까지의 전체 흐름</small></div>
+            <div class="arrow-flow">
+                <div class="step"><b>시작 화면</b><span>게임 실행</span></div>
+                <div class="arrow">&#8250;</div>
+                <div class="step"><b>로딩</b><span>리소스 준비</span></div>
+                <div class="arrow">&#8250;</div>
+                <div class="step"><b>로비</b><span>홈 화면</span></div>
+                <div class="arrow">&#8250;</div>
+                <div class="step"><b>캐릭터/장비</b><span>출발 준비</span></div>
+                <div class="arrow">&#8250;</div>
+                <div class="step"><b>지역 선택</b><span>맵 결정</span></div>
+                <div class="arrow">&#8250;</div>
+                <div class="step"><b>인게임 진입</b><span>스테이지 1</span></div>
             </div>
-        </div>
-    </div>
-
-    <div class="slide">
-        <div class="header-bar">캡스톤디자인(1) 2차 발표</div>
-        <div class="content-area">
-            <div class="section-title">Enemy FSM 시각화 <small>상태 전이를 그림으로 보여주면 코드 없이도 행동 흐름이 보임</small></div>
-            <div class="two-col" style="grid-template-columns: 1.25fr .85fr;">
-                <div class="diagram-panel"><svg class="state-diagram" viewBox="0 0 720 492"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <marker id="arrowHead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-                                <polygon points="0 0, 10 3.5, 0 7" fill="#665a96" />
-                            </marker>
-                        </defs>
-                        <rect x="8" y="8" width="704" height="476" rx="16" fill="#fbfaff" stroke="#d2cce5"
-                            stroke-width="3" />
-                        <circle cx="360" cy="92" r="58" fill="#eaf3fb" stroke="#2b78b8" stroke-width="4" /><text x="360"
-                            y="101" text-anchor="middle" font-size="27" font-weight="900" fill="#245f92">Idle</text>
-                        <circle cx="180" cy="246" r="58" fill="#e8f5ef" stroke="#18865e" stroke-width="4" /><text
-                            x="180" y="255" text-anchor="middle" font-size="27" font-weight="900"
-                            fill="#18865e">Move</text>
-                        <circle cx="540" cy="246" r="58" fill="#fff2e6" stroke="#c66b1f" stroke-width="4" /><text
-                            x="540" y="255" text-anchor="middle" font-size="27" font-weight="900"
-                            fill="#b65d17">Attack</text>
-                        <circle cx="276" cy="402" r="58" fill="#fae9e7" stroke="#c9493f" stroke-width="4" /><text
-                            x="276" y="411" text-anchor="middle" font-size="27" font-weight="900"
-                            fill="#b93c34">Hurt</text>
-                        <circle cx="444" cy="402" r="58" fill="#eee9fa" stroke="#665a96" stroke-width="4" /><text
-                            x="444" y="411" text-anchor="middle" font-size="27" font-weight="900"
-                            fill="#4f457e">Dead</text>
-                        <path d="M320 136 C260 160 220 186 194 205" fill="none" stroke="#665a96" stroke-width="4"
-                            marker-end="url(#arrowHead)" />
-                        <path d="M400 136 C460 160 500 186 526 205" fill="none" stroke="#665a96" stroke-width="4"
-                            marker-end="url(#arrowHead)" />
-                        <path d="M237 246 L479 246" fill="none" stroke="#665a96" stroke-width="4"
-                            marker-end="url(#arrowHead)" />
-                        <path d="M515 294 C472 344 426 375 346 397" fill="none" stroke="#c9493f" stroke-width="4"
-                            marker-end="url(#arrowHead)" />
-                        <path d="M335 402 L386 402" fill="none" stroke="#665a96" stroke-width="4"
-                            marker-end="url(#arrowHead)" /><text x="238" y="164" font-size="16" font-weight="900"
-                            fill="#665a96">afterIdle = Move</text><text x="447" y="164" font-size="16" font-weight="900"
-                            fill="#665a96">afterIdle = Attack</text><text x="312" y="231" font-size="16"
-                            font-weight="900" fill="#665a96">afterMove</text><text x="438" y="348" font-size="16"
-                            font-weight="900" fill="#c9493f">OnHit</text><text x="351" y="388" font-size="16"
-                            font-weight="900" fill="#665a96">OnDie</text>
-                    </svg></div>
-                <div class="card">
-                    <h3>상태 5개</h3>
-                    <div class="legend" style="grid-template-columns: 1fr;"><span class="chip blue">Idle: 대기</span><span
-                            class="chip green">Move: 이동</span><span class="chip orange">Attack: 공격</span><span
-                            class="chip red">Hurt: 피격</span><span class="chip">Dead: 사망</span></div>
-                    <p style="margin-top: 22px;">EnemyController는 현재 상태의 OnEnter, Tick, OnExit를 실행하고, 모듈 완료 시
-                        EnemyBrain이 알려준 다음 상태로 이동합니다.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="slide">
-        <div class="header-bar">캡스톤디자인(1) 2차 발표</div>
-        <div class="content-area">
-            <div class="section-title">EnemyBrain ScriptableObject <small>상태 전이 규칙을 코드가 아니라 데이터로 바꾸는 지점</small></div>
-            <div class="two-col">
-                <div class="card">
-                    <h3>EnemyBrain이 가진 값</h3>
-                    <div class="mini-code" style="font-size:17px; margin-top: 16px;">afterIdle = <span
-                            class="key">Move</span><br>afterMove = <span class="key">Attack</span><br>afterAttack =
-                        <span class="key">Move</span><br>afterHurt = <span class="key">Move</span>
-                    </div>
-                    <p style="margin-top: 20px;">같은 EnemyController라도 Brain SO를 바꾸면 행동 흐름이 바뀝니다.</p>
-                </div>
-                <div class="image-slot" style="height: 440px;"><strong>EnemyBrain Inspector 캡처
-                        추천</strong><span>afterIdle, afterMove, afterAttack, afterHurt 필드가 보이는 Unity Inspector 화면을 넣으면 상태
-                        전이가 데이터라는 점이 바로 보입니다.</span></div>
+            <div class="arrow-flow" style="margin-top: 22px;">
+                <div class="step"><b>전투</b><span>이동·자동 공격</span></div>
+                <div class="arrow">&#8250;</div>
+                <div class="step"><b>경험치·레벨업</b><span>스킬 선택</span></div>
+                <div class="arrow">&#8250;</div>
+                <div class="step"><b>스테이지 클리어</b><span>포탈 진입</span></div>
+                <div class="arrow">&#8250;</div>
+                <div class="step"><b>다음 스테이지</b><span>난이도 상승</span></div>
+                <div class="arrow">&#8250;</div>
+                <div class="step"><b>보스 스테이지</b><span>지역 끝</span></div>
+                <div class="arrow">&#8250;</div>
+                <div class="step"><b>결과 화면</b><span>맵 클리어 / 게임오버</span></div>
             </div>
             <div class="note-box" style="margin-top: 24px;">
-                <p>청중에게는 “AI 패턴을 코드에 박아두는 것이 아니라, Inspector에서 다음 행동표를 바꾸는 방식”이라고 설명하면 이해가 빠릅니다.</p>
+                <p>각 단계마다 플레이어가 보게 되는 화면과 게임 요소가 달라집니다. 이후 슬라이드에서 단계별로 자세히 다룹니다.</p>
             </div>
         </div>
     </div>
 
+    <!-- 5. 시작 화면 + 로딩 -->
     <div class="slide">
-        <div class="header-bar">캡스톤디자인(1) 2차 발표</div>
+        <div class="header-bar">캡스톤 디자인 2차발표</div>
+        <div class="step-pill">STEP 1 · 시작과 로딩</div>
         <div class="content-area">
-            <div class="section-title">데이터에서 런타임까지 <small>적 하나가 실제 게임 오브젝트가 되는 전체 흐름</small></div>
-            <div class="flow" style="margin-top: 28px;">
-                <div class="flow-card" style="flex:1;">EnemyIdentity<small>Prefab, Tag, ModuleData</small></div>
-                <div class="arrow">→</div>
-                <div class="flow-card" style="flex:1;">Name + Tag<small>EnemyData 조회 키</small></div>
-                <div class="arrow">→</div>
-                <div class="flow-card" style="flex:1;">PoolManager<small>enemy prefab 획득</small></div>
-                <div class="arrow">→</div>
-                <div class="flow-card" style="flex:1;">Factory<small>Move/Attack 부착</small></div>
-                <div class="arrow">→</div>
-                <div class="flow-card" style="flex:1;">FSM 시작<small>Idle부터 실행</small></div>
-            </div>
-            <div class="three-col" style="margin-top: 38px;">
-                <div class="card">
-                    <h3>1. 데이터 선택</h3>
-                    <p>MapManager가 현재 맵에 맞는 EnemyIdentity를 고릅니다.</p>
+            <div class="section-title">게임 실행 → 로딩 화면 <small>플레이어가 가장 먼저 보는 화면</small></div>
+            <div class="two-col">
+                <div class="photo-slot" style="min-height: 470px;">
+                    <strong>사진 위치 01 · 시작/로딩 화면</strong>
+                    <span>게임 실행 직후 타이틀과 로딩 진행 표시가 나타나는 화면을 캡처합니다.</span>
                 </div>
-                <div class="card">
-                    <h3>2. 스탯 조회</h3>
-                    <p>EnemyController의 enemyName과 EnemyIdentity.Tag로 EnemyData를 조회합니다.</p>
-                </div>
-                <div class="card">
-                    <h3>3. 조립과 상태 실행</h3>
-                    <p>Factory가 모듈을 붙이고 EnemyBrain의 전이 규칙에 따라 행동합니다.</p>
-                </div>
-            </div>
-            <div class="note-box" style="margin-top: 26px;">
-                <p>이 슬라이드는 Enemy System 전체를 한 번에 복습하는 연결 슬라이드로 쓰기 좋습니다.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="slide">
-        <div class="header-bar">캡스톤디자인(1) 2차 발표</div>
-        <div class="content-area">
-            <div class="section-title">2차 발표까지의 성과 <small>구현 결과를 아키텍처 관점에서 정리</small></div>
-            <div class="four-col">
-                <div class="metric"><b>01</b><span>Addressables 라벨 로드 패턴을 여러 매니저에 적용했습니다.</span></div>
-                <div class="metric"><b>02</b><span>Map JSON과 MapScriptable을 mapId로 조인하는 구조를 만들었습니다.</span></div>
-                <div class="metric"><b>03</b><span>EnemyKey(Name+Tag), EnemyIdentity, Factory로 적을 구분하고 조립합니다.</span>
-                </div>
-                <div class="metric"><b>04</b><span>EnemyBrain SO로 상태 전이를 데이터화했습니다.</span></div>
-            </div>
-            <div class="note-box" style="margin-top: 46px;">
-                <p>공통 성과는 “콘텐츠 추가 시 기존 코드 수정 지점을 줄였다”는 것입니다. 이 부분을 결론 문장으로 반복하면 발표 메시지가 단단해집니다.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="slide">
-        <div class="header-bar">캡스톤디자인(1) 2차 발표</div>
-        <div class="content-area">
-            <div class="section-title">시연 구성 제안 <small>아키텍처 설명을 실제 화면과 연결하는 순서</small></div>
-            <div class="two-col demo-slide">
-                <div class="card">
-                    <h3>라이브 데모 순서</h3>
-                    <div class="flow vertical" style="margin-top: 16px;">
-                        <div class="flow-card">1. Addressables 라벨이 붙은 에셋 확인</div>
-                        <div class="flow-card">2. mapData JSON 수치 변경 위치 확인</div>
-                        <div class="flow-card">3. MapScriptable의 mapId와 프리팹 리스트 확인</div>
-                        <div class="flow-card">4. EnemyName + Tag가 EnemyKey가 되는 코드 확인</div>
-                        <div class="flow-card">5. Normal / Fire / Ice / Boss 외형 비교</div>
-                        <div class="flow-card">6. 실행 후 스폰/행동 변화 확인</div>
+                <div class="card" style="min-height: 470px;">
+                    <span class="badge">진행 순서</span>
+                    <h3>실행하면 무슨 일이 벌어지는가</h3>
+                    <ul>
+                        <li>게임을 실행하면 먼저 <span class="accent">로딩 화면</span>이 표시됩니다.</li>
+                        <li>이 동안 캐릭터, 적, 맵, UI 등 게임에 필요한 리소스가 백그라운드에서 준비됩니다.</li>
+                        <li>로딩이 끝나면 자동으로 <span class="accent">로비 화면</span>으로 전환됩니다.</li>
+                        <li>플레이어 입장에서는 별도 입력 없이 자연스럽게 다음 화면으로 넘어가는 짧은 단계입니다.</li>
+                    </ul>
+                    <div class="note-box" style="margin-top: 18px;">
+                        <p>로딩 중에 Addressables 시스템이 캐릭터, 적, 맵, 이펙트 등 리소스를 비동기로 불러옵니다.</p>
                     </div>
                 </div>
-                <div class="card">
-                    <h3>사진 또는 영상 배치 추천</h3>
-                    <ul>
-                        <li>로비 맵 선택 화면: MapManager 설명 직전</li>
-                        <li>인게임 전투 화면: EnemyTag 조합 예시 직후</li>
-                        <li>Normal, Fire, Ice, Boss 비교 이미지: EnemyKey 설명 직후</li>
-                        <li>Addressables Groups 창: 라벨 로드 설명 슬라이드</li>
-                        <li>EnemyBrain Inspector: FSM 설명 슬라이드</li>
-                    </ul>
-                    <div class="image-slot" style="height: 210px; margin-top: 24px;"><strong>데모 GIF 또는 짧은 캡처
-                            영상</strong><span>PPTX 변환 시에는 정지 이미지가 안정적입니다. 발표용 HTML에서는 GIF도 가능.</span></div>
-                </div>
             </div>
         </div>
     </div>
 
+    <!-- 6. 로비 진입 -->
     <div class="slide">
-        <div class="header-bar">캡스톤디자인(1) 2차 발표</div>
+        <div class="header-bar">캡스톤 디자인 2차발표</div>
+        <div class="step-pill">STEP 2 · 로비</div>
         <div class="content-area">
-            <div class="section-title">향후 계획 <small>2차 발표 이후 최종 시연까지 보완할 부분</small></div>
-            <div class="three-col">
-                <div class="card" style="min-height: 420px;"><span class="badge blue">콘텐츠</span>
-                    <h3>맵과 보스 패턴 확장</h3>
+            <div class="section-title">로비 화면 <small>모든 준비가 시작되는 홈 베이스</small></div>
+            <div class="two-col wide-right">
+                <div class="card" style="min-height: 470px;">
+                    <span class="badge blue">로비에서 하는 일</span>
+                    <h3>플레이어는 로비에서 다음을 결정합니다</h3>
                     <ul>
-                        <li>10스테이지 단위 보스 맵 완성</li>
-                        <li>지정 스폰 맵과 랜덤 맵 비율 조정</li>
-                        <li>맵별 적 조합 다양화</li>
+                        <li>이번 판에 사용할 <span class="accent">캐릭터</span>를 고릅니다.</li>
+                        <li>장착할 <span class="accent">장비, 오브, 배럴</span> 등을 점검합니다.</li>
+                        <li>도전할 <span class="accent">지역(맵)</span>을 선택합니다.</li>
+                        <li>준비가 끝나면 인게임으로 출발합니다.</li>
                     </ul>
+                    <div class="note-box" style="margin-top: 18px;">
+                        <p>로비는 매 판을 시작하기 전 거치는 홈 화면으로, 캐릭터·장비·지역 선택이 모두 이 화면 안에서 이루어집니다.</p>
+                    </div>
                 </div>
-                <div class="card" style="min-height: 420px;"><span class="badge green">시스템</span>
-                    <h3>장비와 스킬 시스템 보강</h3>
-                    <ul>
-                        <li>무기, 보호구, 신발 장비 구조 정리</li>
-                        <li>오브와 배럴 공격 타입 추가</li>
-                        <li>레벨업 선택지 밸런싱</li>
-                    </ul>
+                <div class="photo-slot" style="min-height: 470px;">
+                    <strong>사진 위치 02 · 로비 전체 화면</strong>
+                    <span>캐릭터, 장비 슬롯, 지역 선택 버튼이 한 화면에 보이도록 로비 UI를 캡처합니다.</span>
                 </div>
-                <div class="card" style="min-height: 420px;"><span class="badge orange">검증</span>
-                    <h3>리모트 콘텐츠 패치 검증</h3>
-                    <ul>
-                        <li>Addressables 빌드 분리 테스트</li>
-                        <li>라벨 누락 검증 체크리스트 작성</li>
-                        <li>밸런싱과 QA 반복</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="note-box" style="margin-top: 28px;">
-                <p>최종 목표는 새 빌드 없이 적, 맵, 스킬을 추가하는 흐름을 실제 데모로 보여주는 것입니다.</p>
             </div>
         </div>
     </div>
 
+    <!-- 7. 캐릭터 선택 -->
     <div class="slide">
-        <div class="header-bar">캡스톤디자인(1) 2차 발표</div>
-        <div class="thankyou">감사합니다</div>
+        <div class="header-bar">캡스톤 디자인 2차발표</div>
+        <div class="step-pill">STEP 3 · 캐릭터 선택</div>
+        <div class="content-area">
+            <div class="section-title">캐릭터 선택 <small>이번 판을 함께할 캐릭터를 고릅니다</small></div>
+            <div class="two-col">
+                <div class="photo-slot" style="min-height: 470px;">
+                    <strong>사진 위치 03 · 캐릭터 선택 UI</strong>
+                    <span>캐릭터 카드와 기본 능력치 표기가 보이는 선택 화면을 캡처합니다.</span>
+                </div>
+                <div class="card" style="min-height: 470px;">
+                    <h3>캐릭터마다 어떤 차이가 있는가</h3>
+                    <ul>
+                        <li>각 캐릭터는 <span class="accent">기본 체력, 이동 속도, 공격 속도</span> 등의 기본 능력치가 다릅니다.</li>
+                        <li>외형과 이펙트도 다르게 설정되어 있어, 시각적으로도 다른 플레이 경험을 줍니다.</li>
+                        <li>선택한 캐릭터는 이번 판이 끝날 때까지 그대로 사용됩니다.</li>
+                    </ul>
+                    <div class="note-box" style="margin-top: 18px;">
+                        <p>기본 능력치가 다르기 때문에 어떤 캐릭터를 고르느냐에 따라 이후 장비와 스킬 빌드 방향이 달라집니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
+    <!-- 8. 장비 / 오브 / 배럴 -->
+    <div class="slide">
+        <div class="header-bar">캡스톤 디자인 2차발표</div>
+        <div class="step-pill">STEP 4 · 장비 세팅</div>
+        <div class="content-area">
+            <div class="section-title">장비, 오브, 배럴 세팅 <small>출발 전 마지막 준비</small></div>
+            <div class="three-col" style="margin-bottom: 22px;">
+                <div class="card">
+                    <span class="badge">장비</span>
+                    <h3>기본 능력치 보강</h3>
+                    <p>장착한 장비에 따라 공격력, 체력, 이동 속도 등 기본 스탯이 변동됩니다.</p>
+                </div>
+                <div class="card">
+                    <span class="badge orange">오브</span>
+                    <h3>플레이어 주변에 배치</h3>
+                    <p>장착하면 플레이어 주위를 도는 보조 발사체가 생겨, 기본 공격과 별개로 주변 적을 견제합니다.</p>
+                </div>
+                <div class="card">
+                    <span class="badge blue">배럴</span>
+                    <h3>전투 중 자동 발사</h3>
+                    <p>일정 주기로 자동으로 투사체를 쏘는 보조 무기로, 장비 슬롯을 사용해 장착합니다.</p>
+                </div>
+            </div>
+            <div class="photo-slot" style="min-height: 230px;">
+                <strong>사진 위치 04 · 장비/오브/배럴 슬롯 UI</strong>
+                <span>장비 슬롯, 오브 슬롯, 배럴 슬롯이 한 화면에 보이는 인벤토리/세팅 창을 캡처합니다.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 9. 지역 선택 -->
+    <div class="slide">
+        <div class="header-bar">캡스톤 디자인 2차발표</div>
+        <div class="step-pill">STEP 5 · 지역 선택</div>
+        <div class="content-area">
+            <div class="section-title">도전할 지역(맵) 선택 <small>5개의 지역 중에서 선택합니다</small></div>
+            <div class="five-col" style="margin-bottom: 18px;">
+                <div class="map-card dungeon">
+                    <h3>Dungeon</h3>
+                    <p>입문 지역. 좁은 공간과 기본 적이 등장합니다.</p>
+                </div>
+                <div class="map-card jungle">
+                    <h3>Jungle</h3>
+                    <p>이동·근접 적 비중이 높은 지역입니다.</p>
+                </div>
+                <div class="map-card lava">
+                    <h3>Lava</h3>
+                    <p>화염 속성 효과가 적용되는 지역입니다.</p>
+                </div>
+                <div class="map-card forest">
+                    <h3>Forest</h3>
+                    <p>독 속성 효과가 강조되는 지역입니다.</p>
+                </div>
+                <div class="map-card ocean">
+                    <h3>Ocean</h3>
+                    <p>원거리 적과 빙결 효과가 등장합니다.</p>
+                </div>
+            </div>
+            <div class="two-col wide-right">
+                <div class="card">
+                    <h3>지역마다 무엇이 달라지는가</h3>
+                    <ul>
+                        <li>각 지역은 <span class="accent">3개의 스테이지</span>로 구성됩니다.</li>
+                        <li>지역마다 등장하는 적의 종류, 수, 속성 효과가 다르게 설정되어 있습니다.</li>
+                        <li>뒤에 있는 지역일수록 적이 강해지고, 보스 패턴도 달라집니다.</li>
+                    </ul>
+                </div>
+                <div class="photo-slot" style="min-height: 200px;">
+                    <strong>사진 위치 05 · 지역 선택 화면</strong>
+                    <span>5개 지역 아이콘이 늘어선 맵 선택 UI를 캡처합니다.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 10. 인게임 진입 / 스테이지 1 -->
+    <div class="slide">
+        <div class="header-bar">캡스톤 디자인 2차발표</div>
+        <div class="step-pill">STEP 6 · 인게임 진입</div>
+        <div class="content-area">
+            <div class="section-title">인게임 진입 — 스테이지 1 시작 <small>지역을 선택하면 곧바로 첫 번째 스테이지로 이동합니다</small></div>
+            <div class="two-col wide-left">
+                <div class="photo-slot dark" style="min-height: 480px;">
+                    <strong>사진 위치 06 · 스테이지 1 시작 직후 화면</strong>
+                    <span>플레이어 캐릭터, 첫 적, 맵 지형이 함께 보이는 인게임 시작 시점을 캡처합니다.</span>
+                </div>
+                <div class="card" style="min-height: 480px;">
+                    <h3>화면 구성 요소</h3>
+                    <ul>
+                        <li>가운데에 <span class="accent">플레이어 캐릭터</span>가 등장합니다.</li>
+                        <li>맵 곳곳에 <span class="accent">적</span>이 배치되어 플레이어 쪽으로 다가옵니다.</li>
+                        <li>상단/하단에는 <span class="accent">체력, 경험치 게이지, 레벨</span> 등의 HUD가 표시됩니다.</li>
+                        <li>화면 어딘가에는 잠겨 있는 <span class="accent">포탈</span> 자리가 미리 준비되어 있습니다.</li>
+                    </ul>
+                    <div class="note-box" style="margin-top: 18px;">
+                        <p>이 시점부터 실제 전투가 시작됩니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 11. 전투 기본 -->
+    <div class="slide">
+        <div class="header-bar">캡스톤 디자인 2차발표</div>
+        <div class="step-pill">STEP 7 · 전투 기본</div>
+        <div class="content-area">
+            <div class="section-title">전투 방식 <small>이동만 조작하고, 공격은 자동으로 이루어집니다</small></div>
+            <div class="three-col" style="margin-bottom: 22px;">
+                <div class="card">
+                    <span class="badge blue">조작</span>
+                    <h3>이동과 회피</h3>
+                    <p>방향키로 캐릭터를 움직이며 적의 공격을 피하는 데 집중합니다.</p>
+                </div>
+                <div class="card">
+                    <span class="badge green">공격</span>
+                    <h3>가까운 적 자동 타겟</h3>
+                    <p>플레이어는 일정 주기로 가장 가까운 적을 향해 자동으로 화살을 발사합니다.</p>
+                </div>
+                <div class="card">
+                    <span class="badge orange">피격</span>
+                    <h3>피격 시 짧은 무적</h3>
+                    <p>피격 직후 짧은 무적시간이 적용되어 연속 피격으로 즉사하지 않도록 보호됩니다.</p>
+                </div>
+            </div>
+            <div class="photo-slot" style="min-height: 250px;">
+                <strong>사진 위치 07 · 전투 화면</strong>
+                <span>화살이 발사되는 순간과 적이 다가오는 모습을 함께 보여주는 컷을 캡처합니다.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 12. 등장하는 적 -->
+    <div class="slide">
+        <div class="header-bar">캡스톤 디자인 2차발표</div>
+        <div class="step-pill">STEP 8 · 적</div>
+        <div class="content-area">
+            <div class="section-title">전투에서 만나는 적 <small>지역에 따라 다양한 적이 등장합니다</small></div>
+            <div class="four-col">
+                <div class="card">
+                    <span class="badge red">근접</span>
+                    <h3>Slime</h3>
+                    <p>천천히 다가와서 부딪히는 기본 근접 적입니다.</p>
+                </div>
+                <div class="card">
+                    <span class="badge red">근접</span>
+                    <h3>Bird</h3>
+                    <p>이동 속도가 빠르고 거리를 좁혀오는 근접 적입니다.</p>
+                </div>
+                <div class="card">
+                    <span class="badge blue">원거리</span>
+                    <h3>Octopus</h3>
+                    <p>일정 거리에서 투사체를 쏘는 원거리 적입니다.</p>
+                </div>
+                <div class="card">
+                    <span class="badge blue">원거리</span>
+                    <h3>Wizard</h3>
+                    <p>패턴이 다양한 원거리 적으로, 후반 지역에서 등장합니다.</p>
+                </div>
+            </div>
+            <div class="photo-slot" style="min-height: 230px; margin-top: 22px;">
+                <strong>사진 위치 08 · 다양한 적이 함께 등장하는 컷</strong>
+                <span>한 화면에 근접 적과 원거리 적이 동시에 보이는 장면을 캡처합니다.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 13. 적 속성 효과 -->
+    <div class="slide">
+        <div class="header-bar">캡스톤 디자인 2차발표</div>
+        <div class="step-pill">STEP 9 · 적 속성</div>
+        <div class="content-area">
+            <div class="section-title">적의 속성 효과 <small>지역에 따라 추가 효과가 적용됩니다</small></div>
+            <table class="table" style="margin-bottom: 22px;">
+                <tr>
+                    <th style="width: 18%;">속성</th>
+                    <th style="width: 28%;">대표 등장 지역</th>
+                    <th>플레이어가 체감하는 효과</th>
+                </tr>
+                <tr>
+                    <td>Fire</td>
+                    <td>Lava</td>
+                    <td>피격 시 일정 시간 지속 피해를 입습니다.</td>
+                </tr>
+                <tr>
+                    <td>Ice</td>
+                    <td>Ocean</td>
+                    <td>피격 시 이동 속도가 잠시 느려집니다.</td>
+                </tr>
+                <tr>
+                    <td>Poison</td>
+                    <td>Forest</td>
+                    <td>피격 시 일정 시간 동안 추가 피해가 누적됩니다.</td>
+                </tr>
+                <tr>
+                    <td>Lightning</td>
+                    <td>후반 지역</td>
+                    <td>일부 Wizard 계열 적이 사용하는 강한 원거리 속성입니다.</td>
+                </tr>
+            </table>
+            <div class="note-box">
+                <p>같은 적이라도 지역과 속성이 더해지면 위협 수준이 달라집니다. 그래서 단순히 "적이 많다"가 아니라 "지역이 깊어질수록 다른 방식으로 어렵다"는 구조가 됩니다.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 14. 경험치 -> 레벨업 -->
+    <div class="slide">
+        <div class="header-bar">캡스톤 디자인 2차발표</div>
+        <div class="step-pill">STEP 10 · 경험치와 레벨업</div>
+        <div class="content-area">
+            <div class="section-title">경험치 수집과 레벨업 <small>전투를 진행하면 캐릭터가 자라납니다</small></div>
+            <div class="step-row">
+                <div class="step-num">1</div>
+                <div>
+                    <h3>적을 처치하면 경험치가 떨어집니다</h3>
+                    <p>처치된 적 위치에 경험치 오브가 생성되며, 플레이어가 가까이 가면 자동으로 흡수됩니다.</p>
+                </div>
+            </div>
+            <div class="step-row">
+                <div class="step-num">2</div>
+                <div>
+                    <h3>경험치 게이지가 가득 차면 레벨업</h3>
+                    <p>레벨이 올라갈수록 다음 레벨에 필요한 경험치가 점진적으로 증가합니다.</p>
+                </div>
+            </div>
+            <div class="step-row">
+                <div class="step-num">3</div>
+                <div>
+                    <h3>레벨업 즉시 게임이 잠시 멈추고 보상 화면이 뜹니다</h3>
+                    <p>전투가 일시 정지되며, 화면 위에 스킬 선택 팝업이 표시됩니다. 이 단계는 다음 슬라이드에서 자세히 다룹니다.</p>
+                </div>
+            </div>
+            <div class="photo-slot" style="min-height: 170px; margin-top: 8px;">
+                <strong>사진 위치 09 · 경험치 게이지와 레벨 표시</strong>
+                <span>HUD의 경험치 바와 레벨 숫자가 잘 보이는 컷을 캡처합니다.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 15. 스킬 선택 -->
+    <div class="slide">
+        <div class="header-bar">캡스톤 디자인 2차발표</div>
+        <div class="step-pill">STEP 11 · 스킬 선택</div>
+        <div class="content-area">
+            <div class="section-title">레벨업 보상 — 스킬 선택 <small>레벨업마다 후보 중 하나를 골라 캐릭터를 강화합니다</small></div>
+            <div class="two-col wide-left">
+                <div class="photo-slot" style="min-height: 460px;">
+                    <strong>사진 위치 10 · 레벨업 스킬 선택 팝업</strong>
+                    <span>레벨업 시 표시되는 스킬 카드 3장이 보이는 팝업을 캡처합니다.</span>
+                </div>
+                <div class="card" style="min-height: 460px;">
+                    <h3>플레이어가 보는 화면</h3>
+                    <ul>
+                        <li>레벨업 시 <span class="accent">무작위 스킬 후보</span>가 카드 형태로 제시됩니다.</li>
+                        <li>이미 보유한 스킬은 <span class="accent">레벨이 한 단계 상승</span>하는 방식으로 강화됩니다.</li>
+                        <li>새로운 스킬을 골라 <span class="accent">다른 빌드</span>로 전환할 수도 있습니다.</li>
+                        <li>선택을 마치면 전투가 다시 진행됩니다.</li>
+                    </ul>
+                    <div class="note-box" style="margin-top: 18px;">
+                        <p>매 판마다 등장 후보가 달라지기 때문에, 같은 캐릭터로 플레이해도 매번 다른 빌드가 만들어집니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 16. 스킬 카탈로그 - 공격형 -->
+    <div class="slide">
+        <div class="header-bar">캡스톤 디자인 2차발표</div>
+        <div class="step-pill">STEP 11 · 공격형 스킬</div>
+        <div class="content-area">
+            <div class="section-title">스킬 종류 (1) — 공격 강화 <small>화살 자체의 성능을 끌어올리는 스킬</small></div>
+            <div class="four-col">
+                <div class="card">
+                    <span class="badge">공격</span>
+                    <h3>Attack Speed Increase</h3>
+                    <p>공격 주기를 단축해 같은 시간에 더 많은 화살을 발사합니다.</p>
+                </div>
+                <div class="card">
+                    <span class="badge blue">이동</span>
+                    <h3>Move Speed Increase</h3>
+                    <p>이동 속도를 높여 적의 공격을 더 쉽게 회피하게 합니다.</p>
+                </div>
+                <div class="card">
+                    <span class="badge orange">탄수</span>
+                    <h3>Multi Shot</h3>
+                    <p>한 번에 발사되는 화살 수를 레벨에 따라 단계적으로 늘립니다.</p>
+                </div>
+                <div class="card">
+                    <span class="badge orange">패턴</span>
+                    <h3>Diagonal Shot</h3>
+                    <p>대각선 방향으로도 화살을 발사해 사거리 패턴을 넓힙니다.</p>
+                </div>
+                <div class="card" style="grid-column: 1 / span 4;">
+                    <span class="badge orange">패턴</span>
+                    <h3>Horizontal Shot</h3>
+                    <p>좌우 수평 방향으로 추가 화살을 발사합니다. 다른 패턴 스킬과 조합되면 화면을 가로지르는 탄막이 만들어집니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 17. 스킬 카탈로그 - 보조형 -->
+    <div class="slide">
+        <div class="header-bar">캡스톤 디자인 2차발표</div>
+        <div class="step-pill">STEP 11 · 보조형 스킬</div>
+        <div class="content-area">
+            <div class="section-title">스킬 종류 (2) — 보조 무기 <small>플레이어 주변에서 자동으로 작동하는 추가 공격</small></div>
+            <div class="three-col">
+                <div class="card">
+                    <span class="badge blue">배럴</span>
+                    <h3>Ice Barrel</h3>
+                    <p>레벨에 비례해 배럴이 늘어나며, 일정 주기로 빙결 속성 투사체를 자동 발사합니다.</p>
+                </div>
+                <div class="card">
+                    <span class="badge blue">오브</span>
+                    <h3>Ice Orb</h3>
+                    <p>플레이어 주변을 도는 빙결 오브가 생성되어 접근하는 적을 견제합니다.</p>
+                </div>
+                <div class="card">
+                    <span class="badge green">오브</span>
+                    <h3>Venom Orb</h3>
+                    <p>독 속성 오브로, 닿은 적에게 지속 피해를 줍니다.</p>
+                </div>
+            </div>
+            <div class="note-box" style="margin-top: 22px;">
+                <p>공격형 스킬과 보조형 스킬은 서로 조합되며, 어떤 스킬을 어떤 순서로 골랐느냐에 따라 같은 캐릭터라도 전혀 다른 전투 양상이 만들어집니다.</p>
+            </div>
+            <div class="photo-slot" style="min-height: 170px; margin-top: 18px;">
+                <strong>사진 위치 11 · 보조 스킬 발동 장면</strong>
+                <span>오브가 플레이어 주변을 돌거나 배럴이 발사되는 컷을 캡처합니다.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 18. 스테이지 클리어 -> 포탈 -->
+    <div class="slide">
+        <div class="header-bar">캡스톤 디자인 2차발표</div>
+        <div class="step-pill">STEP 12 · 스테이지 클리어</div>
+        <div class="content-area">
+            <div class="section-title">스테이지 클리어 → 포탈 진입 <small>스테이지의 적을 모두 정리하면 다음 단계로 넘어갑니다</small></div>
+            <div class="two-col">
+                <div class="card" style="min-height: 480px;">
+                    <h3>클리어 조건과 처리 흐름</h3>
+                    <ul>
+                        <li>스테이지에 등장한 모든 적을 처치합니다.</li>
+                        <li>맵에 흩어진 경험치 오브 등 수집 요소를 모두 회수하면 <span class="accent">포탈이 활성화</span>됩니다.</li>
+                        <li>플레이어가 포탈에 진입하면 다음 스테이지로 전환됩니다.</li>
+                        <li>전환 사이에는 짧은 로딩 / 스테이지 인덱스 갱신이 있습니다.</li>
+                    </ul>
+                    <div class="note-box" style="margin-top: 18px;">
+                        <p>클리어 조건이 단순하기 때문에 플레이어는 "다음으로 가는 흐름"을 바로 이해할 수 있습니다.</p>
+                    </div>
+                </div>
+                <div class="photo-slot" style="min-height: 480px;">
+                    <strong>사진 위치 12 · 활성화된 포탈</strong>
+                    <span>적을 모두 처치한 뒤 빛나는 포탈이 등장한 장면을 캡처합니다.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 19. 다음 스테이지 / 난이도 상승 -->
+    <div class="slide">
+        <div class="header-bar">캡스톤 디자인 2차발표</div>
+        <div class="step-pill">STEP 13 · 다음 스테이지</div>
+        <div class="content-area">
+            <div class="section-title">다음 스테이지 — 난이도 상승 <small>같은 흐름이 반복되며 점점 어려워집니다</small></div>
+            <div class="three-col" style="margin-bottom: 22px;">
+                <div class="card">
+                    <span class="badge orange">적 수</span>
+                    <h3>등장 수 증가</h3>
+                    <p>스테이지가 진행될수록 한 번에 등장하는 적의 수가 늘어납니다.</p>
+                </div>
+                <div class="card">
+                    <span class="badge red">스탯</span>
+                    <h3>체력·공격력 상승</h3>
+                    <p>같은 종류의 적이라도 뒤로 갈수록 더 단단하고 더 큰 피해를 줍니다.</p>
+                </div>
+                <div class="card">
+                    <span class="badge dark">속성</span>
+                    <h3>속성 효과 강화</h3>
+                    <p>지역 고유의 화염, 빙결, 독 효과가 더 강하게 작용해 플레이 부담이 커집니다.</p>
+                </div>
+            </div>
+            <div class="note-box">
+                <p>매 스테이지를 도는 동안 캐릭터도 레벨업으로 강해지지만, 적도 동시에 강해집니다. 플레이어가 어떤 스킬을 골랐느냐에 따라 이 균형이 달라집니다.</p>
+            </div>
+            <div class="photo-slot" style="min-height: 200px; margin-top: 18px;">
+                <strong>사진 위치 13 · 후반 스테이지의 화면</strong>
+                <span>적이 많아지고 탄막이 늘어난 화면을 1번 슬라이드와 비교되도록 캡처합니다.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 20. 보스 스테이지 -->
+    <div class="slide">
+        <div class="header-bar">캡스톤 디자인 2차발표</div>
+        <div class="step-pill">STEP 14 · 보스 스테이지</div>
+        <div class="content-area">
+            <div class="section-title">보스 스테이지 <small>지역의 마지막 관문</small></div>
+            <div class="two-col wide-left">
+                <div class="photo-slot dark" style="min-height: 480px;">
+                    <strong>사진 위치 14 · 보스 등장 컷</strong>
+                    <span>보스가 화면 중앙에 자리잡고 패턴을 사용하는 장면을 캡처합니다.</span>
+                </div>
+                <div class="card" style="min-height: 480px;">
+                    <h3>일반 스테이지와 다른 점</h3>
+                    <ul>
+                        <li>일반 적 대신 <span class="accent">단일 보스</span>가 등장합니다.</li>
+                        <li>보스는 일반 적보다 <span class="accent">체력과 공격력이 매우 높고</span>, 고유 패턴을 사용합니다.</li>
+                        <li>대표적으로 근접 돌진, 다방향 투사체, 일정 주기의 광역 패턴 등이 조합됩니다.</li>
+                        <li>보스를 처치하면 그 지역의 한 사이클이 종료됩니다.</li>
+                    </ul>
+                    <div class="note-box" style="margin-top: 18px;">
+                        <p>보스 스테이지는 그 지역에서 쌓아온 빌드를 검증하는 단계입니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 21. 결과 화면: 클리어 / 게임오버 -->
+    <div class="slide">
+        <div class="header-bar">캡스톤 디자인 2차발표</div>
+        <div class="step-pill">STEP 15 · 결과 화면</div>
+        <div class="content-area">
+            <div class="section-title">맵 클리어 또는 게임 오버 <small>한 판은 두 가지 결과 중 하나로 끝납니다</small></div>
+            <div class="two-col">
+                <div class="card" style="min-height: 360px;">
+                    <span class="badge green">성공</span>
+                    <h3>맵 클리어</h3>
+                    <ul>
+                        <li>지역의 마지막 보스를 처치하면 <span class="accent">맵 클리어 화면</span>이 표시됩니다.</li>
+                        <li>이번 판의 결과(처치 수, 획득 보상 등)가 요약됩니다.</li>
+                        <li>이후 자동으로 로비로 복귀합니다.</li>
+                    </ul>
+                </div>
+                <div class="card" style="min-height: 360px;">
+                    <span class="badge red">실패</span>
+                    <h3>게임 오버</h3>
+                    <ul>
+                        <li>도중에 플레이어 체력이 0이 되면 <span class="accent">게임 오버 화면</span>으로 전환됩니다.</li>
+                        <li>현재 진행 중이던 스테이지가 중단되고, 결과가 정리됩니다.</li>
+                        <li>이후 로비로 돌아가 다시 도전할 수 있습니다.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="photo-slot" style="min-height: 150px; margin-top: 16px;">
+                <strong>사진 위치 15 · 맵 클리어 / 게임 오버 화면</strong>
+                <span>두 결과 화면을 한 컷씩 준비해 비교 가능하게 배치합니다.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 22. 로비 복귀 / 다시 도전 -->
+    <div class="slide">
+        <div class="header-bar">캡스톤 디자인 2차발표</div>
+        <div class="step-pill">STEP 16 · 로비 복귀</div>
+        <div class="content-area">
+            <div class="section-title">로비 복귀 → 다음 도전 <small>한 판이 끝나면 다시 출발점으로 돌아옵니다</small></div>
+            <div class="three-col" style="margin-bottom: 22px;">
+                <div class="card">
+                    <span class="badge">정리</span>
+                    <h3>판 결과 정리</h3>
+                    <p>이번 판에서 도달한 지역과 클리어 여부가 정리되어 표시됩니다.</p>
+                </div>
+                <div class="card">
+                    <span class="badge blue">선택</span>
+                    <h3>다음 시도 준비</h3>
+                    <p>로비에서 다시 캐릭터, 장비, 지역을 선택해 다음 판을 시작할 수 있습니다.</p>
+                </div>
+                <div class="card">
+                    <span class="badge orange">반복</span>
+                    <h3>매 판이 새로운 빌드</h3>
+                    <p>스킬 선택이 매번 무작위이기 때문에, 같은 지역을 다시 가도 다른 전투가 펼쳐집니다.</p>
+                </div>
+            </div>
+            <div class="note-box">
+                <p>한 판이 끝나도 스테이지·스킬 선택 조합이 매번 달라지기 때문에, 같은 지역을 다시 도전해도 플레이 경험이 반복되지 않습니다.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 23. 사진 배치 가이드 -->
+    <div class="slide">
+        <div class="header-bar">캡스톤 디자인 2차발표</div>
+        <div class="step-pill">STEP 17 · 사진 가이드</div>
+        <div class="content-area">
+            <div class="section-title" style="margin-bottom: 14px;">사진 배치 가이드 요약 <small>각 슬라이드에 들어갈 캡처 위치를 한 번에
+                    정리</small></div>
+            <table class="table compact-table" style="font-size: 14px;">
+                <tr>
+                    <th style="width: 14%; padding: 6px 10px;">위치</th>
+                    <th style="width: 28%; padding: 6px 10px;">사용 슬라이드</th>
+                    <th style="padding: 6px 10px;">캡처 대상</th>
+                </tr>
+                <tr style="line-height:1.3;">
+                    <td style="padding:5px 10px;">01</td>
+                    <td>STEP 1 · 시작과 로딩</td>
+                    <td>게임 실행 직후 타이틀과 로딩 진행 화면</td>
+                </tr>
+                <tr>
+                    <td>02</td>
+                    <td>STEP 2 · 로비</td>
+                    <td>로비 전체 UI(캐릭터, 장비 슬롯, 지역 선택)</td>
+                </tr>
+                <tr>
+                    <td>03</td>
+                    <td>STEP 3 · 캐릭터 선택</td>
+                    <td>캐릭터 선택 화면과 능력치 표기</td>
+                </tr>
+                <tr>
+                    <td>04</td>
+                    <td>STEP 4 · 장비 세팅</td>
+                    <td>장비/오브/배럴 슬롯이 한 화면에 보이는 인벤토리</td>
+                </tr>
+                <tr>
+                    <td>05</td>
+                    <td>STEP 5 · 지역 선택</td>
+                    <td>5개 지역 선택 UI</td>
+                </tr>
+                <tr>
+                    <td>06</td>
+                    <td>STEP 6 · 인게임 진입</td>
+                    <td>스테이지 1 시작 직후 화면(플레이어, 적, 맵)</td>
+                </tr>
+                <tr>
+                    <td>07</td>
+                    <td>STEP 7 · 전투 기본</td>
+                    <td>화살 발사와 적 접근이 함께 보이는 전투 컷</td>
+                </tr>
+                <tr>
+                    <td>08</td>
+                    <td>STEP 8 · 적</td>
+                    <td>근접/원거리 적이 함께 등장한 화면</td>
+                </tr>
+                <tr>
+                    <td>09</td>
+                    <td>STEP 10 · 경험치/레벨업</td>
+                    <td>경험치 게이지와 레벨 표시 HUD</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>STEP 11 · 스킬 선택</td>
+                    <td>레벨업 시 표시되는 스킬 카드 팝업</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>STEP 11 · 보조형 스킬</td>
+                    <td>오브/배럴 발동 장면</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>STEP 12 · 스테이지 클리어</td>
+                    <td>활성화된 포탈 컷</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>STEP 13 · 다음 스테이지</td>
+                    <td>후반 스테이지의 늘어난 적/탄막 화면</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>STEP 14 · 보스</td>
+                    <td>보스 등장 및 패턴 사용 컷</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>STEP 15 · 결과 화면</td>
+                    <td>맵 클리어 / 게임 오버 화면(각 1컷)</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- 24. 시연 순서 -->
+    <div class="slide">
+        <div class="header-bar">캡스톤 디자인 2차발표</div>
+        <div class="step-pill">STEP 18 · 시연</div>
+        <div class="content-area">
+            <div class="section-title">시연 순서 <small>실제 게임 진행 흐름대로 플레이를 보여줍니다</small></div>
+            <div class="step-row">
+                <div class="step-num">1</div>
+                <div>
+                    <h3>게임 실행 후 로비까지 보여주기</h3>
+                    <p>로딩 화면이 끝나고 로비 UI가 등장하는 흐름을 자연스럽게 노출합니다.</p>
+                </div>
+            </div>
+            <div class="step-row">
+                <div class="step-num">2</div>
+                <div>
+                    <h3>캐릭터 / 장비 / 지역 선택</h3>
+                    <p>로비에서 캐릭터를 고르고 장비를 점검한 뒤 지역을 선택해 인게임으로 진입합니다.</p>
+                </div>
+            </div>
+            <div class="step-row">
+                <div class="step-num">3</div>
+                <div>
+                    <h3>스테이지 1~2 전투와 레벨업</h3>
+                    <p>적 처치, 경험치 수집, 레벨업 시 스킬 선택, 포탈을 통한 다음 스테이지 진입을 한 번씩 보여줍니다.</p>
+                </div>
+            </div>
+            <div class="step-row">
+                <div class="step-num">4</div>
+                <div>
+                    <h3>보스 스테이지와 결과 화면</h3>
+                    <p>가능하다면 짧은 보스 전투 후 맵 클리어 또는 게임 오버 화면까지 보여 주고 마무리합니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 25. Thank you -->
+    <div class="slide">
+        <div class="header-bar">캡스톤 디자인 2차발표</div>
+        <div class="thankyou">감사합니다.</div>
+        <div class="footer-note">23101177 컴퓨터공학과 박재홍 — Archery 2차 발표</div>
+    </div>
+
+
+    <!-- PPTX 다운로드 버튼 (인쇄/발표 시 숨김) -->
     <div id="pptx-export-area" style="position:fixed; bottom:20px; right:20px; z-index:9999;">
-        <button id="export-btn"
-            style="background:#665a96; color:#fff; border:none; border-radius:8px; padding:12px 24px; font-size:16px; font-weight:900; cursor:pointer; box-shadow:0 4px 12px rgba(0,0,0,0.25); font-family:'Noto Sans KR',sans-serif;">PPTX
-            다운로드</button>
-        <div id="export-status"
-            style="color:#4f457e; font-size:13px; text-align:center; margin-top:6px; font-family:'Noto Sans KR',sans-serif; display:none; font-weight:800;">
-            변환 중...</div>
+        <button id="export-btn" style="
+            background:#665a96; color:#fff; border:none; border-radius:8px;
+            padding:12px 24px; font-size:16px; font-weight:700; cursor:pointer;
+            box-shadow:0 4px 12px rgba(0,0,0,0.3); font-family:'Noto Sans KR',sans-serif;
+        ">📥 PPTX 다운로드</button>
+        <div id="export-status" style="
+            color:#4f457e; font-size:13px; text-align:center; margin-top:6px;
+            font-family:'Noto Sans KR',sans-serif; display:none;
+        ">변환 중...</div>
     </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/gitbrent/pptxgenjs@3.12.0/dist/pptxgen.bundle.js"></script>
+    <style>
+        @media print {
+            #pptx-export-area {
+                display: none !important;
+            }
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/dom-to-pptx@latest/dist/dom-to-pptx.bundle.js"></script>
     <script>
+        function inlineComputedStyles(sourceNode, targetNode) {
+            if (!(sourceNode instanceof Element) || !(targetNode instanceof Element)) {
+                return;
+            }
+
+            const computedStyle = window.getComputedStyle(sourceNode);
+            for (const propertyName of computedStyle) {
+                targetNode.style.setProperty(
+                    propertyName,
+                    computedStyle.getPropertyValue(propertyName),
+                    computedStyle.getPropertyPriority(propertyName)
+                );
+            }
+
+            const sourceChildren = Array.from(sourceNode.children);
+            const targetChildren = Array.from(targetNode.children);
+            for (let index = 0; index < sourceChildren.length; index += 1) {
+                inlineComputedStyles(sourceChildren[index], targetChildren[index]);
+            }
+        }
+
+        function createExportSlides(slides) {
+            const exportRoot = document.createElement('div');
+            exportRoot.style.position = 'fixed';
+            exportRoot.style.left = '-99999px';
+            exportRoot.style.top = '0';
+            exportRoot.style.pointerEvents = 'none';
+            exportRoot.style.zIndex = '-1';
+            document.body.appendChild(exportRoot);
+
+            const exportSlides = slides.map((slide) => {
+                const clone = slide.cloneNode(true);
+                inlineComputedStyles(slide, clone);
+                clone.style.margin = '0';
+                clone.style.breakAfter = 'auto';
+                exportRoot.appendChild(clone);
+                return clone;
+            });
+
+            return {
+                exportRoot,
+                exportSlides,
+            };
+        }
+
         document.getElementById('export-btn').addEventListener('click', async () => {
             const btn = document.getElementById('export-btn');
             const status = document.getElementById('export-status');
             btn.disabled = true;
             btn.style.opacity = '0.6';
             status.style.display = 'block';
-            status.textContent = '변환 준비 중...';
-
+            status.textContent = '변환 중... 잠시만 기다려주세요.';
             try {
                 const slides = Array.from(document.querySelectorAll('.slide'));
-                const pptx = new PptxGenJS();
-                pptx.defineLayout({ name: 'ARCHERY', width: 13.333, height: 7.474 });
-                pptx.layout = 'ARCHERY';
-                pptx.author = 'Archery Capstone';
-                pptx.subject = 'Archery Architecture Presentation';
-                pptx.title = 'Archery Architecture';
-                pptx.company = 'Capstone Design';
-
-                for (let i = 0; i < slides.length; i++) {
-                    status.textContent = `슬라이드 ${i + 1}/${slides.length} 캡처 중...`;
-                    const slideEl = slides[i];
-                    const canvas = await html2canvas(slideEl, {
-                        scale: 2,
-                        useCORS: true,
-                        backgroundColor: '#f1eef8',
-                        width: 1456,
-                        height: 816,
-                        windowWidth: 1456,
-                        windowHeight: 816,
+                const { exportRoot, exportSlides } = createExportSlides(slides);
+                try {
+                    await domToPptx.exportToPptx(exportSlides, {
+                        fileName: 'presentation2.pptx',
                     });
-
-                    const dataUrl = canvas.toDataURL('image/png');
-                    const slide = pptx.addSlide();
-                    slide.addImage({ data: dataUrl, x: 0, y: 0, w: 13.333, h: 7.474 });
+                } finally {
+                    exportRoot.remove();
                 }
-
-                status.textContent = 'PPTX 파일 생성 중...';
-                await pptx.writeFile({ fileName: 'presentation2.pptx' });
-                status.textContent = '다운로드 완료';
+                status.textContent = '✅ 다운로드 완료!';
             } catch (e) {
                 console.error(e);
-                status.textContent = '오류 발생: ' + e.message;
+                status.textContent = '❌ 오류 발생: ' + e.message;
             } finally {
                 btn.disabled = false;
                 btn.style.opacity = '1';
-                setTimeout(() => { status.style.display = 'none'; }, 4000);
+                setTimeout(() => { status.style.display = 'none'; }, 3000);
             }
         });
     </script>
