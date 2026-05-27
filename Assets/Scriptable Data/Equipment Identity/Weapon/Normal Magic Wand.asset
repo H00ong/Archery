@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   equipmentName: Normal Magic Staff
   equipmentType: 0
-  equipmentIcon: {fileID: 21300004, guid: 7ab74e659e1f0a34d9cfec21c478fc12, type: 3}
+  index: 0
+  equipmentIcon: {fileID: 21300000, guid: 4681d43d3e021be498eff84c3fa6eb83, type: 3}
   baseStat:
     maxHP: 0
     attackPower: 5

@@ -10,6 +10,7 @@ namespace Players
         [Header("장비 식별")]
         public string equipmentName;
         public EquipmentType equipmentType;
+        public int index = 0;    // 인벤토리 UI에서의 순서 - EquipmentTabPresenter에서 사용
         public Sprite equipmentIcon;
 
         [Header("기본 능력치 (Lv1)")]
