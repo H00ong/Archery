@@ -1128,7 +1128,7 @@ GameObject:
   - component: {fileID: 101922871}
   - component: {fileID: 101922870}
   m_Layer: 0
-  m_Name: Level Growth Effect Detail Popup
+  m_Name: Current Level Growth Effect Detail Popup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1694,7 +1694,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: '>'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1785,7 +1785,7 @@ GameObject:
   - component: {fileID: 143461303}
   - component: {fileID: 143461302}
   m_Layer: 0
-  m_Name: Equip Name
+  m_Name: Shoe Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2163,7 +2163,7 @@ GameObject:
   - component: {fileID: 215723212}
   - component: {fileID: 215723211}
   m_Layer: 0
-  m_Name: Level Growth Effect Detail Popup
+  m_Name: Current Level Growth Effect Detail Popup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2593,7 +2593,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Choose
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2820,7 +2820,7 @@ GameObject:
   - component: {fileID: 279339495}
   - component: {fileID: 279339494}
   m_Layer: 0
-  m_Name: Level Growth Effect Detail Popup
+  m_Name: Current Level Growth Effect Detail Popup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3239,7 +3239,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Character
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3266,8 +3266,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3511,7 +3511,7 @@ GameObject:
   - component: {fileID: 321284448}
   - component: {fileID: 321284447}
   m_Layer: 0
-  m_Name: Level Growth Effect Detail Popup Button
+  m_Name: Current Level Growth Effect Detail Popup Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3766,7 +3766,7 @@ GameObject:
   - component: {fileID: 344953234}
   - component: {fileID: 344953235}
   m_Layer: 0
-  m_Name: Display
+  m_Name: Weapon Display Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3842,7 +3842,7 @@ GameObject:
   - component: {fileID: 383059353}
   - component: {fileID: 383059352}
   m_Layer: 5
-  m_Name: Action Button
+  m_Name: Choose Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4475,7 +4475,7 @@ GameObject:
   - component: {fileID: 484458584}
   - component: {fileID: 484458583}
   m_Layer: 0
-  m_Name: Character Icon
+  m_Name: Equipped Character Icon Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4595,7 +4595,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Choose
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7338,7 +7338,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Choose
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7430,7 +7430,7 @@ GameObject:
   - component: {fileID: 893152356}
   - component: {fileID: 893152355}
   m_Layer: 0
-  m_Name: Level Growth Effect Detail Popup Button
+  m_Name: Current Level Growth Effect Detail Popup Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7808,7 +7808,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Weapon
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8201,7 +8201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Shoe
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8292,7 +8292,7 @@ GameObject:
   - component: {fileID: 929751182}
   - component: {fileID: 929751181}
   m_Layer: 0
-  m_Name: Equipped Contents
+  m_Name: Equipped Contents_Background Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8374,7 +8374,7 @@ GameObject:
   - component: {fileID: 953288355}
   - component: {fileID: 953288354}
   m_Layer: 0
-  m_Name: Effect Detail Popup
+  m_Name: Current Effect Detail Popup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8571,7 +8571,7 @@ GameObject:
   - component: {fileID: 961885295}
   - component: {fileID: 961885294}
   m_Layer: 0
-  m_Name: Level Growth Effect Detail Popup
+  m_Name: Current Level Growth Effect Detail Popup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8920,7 +8920,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: <
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10815,7 +10815,7 @@ GameObject:
   - component: {fileID: 1169527585}
   - component: {fileID: 1169527584}
   m_Layer: 5
-  m_Name: Action Button
+  m_Name: Choose Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11237,7 +11237,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: '>'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11328,7 +11328,7 @@ GameObject:
   - component: {fileID: 1218861185}
   - component: {fileID: 1218861184}
   m_Layer: 0
-  m_Name: Effect Detail Popup
+  m_Name: Current Effect Detail Popup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11681,7 +11681,7 @@ GameObject:
   - component: {fileID: 1263672691}
   - component: {fileID: 1263672690}
   m_Layer: 0
-  m_Name: Level Growth Stat Text
+  m_Name: Current Level Growth Stat Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12058,7 +12058,7 @@ GameObject:
   - component: {fileID: 1284761877}
   - component: {fileID: 1284761876}
   m_Layer: 0
-  m_Name: Equip Name
+  m_Name: Armor Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12420,7 +12420,7 @@ GameObject:
   - component: {fileID: 1315800870}
   - component: {fileID: 1315800869}
   m_Layer: 0
-  m_Name: CharacterName Text
+  m_Name: Equipped CharacterName Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12601,7 +12601,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: 'UI
+
+    Setting'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -12628,8 +12630,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -13071,7 +13073,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: <
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -13900,7 +13902,7 @@ GameObject:
   - component: {fileID: 1406903559}
   - component: {fileID: 1406903558}
   m_Layer: 0
-  m_Name: Character Display
+  m_Name: Character Display Raw Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14230,7 +14232,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Gold
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -14321,7 +14323,7 @@ GameObject:
   - component: {fileID: 1446695835}
   - component: {fileID: 1446695834}
   m_Layer: 5
-  m_Name: Lock Icon
+  m_Name: Character Lock Icon Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14669,7 +14671,7 @@ GameObject:
   - component: {fileID: 1472333642}
   - component: {fileID: 1472333641}
   m_Layer: 0
-  m_Name: Characrter Name
+  m_Name: Characrter Name Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15291,7 +15293,7 @@ GameObject:
   - component: {fileID: 1527839002}
   - component: {fileID: 1527839001}
   m_Layer: 5
-  m_Name: Action Button
+  m_Name: Choose Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15864,7 +15866,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Armor
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -15956,7 +15958,7 @@ GameObject:
   - component: {fileID: 1587476132}
   - component: {fileID: 1587476131}
   m_Layer: 0
-  m_Name: Level Growth Effect Detail Popup Button
+  m_Name: Current Level Growth Effect Detail Popup Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16272,7 +16274,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: '>'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -16577,7 +16579,7 @@ GameObject:
   - component: {fileID: 1608092251}
   - component: {fileID: 1608092250}
   m_Layer: 0
-  m_Name: Level Growth Stat Text
+  m_Name: Current Level Growth Stat Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16820,7 +16822,7 @@ GameObject:
   - component: {fileID: 1621119741}
   - component: {fileID: 1621119740}
   m_Layer: 0
-  m_Name: Level Growth Stat Text
+  m_Name: Current Level Growth Stat Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17213,7 +17215,7 @@ GameObject:
   - component: {fileID: 1686379059}
   - component: {fileID: 1686379058}
   m_Layer: 0
-  m_Name: Current Character Contents
+  m_Name: Current Character Contents_Background Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17929,7 +17931,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: <
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -18103,7 +18105,7 @@ GameObject:
   - component: {fileID: 1773018382}
   - component: {fileID: 1773018381}
   m_Layer: 0
-  m_Name: Level Growth Effect Detail Popup Button
+  m_Name: Current Level Growth Effect Detail Popup Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18352,7 +18354,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Choose
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -18942,7 +18944,7 @@ GameObject:
   - component: {fileID: 1804818363}
   - component: {fileID: 1804818362}
   m_Layer: 0
-  m_Name: Equip Name
+  m_Name: Weapon Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19898,7 +19900,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Inventory
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -19925,8 +19927,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -20155,7 +20157,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: <
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -20625,7 +20627,7 @@ GameObject:
   - component: {fileID: 1982738883}
   - component: {fileID: 1982738882}
   m_Layer: 0
-  m_Name: Level Growth Stat Text
+  m_Name: Current Level Growth Stat Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21324,7 +21326,7 @@ GameObject:
   - component: {fileID: 2035873053}
   - component: {fileID: 2035873054}
   m_Layer: 0
-  m_Name: Effect Detail Popup
+  m_Name: Current Effect Detail Popup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21735,7 +21737,7 @@ GameObject:
   - component: {fileID: 2083707533}
   - component: {fileID: 2083707532}
   m_Layer: 5
-  m_Name: Action Button
+  m_Name: Choose Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22468,7 +22470,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: '>'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -22559,7 +22561,7 @@ GameObject:
   - component: {fileID: 2137479879}
   - component: {fileID: 2137479878}
   m_Layer: 0
-  m_Name: Effect Detail Popup
+  m_Name: Current Effect Detail Popup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
