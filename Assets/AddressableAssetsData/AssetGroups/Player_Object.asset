@@ -15,6 +15,11 @@ MonoBehaviour:
   m_GroupName: Player_Object
   m_GUID: fedb9381283fe2944bad525cd0db34e3
   m_SerializeEntries:
+  - m_GUID: 1e63d0d7357d15f4ca28ba653923acef
+    m_Address: Assets/Prefabs/Objects/Player/Gold Item.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4c0a5b1487abe67489f755abb9376c1f
     m_Address: Exp Item
     m_ReadOnly: 0
