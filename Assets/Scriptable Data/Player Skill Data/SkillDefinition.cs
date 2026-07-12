@@ -12,6 +12,7 @@ public class SkillDefinition : ScriptableObject
     [RegistryKey("skillIds")] public string id;
     public SkillRarity rarity;
     public int maxLevel;
+    public Sprite icon;
     public MonoScript moduleScript;
     private PlayerSkillModuleBase skillModule;
 
