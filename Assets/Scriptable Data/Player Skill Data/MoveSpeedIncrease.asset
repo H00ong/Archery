@@ -15,4 +15,5 @@ MonoBehaviour:
   id: MoveSpeedIncrease
   rarity: 0
   maxLevel: 10
+  icon: {fileID: 21300000, guid: abb069e0b06c14037af70e4560953989, type: 3}
   moduleScript: {fileID: 11500000, guid: 0fb026e475f785141b6abde0c422f961, type: 3}

@@ -15,4 +15,5 @@ MonoBehaviour:
   id: HorizontalShot
   rarity: 0
   maxLevel: 2
+  icon: {fileID: 21300000, guid: f3d0c41e13fdd4d3898ca8691a0fad2d, type: 3}
   moduleScript: {fileID: 11500000, guid: 2235c40e6d87f484cbd8c71b0888bb4c, type: 3}

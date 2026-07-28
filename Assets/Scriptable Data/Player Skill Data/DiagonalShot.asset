@@ -15,4 +15,5 @@ MonoBehaviour:
   id: DiagonalShot
   rarity: 0
   maxLevel: 2
+  icon: {fileID: 21300000, guid: 22849bbeddf6c4c0ea05734d6a2ce06f, type: 3}
   moduleScript: {fileID: 11500000, guid: b98f3ca660709d241a6b50ead5402757, type: 3}

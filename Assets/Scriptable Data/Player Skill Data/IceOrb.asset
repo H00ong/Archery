@@ -15,4 +15,5 @@ MonoBehaviour:
   id: IceOrb
   rarity: 0
   maxLevel: 2
+  icon: {fileID: 21300000, guid: 141aae4e5e6c04bbfacb7f5d36fe8878, type: 3}
   moduleScript: {fileID: 11500000, guid: 7a5b6c1823ec8c74e9b7398b3e84b127, type: 3}

@@ -15,4 +15,5 @@ MonoBehaviour:
   id: AttackSpeedIncrease
   rarity: 0
   maxLevel: 2
+  icon: {fileID: 21300000, guid: d4a7cb950033b45bc979dc7450945230, type: 3}
   moduleScript: {fileID: 11500000, guid: ba566e132c5343b42b215f01e7be8f9a, type: 3}
