@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6303807554714282403}
   - component: {fileID: 8311624849022614786}
   - component: {fileID: 7188299804824413052}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ice Orb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8f1ff364d573f5142a4f57d0711449b3, type: 2}
+  - {fileID: 2100000, guid: 4726dff4cff57a24ca896214d4885bbc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -121,4 +121,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0035b24f03ecdc045919238c4d218ad5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultRotateSpeed: 300

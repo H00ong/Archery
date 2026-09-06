@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1501eb0a2cddc3b41a86938de77ca2ee, type: 3}
-  m_Name: MultiShot
+  m_Name: AttackSpeedIncrease
   m_EditorClassIdentifier: 
-  id: MultiShot
-  rarity: 0
-  maxLevel: 1
-  icon: {fileID: 21300000, guid: 62e8653778e13431a8c384de9044c20b, type: 3}
-  moduleScript: {fileID: 11500000, guid: 2ec44fe540e62724c82c6b74d402e164, type: 3}
+  id: AttackSpeedIncrease
+  maxLevel: 2
+  icon: {fileID: 21300000, guid: 7351a0f9ec9f4254282330d1f6902fc2, type: 3}
+  moduleScript: {fileID: 11500000, guid: ba566e132c5343b42b215f01e7be8f9a, type: 3}
+  description: "Increase attack speed."
+  availability: 0
+  conditionEffectType: 1

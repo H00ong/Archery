@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1501eb0a2cddc3b41a86938de77ca2ee, type: 3}
+  m_Name: IceAttackGrant
+  m_EditorClassIdentifier: 
+  id: IceAttackGrant
+  maxLevel: 1
+  icon: {fileID: 21300000, guid: 4c7b23585d651a447914f086decc59c5, type: 3}
+  moduleScript: {fileID: 11500000, guid: 36cce74618bbd7949a8e54d961b66374, type: 3}
+  description: "Add Ice damage to basic attacks."
+  availability: 1
+  conditionEffectType: 8

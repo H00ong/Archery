@@ -15,8 +15,23 @@ MonoBehaviour:
   m_GroupName: Meteor
   m_GUID: 9b7e69492c204cd4bb53350468031534
   m_SerializeEntries:
+  - m_GUID: 7b51bb0323b6e2e4884f106dac391f01
+    m_Address: Assets/Prefabs/Objects/Player/Barrel/Fire Meteor.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: aaa982682e8d5e34fb9fbb0a6a14c117
     m_Address: Ice Meteor
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e18af0e3ae835c9478817985ceb12051
+    m_Address: Assets/Prefabs/Objects/Player/Barrel/Poison Meteor.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ef1a9f1515b60384e93a06c0d5a33a28
+    m_Address: Assets/Prefabs/Objects/Player/Barrel/Lightning Meteor.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

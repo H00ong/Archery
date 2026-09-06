@@ -15,6 +15,18 @@ MonoBehaviour:
   m_GroupName: Orb_Config
   m_GUID: 3f02bce923807a74fb0f3437f1083f31
   m_SerializeEntries:
+  - m_GUID: 20e4bb4bde0f3c248a83560266d9035e
+    m_Address: Assets/Scriptable Data/Orb Data/FIreOrb.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - orb_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 27f575a214c052e458df31c3a78408f1
+    m_Address: Assets/Scriptable Data/Orb Data/Lightning.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - orb_config
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5397725939f06b545bd1b232e8c1553b
     m_Address: IceOrb
     m_ReadOnly: 0

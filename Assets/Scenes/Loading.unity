@@ -1294,6 +1294,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5838998061893342135, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
+      propertyPath: meteorYOffset
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5838998061893342135, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
+      propertyPath: barrelGenerateTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942274392144273177, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
+      propertyPath: _defaultDistance
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942274392144273177, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
+      propertyPath: _orbDamageModifier
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942274392144273177, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
+      propertyPath: _defaultRotateSpeed
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 8894359464752876839, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
       propertyPath: progressBar
       value: 

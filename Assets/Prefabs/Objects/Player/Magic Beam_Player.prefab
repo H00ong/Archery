@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 449216528547257270}
   - component: {fileID: 4356161933029992605}
   - component: {fileID: 3235863081872022892}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Magic Beam_Player
   m_TagString: PlayerProjectile
   m_Icon: {fileID: 0}
@@ -151,6 +151,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyOnHit: 1
+  destroyOnFloor: 1
+  destroyOnObstacle: 1
   rigidBody: {fileID: 4356161933029992605}
   projectileCollider: {fileID: 449216528547257270}
   explosionEffect:
@@ -167,6 +169,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7099034434366815332}
     m_Modifications:
+    - target: {fileID: 2130707793970569070, guid: bd1386d4ee3726342be61ab90aefa917, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3806039596526897750, guid: bd1386d4ee3726342be61ab90aefa917, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3806039596594972657, guid: bd1386d4ee3726342be61ab90aefa917, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3806039597038410503, guid: bd1386d4ee3726342be61ab90aefa917, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3806039597857766771, guid: bd1386d4ee3726342be61ab90aefa917, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3806039598199004521, guid: bd1386d4ee3726342be61ab90aefa917, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.72
@@ -230,6 +252,10 @@ PrefabInstance:
     - target: {fileID: 3806039598199004532, guid: bd1386d4ee3726342be61ab90aefa917, type: 3}
       propertyPath: m_Name
       value: FX_Fire_03_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3806039598199004532, guid: bd1386d4ee3726342be61ab90aefa917, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

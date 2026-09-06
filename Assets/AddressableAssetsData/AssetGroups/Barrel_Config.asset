@@ -15,8 +15,38 @@ MonoBehaviour:
   m_GroupName: Barrel_Config
   m_GUID: d85173c11b7b00b43b9f79f8d5e4750c
   m_SerializeEntries:
+  - m_GUID: 18eed262dc2fc2746aa802237b867d51
+    m_Address: Assets/Scriptable Data/Barrel Data/PoisonBarrel.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - barrel_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2016b65427f4a0e4e8015582d89ee0d6
+    m_Address: Assets/Scriptable Data/Barrel Data/HealBarrel.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - barrel_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3266016f0dc57e94886701edd3070d52
+    m_Address: Assets/Scriptable Data/Barrel Data/FireBarrel.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - barrel_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3a67bba504f7b834bbea7dc3985c8565
+    m_Address: Assets/Scriptable Data/Barrel Data/LightningBarrel.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - barrel_config
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 456ca2a9df10d904f96a6777c86270e9
     m_Address: IceBarrel
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - barrel_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5110e4273b75beb488952272552788bf
+    m_Address: Assets/Scriptable Data/Barrel Data/ShieldBarrel.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - barrel_config

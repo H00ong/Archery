@@ -32,11 +32,36 @@ MonoBehaviour:
   - DiagonalShot
   - HorizontalShot
   - MultiShot
+  - PierceShot
+  - HomingShot
+  - ReflectShot
   - MoveSpeedIncrease
   - AttackSpeedIncrease
+  - AttackPowerIncrease
+  - ProjectileSpeedIncrease
+  - MaxHPIncrease
+  - HealthRegen
+  - DefenseIncrease
+  - OrbDamageIncrease
   - VenomOrb
   - IceOrb
-  - IceBarrelGenerate
+  - FireOrb
+  - LightningOrb
+  - IceBarrel
+  - FireBarrel
+  - PoisonBarrel
+  - LightningBarrel
+  - ShieldBarrel
+  - HealthBarrel
+  - FireEnhance
+  - IceEnhance
+  - PoisonEnhance
+  - LightningEnhance
+  - FireAttackGrant
+  - IceAttackGrant
+  - PoisonAttackGrant
+  - LightningAttackGrant
+  - GroundZoneSkill
   weaponNames:
   - Normal Magic Staff
   - Fire Staff

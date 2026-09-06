@@ -15,8 +15,44 @@ MonoBehaviour:
   m_GroupName: Skill_Config
   m_GUID: dfbaf6273b1063a43b92d071cc89a8fa
   m_SerializeEntries:
+  - m_GUID: 02fd81f464fa00743af7e1d38896a38f
+    m_Address: Assets/Scriptable Data/Player Skill Data/Barrel Skill/HealthBarrel.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - skill_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 137be07f649827d45888a5c5e6af37da
+    m_Address: Assets/Scriptable Data/Player Skill Data/Bullet Spec up/IceAttackGrant.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - skill_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 17a0134e4ec40af44a3e6e4012949547
+    m_Address: Assets/Scriptable Data/Player Skill Data/Barrel Skill/FireBarrel.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - skill_config
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1950ff710bea9ba4a968c4857acf325a
-    m_Address: IceOrb
+    m_Address: Assets/Scriptable Data/Player Skill Data/Orb Skill/IceOrb.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - skill_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1d70968686268364ba5d7d0c1d4d99e0
+    m_Address: Assets/Scriptable Data/Player Skill Data/Barrel Skill/PoisonBarrel.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - skill_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 21d3b7a0c6e94f1f8a5d2b9c4e7f0138
+    m_Address: Assets/Scriptable Data/Player Skill Data/Stat Growth Skill/AttackPowerIncrease.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - skill_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2aed22e527d6f2044b9f0c33288abab3
+    m_Address: Assets/Scriptable Data/Player Skill Data/Orb Skill/LightningOrb.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - skill_config
@@ -27,20 +63,92 @@ MonoBehaviour:
     m_SerializedLabels:
     - skill_config
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 31b285f2aad4bd143b406fa13333e5b9
+    m_Address: Assets/Scriptable Data/Player Skill Data/Bullet Spec up/HomingShot.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - skill_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3f3f3252b1fab3144ae04c623759d937
+    m_Address: Assets/Scriptable Data/Player Skill Data/Bullet Spec up/FireAttackGrant.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - skill_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3fd80ac5cfe9ea6469fe79a1da227566
+    m_Address: Assets/Scriptable Data/Player Skill Data/Stat Growth Skill/OrbDamageIncrease.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - skill_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 482292f7f5987834097623f5588a5c36
+    m_Address: Assets/Scriptable Data/Player Skill Data/Magic Effect Spec up/PoisonEnhance.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - skill_config
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 52ec2bc9411999b4b99a769ca4c942df
-    m_Address: AttackSpeedIncrease
+    m_Address: Assets/Scriptable Data/Player Skill Data/Stat Growth Skill/AttackSpeedIncrease.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - skill_config
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 64d603b9843a0cc4a911b8ef74edef9a
-    m_Address: VenomOrb
+    m_Address: Assets/Scriptable Data/Player Skill Data/Orb Skill/VenomOrb.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - skill_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 65783b92fd3086044a7e51de98e6e997
+    m_Address: Assets/Scriptable Data/Player Skill Data/Stat Growth Skill/DefenseIncrease.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - skill_config
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 692bb32a300e6b4468a4a19da971441f
-    m_Address: MoveSpeedIncrease
+    m_Address: Assets/Scriptable Data/Player Skill Data/Stat Growth Skill/MoveSpeedIncrease.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - skill_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6a9fc08308555e94e9423aa925fad00e
+    m_Address: Assets/Scriptable Data/Player Skill Data/Stat Growth Skill/HealthRegen.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - skill_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7f2c8a4e1d6b40c9a3f5e8b2d0a79163
+    m_Address: Assets/Scriptable Data/Player Skill Data/Stat Growth Skill/ProjectileSpeedIncrease.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - skill_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 81e865ef05a4ba84a8d7d39321bbca26
+    m_Address: Assets/Scriptable Data/Player Skill Data/Orb Skill/FireOrb.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - skill_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8866e0601323f9a4ea1790750d5e8436
+    m_Address: Assets/Scriptable Data/Player Skill Data/Bullet Spec up/PierceShot.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - skill_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 88791bea38feac646a67d8fc638829dc
+    m_Address: Assets/Scriptable Data/Player Skill Data/Bullet Spec up/PoisonAttackGrant.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - skill_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8ed0cdab43eb3164798c7cf5b6cb6573
+    m_Address: Assets/Scriptable Data/Player Skill Data/Magic Effect Spec up/FireEnhance.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - skill_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 97073e43ac36d9e4da51d3b06ddd8586
+    m_Address: Assets/Scriptable Data/Player Skill Data/Bullet Spec up/LightningAttackGrant.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - skill_config
@@ -57,8 +165,44 @@ MonoBehaviour:
     m_SerializedLabels:
     - skill_config
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: da636bbafccb9b54592ed8d432cab604
+    m_Address: Assets/Scriptable Data/Player Skill Data/Magic Effect Spec up/IceEnhance.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - skill_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e5417190f65f4fe4f8833f4974cd89c0
+    m_Address: Assets/Scriptable Data/Player Skill Data/Magic Effect Spec up/LightningEnhance.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - skill_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ea2db1f2e1231424588b530039eff38d
+    m_Address: Assets/Scriptable Data/Player Skill Data/Barrel Skill/LightningBarrel.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - skill_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f1bdb7c01920f864f9cf42dde29b8e23
+    m_Address: Assets/Scriptable Data/Player Skill Data/Barrel Skill/ShieldBarrel.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - skill_config
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: fb0cbce25961bce4fb2806f710c17912
     m_Address: HorizontalShot
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - skill_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fd20fa5cc316ad04ba15168f5ee22dde
+    m_Address: Assets/Scriptable Data/Player Skill Data/Stat Growth Skill/MaxHPIncrease.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - skill_config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ff4604315bdba604fbe3c539382d86ab
+    m_Address: Assets/Scriptable Data/Player Skill Data/Bullet Spec up/ReflectShot.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - skill_config

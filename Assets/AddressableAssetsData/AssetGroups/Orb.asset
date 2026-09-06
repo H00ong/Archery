@@ -15,6 +15,16 @@ MonoBehaviour:
   m_GroupName: Orb
   m_GUID: 639baf2912da66e44b2d772e15fbbb3a
   m_SerializeEntries:
+  - m_GUID: 1e9650b720ab67e478b178e62eeb3d28
+    m_Address: Assets/Prefabs/Objects/Player/Orbs/Lightning Orb.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3b16fdb6c5c93e943a7cdcfea291a2aa
+    m_Address: Assets/Prefabs/Objects/Player/Orbs/Fire Orb.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 551640079d8749f4799e50630cfa7f80
     m_Address: Ice Orb
     m_ReadOnly: 0

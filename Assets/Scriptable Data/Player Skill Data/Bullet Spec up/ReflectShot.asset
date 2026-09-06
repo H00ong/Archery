@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1501eb0a2cddc3b41a86938de77ca2ee, type: 3}
-  m_Name: IceOrb
+  m_Name: ReflectShot
   m_EditorClassIdentifier: 
-  id: IceOrb
-  rarity: 0
-  maxLevel: 2
-  icon: {fileID: 21300000, guid: 141aae4e5e6c04bbfacb7f5d36fe8878, type: 3}
-  moduleScript: {fileID: 11500000, guid: 7a5b6c1823ec8c74e9b7398b3e84b127, type: 3}
+  id: ReflectShot
+  maxLevel: 3
+  icon: {fileID: 21300000, guid: bc25e031066536e4da8bf551573ac960, type: 3}
+  moduleScript: {fileID: 11500000, guid: d5d37105f44624249aa58cd3e310a97f, type: 3}
+  description: Projectiles bounce to additional enemies.
+  availability: 0
+  conditionEffectType: 1

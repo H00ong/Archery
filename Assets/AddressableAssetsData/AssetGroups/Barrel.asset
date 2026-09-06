@@ -15,13 +15,33 @@ MonoBehaviour:
   m_GroupName: Barrel
   m_GUID: b11fe90da18573341acc2a786a52508b
   m_SerializeEntries:
-  - m_GUID: 0b81e09a41794324dba6561c04beb40f
-    m_Address: Lightning Barrel
+  - m_GUID: 20750940ed579ce49a717535db5cb3cf
+    m_Address: Ice Barrel
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 20750940ed579ce49a717535db5cb3cf
-    m_Address: Ice Barrel
+  - m_GUID: 41a8395e10bfa344a97f9760a9c684f8
+    m_Address: Assets/Prefabs/Objects/Player/Barrel/Fire Barrel.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 49570a944948869439c60a3d87e5cc34
+    m_Address: Assets/Prefabs/Objects/Player/Barrel/Lightning Barrel.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8d6d95eb51b421f4cbd9c74cf11cdfb6
+    m_Address: Assets/Prefabs/Objects/Player/Barrel/Shield Barrel.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 98c3a54a75d28ef43b9c29e7528ff08a
+    m_Address: Assets/Prefabs/Objects/Player/Barrel/Poison Barrel.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d2d8c6720a013ee4bb69062df3dc240b
+    m_Address: Assets/Prefabs/Objects/Player/Barrel/Hp Barrel.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

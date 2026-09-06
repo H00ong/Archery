@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1501eb0a2cddc3b41a86938de77ca2ee, type: 3}
+  m_Name: FireBarrel
+  m_EditorClassIdentifier: 
+  id: FireBarrel
+  maxLevel: 2
+  icon: {fileID: 21300000, guid: 2293687b2b9e5ad49944d2cd3b2e6943, type: 3}
+  moduleScript: {fileID: 11500000, guid: 2cf004fcdbb543f46b40bb2eef3ab060, type: 3}
+  description: "Spawn Fire barrels that call down meteors."
+  availability: 0
+  conditionEffectType: 1
