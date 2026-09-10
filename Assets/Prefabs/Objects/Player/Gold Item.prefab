@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 396907420037181553}
   - component: {fileID: 1522487159942376152}
   - component: {fileID: 8262878869614741841}
-  - component: {fileID: 4032325856026832012}
+  - component: {fileID: 4561302446011846982}
   m_Layer: 0
   m_Name: Gold Item
   m_TagString: Untagged
@@ -109,7 +109,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4032325856026832012
+--- !u!114 &4561302446011846982
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,9 +118,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7380194161578732177}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd4024b95ec539346918459b15bd36e7, type: 3}
+  m_Script: {fileID: 11500000, guid: bdb2f19e1a38ee1438bcad4465593069, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   magnetRange: 5
   magnetSpeed: 30
-  expAmount: 5
+  goldAmount: 10

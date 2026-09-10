@@ -148,6 +148,7 @@ GameObject:
   - component: {fileID: 3698489137114504438}
   - component: {fileID: 4946503576392291209}
   - component: {fileID: 2940648193502634017}
+  - component: {fileID: 5186660679001739711}
   m_Layer: 0
   m_Name: Managers - DDL
   m_TagString: Untagged
@@ -351,9 +352,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _label: orb_config
-  _defaultDistance: 2
-  _orbDamageModifier: 1
-  _defaultRotateSpeed: 40
+  _defaultDistance: 3
+  _orbDamageModifier: 2
+  _defaultRotateSpeed: 200
 --- !u!114 &5838998061893342135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -367,9 +368,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   addressableAssetLabel: barrel_config
-  barrelGenerateTime: 5
+  barrelGenerateTime: 10
   meteorDamageModifier: 1
-  meteorYOffset: 1
+  meteorYOffset: 1.5
 --- !u!114 &4057547474843920445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -425,6 +426,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentLabel: equipment_identity
+--- !u!114 &5186660679001739711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426551961764907274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0b42ad391687e24a936e3e7565fbbf9, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  expItemPrefab:
+    m_AssetGUID:
+    m_SubObjectName:
+    m_SubObjectType:
+    m_SubObjectGUID:
+    m_EditorAssetChanged: 0
+  goldItemPrefab:
+    m_AssetGUID:
+    m_SubObjectName:
+    m_SubObjectType:
+    m_SubObjectGUID:
+    m_EditorAssetChanged: 0
+  baseGoldAmount: 10
+  expDropChance: 1
+  goldDropChance: 0.7
 --- !u!1 &491356875244841937
 GameObject:
   m_ObjectHideFlags: 0
