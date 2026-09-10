@@ -1778,7 +1778,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDebugMode: 0
   enemyName: Octopus
-  enemyTags: 536871058
+  enemyTags: 146
   idle: {fileID: 0}
   move: {fileID: 0}
   hurt: {fileID: 0}
@@ -1789,13 +1789,22 @@ MonoBehaviour:
   enemyCollider: {fileID: 7401207874667788413}
   enemyReference: {fileID: 6761727978524723400}
   enemyVisual: {fileID: 0}
+  healthBar: {fileID: 0}
   defaultIdleTime: 2
   expItemPrefab:
     m_AssetGUID: 4c0a5b1487abe67489f755abb9376c1f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_SubObjectGUID: 
+    m_SubObjectName:
+    m_SubObjectType:
+    m_SubObjectGUID:
     m_EditorAssetChanged: 0
+  goldItemPrefab:
+    m_AssetGUID:
+    m_SubObjectName:
+    m_SubObjectType:
+    m_SubObjectGUID:
+    m_EditorAssetChanged: 0
+  baseExpAmount: 10
+  baseGoldAmount: 10
   defaultAttackSpeed: 1
   lastPlayerPosition: {x: 0, y: 0, z: 0}
   player: {fileID: 0}
