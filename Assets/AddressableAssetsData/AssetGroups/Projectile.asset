@@ -65,6 +65,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 481b04362d17e7041b670e18d9541baa
+    m_Address: Assets/Prefabs/Objects/Enemy/Boss/Enemy Beam_RangedEnemy.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4a79d0a9dd688dd41995d49338d2e5a7
     m_Address: Enemy_Rock
     m_ReadOnly: 0

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c8fb38413c82ac4f88d0e401552a0ea, type: 3}
+  m_Name: Boss Sunflora Pixie_Identity
+  m_EditorClassIdentifier: 
+  Prefab:
+    m_AssetGUID: 744c690fae761ea4092a2d3e81660c35
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  Tag: 335545252
+  ObjectMat: {fileID: 0}
+  AccessoryMat: {fileID: 0}
+  brain: {fileID: 11400000, guid: 69c893b7bde8e6c49aa4b4e80547e451, type: 2}
+  moveModule: {fileID: 11400000, guid: eb673b80dc4d2b544b2e7d4e8e5afc3e, type: 2}
+  attackModules:
+  - {fileID: 11400000, guid: f5039e4815687eb40838f8671f6abef6, type: 2}
+  - {fileID: 11400000, guid: 08017483393fb9f449a2756ee000b4a6, type: 2}
+  - {fileID: 11400000, guid: 22c5348331105a74ea64e2d78eef12a0, type: 2}

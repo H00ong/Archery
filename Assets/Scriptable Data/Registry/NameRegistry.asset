@@ -19,6 +19,39 @@ MonoBehaviour:
   - Slime
   - Melee Golem
   - Bird
+  - Dummy
+  - Bloom
+  - Bud
+  - Dragon Fire Boss
+  - Dragon Inferno Boss
+  - Dragon Spark
+  - Hermit King Boss
+  - Poison Bomb
+  - Shell
+  - Snake
+  - Snake Naga Boss
+  - Snakelet
+  - Snow Bomb
+  - Spike
+  - Sun Blossom
+  - Sunflora Pixie Boss
+  - Sunflower Fairy
+  - Target Dummy
+  - Training Dummy Boss
+  - Training Dummy Boss
+  - Werewolf Boss
+  - Wolf
+  - Cactus
+  - Mushroom
+  - Orc
+  - Skeleton Minion
+  - Skeleton Warrior
+  - Stingray
+  - Turtle Shell
+  - Ranged Golem
+  - Skeleton Mage
+  - Skeleton Rogue
+  - Stone Monster
   mapIds:
   - Dungeon
   - Jungle

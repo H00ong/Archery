@@ -15,6 +15,16 @@ MonoBehaviour:
   m_GroupName: Enemy
   m_GUID: 4a9441921ce7a2f4eb3b7a648d6ca9bf
   m_SerializeEntries:
+  - m_GUID: 01c7c9b1d53682a45a88ad6954eb9f8f
+    m_Address: Assets/Prefabs/Enemies/Melee Enemies/Spike.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 028f9098b7a845f469590f754bd71614
+    m_Address: Assets/Prefabs/Enemies/Melee Enemies/Dummy.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0cf9f8ebfe3f4c54781c23d62d36d437
     m_Address: Stingray
     m_ReadOnly: 0
@@ -35,6 +45,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1a96644a464f3db4c8fa74674dd11113
+    m_Address: Assets/Prefabs/Enemies/Boss Enemies/Boss Snake.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1fc1d177e3260b441a868c9d31d683a1
     m_Address: Ranged Golem_Yellow Variant
     m_ReadOnly: 0
@@ -42,6 +57,26 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 29eb6b6019e44d84786e1db04bcc47d2
     m_Address: Skeleton_Mage Brown Variant
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2bfa69eb3d80fdb41aa33b85dc5b4204
+    m_Address: Assets/Prefabs/Enemies/Boss Enemies/Boss Snake Naga.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2f4851d6b27eb6e42bb4f91930d5855f
+    m_Address: Assets/Prefabs/Enemies/Boss Enemies/Boss Sunflower Fairy.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2fff3bb5555644540ab8ffdf8b613cf8
+    m_Address: Assets/Prefabs/Enemies/Ranged Enemies/Bloom/Bloom.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 35020cd28753b64429c47570f5993364
+    m_Address: Assets/Prefabs/Enemies/Ranged Enemies/Dragon Spark/Dragon Spark.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -72,6 +107,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 43bbc4a66530c924b9c31140edb12518
+    m_Address: Assets/Prefabs/Enemies/Melee Enemies/Shell.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 458752e571e0f8c4e9ba5bc625231804
     m_Address: Assets/Prefabs/Enemies/Melee Enemies/Box.prefab
     m_ReadOnly: 0
@@ -79,6 +119,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 45907d5c35c706b4e8b2f9e1eb1b88e7
     m_Address: Skeleton_Mage
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 46d215cd6e2058e4b87c561003b5fe3e
+    m_Address: Assets/Prefabs/Enemies/Melee Enemies/Snakelet.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -92,8 +137,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 59ab23b63e2ec514ba9473389c2ea03e
+    m_Address: Assets/Prefabs/Enemies/Ranged Enemies/Sunflower Fairy/Sunflower Fairy.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5a755a90f16057348918a9ac2c49aff3
     m_Address: Skeleton_Mage Sky Variant
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6107060290f77f041af2611fa2cdd3f3
+    m_Address: Assets/Prefabs/Enemies/Boss Enemies/Boss Dragon Fire.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -109,6 +164,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7292c4eb381e92840bd3c4570909e7e1
     m_Address: Skeleton_Rogue Red Variant
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 744c690fae761ea4092a2d3e81660c35
+    m_Address: Assets/Prefabs/Enemies/Boss Enemies/Boss Sunflora Pixie.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -138,6 +198,36 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 885f250094639e349b3dd43ee0cd5394
+    m_Address: Assets/Prefabs/Enemies/Melee Enemies/Snow Bomb.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8b63475f917bc1f499a4095147b042ab
+    m_Address: Assets/Prefabs/Enemies/Boss Enemies/Boss Hermit King.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8e37a9aa2fc19404c97ca163e4165e81
+    m_Address: Assets/Prefabs/Enemies/Boss Enemies/Training Dummy.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 921e95b1d85fa484c90e815ceca51855
+    m_Address: Assets/Prefabs/Enemies/Ranged Enemies/SunBlossom/Sun Blossom.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 93768323651667b42870abc3ef693a11
+    m_Address: Assets/Prefabs/Enemies/Ranged Enemies/Snake/Snake.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 953bae3fa8552cb4189a4c487644026b
+    m_Address: Assets/Prefabs/Enemies/Boss Enemies/Boss Wolf .prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 96ad9b4cee809fe4a9079c5f1eee379b
     m_Address: Assets/Prefabs/Enemies/Ranged Enemies/StoneMonster/StoneMonster Yellow
       Variant.prefab
@@ -156,6 +246,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a04a5b2d7d8cba64e8e88417b035e749
     m_Address: TurtleShell
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a080ddda5a6fefd40af054fcb362102e
+    m_Address: Assets/Prefabs/Enemies/Ranged Enemies/Wolf/Wolf.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -189,13 +284,28 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b27be62ba9e1f3745b49007f615e98dc
+    m_Address: Assets/Prefabs/Enemies/Boss Enemies/Boss Dragon Inferno.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b570f0d2a8d8ea748b7c196abbd87898
     m_Address: Ranged Golem
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bb2344c41fe7bcd4ba6ef18a207c812c
+    m_Address: Assets/Prefabs/Enemies/Melee Enemies/Poison Bomb.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bb497ae07c8674c4b9a715b46c1ef504
     m_Address: Assets/Prefabs/Enemies/Ranged Enemies/Wizard/Wizard_Green_Enemy Variant.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bc3b07863fdbb4947b456a0f44a8302e
+    m_Address: Assets/Prefabs/Enemies/Boss Enemies/Boss Werewolf.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -239,6 +349,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e545bf19b223db643b82ec2064e70d46
+    m_Address: Assets/Prefabs/Enemies/Melee Enemies/Bud.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e5e6c15be3ece34458dd0c972dfe5a5b
     m_Address: Octopus_Green Variant
     m_ReadOnly: 0
@@ -251,6 +366,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e8c6a1aba2a6ba7449368af77f106a36
     m_Address: Octopus_Yellow Variant
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ee3fc819ca7abb44f8c1b9846b6cc97a
+    m_Address: Assets/Prefabs/Enemies/Melee Enemies/Target Dummy.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
