@@ -2049,6 +2049,7 @@ GameObject:
   - component: {fileID: 1816902974709275259}
   - component: {fileID: 3472696201290831168}
   - component: {fileID: 3776637695197229959}
+  - component: {fileID: 1660164399743938482}
   - component: {fileID: 7085327680447987264}
   m_Layer: 3
   m_Name: Skeleton_Rogue
@@ -2085,21 +2086,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c89b3cc84aca5e74ba9c4548d1dda437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDebugMode: 1
-  enemyName: 9
-  enemyTags: 134217866
-  stats:
-    baseStats:
-      hp: 0
-      atk: 0
-      moveSpeed: 0
-    shooting:
-      projectileAtk: 0
-      projectileSpeed: 0
-    flyingShooting:
-      flyingProjectileAtk: 0
-      flyingProjectileSpeed: 0
-  brain: {fileID: 11400000, guid: bfc27aff85bad2d4ca882c5618105ad9, type: 2}
+  enemyName: Skeleton Rogue
+  enemyTags: 138
   idle: {fileID: 0}
   move: {fileID: 0}
   hurt: {fileID: 0}
@@ -2107,23 +2095,13 @@ MonoBehaviour:
   health: {fileID: 3776637695197229959}
   anim: {fileID: 9006960222505617805}
   rigidBody: {fileID: 7085327680447987264}
-  enemyCollider: {fileID: 5578341351189004176}
-  enemyReference: {fileID: 0}
+  enemyColliders:
+  - {fileID: 5578341351189004176}
+  enemyReference: {fileID: 3472696201290831168}
+  enemyVisual: {fileID: 1660164399743938482}
+  healthBar: {fileID: 0}
   defaultIdleTime: 2
-  expItemPrefab:
-    m_AssetGUID: 4c0a5b1487abe67489f755abb9376c1f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_SubObjectGUID: 
-    m_EditorAssetChanged: 0
   defaultAttackSpeed: 0.8
-  defaultAtk: 0
-  blockCheck: {fileID: 8110172442065137067}
-  sphereCastRadius: 0
-  castDistance: 0.5
-  obstacleLayer:
-    serializedVersion: 2
-    m_Bits: 64
   lastPlayerPosition: {x: 0, y: 0, z: 0}
   player: {fileID: 0}
 --- !u!114 &3472696201290831168
@@ -2155,6 +2133,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+--- !u!114 &1660164399743938482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7318501122882325577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b277374b5931e9441be028e288087ac2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectRenderers:
+  - {fileID: 1406089669794716042}
+  - {fileID: 3140918820944215272}
+  - {fileID: 1823261195899749413}
+  - {fileID: 2433671261222230077}
+  - {fileID: 8913844822483154149}
+  - {fileID: 6094705058793812447}
+  - {fileID: 4838138341453296447}
+  - {fileID: 6578180536603425754}
+  - {fileID: 7011714866283513847}
+  - {fileID: 8623887264747589655}
+  - {fileID: 3945385102058550792}
+  accessoryRenderers:
+  - {fileID: 8727664316995206272}
+  fireEmissionColor: {r: 0.20784314, g: 0.03529412, b: 0, a: 1}
+  poisonEmissionColor: {r: 0.05882353, g: 0, b: 0.15294118, a: 1}
+  iceEmissionColor: {r: 0, g: 0.0627451, b: 0.15294118, a: 1}
+  lightningEmissionColor: {r: 0.09411765, g: 0.05882353, b: 0, a: 1}
+  magmaEmissionColor: {r: 0.15294118, g: 0.047058824, b: 0.003921569, a: 1}
+  darkEmissionColor: {r: 0.09411765, g: 0.09411765, b: 0.09411765, a: 1}
+  intensity: 1
 --- !u!54 &7085327680447987264
 Rigidbody:
   m_ObjectHideFlags: 0

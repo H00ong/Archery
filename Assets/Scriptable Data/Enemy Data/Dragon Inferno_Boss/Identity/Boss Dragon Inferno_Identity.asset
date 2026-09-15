@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c8fb38413c82ac4f88d0e401552a0ea, type: 3}
+  m_Name: Boss Dragon Inferno_Identity
+  m_EditorClassIdentifier: 
+  Prefab:
+    m_AssetGUID: b27be62ba9e1f3745b49007f615e98dc
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  Tag: 67109156
+  ObjectMat: {fileID: 0}
+  AccessoryMat: {fileID: 0}
+  brain: {fileID: 11400000, guid: 69c893b7bde8e6c49aa4b4e80547e451, type: 2}
+  moveModule: {fileID: 11400000, guid: 52e2186ff3efbd44a9c2a4220dfcfbf1, type: 2}
+  attackModules:
+  - {fileID: 11400000, guid: f28a318c994819f478980f8d43fd2102, type: 2}

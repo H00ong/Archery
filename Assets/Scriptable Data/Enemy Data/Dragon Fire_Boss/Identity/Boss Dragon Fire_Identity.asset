@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c8fb38413c82ac4f88d0e401552a0ea, type: 3}
+  m_Name: Boss Dragon Fire_Identity
+  m_EditorClassIdentifier: 
+  Prefab:
+    m_AssetGUID: 6107060290f77f041af2611fa2cdd3f3
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  Tag: 67109540
+  ObjectMat: {fileID: 0}
+  AccessoryMat: {fileID: 0}
+  brain: {fileID: 11400000, guid: 69c893b7bde8e6c49aa4b4e80547e451, type: 2}
+  moveModule: {fileID: 11400000, guid: 4afe0a70b5673114f8f1fec18f5e0efc, type: 2}
+  attackModules:
+  - {fileID: 11400000, guid: fe6fdde04be3935459e0b8d5af4fddbf, type: 2}
+  - {fileID: 11400000, guid: 45d3ab3874fb10b4890e24211ffe7607, type: 2}

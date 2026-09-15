@@ -15552,7 +15552,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8642438158314901855, guid: edcc86a903182d0429c0d7b2c727fec0, type: 3}
 --- !u!1 &1167356293728112830
@@ -131151,7 +131151,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8642438158314901855, guid: edcc86a903182d0429c0d7b2c727fec0, type: 3}
 --- !u!1 &6097048298363052466
@@ -151460,6 +151460,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floor: {fileID: 7055404409111692858}
+  mapGuideCenter: {fileID: 0}
+  mapGuideSize: {x: 22, y: 6.48, z: 36}
   surface: {fileID: 1657533141949350855}
   playerSpawnPoint: {fileID: 3905099478839192669}
   bossSpawnPoint: {fileID: 266244807015466681}
@@ -151504,6 +151506,7 @@ MonoBehaviour:
   - {fileID: 2866359304194460614}
   - {fileID: 1463673981623763613}
   - {fileID: 7416772401992528643}
+  itemDropYOffset: 0.5
 --- !u!1 &7433770718182054101
 GameObject:
   m_ObjectHideFlags: 0

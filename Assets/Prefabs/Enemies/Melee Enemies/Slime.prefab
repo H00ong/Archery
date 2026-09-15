@@ -182,8 +182,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.46
-  m_Center: {x: -0.48, y: 0.15, z: 0}
+  m_Radius: 0.55
+  m_Center: {x: -0.32, y: 0.12, z: 0}
 --- !u!1 &3015535440102304918
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,9 +616,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c89b3cc84aca5e74ba9c4548d1dda437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDebugMode: 0
   enemyName: Slime
-  enemyTags: 0
+  enemyTags: 73
   idle: {fileID: 0}
   move: {fileID: 0}
   hurt: {fileID: 0}
@@ -626,16 +625,12 @@ MonoBehaviour:
   health: {fileID: 8066314967143547211}
   anim: {fileID: 5595454432852353845}
   rigidBody: {fileID: 7272602529922382973}
-  enemyCollider: {fileID: 1456042515930322807}
+  enemyColliders:
+  - {fileID: 1456042515930322807}
   enemyReference: {fileID: 8229233503528448360}
   enemyVisual: {fileID: 1720975755969374210}
+  healthBar: {fileID: 0}
   defaultIdleTime: 2
-  expItemPrefab:
-    m_AssetGUID: 4c0a5b1487abe67489f755abb9376c1f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_SubObjectGUID: 
-    m_EditorAssetChanged: 0
   defaultAttackSpeed: 0.8
   lastPlayerPosition: {x: 0, y: 0, z: 0}
   player: {fileID: 0}

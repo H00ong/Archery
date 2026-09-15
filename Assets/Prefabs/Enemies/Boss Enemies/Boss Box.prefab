@@ -855,7 +855,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c89b3cc84aca5e74ba9c4548d1dda437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDebugMode: 0
   enemyName: Box
   enemyTags: 804
   idle: {fileID: 0}
@@ -865,17 +864,14 @@ MonoBehaviour:
   health: {fileID: 8313429603908516969}
   anim: {fileID: 7858815699185004940}
   rigidBody: {fileID: 4467790697742285200}
-  enemyCollider: {fileID: 4223965325044976831}
+  enemyColliders:
+  - {fileID: 4223965325044976831}
+  - {fileID: 7328203047953340590}
   enemyReference: {fileID: 6384863458046553930}
   enemyVisual: {fileID: -8814757371351752677}
+  healthBar: {fileID: 0}
   defaultIdleTime: 2
-  expItemPrefab:
-    m_AssetGUID: 4c0a5b1487abe67489f755abb9376c1f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_SubObjectGUID: 
-    m_EditorAssetChanged: 0
-  defaultAttackSpeed: 0.7
+  defaultAttackSpeed: 1
   lastPlayerPosition: {x: 0, y: 0, z: 0}
   player: {fileID: 0}
 --- !u!114 &8313429603908516969

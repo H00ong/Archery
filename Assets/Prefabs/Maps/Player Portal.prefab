@@ -19519,7 +19519,7 @@ GameObject:
   - component: {fileID: 6173569358697885391}
   m_Layer: 6
   m_Name: Obstacle Collider
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

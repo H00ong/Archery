@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c8fb38413c82ac4f88d0e401552a0ea, type: 3}
+  m_Name: Training Dummy_Identity
+  m_EditorClassIdentifier: 
+  Prefab:
+    m_AssetGUID: 8e37a9aa2fc19404c97ca163e4165e81
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  Tag: 536871716
+  ObjectMat: {fileID: 0}
+  AccessoryMat: {fileID: 0}
+  brain: {fileID: 11400000, guid: 69c893b7bde8e6c49aa4b4e80547e451, type: 2}
+  moveModule: {fileID: 11400000, guid: 6ab3ec41700933a41b2b4c304db9276e, type: 2}
+  attackModules:
+  - {fileID: 11400000, guid: fe4a84fd1db57a64fa9d3877d850f6a4, type: 2}
+  - {fileID: 11400000, guid: d7cd8e1e09c24c842a990c4094823c73, type: 2}

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c8fb38413c82ac4f88d0e401552a0ea, type: 3}
+  m_Name: Boss Sunflower Fairy_Identity
+  m_EditorClassIdentifier: 
+  Prefab:
+    m_AssetGUID: 2f4851d6b27eb6e42bb4f91930d5855f
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  Tag: 335544740
+  ObjectMat: {fileID: 0}
+  AccessoryMat: {fileID: 0}
+  brain: {fileID: 11400000, guid: 69c893b7bde8e6c49aa4b4e80547e451, type: 2}
+  moveModule: {fileID: 11400000, guid: 21cb1743d73963d4c888c72cc5728bbb, type: 2}
+  attackModules:
+  - {fileID: 11400000, guid: 6951cd456a16b894381a93ebb15267f7, type: 2}
+  - {fileID: 11400000, guid: 3c3b325143399e641acf40baa8f93af2, type: 2}

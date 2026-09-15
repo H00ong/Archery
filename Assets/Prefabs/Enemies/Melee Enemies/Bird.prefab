@@ -363,7 +363,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDebugMode: 0
   enemyName: Bird
-  enemyTags: 0
+  enemyTags: 73
   idle: {fileID: 0}
   move: {fileID: 0}
   hurt: {fileID: 0}
@@ -371,16 +371,12 @@ MonoBehaviour:
   health: {fileID: 9197043031268476017}
   anim: {fileID: 8572564448769001456}
   rigidBody: {fileID: 7645161806128579247}
-  enemyCollider: {fileID: 6830129245748897892}
+  enemyColliders:
+  - {fileID: 6830129245748897892}
   enemyReference: {fileID: 1317046124616405867}
   enemyVisual: {fileID: 6785470748178717786}
+  healthBar: {fileID: 0}
   defaultIdleTime: 2
-  expItemPrefab:
-    m_AssetGUID: 4c0a5b1487abe67489f755abb9376c1f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_SubObjectGUID: 
-    m_EditorAssetChanged: 0
   defaultAttackSpeed: 1
   lastPlayerPosition: {x: 0, y: 0, z: 0}
   player: {fileID: 0}
