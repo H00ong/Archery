@@ -556,9 +556,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c89b3cc84aca5e74ba9c4548d1dda437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDebugMode: 1
-  enemyName: Octopus
-  enemyTags: 162
+  enemyName: Skeleton Warrior
+  enemyTags: 73
   idle: {fileID: 0}
   move: {fileID: 0}
   hurt: {fileID: 0}
@@ -566,16 +565,13 @@ MonoBehaviour:
   health: {fileID: 7349292191710604387}
   anim: {fileID: 3799069060420986106}
   rigidBody: {fileID: 9177416918565869879}
-  enemyCollider: {fileID: 1147604663548006902}
+  enemyColliders:
+  - {fileID: 1147604663548006902}
+  - {fileID: 6989590049489497301}
   enemyReference: {fileID: 0}
   enemyVisual: {fileID: 0}
+  healthBar: {fileID: 0}
   defaultIdleTime: 2
-  expItemPrefab:
-    m_AssetGUID: 4c0a5b1487abe67489f755abb9376c1f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_SubObjectGUID: 
-    m_EditorAssetChanged: 0
   defaultAttackSpeed: 1
   lastPlayerPosition: {x: 0, y: 0, z: 0}
   player: {fileID: 0}

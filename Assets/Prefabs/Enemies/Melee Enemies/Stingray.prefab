@@ -308,6 +308,7 @@ GameObject:
   - component: {fileID: 8125030513745098297}
   - component: {fileID: 3689596402967281046}
   - component: {fileID: 3176092750773049730}
+  - component: {fileID: 6668713834801405691}
   m_Layer: 3
   m_Name: Stingray
   m_TagString: Enemy
@@ -325,7 +326,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.69, y: 0.41, z: 0}
-  m_LocalScale: {x: 1.55, y: 1.55, z: 1.55}
+  m_LocalScale: {x: 2.1, y: 2.1, z: 2.1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4102705543982236865}
@@ -370,21 +371,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c89b3cc84aca5e74ba9c4548d1dda437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDebugMode: 1
-  enemyName: 13
-  enemyTags: 162
-  stats:
-    baseStats:
-      hp: 0
-      atk: 0
-      moveSpeed: 0
-    shooting:
-      projectileAtk: 0
-      projectileSpeed: 0
-    flyingShooting:
-      flyingProjectileAtk: 0
-      flyingProjectileSpeed: 0
-  brain: {fileID: 11400000, guid: bfc27aff85bad2d4ca882c5618105ad9, type: 2}
+  enemyName: Stingray
+  enemyTags: 67108937
   idle: {fileID: 0}
   move: {fileID: 0}
   hurt: {fileID: 0}
@@ -392,23 +380,13 @@ MonoBehaviour:
   health: {fileID: 3176092750773049730}
   anim: {fileID: 2821942436323518329}
   rigidBody: {fileID: 9047135121757203291}
-  enemyCollider: {fileID: 2973891044100896292}
+  enemyColliders:
+  - {fileID: 2973891044100896292}
   enemyReference: {fileID: 0}
+  enemyVisual: {fileID: 0}
+  healthBar: {fileID: 0}
   defaultIdleTime: 1
-  expItemPrefab:
-    m_AssetGUID: 4c0a5b1487abe67489f755abb9376c1f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_SubObjectGUID: 
-    m_EditorAssetChanged: 0
   defaultAttackSpeed: 0.8
-  defaultAtk: 0
-  blockCheck: {fileID: 6418542969917001512}
-  sphereCastRadius: 0.5
-  castDistance: 0.5
-  obstacleLayer:
-    serializedVersion: 2
-    m_Bits: 64
   lastPlayerPosition: {x: 0, y: 0, z: 0}
   player: {fileID: 0}
 --- !u!114 &3689596402967281046
@@ -437,6 +415,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+--- !u!114 &6668713834801405691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4416062631461227150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b277374b5931e9441be028e288087ac2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectRenderers: []
+  accessoryRenderers: []
+  fireEmissionColor: {r: 0.20784314, g: 0.03529412, b: 0, a: 1}
+  poisonEmissionColor: {r: 0.05882353, g: 0, b: 0.15294118, a: 1}
+  iceEmissionColor: {r: 0, g: 0.0627451, b: 0.15294118, a: 1}
+  lightningEmissionColor: {r: 0.09411765, g: 0.05882353, b: 0, a: 1}
+  magmaEmissionColor: {r: 0.15294118, g: 0.047058824, b: 0.003921569, a: 1}
+  darkEmissionColor: {r: 0.09411765, g: 0.09411765, b: 0.09411765, a: 1}
+  intensity: 1
 --- !u!1 &4508928136853976210
 GameObject:
   m_ObjectHideFlags: 0

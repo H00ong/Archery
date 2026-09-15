@@ -105,7 +105,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8522936793963785310}
   - component: {fileID: 4526319670209505715}
-  - component: {fileID: 8705479432085156787}
   - component: {fileID: 281678182398032225}
   - component: {fileID: 1348164910137312985}
   - component: {fileID: 3476219967002177121}
@@ -160,27 +159,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
---- !u!65 &8705479432085156787
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1577555699710254621}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.3834178, y: 1.248042, z: 1}
-  m_Center: {x: 0, y: 0.655979, z: 0}
 --- !u!114 &281678182398032225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,9 +171,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c89b3cc84aca5e74ba9c4548d1dda437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDebugMode: 0
   enemyName: Wizard
-  enemyTags: 0
+  enemyTags: 162
   idle: {fileID: 0}
   move: {fileID: 0}
   hurt: {fileID: 0}
@@ -203,16 +180,12 @@ MonoBehaviour:
   health: {fileID: 3476219967002177121}
   anim: {fileID: 7177949410518404586}
   rigidBody: {fileID: 4526319670209505715}
-  enemyCollider: {fileID: 8705479432085156787}
-  enemyReference: {fileID: 0}
-  enemyVisual: {fileID: 0}
-  defaultIdleTime: 1.5
-  expItemPrefab:
-    m_AssetGUID: 4c0a5b1487abe67489f755abb9376c1f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_SubObjectGUID: 
-    m_EditorAssetChanged: 1
+  enemyColliders:
+  - {fileID: 8056467789288890600}
+  enemyReference: {fileID: 1348164910137312985}
+  enemyVisual: {fileID: -4671891932017279617}
+  healthBar: {fileID: 0}
+  defaultIdleTime: 2
   defaultAttackSpeed: 1
   lastPlayerPosition: {x: 0, y: 0, z: 0}
   player: {fileID: 0}
@@ -505,6 +478,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8551829882527989541}
+  - component: {fileID: 8056467789288890600}
   m_Layer: 0
   m_Name: Spine
   m_TagString: Untagged
@@ -533,6 +507,29 @@ Transform:
   - {fileID: 3238605940655604291}
   m_Father: {fileID: 2694868790445959948}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &8056467789288890600
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3118796733511536231}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 57.72
+  m_Height: 219.98067
+  m_Direction: 0
+  m_Center: {x: -10.614657, y: -0.00000041934956, z: 6.2933415e-16}
 --- !u!1 &3128090381660782967
 GameObject:
   m_ObjectHideFlags: 0

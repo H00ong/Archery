@@ -487,9 +487,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c89b3cc84aca5e74ba9c4548d1dda437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDebugMode: 1
-  enemyName: Octopus
-  enemyTags: 73
+  isDebugMode: 0
+  enemyName: Cactus
+  enemyTags: 268435529
   idle: {fileID: 0}
   move: {fileID: 0}
   hurt: {fileID: 0}
@@ -497,16 +497,13 @@ MonoBehaviour:
   health: {fileID: 3535527881971153687}
   anim: {fileID: 6466400338080955798}
   rigidBody: {fileID: 3039918371906319464}
-  enemyCollider: {fileID: 2185939943995532756}
+  enemyColliders:
+  - {fileID: 2185939943995532756}
+  - {fileID: 7103099505533023239}
   enemyReference: {fileID: 4724272185306061029}
   enemyVisual: {fileID: 0}
+  healthBar: {fileID: 0}
   defaultIdleTime: 2
-  expItemPrefab:
-    m_AssetGUID: 4c0a5b1487abe67489f755abb9376c1f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_SubObjectGUID: 
-    m_EditorAssetChanged: 0
   defaultAttackSpeed: 1
   lastPlayerPosition: {x: 0, y: 0, z: 0}
   player: {fileID: 0}

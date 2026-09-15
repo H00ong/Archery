@@ -173,9 +173,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c89b3cc84aca5e74ba9c4548d1dda437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDebugMode: 1
-  enemyName: Octopus
-  enemyTags: 162
+  isDebugMode: 0
+  enemyName: Mushroom
+  enemyTags: 268435529
   idle: {fileID: 0}
   move: {fileID: 0}
   hurt: {fileID: 0}
@@ -183,16 +183,12 @@ MonoBehaviour:
   health: {fileID: 2326134793688313752}
   anim: {fileID: 2429455444787474321}
   rigidBody: {fileID: 1597574185860486274}
-  enemyCollider: {fileID: 7024538683528829943}
+  enemyColliders:
+  - {fileID: 7024538683528829943}
   enemyReference: {fileID: 0}
   enemyVisual: {fileID: 0}
+  healthBar: {fileID: 0}
   defaultIdleTime: 2
-  expItemPrefab:
-    m_AssetGUID: 4c0a5b1487abe67489f755abb9376c1f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_SubObjectGUID: 
-    m_EditorAssetChanged: 0
   defaultAttackSpeed: 0.8
   lastPlayerPosition: {x: 0, y: 0, z: 0}
   player: {fileID: 0}

@@ -663,6 +663,7 @@ GameObject:
   - component: {fileID: 2107695827798336632}
   - component: {fileID: 7359323934309060091}
   - component: {fileID: 7388464364624522364}
+  - component: {fileID: 6385031852785613359}
   m_Layer: 3
   m_Name: TurtleShell
   m_TagString: Enemy
@@ -725,21 +726,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c89b3cc84aca5e74ba9c4548d1dda437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDebugMode: 1
-  enemyName: 6
-  enemyTags: 162
-  stats:
-    baseStats:
-      hp: 0
-      atk: 0
-      moveSpeed: 0
-    shooting:
-      projectileAtk: 0
-      projectileSpeed: 0
-    flyingShooting:
-      flyingProjectileAtk: 0
-      flyingProjectileSpeed: 0
-  brain: {fileID: 11400000, guid: bfc27aff85bad2d4ca882c5618105ad9, type: 2}
+  enemyName: Turtle Shell
+  enemyTags: 134217801
   idle: {fileID: 0}
   move: {fileID: 0}
   hurt: {fileID: 0}
@@ -747,23 +735,13 @@ MonoBehaviour:
   health: {fileID: 7388464364624522364}
   anim: {fileID: 9147543631441472652}
   rigidBody: {fileID: 4860087311136199205}
-  enemyCollider: {fileID: 6150754237372376481}
+  enemyColliders:
+  - {fileID: 6150754237372376481}
   enemyReference: {fileID: 0}
+  enemyVisual: {fileID: 0}
+  healthBar: {fileID: 0}
   defaultIdleTime: 2
-  expItemPrefab:
-    m_AssetGUID: 4c0a5b1487abe67489f755abb9376c1f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_SubObjectGUID: 
-    m_EditorAssetChanged: 0
   defaultAttackSpeed: 0.8
-  defaultAtk: 0
-  blockCheck: {fileID: 5505083999805544712}
-  sphereCastRadius: 0.4
-  castDistance: 0.5
-  obstacleLayer:
-    serializedVersion: 2
-    m_Bits: 64
   lastPlayerPosition: {x: 0, y: 0, z: 0}
   player: {fileID: 0}
 --- !u!114 &7359323934309060091
@@ -792,6 +770,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+--- !u!114 &6385031852785613359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5392752997630631303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b277374b5931e9441be028e288087ac2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectRenderers: []
+  accessoryRenderers: []
+  fireEmissionColor: {r: 0.20784314, g: 0.03529412, b: 0, a: 1}
+  poisonEmissionColor: {r: 0.05882353, g: 0, b: 0.15294118, a: 1}
+  iceEmissionColor: {r: 0, g: 0.0627451, b: 0.15294118, a: 1}
+  lightningEmissionColor: {r: 0.09411765, g: 0.05882353, b: 0, a: 1}
+  magmaEmissionColor: {r: 0.15294118, g: 0.047058824, b: 0.003921569, a: 1}
+  darkEmissionColor: {r: 0.09411765, g: 0.09411765, b: 0.09411765, a: 1}
+  intensity: 1
 --- !u!1 &5677670019393548890
 GameObject:
   m_ObjectHideFlags: 0
@@ -1277,8 +1276,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.55
-  m_Center: {x: -0.44, y: 0.48, z: 0}
+  m_Radius: 0.76
+  m_Center: {x: -0.44, y: 0.2, z: 0}
 --- !u!1 &8529082305320039802
 GameObject:
   m_ObjectHideFlags: 0

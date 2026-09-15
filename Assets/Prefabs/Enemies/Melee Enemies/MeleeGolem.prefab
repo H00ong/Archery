@@ -719,7 +719,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDebugMode: 0
   enemyName: Melee Golem
-  enemyTags: 0
+  enemyTags: 268435529
   idle: {fileID: 0}
   move: {fileID: 0}
   hurt: {fileID: 0}
@@ -727,16 +727,15 @@ MonoBehaviour:
   health: {fileID: 7032517276093481923}
   anim: {fileID: 3465462293368827570}
   rigidBody: {fileID: -540339900640433905}
-  enemyCollider: {fileID: 2888611761645387499}
+  enemyColliders:
+  - {fileID: 2888611761645387499}
+  - {fileID: 8407492113458822997}
+  - {fileID: 7895666438612511336}
+  - {fileID: 6420638256059060865}
   enemyReference: {fileID: 7336120299434602713}
   enemyVisual: {fileID: 5013358641949258350}
+  healthBar: {fileID: 0}
   defaultIdleTime: 2
-  expItemPrefab:
-    m_AssetGUID: 4c0a5b1487abe67489f755abb9376c1f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_SubObjectGUID: 
-    m_EditorAssetChanged: 0
   defaultAttackSpeed: 0.7
   lastPlayerPosition: {x: 0, y: 0, z: 0}
   player: {fileID: 0}

@@ -78,6 +78,7 @@ GameObject:
   - component: {fileID: 2249489781883047667}
   - component: {fileID: 4739736446398181617}
   - component: {fileID: 3587062584671058871}
+  - component: {fileID: 5970590930215153025}
   m_Layer: 3
   m_Name: Skeleton_Mage
   m_TagString: Enemy
@@ -140,21 +141,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c89b3cc84aca5e74ba9c4548d1dda437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDebugMode: 1
-  enemyName: 10
+  enemyName: Skeleton Mage
   enemyTags: 138
-  stats:
-    baseStats:
-      hp: 0
-      atk: 0
-      moveSpeed: 0
-    shooting:
-      projectileAtk: 0
-      projectileSpeed: 0
-    flyingShooting:
-      flyingProjectileAtk: 0
-      flyingProjectileSpeed: 0
-  brain: {fileID: 11400000, guid: bfc27aff85bad2d4ca882c5618105ad9, type: 2}
   idle: {fileID: 0}
   move: {fileID: 0}
   hurt: {fileID: 0}
@@ -162,23 +150,13 @@ MonoBehaviour:
   health: {fileID: 3587062584671058871}
   anim: {fileID: 8988837903954450812}
   rigidBody: {fileID: 8874216806385716659}
-  enemyCollider: {fileID: 8694925854488473931}
-  enemyReference: {fileID: 0}
+  enemyColliders:
+  - {fileID: 8694925854488473931}
+  enemyReference: {fileID: 4739736446398181617}
+  enemyVisual: {fileID: 0}
+  healthBar: {fileID: 0}
   defaultIdleTime: 2
-  expItemPrefab:
-    m_AssetGUID: 4c0a5b1487abe67489f755abb9376c1f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_SubObjectGUID: 
-    m_EditorAssetChanged: 1
   defaultAttackSpeed: 1.3
-  defaultAtk: 0
-  blockCheck: {fileID: 8227521340796529963}
-  sphereCastRadius: 0.4
-  castDistance: 0.5
-  obstacleLayer:
-    serializedVersion: 2
-    m_Bits: 64
   lastPlayerPosition: {x: 0, y: 0, z: 0}
   player: {fileID: 0}
 --- !u!114 &4739736446398181617
@@ -210,6 +188,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+--- !u!114 &5970590930215153025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234249553462489068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b277374b5931e9441be028e288087ac2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectRenderers:
+  - {fileID: 4839634589098919318}
+  - {fileID: 4265123742172184149}
+  - {fileID: 7273446816024842090}
+  - {fileID: 5120546739803006979}
+  - {fileID: 8593706713882456946}
+  - {fileID: 5001599366295126355}
+  - {fileID: 6310280488084367266}
+  - {fileID: 994328499176146068}
+  - {fileID: 5169470195654361525}
+  accessoryRenderers:
+  - {fileID: 3060458633395325507}
+  fireEmissionColor: {r: 0.20784314, g: 0.03529412, b: 0, a: 1}
+  poisonEmissionColor: {r: 0.05882353, g: 0, b: 0.15294118, a: 1}
+  iceEmissionColor: {r: 0, g: 0.0627451, b: 0.15294118, a: 1}
+  lightningEmissionColor: {r: 0.09411765, g: 0.05882353, b: 0, a: 1}
+  magmaEmissionColor: {r: 0.15294118, g: 0.047058824, b: 0.003921569, a: 1}
+  darkEmissionColor: {r: 0.09411765, g: 0.09411765, b: 0.09411765, a: 1}
+  intensity: 1
 --- !u!1 &583905609749978512
 GameObject:
   m_ObjectHideFlags: 0
