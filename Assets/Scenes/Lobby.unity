@@ -1245,15 +1245,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 787728727302200200, guid: b5bd29271a626024dace3ff1f32a0682, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 2.6
       objectReference: {fileID: 0}
     - target: {fileID: 787728727302200200, guid: b5bd29271a626024dace3ff1f32a0682, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 25.2
       objectReference: {fileID: 0}
     - target: {fileID: 787728727302200200, guid: b5bd29271a626024dace3ff1f32a0682, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -25.2
       objectReference: {fileID: 0}
     - target: {fileID: 787728727302200200, guid: b5bd29271a626024dace3ff1f32a0682, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1295,6 +1295,18 @@ PrefabInstance:
       propertyPath: lockIcon
       value: 
       objectReference: {fileID: 1003428864}
+    - target: {fileID: 8333193910443452023, guid: b5bd29271a626024dace3ff1f32a0682, type: 3}
+      propertyPath: cameraOffset.x
+      value: 2.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8333193910443452023, guid: b5bd29271a626024dace3ff1f32a0682, type: 3}
+      propertyPath: cameraOffset.y
+      value: 23.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8333193910443452023, guid: b5bd29271a626024dace3ff1f32a0682, type: 3}
+      propertyPath: cameraOffset.z
+      value: -25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
