@@ -20,6 +20,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6192455fdc6f0df4fa99eadc88278697
+    m_Address: Assets/Prefabs/Maps/Desert Map.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 63b54f9f8e3443e418622819b36ee744
     m_Address: Assets/Prefabs/Test Map Dummy.prefab
     m_ReadOnly: 0
@@ -32,6 +37,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b580322824cd0744caf7fcd9201014e8
     m_Address: Assets/Prefabs/Test Map Dummy4.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c0c2ffd829a58b9428baa9e070f2bc19
+    m_Address: Assets/Prefabs/Dummy Maps/Desert Map Dummy.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
