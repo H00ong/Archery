@@ -54,7 +54,7 @@ MonoBehaviour:
   - Stone Monster
   mapIds:
   - Dungeon
-  - Jungle
+  - Desert
   - Ocean
   - Lava
   - Forest
