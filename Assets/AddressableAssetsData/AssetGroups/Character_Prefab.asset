@@ -20,6 +20,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a62932c9b4c6f2e49a6cbc526c910485
+    m_Address: Assets/Prefabs/Player/Character/Druid.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 856c05a54378faf41860bc411561527d, type: 2}
   m_SchemaSet:

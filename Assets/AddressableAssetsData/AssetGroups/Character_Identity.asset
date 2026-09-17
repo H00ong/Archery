@@ -16,7 +16,7 @@ MonoBehaviour:
   m_GUID: bde066584f69dc54ebf62cbb39e48226
   m_SerializeEntries:
   - m_GUID: 3afde16ba7f584b41bc2aec7a55c73e9
-    m_Address: Archer
+    m_Address: Assets/Scriptable Data/Character Identity/Druid.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - character_identity

@@ -799,7 +799,7 @@ MonoBehaviour:
   rigidBody: {fileID: 1673894776317813683}
   enemyColliders:
   - {fileID: 212684825919933298}
-  - {fileID: 824268309658434189}
+  - {fileID: 0}
   - {fileID: 944516202013399318}
   enemyReference: {fileID: 6328783121231804827}
   enemyVisual: {fileID: 0}
@@ -857,7 +857,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff5010d84058cff438cba248dff55dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
 --- !u!54 &1673894776317813683
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1056,7 +1055,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8416509255958721513}
-  - component: {fileID: 824268309658434189}
+  - component: {fileID: 3384411577014087056}
   m_Layer: 3
   m_Name: RigPelvis
   m_TagString: Untagged
@@ -1082,8 +1081,8 @@ Transform:
   - {fileID: 1906198657064765308}
   m_Father: {fileID: 3805569301371381647}
   m_LocalEulerAnglesHint: {x: -2.730241, y: -87.947174, z: -127.35936}
---- !u!136 &824268309658434189
-CapsuleCollider:
+--- !u!135 &3384411577014087056
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1100,10 +1099,8 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.4
-  m_Height: 2.28
-  m_Direction: 0
+  serializedVersion: 3
+  m_Radius: 0.95
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7846381803005043413
 GameObject:

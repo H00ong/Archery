@@ -20,6 +20,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 489df6c244cadab49aa40c0cbeae3c4a
+    m_Address: Assets/Prefabs/Player/Character/Druid-Dummy.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 60005f3e55b36d2408ed6f4fa67ac12b
     m_Address: Assets/Prefabs/Player/Character/Blue Wizard - Dummy.prefab
     m_ReadOnly: 0

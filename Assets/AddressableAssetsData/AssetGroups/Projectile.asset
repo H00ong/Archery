@@ -50,6 +50,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 371136a0df9bdcc4480855f8625d93cc
+    m_Address: Assets/Prefabs/Objects/Player/Magic Beam_Druid.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 37cdc7ef5ece12345b29556a7d424d20
     m_Address: Enemy Beam_Octopus Orange
     m_ReadOnly: 0
