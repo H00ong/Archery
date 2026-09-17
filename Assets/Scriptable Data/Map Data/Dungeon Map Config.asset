@@ -32,15 +32,6 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
   enemyIdentityList:
-  - {fileID: 11400000, guid: a0020000000000000000000000000001, type: 2}
-  - {fileID: 11400000, guid: ab495f45e4c70b0419e59753ee996647, type: 2}
-  - {fileID: 11400000, guid: a0070000000000000000000000000001, type: 2}
-  - {fileID: 11400000, guid: 92d8fcd67320a2f48bba6772265ffcf1, type: 2}
-  - {fileID: 11400000, guid: 5378d529296aaa64bbb64a0dc161f42e, type: 2}
   - {fileID: 11400000, guid: 261d6744450496d4fa6bdce58751d13c, type: 2}
-  - {fileID: 11400000, guid: 358ab601604366a40ac4e29958dd937e, type: 2}
-  - {fileID: 11400000, guid: 8a86e88414659254ca19d70daf2e1971, type: 2}
-  - {fileID: 11400000, guid: a0080000000000000000000000000001, type: 2}
-  - {fileID: 11400000, guid: 732144ae1393e9740810aedca282fd38, type: 2}
   bossIdentityList:
   - {fileID: 11400000, guid: 4d8c691c34827b944a460faf77ded9c8, type: 2}

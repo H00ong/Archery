@@ -154,7 +154,6 @@ GameObject:
   - component: {fileID: 527986439957911026}
   - component: {fileID: 8172282651366913629}
   - component: {fileID: 5711621382189680893}
-  - component: {fileID: 511624517346247785}
   m_Layer: 6
   m_Name: Wall_Chiseled (2)
   m_TagString: Obstacle
@@ -230,28 +229,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &511624517346247785
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 579798704990549531}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2348616061427368171, guid: edcc86a903182d0429c0d7b2c727fec0, type: 3}
 --- !u!1 &636650469369391190
 GameObject:
   m_ObjectHideFlags: 0
@@ -263,7 +240,6 @@ GameObject:
   - component: {fileID: 3296670733145337316}
   - component: {fileID: 1211355092092815582}
   - component: {fileID: 7342545037925729882}
-  - component: {fileID: 5779551094918823609}
   m_Layer: 6
   m_Name: Wall_Chiseled (3)
   m_TagString: Obstacle
@@ -339,28 +315,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5779551094918823609
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 636650469369391190}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2348616061427368171, guid: edcc86a903182d0429c0d7b2c727fec0, type: 3}
 --- !u!1 &746953924721513818
 GameObject:
   m_ObjectHideFlags: 0
@@ -5367,7 +5321,6 @@ GameObject:
   - component: {fileID: 5771124506945003832}
   - component: {fileID: 6317952882617307073}
   - component: {fileID: 6181200411204909414}
-  - component: {fileID: 8344563321738551518}
   m_Layer: 6
   m_Name: Wall_Chiseled (7)
   m_TagString: Obstacle
@@ -5443,28 +5396,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &8344563321738551518
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1263611346422779124}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2348616061427368171, guid: edcc86a903182d0429c0d7b2c727fec0, type: 3}
 --- !u!1 &1328037289276459162
 GameObject:
   m_ObjectHideFlags: 0
@@ -5553,7 +5484,6 @@ GameObject:
   - component: {fileID: 1609125159641617751}
   - component: {fileID: 6243633033075097088}
   - component: {fileID: 7252788773569923736}
-  - component: {fileID: 1726854326873841116}
   m_Layer: 6
   m_Name: Wall_Chiseled (12)
   m_TagString: Obstacle
@@ -5629,28 +5559,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1726854326873841116
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1917947536786534828}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2348616061427368171, guid: edcc86a903182d0429c0d7b2c727fec0, type: 3}
 --- !u!1 &1929056839070975989
 GameObject:
   m_ObjectHideFlags: 0
@@ -5688,6 +5596,7 @@ Transform:
   - {fileID: 8987087617382350274}
   - {fileID: 4495223672070801631}
   - {fileID: 3348578493765528791}
+  - {fileID: 6862215070103219244}
   - {fileID: 258643804250490649}
   - {fileID: 1943504622938156900}
   - {fileID: 6927649316622403395}
@@ -5942,7 +5851,6 @@ GameObject:
   - component: {fileID: 8763844701230318290}
   - component: {fileID: 6209543567682382224}
   - component: {fileID: 3164393486275116001}
-  - component: {fileID: 2140467342675379258}
   m_Layer: 6
   m_Name: Wall_Chiseled (5)
   m_TagString: Obstacle
@@ -6018,28 +5926,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &2140467342675379258
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2349658419091031923}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2348616061427368171, guid: edcc86a903182d0429c0d7b2c727fec0, type: 3}
 --- !u!1 &2373220386060702956
 GameObject:
   m_ObjectHideFlags: 0
@@ -6051,7 +5937,6 @@ GameObject:
   - component: {fileID: 1859081228273198961}
   - component: {fileID: 2386207391278139457}
   - component: {fileID: 3638030602650759455}
-  - component: {fileID: 1529238879081642446}
   m_Layer: 6
   m_Name: Wall_Chiseled (8)
   m_TagString: Obstacle
@@ -6127,28 +6012,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1529238879081642446
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2373220386060702956}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2348616061427368171, guid: edcc86a903182d0429c0d7b2c727fec0, type: 3}
 --- !u!1 &2688637558608568933
 GameObject:
   m_ObjectHideFlags: 0
@@ -11121,7 +10984,6 @@ GameObject:
   - component: {fileID: 7800043820659123553}
   - component: {fileID: 6166647923076708159}
   - component: {fileID: 855390832856939609}
-  - component: {fileID: 5179068563914302048}
   m_Layer: 6
   m_Name: Wall_Chiseled (13)
   m_TagString: Obstacle
@@ -11197,28 +11059,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5179068563914302048
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3491965417453354967}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2348616061427368171, guid: edcc86a903182d0429c0d7b2c727fec0, type: 3}
 --- !u!1 &3607497019257344935
 GameObject:
   m_ObjectHideFlags: 0
@@ -11563,7 +11403,6 @@ GameObject:
   - component: {fileID: 975389472215244400}
   - component: {fileID: 5299493107945770258}
   - component: {fileID: 1967936959280734523}
-  - component: {fileID: 8355300708061461320}
   m_Layer: 6
   m_Name: Wall_Chiseled (4)
   m_TagString: Obstacle
@@ -11639,28 +11478,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &8355300708061461320
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4565231929002826727}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2348616061427368171, guid: edcc86a903182d0429c0d7b2c727fec0, type: 3}
 --- !u!1 &4578149795181058983
 GameObject:
   m_ObjectHideFlags: 0
@@ -11672,7 +11489,6 @@ GameObject:
   - component: {fileID: 3807100665882033978}
   - component: {fileID: 516626441168328739}
   - component: {fileID: 5434579441538339725}
-  - component: {fileID: 42685668293381842}
   m_Layer: 6
   m_Name: Wall_Chiseled (14)
   m_TagString: Obstacle
@@ -11748,28 +11564,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &42685668293381842
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4578149795181058983}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2348616061427368171, guid: edcc86a903182d0429c0d7b2c727fec0, type: 3}
 --- !u!1 &4709554773918836332
 GameObject:
   m_ObjectHideFlags: 0
@@ -11781,7 +11575,6 @@ GameObject:
   - component: {fileID: 3758801748660972423}
   - component: {fileID: 2220946970345924656}
   - component: {fileID: 6571461843260148872}
-  - component: {fileID: 4273273633289927563}
   m_Layer: 6
   m_Name: Wall_DoorStand
   m_TagString: Obstacle
@@ -11857,28 +11650,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &4273273633289927563
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4709554773918836332}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4020010431235954438, guid: edcc86a903182d0429c0d7b2c727fec0, type: 3}
 --- !u!1 &4738091765765984913
 GameObject:
   m_ObjectHideFlags: 0
@@ -11938,7 +11709,6 @@ GameObject:
   - component: {fileID: 6022307972699764075}
   - component: {fileID: 2221947343706516232}
   - component: {fileID: 8947023392481585756}
-  - component: {fileID: 8077131664133484245}
   m_Layer: 6
   m_Name: Wall_Chiseled (1)
   m_TagString: Obstacle
@@ -12014,28 +11784,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &8077131664133484245
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4871101413988830810}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2348616061427368171, guid: edcc86a903182d0429c0d7b2c727fec0, type: 3}
 --- !u!1 &5178119037580533429
 GameObject:
   m_ObjectHideFlags: 0
@@ -12254,7 +12002,6 @@ GameObject:
   - component: {fileID: 2767582623751933553}
   - component: {fileID: 6682142709655975076}
   - component: {fileID: 8566416978498665201}
-  - component: {fileID: 7536890668228662274}
   m_Layer: 6
   m_Name: Wall_Chiseled (9)
   m_TagString: Obstacle
@@ -12330,28 +12077,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7536890668228662274
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5856166458829532195}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2348616061427368171, guid: edcc86a903182d0429c0d7b2c727fec0, type: 3}
 --- !u!1 &5953976951489876638
 GameObject:
   m_ObjectHideFlags: 0
@@ -12431,7 +12156,6 @@ Transform:
   m_Children:
   - {fileID: 3758801748660972423}
   - {fileID: 6022307972699764075}
-  - {fileID: 6593122927037438792}
   - {fileID: 527986439957911026}
   - {fileID: 414278564273304186}
   - {fileID: 2177202781763925433}
@@ -12443,6 +12167,7 @@ Transform:
   - {fileID: 975389472215244400}
   - {fileID: 8763844701230318290}
   - {fileID: 1209433120406097780}
+  - {fileID: 6593122927037438792}
   m_Father: {fileID: 1711046135029224793}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6066481515643945036
@@ -12721,7 +12446,6 @@ GameObject:
   - component: {fileID: 1209433120406097780}
   - component: {fileID: 2948730707091326969}
   - component: {fileID: 2936687710742528490}
-  - component: {fileID: 1223606508004416139}
   m_Layer: 6
   m_Name: Wall_Chiseled (6)
   m_TagString: Obstacle
@@ -12797,28 +12521,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1223606508004416139
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7428083155388536502}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2348616061427368171, guid: edcc86a903182d0429c0d7b2c727fec0, type: 3}
 --- !u!1 &7665015207442359663
 GameObject:
   m_ObjectHideFlags: 0
@@ -13118,7 +12820,6 @@ GameObject:
   - component: {fileID: 1694845342899441047}
   - component: {fileID: 5268568900025656531}
   - component: {fileID: 2120473826789820986}
-  - component: {fileID: 6185414981572047346}
   m_Layer: 6
   m_Name: Wall_Chiseled (11)
   m_TagString: Obstacle
@@ -13194,28 +12895,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6185414981572047346
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8252282575728027069}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2348616061427368171, guid: edcc86a903182d0429c0d7b2c727fec0, type: 3}
 --- !u!1 &8587270903228380207
 GameObject:
   m_ObjectHideFlags: 0
@@ -13385,7 +13064,6 @@ GameObject:
   - component: {fileID: 2177202781763925433}
   - component: {fileID: 7644980289637813457}
   - component: {fileID: 2879395214285027787}
-  - component: {fileID: 4193605872270668481}
   m_Layer: 6
   m_Name: Wall_Chiseled (10)
   m_TagString: Obstacle
@@ -13461,28 +13139,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &4193605872270668481
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8719848140595325370}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2348616061427368171, guid: edcc86a903182d0429c0d7b2c727fec0, type: 3}
 --- !u!1 &8748208021734077161
 GameObject:
   m_ObjectHideFlags: 0
@@ -13652,7 +13308,6 @@ GameObject:
   - component: {fileID: 414278564273304186}
   - component: {fileID: 1754273670204358997}
   - component: {fileID: 4368411401930526861}
-  - component: {fileID: 3432380882863110194}
   m_Layer: 6
   m_Name: Wall_Chiseled
   m_TagString: Obstacle
@@ -13728,28 +13383,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3432380882863110194
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9211066319079866852}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2348616061427368171, guid: edcc86a903182d0429c0d7b2c727fec0, type: 3}
 --- !u!1001 &896900746570842840
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13889,6 +13522,68 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6073927788516702459, guid: 9f1404a84aac4184a93c66c977c001aa, type: 3}
   m_PrefabInstance: {fileID: 1040386157524480847}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1082503483442230211
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1711046135029224793}
+    m_Modifications:
+    - target: {fileID: 665687453167540882, guid: f9f14855bb322d04585f1439c07637be, type: 3}
+      propertyPath: m_Name
+      value: Obstacle Wall Colliders
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782251460874461167, guid: f9f14855bb322d04585f1439c07637be, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782251460874461167, guid: f9f14855bb322d04585f1439c07637be, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782251460874461167, guid: f9f14855bb322d04585f1439c07637be, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782251460874461167, guid: f9f14855bb322d04585f1439c07637be, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782251460874461167, guid: f9f14855bb322d04585f1439c07637be, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782251460874461167, guid: f9f14855bb322d04585f1439c07637be, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782251460874461167, guid: f9f14855bb322d04585f1439c07637be, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782251460874461167, guid: f9f14855bb322d04585f1439c07637be, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782251460874461167, guid: f9f14855bb322d04585f1439c07637be, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782251460874461167, guid: f9f14855bb322d04585f1439c07637be, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f9f14855bb322d04585f1439c07637be, type: 3}
+--- !u!4 &6862215070103219244 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5782251460874461167, guid: f9f14855bb322d04585f1439c07637be, type: 3}
+  m_PrefabInstance: {fileID: 1082503483442230211}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1246548073464204941
 PrefabInstance:
