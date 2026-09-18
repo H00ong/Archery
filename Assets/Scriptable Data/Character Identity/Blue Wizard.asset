@@ -35,10 +35,10 @@ MonoBehaviour:
     m_EditorAssetChanged: 1
   baseStat:
     maxHP: 1000
-    attackPower: 1000
-    moveSpeed: 6
+    attackPower: 50
+    moveSpeed: 8
     armor: 0
-    magicResistance: 2
+    magicResistance: 0
     attackSpeed: 1
     projectileSpeed: 30
     attackEffectType: 1
