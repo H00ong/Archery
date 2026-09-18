@@ -15,4 +15,4 @@ MonoBehaviour:
   targetName: Stingray
   targetTag: 67108928
   attackIndex: 0
-  attackMoveSpeed: 3
+  attackMoveSpeed: 10

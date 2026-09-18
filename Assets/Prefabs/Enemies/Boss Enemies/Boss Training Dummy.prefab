@@ -799,7 +799,7 @@ MonoBehaviour:
   rigidBody: {fileID: 1673894776317813683}
   enemyColliders:
   - {fileID: 212684825919933298}
-  - {fileID: 0}
+  - {fileID: 3384411577014087056}
   - {fileID: 944516202013399318}
   enemyReference: {fileID: 6328783121231804827}
   enemyVisual: {fileID: 0}
@@ -883,7 +883,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 4
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &6643019011889263381
 GameObject:
   m_ObjectHideFlags: 0

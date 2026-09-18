@@ -15,4 +15,4 @@ MonoBehaviour:
   targetName: Dummy
   targetTag: 8
   duration: 5
-  defaultAttackRange: 3
+  defaultAttackRange: 2

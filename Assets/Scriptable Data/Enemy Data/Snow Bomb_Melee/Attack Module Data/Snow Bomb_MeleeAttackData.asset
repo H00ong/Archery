@@ -15,4 +15,4 @@ MonoBehaviour:
   targetName: Snow Bomb
   targetTag: 64
   attackIndex: 0
-  attackMoveSpeed: 5
+  attackMoveSpeed: 10

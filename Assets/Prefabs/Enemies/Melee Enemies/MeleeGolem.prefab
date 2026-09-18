@@ -717,9 +717,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c89b3cc84aca5e74ba9c4548d1dda437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDebugMode: 0
   enemyName: Melee Golem
-  enemyTags: 268435529
+  enemyTags: 73
   idle: {fileID: 0}
   move: {fileID: 0}
   hurt: {fileID: 0}
@@ -764,7 +763,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff5010d84058cff438cba248dff55dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
 --- !u!114 &7336120299434602713
 MonoBehaviour:
   m_ObjectHideFlags: 0

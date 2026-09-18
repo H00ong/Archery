@@ -15,7 +15,7 @@ MonoBehaviour:
   targetName: Werewolf Boss
   targetTag: 512
   attackIndex: 2
-  attackMoveSpeed: 8
+  attackMoveSpeed: 12
   attackRange: 4
   chaseDuration: 4
-  moveSpeedIncreaseMultiplier: 2
+  moveSpeedIncreaseMultiplier: 1.3

@@ -15,7 +15,7 @@ MonoBehaviour:
   targetName: Box
   targetTag: 512
   attackIndex: 1
-  attackMoveSpeed: 0
+  attackMoveSpeed: 12
   attackRange: 5
   chaseDuration: 4
-  moveSpeedIncreaseMultiplier: 2
+  moveSpeedIncreaseMultiplier: 1.3

@@ -249,7 +249,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2790548115041853541}
-  - component: {fileID: 5968782013640671245}
+  - component: {fileID: 8679911254136322082}
   m_Layer: 3
   m_Name: RigPelvis
   m_TagString: Untagged
@@ -274,8 +274,8 @@ Transform:
   - {fileID: 2790548115041853551}
   m_Father: {fileID: 2790548115041853485}
   m_LocalEulerAnglesHint: {x: -0.000000009313226, y: -89.999985, z: -90}
---- !u!136 &5968782013640671245
-CapsuleCollider:
+--- !u!135 &8679911254136322082
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -292,11 +292,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.26701033
-  m_Height: 1.4286704
-  m_Direction: 0
-  m_Center: {x: -0.21433526, y: -3.3631767e-10, z: 5.94829e-13}
+  serializedVersion: 3
+  m_Radius: 0.7
+  m_Center: {x: -0.24, y: 0, z: 0}
 --- !u!1 &2790548115041762375
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,7 +431,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2790548115041853451}
-  - component: {fileID: 1326963341683440729}
   m_Layer: 3
   m_Name: RigLArm1Gizmo
   m_TagString: Untagged
@@ -456,29 +453,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2790548115041853485}
   m_LocalEulerAnglesHint: {x: 64.81051, y: -80.71693, z: -81.356575}
---- !u!136 &1326963341683440729
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2790548115041762411}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.16
-  m_Height: 1
-  m_Direction: 0
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2790548115041762413
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,7 +617,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2790548115041853463}
-  - component: {fileID: 840525287205071626}
   m_Layer: 3
   m_Name: RigRArm1Gizmo
   m_TagString: Untagged
@@ -666,29 +639,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2790548115041853485}
   m_LocalEulerAnglesHint: {x: -55.428463, y: -96.949486, z: -84.03874}
---- !u!136 &840525287205071626
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2790548115041762423}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.16
-  m_Height: 1
-  m_Direction: 0
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2790548115041762425
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,7 +812,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c89b3cc84aca5e74ba9c4548d1dda437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDebugMode: 0
   enemyName: Dummy
   enemyTags: 73
   idle: {fileID: 0}
@@ -873,9 +822,7 @@ MonoBehaviour:
   anim: {fileID: 2790548115032264647}
   rigidBody: {fileID: 3459665385326363287}
   enemyColliders:
-  - {fileID: 1326963341683440729}
-  - {fileID: 5968782013640671245}
-  - {fileID: 840525287205071626}
+  - {fileID: 8679911254136322082}
   enemyReference: {fileID: 8577265489673309548}
   enemyVisual: {fileID: 2555982757511005681}
   healthBar: {fileID: 0}
@@ -930,7 +877,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff5010d84058cff438cba248dff55dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
 --- !u!54 &3459665385326363287
 Rigidbody:
   m_ObjectHideFlags: 0

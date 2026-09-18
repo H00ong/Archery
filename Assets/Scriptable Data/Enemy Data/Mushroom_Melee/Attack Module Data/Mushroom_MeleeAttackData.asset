@@ -15,4 +15,4 @@ MonoBehaviour:
   targetName: Mushroom
   targetTag: 268435520
   attackIndex: 0
-  attackMoveSpeed: 3
+  attackMoveSpeed: 10

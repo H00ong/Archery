@@ -15,4 +15,4 @@ MonoBehaviour:
   targetName: Turtle Shell
   targetTag: 134217792
   attackIndex: 0
-  attackMoveSpeed: 3
+  attackMoveSpeed: 10
