@@ -1254,6 +1254,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Managers - DDL
       objectReference: {fileID: 0}
+    - target: {fileID: 491356875244841937, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 797612243193601549, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
       propertyPath: m_LocalPosition.x
       value: 36.61181
@@ -1294,6 +1298,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1382179287000807552, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493426813874259204, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2733037086560385913, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5186660679001739711, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
       propertyPath: expItemPrefab.m_AssetGUID
       value: 4c0a5b1487abe67489f755abb9376c1f
@@ -1301,6 +1317,30 @@ PrefabInstance:
     - target: {fileID: 5186660679001739711, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
       propertyPath: goldItemPrefab.m_AssetGUID
       value: 1e63d0d7357d15f4ca28ba653923acef
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393695309323449091, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894848660135024196, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6706672199760926063, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
+      propertyPath: m_text
+      value: Reset Progress
+      objectReference: {fileID: 0}
+    - target: {fileID: 6706672199760926063, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
+      propertyPath: m_fontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6706672199760926063, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6885709720913467672, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8894359464752876839, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
       propertyPath: progressBar
