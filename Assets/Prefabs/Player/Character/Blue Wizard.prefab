@@ -1766,7 +1766,7 @@ Transform:
   m_GameObject: {fileID: 6454357040841821476}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.030419707, y: 4.123515, z: 12.501288}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -1804,7 +1804,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6454357040841821476}
   serializedVersion: 4
-  m_Mass: 10000
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -1850,7 +1850,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd5da75e0f6b76646ad90331457e6e72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugMode: 1
   shootingPos: {fileID: 2722498684020363249}
   defaltProjectileLifetime: 10
   multishotTimeInterval: 0.05
@@ -1905,7 +1904,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff5010d84058cff438cba248dff55dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
 --- !u!114 &1582399508227965933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1918,14 +1916,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dc1ce72720165d46b36a91af3f4ee76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseMaxHP: 100
-  baseAttackPower: 1
-  baseMoveSpeed: 4
-  baseArmor: 10
-  baseMagicResistance: 1
-  baseAttackSpeed: 1
-  baseProjectileSpeed: 20
-  attackEffectType: 1
 --- !u!114 &8863954418034297319
 MonoBehaviour:
   m_ObjectHideFlags: 0
