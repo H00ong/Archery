@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53694e3761a9c1e4b842f0b7deba9db3, type: 3}
   m_Name: Druid
   m_EditorClassIdentifier: 
-  characterName: Engineer
+  characterName: Druid
   index: 1
   characterIcon: {fileID: 21300000, guid: 3209bb8a21a20cf439cf6debc6fa3a62, type: 3}
   characterPrefab:
