@@ -10,30 +10,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 21516b5710d4f94459b8b89a8aa59c25, type: 3}
-  m_Name: Ocean Map Config
+  m_Name: Space Map Config
   m_EditorClassIdentifier: 
-  mapId: Ocean
+  mapId: Space
   mapList:
-  - m_AssetGUID: f9f45ba06ea60e147bcd620308a7a820
+  - m_AssetGUID: 13da2c504a507024c86425c01d89e406
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   bossMap:
-    m_AssetGUID: f9f45ba06ea60e147bcd620308a7a820
+    m_AssetGUID: 13da2c504a507024c86425c01d89e406
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   lobbyDummyMap:
-    m_AssetGUID: b580322824cd0744caf7fcd9201014e8
+    m_AssetGUID: 6d83bdb84b9f56d438545c1c7c0ac77d
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   enemyIdentityList:
   - {fileID: 11400000, guid: 8a86e88414659254ca19d70daf2e1971, type: 2}
   - {fileID: 11400000, guid: be355f4d31bf08a4f85b1db7e8f0834b, type: 2}
   - {fileID: 11400000, guid: 732144ae1393e9740810aedca282fd38, type: 2}
   - {fileID: 11400000, guid: 76bb3baa9fa1d7f48a3d2d8f25079939, type: 2}
-  bossIdentityList: []
+  bossIdentityList:
+  - {fileID: 11400000, guid: 8a8337ff790f47642b53550b119ec39e, type: 2}
+  - {fileID: 11400000, guid: 59bb999ab2818d1449f533e389a9e881, type: 2}

@@ -39,5 +39,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a0100000000000000000000000000001, type: 2}
   - {fileID: 11400000, guid: a0050000000000000000000000000001, type: 2}
   bossIdentityList:
-  - {fileID: 11400000, guid: 1cff8c94097b3e847be7252686d018df, type: 2}
-  - {fileID: 11400000, guid: f904b9693f714654cab8f322ba8b4cf4, type: 2}
+  - {fileID: 11400000, guid: 6b4beea08ac402a499f4dde8c2c96f52, type: 2}

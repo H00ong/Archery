@@ -170,8 +170,8 @@ Transform:
   m_GameObject: {fileID: 579798704990549531}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.3299999, y: 0.0004, z: 11.273454}
-  m_LocalScale: {x: 1.533, y: 1.5589076, z: 1.533}
+  m_LocalPosition: {x: -1.0663, y: 0.0004, z: 11.273454}
+  m_LocalScale: {x: 1.4243102, y: 1.5589076, z: 1.533}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2819816977319403890}
@@ -5500,7 +5500,7 @@ Transform:
   m_GameObject: {fileID: 1917947536786534828}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 17, y: 0.0038, z: -6.45}
+  m_LocalPosition: {x: 17.8, y: 0.0038, z: -6.45}
   m_LocalScale: {x: 1.4702008, y: 1.5773363, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11000,7 +11000,7 @@ Transform:
   m_GameObject: {fileID: 3491965417453354967}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 17, y: 0.0038, z: -13.59}
+  m_LocalPosition: {x: 17.8, y: 0.0038, z: -13.59}
   m_LocalScale: {x: 1.4702008, y: 1.5773363, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11505,8 +11505,8 @@ Transform:
   m_GameObject: {fileID: 4578149795181058983}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 17, y: 0.0038, z: -20.52}
-  m_LocalScale: {x: 1.4702008, y: 1.5773363, z: 1}
+  m_LocalPosition: {x: 17.8, y: 0.0038, z: -20.9125}
+  m_LocalScale: {x: 1.6285414, y: 1.5773363, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2819816977319403890}
@@ -11725,8 +11725,8 @@ Transform:
   m_GameObject: {fileID: 4871101413988830810}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.29, y: 0.0004, z: 11.273454}
-  m_LocalScale: {x: 1.53, y: 1.554786, z: 1.53}
+  m_LocalPosition: {x: 13.6269, y: 0.0004, z: 11.273454}
+  m_LocalScale: {x: 1.6658639, y: 1.554786, z: 1.53}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2819816977319403890}
@@ -12836,7 +12836,7 @@ Transform:
   m_GameObject: {fileID: 8252282575728027069}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 17, y: 0.0038, z: 0.47000027}
+  m_LocalPosition: {x: 17.8, y: 0.0038, z: 0.47000027}
   m_LocalScale: {x: 1.4702008, y: 1.5773363, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13080,8 +13080,8 @@ Transform:
   m_GameObject: {fileID: 8719848140595325370}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 17, y: 0, z: 7}
-  m_LocalScale: {x: 1.4702008, y: 1.5773363, z: 1}
+  m_LocalPosition: {x: 17.8, y: 0, z: 7.5484}
+  m_LocalScale: {x: 1.6961706, y: 1.5773363, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2819816977319403890}
@@ -13535,6 +13535,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle Wall Colliders
       objectReference: {fileID: 0}
+    - target: {fileID: 4416174981879952405, guid: f9f14855bb322d04585f1439c07637be, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416174981879952405, guid: f9f14855bb322d04585f1439c07637be, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 13.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 4737947353981807568, guid: f9f14855bb322d04585f1439c07637be, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5782251460874461167, guid: f9f14855bb322d04585f1439c07637be, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -13811,10 +13823,6 @@ PrefabInstance:
       propertyPath: _portalCd
       value: 
       objectReference: {fileID: 3092990196297389550}
-    - target: {fileID: 2134736611809312909, guid: 8a89041e537b429448668d1daa0fed82, type: 3}
-      propertyPath: _obstacleCd
-      value: 
-      objectReference: {fileID: 7903001873032408771}
     - target: {fileID: 3075652886420850389, guid: 8a89041e537b429448668d1daa0fed82, type: 3}
       propertyPath: m_Name
       value: Player Portal
@@ -13891,11 +13899,6 @@ PrefabInstance:
 --- !u!135 &3092990196297389550 stripped
 SphereCollider:
   m_CorrespondingSourceObject: {fileID: 1363874877914338786, guid: 8a89041e537b429448668d1daa0fed82, type: 3}
-  m_PrefabInstance: {fileID: 4035778095125069836}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &7903001873032408771 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 6173569358697885391, guid: 8a89041e537b429448668d1daa0fed82, type: 3}
   m_PrefabInstance: {fileID: 4035778095125069836}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &8987087617382350274 stripped
