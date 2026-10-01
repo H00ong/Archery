@@ -15,83 +15,103 @@ MonoBehaviour:
   m_GroupName: Projectile
   m_GUID: 481feef88f6731e4a99879596a6e9424
   m_SerializeEntries:
-  - m_GUID: 01167460ca7c11b47970a88125f4698e
-    m_Address: Enemy Beam_Enemy
+  - m_GUID: 004c9f381d8cc94459bf341783e4e876
+    m_Address: Enemy Beam_Boss Fire
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 1520a057a775a5647b776e615990f3e2
-    m_Address: Assets/Prefabs/Objects/Enemy/Rogue/Arrow_Enemy Red Variant.prefab
+  - m_GUID: 06b717f9efb013f42bb6970242cbbabf
+    m_Address: Flying Enemy Beam_Boss Lightning
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 15e73d211edc41b49af42679faa79ada
-    m_Address: Assets/Prefabs/Objects/Enemy/Rogue/Arrow_Enemy Sky Variant.prefab
+  - m_GUID: 1414a0a58fba5ea478476531fc9bf92e
+    m_Address: Flying Enemy Beam_Boss Poison
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 1737537d1f57c4645aa046547ec1f39b
-    m_Address: Assets/Prefabs/Objects/Enemy/Rogue/Arrow_Enemy.prefab
+  - m_GUID: 16f809c109b75e84f8a1723c420a117d
+    m_Address: Flying Enemy Beam_Ranged Lightning Variant
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 1b3742d2592c7584e9e5a4fda3532ca1
-    m_Address: Assets/Prefabs/Objects/Enemy/Rogue/Arrow_Enemy Orange Variant.prefab
+  - m_GUID: 22be731e003ea8944a67b1e2a15b30aa
+    m_Address: Enemy Beam_Boss Ice
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 32997368b0e7f584695e12e26bc10900
-    m_Address: Assets/Prefabs/Objects/Enemy/Stone Monster/Enemy Beam White.prefab
+  - m_GUID: 2ef3c4c75519d00449d2a91213d81965
+    m_Address: Enemy_Rock Fire Variant
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 367d0932061dbe546bc5e3858d596211
-    m_Address: Enemy_Rock Red
+  - m_GUID: 342580b97fdaf1f44a7dc16ac809e68b
+    m_Address: Arrow_Enemy Poison Fire
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 371136a0df9bdcc4480855f8625d93cc
-    m_Address: Assets/Prefabs/Objects/Player/Magic Beam_Druid.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 37cdc7ef5ece12345b29556a7d424d20
-    m_Address: Enemy Beam_Octopus Orange
+    m_Address: Assets/Prefabs/Objects/Player/Magic Beam_Mage.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3a7af0e9ad8d1f54a9d53bb668dee572
-    m_Address: Horn_BossEnemy
+    m_Address: Horn_Boss Turtle Shell
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 47302f49ee02b5642a5fc5ab349d15f0
-    m_Address: Assets/Prefabs/Objects/Enemy/Skeleton Mage/Enemy Beam Purple.prefab
+  - m_GUID: 3b2a03e6cbb6a4a47b92dc7af9e41f3e
+    m_Address: Flying Enemy Beam_Ranged Fire Variant
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 481b04362d17e7041b670e18d9541baa
-    m_Address: Assets/Prefabs/Objects/Enemy/Boss/Enemy Beam_RangedEnemy.prefab
+  - m_GUID: 3d69cd783fa72ce49be158875eaaf596
+    m_Address: Enemy Beam_Poison_Fire Variant
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4a79d0a9dd688dd41995d49338d2e5a7
-    m_Address: Enemy_Rock
+  - m_GUID: 445224927f0d3f7409c40ab3c3c34729
+    m_Address: Enemy_Rock Ice Variant
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 54a2f8a8df3956847ad45afb9f108291
-    m_Address: Assets/Prefabs/Objects/Enemy/Ranged Golem/Enemy_Rock Sky.prefab
+  - m_GUID: 4772892c671e4774ea5d7052e1e20f86
+    m_Address: Arrow_Enemy Poison Variant
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 47a1fa6fb84c2d445aabb196947c29bc
+    m_Address: Arrow_Enemy Ice
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4b5b38adbdf6a2248b09abbc8eac4054
+    m_Address: Enemy Beam_Boss Default Variant
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 50f060f0004ea854d81f6660d1b23911
+    m_Address: Flying Enemy Beam_Boss Ice
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 592b835cce2f5934baeaa7217fdb2289
+    m_Address: Enemy_Rock Poison Variant
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5d057e07ffc2ce74e9ab29e08f2046c9
-    m_Address: Enemy Beam_Boss
+    m_Address: Flying Enemy Beam_Boss Default
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5ec8e47d11a45a24ca12c4f05d33b841
+    m_Address: Enemy Beam_Fire Variant
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5f3ad0a704bf00847a8b0691126928c1
-    m_Address: Magic Beam_Player
+    m_Address: Assets/Prefabs/Objects/Player/Magic Beam_Wizard.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -100,58 +120,128 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 70fa5407dd751ae43ab7fa4f090ca7d9
-    m_Address: Enemy Beam_Octopus Red
+  - m_GUID: 65d088d388e2c8b4e809afad07afac97
+    m_Address: Enemy_Rock Lightning Variant
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7265c09ef47b82546bd1eac95c9e86a4
-    m_Address: Assets/Prefabs/Objects/Enemy/Rogue/Arrow_Enemy Yellow Shiny.prefab
+  - m_GUID: 67a67aaedfa83a442bf0e81098c8a68e
+    m_Address: Enemy Beam_Boss Poison
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 8daf06996d62c404fb29f108825fc925
-    m_Address: Enemy Beam_Octopus Green
+  - m_GUID: 6d2897d1a077b744a8591884857f3454
+    m_Address: Arrow_Enemy
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9119e60f316a62541bd942f99ff6d884
-    m_Address: Enemy Beam_Octopus Sky
+  - m_GUID: 6dfacc6c89d601e4086d04554a7894da
+    m_Address: Flying Enemy Beam_Ranged Default Variant
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: bb962affd651e694cb73e8140557c1a4
-    m_Address: Assets/Prefabs/Objects/Enemy/Ranged Golem/Enemy_Rock Purple.prefab
+  - m_GUID: 706c24b42009c8f48b4816b458765521
+    m_Address: Enemy Beam_Boss Lightning
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: bf7e99959861ce545bb12d8344a751ab
-    m_Address: Assets/Prefabs/Objects/Enemy/Ranged Golem/Enemy_Rock Orange.prefab
+  - m_GUID: 706d3d71a2f050c40bec2effc3717473
+    m_Address: Enemy_Rock
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d18c84eedc2e4474294d55efd772294b
-    m_Address: Assets/Prefabs/Objects/Enemy/Ranged Golem/Enemy_Rock Yellow.prefab
+  - m_GUID: 79cd518be1f4804448bc7d33ef9d0fcf
+    m_Address: Assets/Prefabs/Objects/Player/Bullet_Engineer.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: da530680501c67441b04104c52f4edb2
-    m_Address: Assets/Prefabs/Objects/Enemy/Rogue/Arrow_Enemy Purple Variant.prefab
+  - m_GUID: 7d148c68a5c6f194588e97a214d12386
+    m_Address: Flying Enemy Beam_Ranged Poison_Fire Variant
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e12b9ceabe062cd4597b243404ba378c
-    m_Address: Enemy Beam_Octopus Yellow Variant
+  - m_GUID: 7db29b584ee0ac94e83da9aa4f6cec45
+    m_Address: Flying Enemy Beam_Boss Poison_Fire
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f6475dc38755b5942842ad6847a3e7b1
-    m_Address: Rock_BossEnemy
+  - m_GUID: 81e94489dd8c0b549b2a2efd07e0b5cb
+    m_Address: Assets/Prefabs/Objects/Player/Ninja_dagger_Ninja.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: fb9fb99aa658ff04fbd078499b5d9eed
-    m_Address: Enemy Beam_Octopus Pink Variant
+  - m_GUID: 9cc0de298f6129b44ada30b994d1c4c4
+    m_Address: Flying Enemy Beam_Ranged Ice Variant
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a2628610ed142d447ba5ebdd84dcd6bc
+    m_Address: Enemy_Rock Poison_Fire Variant
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b09b41e5a043be04da0c8dbe50c074e6
+    m_Address: Arrow_Enemy Lightning
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b5d4313abfb97564d9cd0de53fb28080
+    m_Address: Enemy Beam_Boss Poison_Fire
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c0adacc945277114e88c6ad052bfecf2
+    m_Address: Enemy Beam_Lightning Variant
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c4176dc9ec3d3a149ac1d766fa6809ab
+    m_Address: Flying Enemy Beam_Boss Fire
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d73126022ca0ac9479ab1b4dce0cb387
+    m_Address: Enemy Beam_Poison Variant
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d8e8ba3c8cc6bfd468565d83de0c3e2f
+    m_Address: Enemy Beam_Ice Variant
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dbb2054e23b8f9747a17853c50071d31
+    m_Address: Flying Enemy Beam_Ranged Poison Variant
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dc49fdbed5988bf4eb1493fee9fa32bc
+    m_Address: Assets/Prefabs/Objects/Player/arrow_bow_Ranger.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dea77c1431e2380489f466ee17135d3f
+    m_Address: Enemy Beam_Default
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ebf2ddf6c213a694890e01a6a545d010
+    m_Address: Assets/Prefabs/Objects/Player/arrow_crossbow_Rogue.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ecc1020a9cc1b324fa6c9e1d67425ae7
+    m_Address: Assets/Prefabs/Objects/Player/Magic Beam_Druid.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ece9c337c99334f41a39b5a6c06b341d
+    m_Address: Ice_Boss Hermit King
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f08e92be9ac0bb840aef532b3cef58e0
+    m_Address: Arrow_Enemy Fire
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

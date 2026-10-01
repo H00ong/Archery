@@ -15,8 +15,23 @@ MonoBehaviour:
   m_GroupName: Map_Prefab
   m_GUID: 78d728c3c43848242b0e020e42e5c036
   m_SerializeEntries:
-  - m_GUID: 169e0762322e8a941b6bd894a8afd07f
-    m_Address: Assets/Prefabs/Test Map Dummy3.prefab
+  - m_GUID: 13da2c504a507024c86425c01d89e406
+    m_Address: Assets/Prefabs/Maps/Real Maps/Lightning Map.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 387a172cfb735884eb5a146611323ad7
+    m_Address: Assets/Prefabs/Dummy Maps/Winter Map Dummy.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 531f6c44c63232045b2032c96a233c94
+    m_Address: Assets/Prefabs/Dummy Maps/Forest Map Dummy.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 551eb6316cadae54083506612adda768
+    m_Address: Assets/Prefabs/Maps/Real Maps/Forest Map.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -25,8 +40,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 63b54f9f8e3443e418622819b36ee744
-    m_Address: Assets/Prefabs/Test Map Dummy.prefab
+  - m_GUID: 69e3492f250bf034e9d3b0a585c4f6f3
+    m_Address: Assets/Prefabs/Maps/Real Maps/Lava Map.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -35,8 +50,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b580322824cd0744caf7fcd9201014e8
-    m_Address: Assets/Prefabs/Test Map Dummy4.prefab
+  - m_GUID: 6d83bdb84b9f56d438545c1c7c0ac77d
+    m_Address: Assets/Prefabs/Dummy Maps/Lightning Map Dummy.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -45,8 +60,13 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ece9364a751eb0e4caab50363905e115
-    m_Address: Assets/Prefabs/Test Map Dummy2.prefab
+  - m_GUID: c5efc47af05b28945aa77520e156e60a
+    m_Address: Assets/Prefabs/Maps/Real Maps/Winter Map.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d9cea4f5d381e5842a6107e1ef32e9bd
+    m_Address: Assets/Prefabs/Dummy Maps/Lava Map Dummy.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

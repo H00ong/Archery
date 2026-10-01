@@ -55,12 +55,18 @@ MonoBehaviour:
   mapIds:
   - Dungeon
   - Desert
-  - Ocean
   - Lava
+  - Winter
   - Forest
+  - Space
   characterNames:
   - BlueWizard
   - Druid
+  - Ranger
+  - Rogue
+  - Engineer
+  - Mage
+  - Ninja
   skillIds:
   - DiagonalShot
   - HorizontalShot

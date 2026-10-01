@@ -15,14 +15,44 @@ MonoBehaviour:
   m_GroupName: Character_Identity
   m_GUID: bde066584f69dc54ebf62cbb39e48226
   m_SerializeEntries:
+  - m_GUID: 021e5b7c48f4f994f8cbbd3035c44dab
+    m_Address: Assets/Scriptable Data/Character Identity/Ranger.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - character_identity
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 05d95c844690f1e4c906f4a979d2c2eb
+    m_Address: Assets/Scriptable Data/Character Identity/Rogue.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - character_identity
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3afde16ba7f584b41bc2aec7a55c73e9
     m_Address: Assets/Scriptable Data/Character Identity/Druid.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - character_identity
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 68274aa30ee957f428e08fa5386e2c6b
+    m_Address: Assets/Scriptable Data/Character Identity/Engineer.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - character_identity
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 90abebda91c063145b5721e925e86c59
     m_Address: Blue Wizard
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - character_identity
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b967552840e6dff409185fb990539e2e
+    m_Address: Assets/Scriptable Data/Character Identity/Mage.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - character_identity
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: eb465a9c781378442be7f1649b2ca1e7
+    m_Address: Assets/Scriptable Data/Character Identity/Ninja.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - character_identity

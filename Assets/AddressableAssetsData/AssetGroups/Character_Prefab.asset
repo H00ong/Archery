@@ -15,6 +15,11 @@ MonoBehaviour:
   m_GroupName: Character_Prefab
   m_GUID: bc6df3f8ddc7b644491b5664a441dea1
   m_SerializeEntries:
+  - m_GUID: 30a0fa8f1022fbc41b36ee28bae91853
+    m_Address: Assets/Prefabs/Player/Character/Mage.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 93ef7c3672bd64b4ab62e66e4f5c3675
     m_Address: Assets/Prefabs/Player/Character/Blue Wizard.prefab
     m_ReadOnly: 0
@@ -22,6 +27,26 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a62932c9b4c6f2e49a6cbc526c910485
     m_Address: Assets/Prefabs/Player/Character/Druid.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e3c5cacd577000b4bbaffc23a8b77b51
+    m_Address: Assets/Prefabs/Player/Character/Engineer.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e7312a9bf67f0a746b9cb730adfbe55e
+    m_Address: Assets/Prefabs/Player/Character/Ninja.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ecf52b120b78cee4d8dfedd3244db93c
+    m_Address: Assets/Prefabs/Player/Character/Ranger.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fa5b254ec247ae342a512202ca138640
+    m_Address: Assets/Prefabs/Player/Character/Rogue.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

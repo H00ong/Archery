@@ -15,6 +15,12 @@ MonoBehaviour:
   m_GroupName: Map_Config
   m_GUID: 81e7a26942b9a0a4ca0b77a3e4210438
   m_SerializeEntries:
+  - m_GUID: 3079ebaaa2677ee47a8322a450f97220
+    m_Address: Assets/Scriptable Data/Map Data/Space Map Config.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - map_config
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 480761603cbff2b4db408242502242f3
     m_Address: Assets/Scriptable Data/Map Data/Forest Map Config.asset
     m_ReadOnly: 0

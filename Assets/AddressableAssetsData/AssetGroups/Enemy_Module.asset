@@ -27,12 +27,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - enemy_module
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0e36af931d879124983dd84db8239f82
-    m_Address: Assets/Data/Enemy Module Data/Ranged Enemies/Wizard/ShootData_Magma.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - enemy_module
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 13657810921ae4e4caf274d6ca08eb7b
     m_Address: FollowMoveData
     m_ReadOnly: 0
@@ -102,12 +96,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 90003474aa28b8b44b4b6b028eb4c962
     m_Address: FollowMoveData
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - enemy_module
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 916bc322e6a91ab47b8bf14f4356ad6b
-    m_Address: ShootData_Magma
     m_ReadOnly: 0
     m_SerializedLabels:
     - enemy_module
