@@ -15,4 +15,4 @@ MonoBehaviour:
   targetName: Sun Blossom
   targetTag: 8
   duration: 5
-  defaultAttackRange: 4
+  defaultAttackRange: 7.2

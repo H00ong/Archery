@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetName: Bloom
   targetTag: 32
-  duration: 5
+  duration: 4.7
   pickDirectionTime: 7

@@ -15,4 +15,4 @@ MonoBehaviour:
   targetName: Slime
   targetTag: 8
   duration: 0
-  defaultAttackRange: 2
+  defaultAttackRange: 1.5

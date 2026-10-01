@@ -18,7 +18,7 @@ MonoBehaviour:
     m_SubObjectType: 
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
-  Tag: 536871716
+  Tag: 804
   ObjectMat: {fileID: 0}
   AccessoryMat: {fileID: 0}
   brain: {fileID: 11400000, guid: 69c893b7bde8e6c49aa4b4e80547e451, type: 2}

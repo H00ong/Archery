@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Wolf_FlyingShootData
   m_EditorClassIdentifier: 
   targetName: Wolf
-  targetTag: 536871168
+  targetTag: 256
   attackIndex: 0
   projectilePrefab:
-    m_AssetGUID: 5d057e07ffc2ce74e9ab29e08f2046c9
+    m_AssetGUID: 16f809c109b75e84f8a1723c420a117d
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 
-    m_EditorAssetChanged: 0
+    m_EditorAssetChanged: 1
   firePointType: 0

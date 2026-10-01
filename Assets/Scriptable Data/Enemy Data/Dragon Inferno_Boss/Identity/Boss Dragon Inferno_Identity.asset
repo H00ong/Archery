@@ -18,10 +18,11 @@ MonoBehaviour:
     m_SubObjectType: 
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
-  Tag: 67109156
+  Tag: 67109668
   ObjectMat: {fileID: 0}
   AccessoryMat: {fileID: 0}
   brain: {fileID: 11400000, guid: 69c893b7bde8e6c49aa4b4e80547e451, type: 2}
   moveModule: {fileID: 11400000, guid: 52e2186ff3efbd44a9c2a4220dfcfbf1, type: 2}
   attackModules:
   - {fileID: 11400000, guid: f28a318c994819f478980f8d43fd2102, type: 2}
+  - {fileID: 11400000, guid: a4cceb41f0d7efe4ea84ca6446c09bed, type: 2}

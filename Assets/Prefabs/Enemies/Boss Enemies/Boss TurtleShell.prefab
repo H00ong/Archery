@@ -104,7 +104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3369848176702627825}
   - component: {fileID: 7600104951568834834}
-  - component: {fileID: 4278640373379071050}
+  - component: {fileID: 7935302257427942159}
   m_Layer: 3
   m_Name: Anim
   m_TagString: Untagged
@@ -139,7 +139,7 @@ Animator:
   m_GameObject: {fileID: 514029378972073239}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 942e6d5330e147fe84c5ab6ab2193ca1, type: 3}
-  m_Controller: {fileID: 9100000, guid: 2ab902d4df13838418da4d42587d9568, type: 2}
+  m_Controller: {fileID: 22100000, guid: eee8bc85ade8aaf41971601812c1e607, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -151,7 +151,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4278640373379071050
+--- !u!114 &7935302257427942159
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,16 +160,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 514029378972073239}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0be762d2f0dfdc409cd343d548e817f, type: 3}
+  m_Script: {fileID: 11500000, guid: bcd4d2efcf2a7f840a9165a08a21ce26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flyingShootingPoints: []
-  shootingPoints:
-  - {fileID: 6987770490299106948}
-  - {fileID: 1397757842017597908}
-  - {fileID: 8973923113921439450}
-  - {fileID: 3522450673909440585}
-  - {fileID: 8164698959541278585}
 --- !u!1 &682858344845125387
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,8 +313,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1738500030756463553}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.3420201, z: 0, w: 0.9396927}
-  m_LocalPosition: {x: -0.018682204, y: 0.490473, z: 1.2582691}
+  m_LocalRotation: {x: 0.0000000027939675, y: -0.34202012, z: -0.0000000037252899, w: 0.9396926}
+  m_LocalPosition: {x: -0.018682204, y: 0.49047312, z: 1.2582688}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -414,8 +407,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1993109133861392388}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.17364816, z: 0, w: 0.9848078}
-  m_LocalPosition: {x: -0.018682204, y: 0.490473, z: 1.2582691}
+  m_LocalRotation: {x: -0.0000000037252899, y: 0.17364816, z: -0.0000000037252899, w: 0.98480785}
+  m_LocalPosition: {x: -0.018682204, y: 0.49047312, z: 1.2582688}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -665,8 +658,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.55
-  m_Center: {x: -0.44, y: 0.48, z: 0}
+  m_Radius: 0.62
+  m_Center: {x: -0.55, y: 0.21, z: 0}
 --- !u!1 &3988906716031241244
 GameObject:
   m_ObjectHideFlags: 0
@@ -962,15 +955,17 @@ GameObject:
   m_Component:
   - component: {fileID: 3864633594315342594}
   - component: {fileID: 8932255234616220908}
-  - component: {fileID: 3785633040085839281}
-  - component: {fileID: 727792249512793506}
+  - component: {fileID: 7347075632989453324}
+  - component: {fileID: 4725594826162233010}
+  - component: {fileID: 8033059143173192147}
+  - component: {fileID: 3783388384059532508}
   m_Layer: 3
   m_Name: Boss TurtleShell
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3864633594315342594
 Transform:
   m_ObjectHideFlags: 0
@@ -1019,7 +1014,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &3785633040085839281
+--- !u!114 &7347075632989453324
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1028,11 +1023,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 7227122937376436556}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2da94b494a3ab7940b4757f39b11b644, type: 3}
+  m_Script: {fileID: 11500000, guid: c89b3cc84aca5e74ba9c4548d1dda437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
---- !u!114 &727792249512793506
+  enemyName: Turtle Shell
+  enemyTags: 0
+  idle: {fileID: 0}
+  move: {fileID: 0}
+  hurt: {fileID: 0}
+  die: {fileID: 0}
+  health: {fileID: 4725594826162233010}
+  anim: {fileID: 7600104951568834834}
+  rigidBody: {fileID: 8932255234616220908}
+  enemyColliders:
+  - {fileID: 9069682007300915840}
+  enemyReference: {fileID: 0}
+  enemyVisual: {fileID: 0}
+  healthBar: {fileID: 0}
+  defaultIdleTime: 2
+  defaultAttackSpeed: 1
+  lastPlayerPosition: {x: 0, y: 0, z: 0}
+  player: {fileID: 0}
+--- !u!114 &4725594826162233010
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1041,27 +1053,50 @@ MonoBehaviour:
   m_GameObject: {fileID: 7227122937376436556}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 736736f934de3d04397c5ef43f315ff4, type: 3}
+  m_Script: {fileID: 11500000, guid: ff5010d84058cff438cba248dff55dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyType: 4
-  enemyName: 0
-  debugMode: 1
-  defaultIdleTime: 1
-  defaultMoveTime: 4
-  defaultMoveSpeed: 2.5
-  defaultAttackSpeed: 0.3
-  flyingProjectile: {fileID: 0}
-  shootingProjectile: {fileID: 9086765262174619431, guid: 3a7af0e9ad8d1f54a9d53bb668dee572, type: 3}
-  defaultFlyingProjectile: 0
-  defaultProjectileSpeed: 10
-  defaultProjectileLifetime: 10
-  defaultCollideDmaage: 3
-  defaultMainDamage: 5
-  defaultSubDamage: 3
-  defaultAttackRange: 6.39
-  defaultPickDirectionTime: 7
-  defaultRunSpeed: 4
+--- !u!114 &8033059143173192147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7227122937376436556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07b625bc7f25b5d4d81805db481b36c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointGroups:
+  - type: 1
+    points:
+    - {fileID: 6987770490299106948}
+    - {fileID: 1397757842017597908}
+    - {fileID: 8973923113921439450}
+    - {fileID: 3522450673909440585}
+    - {fileID: 8164698959541278585}
+--- !u!114 &3783388384059532508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7227122937376436556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b277374b5931e9441be028e288087ac2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectRenderers: []
+  accessoryRenderers: []
+  fireEmissionColor: {r: 0.20784314, g: 0.03529412, b: 0, a: 1}
+  poisonEmissionColor: {r: 0.05882353, g: 0, b: 0.15294118, a: 1}
+  iceEmissionColor: {r: 0, g: 0.0627451, b: 0.15294118, a: 1}
+  lightningEmissionColor: {r: 0.09411765, g: 0.05882353, b: 0, a: 1}
+  magmaEmissionColor: {r: 0.15294118, g: 0.047058824, b: 0.003921569, a: 1}
+  darkEmissionColor: {r: 0.09411765, g: 0.09411765, b: 0.09411765, a: 1}
+  intensity: 1
 --- !u!1 &7517614087571149358
 GameObject:
   m_ObjectHideFlags: 0
@@ -1160,8 +1195,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7864323155724150512}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.17364825, z: 0, w: 0.9848078}
-  m_LocalPosition: {x: -0.018682204, y: 0.490473, z: 1.2582691}
+  m_LocalRotation: {x: -0.0000000055879354, y: -0.17364818, z: 0.000000013038516, w: 0.98480785}
+  m_LocalPosition: {x: -0.018682204, y: 0.49047312, z: 1.2582688}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1340,8 +1375,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8587057467521435126}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.018682204, y: 0.490473, z: 1.2582691}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.018682204, y: 0.49047312, z: 1.2582688}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1402,8 +1437,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8741609744250152353}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.3420201, z: 0, w: 0.9396927}
-  m_LocalPosition: {x: -0.018682204, y: 0.490473, z: 1.2582691}
+  m_LocalRotation: {x: 0.0000000037252899, y: 0.3420201, z: 0.0000000046566124, w: 0.9396926}
+  m_LocalPosition: {x: -0.018682204, y: 0.49047312, z: 1.2582688}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

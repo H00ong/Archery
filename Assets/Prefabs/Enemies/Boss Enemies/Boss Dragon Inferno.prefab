@@ -62,7 +62,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.59, y: 0, z: 1.73}
-  m_LocalScale: {x: 0.84999996, y: 0.84999996, z: 0.84999996}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4035304421298036803}
@@ -80,7 +80,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c89b3cc84aca5e74ba9c4548d1dda437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDebugMode: 0
   enemyName: Dragon Inferno Boss
   enemyTags: 67109156
   idle: {fileID: 0}
@@ -94,6 +93,7 @@ MonoBehaviour:
   - {fileID: 7700395717828551443}
   - {fileID: 2987940774453142185}
   - {fileID: 2768344456342064442}
+  - {fileID: 5126584890796507086}
   enemyReference: {fileID: 2486355640401535791}
   enemyVisual: {fileID: 6275573847822002035}
   healthBar: {fileID: 0}
@@ -150,7 +150,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff5010d84058cff438cba248dff55dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
 --- !u!54 &6691406630167483151
 Rigidbody:
   m_ObjectHideFlags: 0

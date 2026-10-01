@@ -57,7 +57,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.6
   m_Center: {x: -0.15, y: 0, z: 0}
---- !u!1 &243780217218276991
+--- !u!1 &381083445105429456
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -65,29 +65,29 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3466754532264284066}
+  - component: {fileID: 615167551193430978}
   m_Layer: 0
-  m_Name: ShootingPos_StoneMonster_2
+  m_Name: ShootingPos_StoneMonster_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3466754532264284066
+--- !u!4 &615167551193430978
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 243780217218276991}
+  m_GameObject: {fileID: 381083445105429456}
   serializedVersion: 2
-  m_LocalRotation: {x: -2.2115151e-10, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 1, y: 0.67, z: 0}
-  m_LocalScale: {x: 0.64516145, y: 0.64516133, z: 0.64516145}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.5, y: 0.67, z: 1}
+  m_LocalScale: {x: 0.64516157, y: 0.64516133, z: 0.64516157}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8679971952352095578}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1699379531687473342
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,6 +188,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd4d2efcf2a7f840a9165a08a21ce26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2673336347109198725
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 335647418222663062}
+  m_Layer: 0
+  m_Name: ShootingPos_StoneMonster_0 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &335647418222663062
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2673336347109198725}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.5, y: 0.67, z: 1}
+  m_LocalScale: {x: 0.64516157, y: 0.64516133, z: 0.64516157}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8679971952352095578}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2982116319065764768
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,37 +250,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3515408748593589817}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &3513330545696200709
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 78869988079097800}
-  m_Layer: 0
-  m_Name: ShootingPos_StoneMonster_3
-  m_TagString: Untagged
-  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &78869988079097800
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3513330545696200709}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.7071068, z: 2.2115151e-10, w: 0.7071068}
-  m_LocalPosition: {x: -1, y: 0.67, z: 0}
-  m_LocalScale: {x: 0.64516145, y: 0.64516133, z: 0.64516145}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8679971952352095578}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &3574083502114894267
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,9 +364,8 @@ MonoBehaviour:
   - type: 1
     points:
     - {fileID: 2645453846451033520}
-    - {fileID: 2245518245506081458}
-    - {fileID: 3466754532264284066}
-    - {fileID: 78869988079097800}
+    - {fileID: 335647418222663062}
+    - {fileID: 615167551193430978}
 --- !u!114 &5007890415694791521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -379,7 +378,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff5010d84058cff438cba248dff55dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
 --- !u!114 &525176182266588426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -493,37 +491,6 @@ Transform:
   - {fileID: 3954279029683078054}
   m_Father: {fileID: 3515408748593589817}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -60.650574}
---- !u!1 &6464166324676184538
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2245518245506081458}
-  m_Layer: 0
-  m_Name: ShootingPos_StoneMonster_1
-  m_TagString: Untagged
-  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2245518245506081458
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6464166324676184538}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.0000000018626449, y: 1, z: 0.0000000018626449, w: -0.0000000074505797}
-  m_LocalPosition: {x: 0, y: 0.67, z: -1}
-  m_LocalScale: {x: 0.64516157, y: 0.64516133, z: 0.64516157}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8679971952352095578}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &6539639008548152353
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,9 +649,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2645453846451033520}
-  - {fileID: 2245518245506081458}
-  - {fileID: 3466754532264284066}
-  - {fileID: 78869988079097800}
+  - {fileID: 335647418222663062}
+  - {fileID: 615167551193430978}
   m_Father: {fileID: 2340802524288264490}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7890081088171327787

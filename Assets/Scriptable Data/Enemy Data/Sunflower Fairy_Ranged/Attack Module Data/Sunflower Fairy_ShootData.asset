@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sunflower Fairy_ShootData
   m_EditorClassIdentifier: 
   targetName: Sunflower Fairy
-  targetTag: 335544448
+  targetTag: 128
   attackIndex: 0
   projectilePrefab:
     m_AssetGUID: fb9fb99aa658ff04fbd078499b5d9eed

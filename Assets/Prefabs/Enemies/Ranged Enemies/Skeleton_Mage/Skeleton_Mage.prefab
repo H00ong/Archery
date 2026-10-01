@@ -187,7 +187,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff5010d84058cff438cba248dff55dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
 --- !u!114 &5970590930215153025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,10 +200,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectRenderers:
-  - {fileID: 4839634589098919318}
   - {fileID: 4265123742172184149}
   - {fileID: 7273446816024842090}
-  - {fileID: 5120546739803006979}
   - {fileID: 8593706713882456946}
   - {fileID: 5001599366295126355}
   - {fileID: 6310280488084367266}
@@ -212,6 +209,8 @@ MonoBehaviour:
   - {fileID: 5169470195654361525}
   accessoryRenderers:
   - {fileID: 3060458633395325507}
+  - {fileID: 4839634589098919318}
+  - {fileID: 5120546739803006979}
   fireEmissionColor: {r: 0.20784314, g: 0.03529412, b: 0, a: 1}
   poisonEmissionColor: {r: 0.05882353, g: 0, b: 0.15294118, a: 1}
   iceEmissionColor: {r: 0, g: 0.0627451, b: 0.15294118, a: 1}
@@ -307,7 +306,7 @@ Animator:
   m_Controller: {fileID: 22100000, guid: 9335878620590e34f8c0c38c3efa9441, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_AnimatePhysics: 0

@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0141f23431d4bfb875814fa1fb0bc3a, type: 3}
   m_Name: Wizard_ShootData_Lightning
   m_EditorClassIdentifier: 
-  targetName: 11
-  targetTag: 536871040
+  targetName: Wizard
+  targetTag: 128
   attackIndex: 0
   projectilePrefab:
-    m_AssetGUID: e12b9ceabe062cd4597b243404ba378c
+    m_AssetGUID: c0adacc945277114e88c6ad052bfecf2
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
-  playerTargeting: 1
+  playerTargeting: 0
   firePointType: 1

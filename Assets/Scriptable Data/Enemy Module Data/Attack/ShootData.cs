@@ -18,11 +18,6 @@ public class ShootData : AttackModuleData
         return controller.enemyReference != null ? controller.enemyReference.GetPoints(EnemyPointType.NormalShootingMuzzle) : null;
     }
 
-    public EffectType GetEffectType()
-    {
-        return EnemyTagUtil.ToEffectType(targetTag);
-    }
-
     private void OnValidate()
     {
         // Shoot 태그를 항상 포함, 다른 플래그는 유지

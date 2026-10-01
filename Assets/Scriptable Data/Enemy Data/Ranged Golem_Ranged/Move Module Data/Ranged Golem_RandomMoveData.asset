@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetName: Ranged Golem
   targetTag: 32
-  duration: 5
+  duration: 5.2
   pickDirectionTime: 7

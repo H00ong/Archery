@@ -919,7 +919,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff5010d84058cff438cba248dff55dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
 --- !u!54 &2564459738848462913
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1742,7 +1741,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4866829176028158620}
-  - component: {fileID: 2312609798494636554}
   m_Layer: 3
   m_Name: RigTail5
   m_TagString: Untagged
@@ -1766,27 +1764,6 @@ Transform:
   - {fileID: 2782684168057377908}
   m_Father: {fileID: 149070838471307629}
   m_LocalEulerAnglesHint: {x: 1.2072247, y: 24.108513, z: -1.1484216}
---- !u!135 &2312609798494636554
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3802923942512701776}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 1.08
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3856847349452883963
 GameObject:
   m_ObjectHideFlags: 0
@@ -2262,7 +2239,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 1.5
-  m_Center: {x: 0.3, y: 0.91, z: 0}
+  m_Center: {x: -0.24, y: 0.91, z: 0}
 --- !u!1 &4769547358098181328
 GameObject:
   m_ObjectHideFlags: 0
@@ -2462,7 +2439,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7203634558614372301}
-  - component: {fileID: 5977214601127736990}
   m_Layer: 3
   m_Name: RigTail12
   m_TagString: Untagged
@@ -2485,27 +2461,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8631559289847673309}
   m_LocalEulerAnglesHint: {x: -5.9717503, y: 6.745603, z: -18.09647}
---- !u!135 &5977214601127736990
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5072012490878416670}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 1.05
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5130497398110187279
 GameObject:
   m_ObjectHideFlags: 0

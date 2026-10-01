@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Octopus_ShootData_Fire
   m_EditorClassIdentifier: 
   targetName: Octopus
-  targetTag: 67108992
+  targetTag: 128
   attackIndex: 0
   projectilePrefab:
-    m_AssetGUID: 70fa5407dd751ae43ab7fa4f090ca7d9
+    m_AssetGUID: 5ec8e47d11a45a24ca12c4f05d33b841
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
-  playerTargeting: 1
+  playerTargeting: 0
   firePointType: 1

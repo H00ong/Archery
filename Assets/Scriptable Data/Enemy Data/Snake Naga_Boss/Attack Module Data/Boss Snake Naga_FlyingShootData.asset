@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Boss Snake Naga_FlyingShootData
   m_EditorClassIdentifier: 
   targetName: Snake Naga Boss
-  targetTag: 268435712
+  targetTag: 256
   attackIndex: 0
   projectilePrefab:
-    m_AssetGUID: 5d057e07ffc2ce74e9ab29e08f2046c9
+    m_AssetGUID: 1414a0a58fba5ea478476531fc9bf92e
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 

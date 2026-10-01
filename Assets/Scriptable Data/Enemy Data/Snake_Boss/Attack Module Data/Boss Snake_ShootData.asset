@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Boss Snake_ShootData
   m_EditorClassIdentifier: 
   targetName: Snake
-  targetTag: 268435584
+  targetTag: 128
   attackIndex: 0
   projectilePrefab:
-    m_AssetGUID: fb9fb99aa658ff04fbd078499b5d9eed
+    m_AssetGUID: 67a67aaedfa83a442bf0e81098c8a68e
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 
-    m_EditorAssetChanged: 0
-  playerTargeting: 1
+    m_EditorAssetChanged: 1
+  playerTargeting: 0
   firePointType: 1

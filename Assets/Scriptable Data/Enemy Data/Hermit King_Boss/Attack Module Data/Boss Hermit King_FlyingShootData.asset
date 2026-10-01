@@ -16,7 +16,7 @@ MonoBehaviour:
   targetTag: 256
   attackIndex: 1
   projectilePrefab:
-    m_AssetGUID: 5d057e07ffc2ce74e9ab29e08f2046c9
+    m_AssetGUID: 50f060f0004ea854d81f6660d1b23911
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 

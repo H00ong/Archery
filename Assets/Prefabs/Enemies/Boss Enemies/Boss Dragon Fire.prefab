@@ -2951,7 +2951,7 @@ MonoBehaviour:
   enemyVisual: {fileID: 0}
   healthBar: {fileID: 0}
   defaultIdleTime: 2
-  defaultAttackSpeed: 1
+  defaultAttackSpeed: 1.2
   lastPlayerPosition: {x: 0, y: 0, z: 0}
   player: {fileID: 0}
 --- !u!114 &217415657284873307
@@ -3005,7 +3005,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff5010d84058cff438cba248dff55dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
 --- !u!1 &7572112501270287596
 GameObject:
   m_ObjectHideFlags: 0

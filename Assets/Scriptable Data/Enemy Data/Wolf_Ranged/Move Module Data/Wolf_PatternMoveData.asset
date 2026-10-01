@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetName: Wolf
   targetTag: 16
-  duration: 5
+  duration: 4.6

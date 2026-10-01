@@ -15,4 +15,4 @@ MonoBehaviour:
   targetName: Bird
   targetTag: 8
   duration: 0
-  defaultAttackRange: 3
+  defaultAttackRange: 2

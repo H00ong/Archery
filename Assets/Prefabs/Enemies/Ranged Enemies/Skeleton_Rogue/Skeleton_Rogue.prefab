@@ -2132,7 +2132,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff5010d84058cff438cba248dff55dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
 --- !u!114 &1660164399743938482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2146,8 +2145,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectRenderers:
-  - {fileID: 1406089669794716042}
-  - {fileID: 3140918820944215272}
   - {fileID: 1823261195899749413}
   - {fileID: 2433671261222230077}
   - {fileID: 8913844822483154149}
@@ -2159,6 +2156,8 @@ MonoBehaviour:
   - {fileID: 3945385102058550792}
   accessoryRenderers:
   - {fileID: 8727664316995206272}
+  - {fileID: 3140918820944215272}
+  - {fileID: 1406089669794716042}
   fireEmissionColor: {r: 0.20784314, g: 0.03529412, b: 0, a: 1}
   poisonEmissionColor: {r: 0.05882353, g: 0, b: 0.15294118, a: 1}
   iceEmissionColor: {r: 0, g: 0.0627451, b: 0.15294118, a: 1}

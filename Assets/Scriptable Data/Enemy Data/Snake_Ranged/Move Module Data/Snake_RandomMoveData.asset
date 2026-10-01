@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetName: Snake
   targetTag: 32
-  duration: 5
+  duration: 4.8
   pickDirectionTime: 7

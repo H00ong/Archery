@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Cactus_MeleeAttackData
   m_EditorClassIdentifier: 
   targetName: Cactus
-  targetTag: 268435520
+  targetTag: 64
   attackIndex: 0
-  attackMoveSpeed: 10
+  attackMoveSpeed: 7

@@ -1,0 +1,133 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1444885563445835851
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7574088033797036408}
+    m_Modifications:
+    - target: {fileID: 7563363361670831055, guid: e8f3ac27eef220b4382d8f4cf4935044, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563363361670831055, guid: e8f3ac27eef220b4382d8f4cf4935044, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563363361670831055, guid: e8f3ac27eef220b4382d8f4cf4935044, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563363361670831055, guid: e8f3ac27eef220b4382d8f4cf4935044, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563363361670831055, guid: e8f3ac27eef220b4382d8f4cf4935044, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563363361670831055, guid: e8f3ac27eef220b4382d8f4cf4935044, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563363361670831055, guid: e8f3ac27eef220b4382d8f4cf4935044, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563363361670831055, guid: e8f3ac27eef220b4382d8f4cf4935044, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563363361670831055, guid: e8f3ac27eef220b4382d8f4cf4935044, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563363361670831055, guid: e8f3ac27eef220b4382d8f4cf4935044, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8326243163661987219, guid: e8f3ac27eef220b4382d8f4cf4935044, type: 3}
+      propertyPath: m_Name
+      value: Lightning aura
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e8f3ac27eef220b4382d8f4cf4935044, type: 3}
+--- !u!4 &9005850308892386180 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7563363361670831055, guid: e8f3ac27eef220b4382d8f4cf4935044, type: 3}
+  m_PrefabInstance: {fileID: 1444885563445835851}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7088018793698914463
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 810968414657260007, guid: dea77c1431e2380489f466ee17135d3f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 810968414657260007, guid: dea77c1431e2380489f466ee17135d3f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 810968414657260007, guid: dea77c1431e2380489f466ee17135d3f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 810968414657260007, guid: dea77c1431e2380489f466ee17135d3f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 810968414657260007, guid: dea77c1431e2380489f466ee17135d3f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 810968414657260007, guid: dea77c1431e2380489f466ee17135d3f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 810968414657260007, guid: dea77c1431e2380489f466ee17135d3f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 810968414657260007, guid: dea77c1431e2380489f466ee17135d3f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 810968414657260007, guid: dea77c1431e2380489f466ee17135d3f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 810968414657260007, guid: dea77c1431e2380489f466ee17135d3f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6363200168855403664, guid: dea77c1431e2380489f466ee17135d3f, type: 3}
+      propertyPath: m_Name
+      value: Enemy Beam_Lightning Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8943038501972671063, guid: dea77c1431e2380489f466ee17135d3f, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 90bce7b5f132d2f4e9983e460b0b2d07, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 810968414657260007, guid: dea77c1431e2380489f466ee17135d3f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9005850308892386180}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dea77c1431e2380489f466ee17135d3f, type: 3}
+--- !u!4 &7574088033797036408 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 810968414657260007, guid: dea77c1431e2380489f466ee17135d3f, type: 3}
+  m_PrefabInstance: {fileID: 7088018793698914463}
+  m_PrefabAsset: {fileID: 0}

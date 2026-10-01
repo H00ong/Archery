@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Boss Hermit King_ShootData
   m_EditorClassIdentifier: 
   targetName: Hermit King Boss
-  targetTag: 134217856
+  targetTag: 128
   attackIndex: 0
   projectilePrefab:
-    m_AssetGUID: fb9fb99aa658ff04fbd078499b5d9eed
+    m_AssetGUID: ece9c337c99334f41a39b5a6c06b341d
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
-  playerTargeting: 1
+  playerTargeting: 0
   firePointType: 1

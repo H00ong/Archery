@@ -173,7 +173,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c89b3cc84aca5e74ba9c4548d1dda437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDebugMode: 0
   enemyName: Mushroom
   enemyTags: 268435529
   idle: {fileID: 0}
@@ -217,7 +216,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff5010d84058cff438cba248dff55dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
 --- !u!1 &2074595359219507249
 GameObject:
   m_ObjectHideFlags: 0
@@ -728,7 +726,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 0.66
   m_Center: {x: -0.43, y: 0.12, z: 0}
 --- !u!1 &7224311285097437429
 GameObject:

@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Sun Blossom_ShootData
   m_EditorClassIdentifier: 
   targetName: Sun Blossom
-  targetTag: 335544448
+  targetTag: 128
   attackIndex: 0
   projectilePrefab:
-    m_AssetGUID: fb9fb99aa658ff04fbd078499b5d9eed
+    m_AssetGUID: 3d69cd783fa72ce49be158875eaaf596
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 

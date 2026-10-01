@@ -16,6 +16,6 @@ MonoBehaviour:
   targetTag: 512
   attackIndex: 2
   attackMoveSpeed: 12
-  attackRange: 4
+  attackRange: 5
   chaseDuration: 4
   moveSpeedIncreaseMultiplier: 1.3
