@@ -241,12 +241,12 @@ Slider/TMP 오브젝트를 씬에 만들어서 드래그해 넣기만 하면 값
 
 각 적 프리팹에 필요한 작업:
 
-1. 적 프리팹 자식으로 **World Space Canvas** 생성 (머리 위쯤 위치, 작은 스케일)
+1. 적 프리팹의 **직접 자식**으로 World Space Canvas 생성 (작은 스케일)
 2. 그 캔버스 자식으로 **Slider** 생성
-3. 캔버스(또는 원하는 오브젝트)에 `EnemyHealthBar` 컴포넌트를 붙이고:
+3. 활성 상태를 유지할 캔버스에 `EnemyHealthBar` 컴포넌트를 붙이고:
    - `hpSlider` → 방금 만든 Slider
    - `worldOffset` → 기본값 (0, 2, 0), 필요시 조정
    - `hideWhenFull` → 체력이 가득 찼을 때 숨길지 여부 (기본 `true`)
 4. `EnemyController.healthBar`는 같은 프리팹 자식에서 `GetComponentInChildren`으로 자동으로 찾으므로 보통 수동 연결 불필요
 
-주의: `EnemyHealthBar`는 `CameraController.Instance`를 참조해 매 `LateUpdate`마다 카메라를 향하도록 회전하므로, 씬에 `CameraController`가 있어야 합니다. 또한 `hideWhenFull=true`면 체력이 꽉 찼거나(1) 0일 때 자동으로 안 보이는 게 정상 동작입니다 (버그 아님).
+주의: `EnemyHealthBar` 컴포넌트를 Slider 자체에 붙이면 숨길 때 컴포넌트까지 꺼지므로 반드시 부모 Canvas에 붙여야 합니다. 체력 값은 `Health.OnHealthChanged` 이벤트가 발생할 때만 갱신하며, 위치는 부모 Transform을 따라갑니다. `hideWhenFull=true`이면 평소에는 Slider 자식만 끄고, 피해를 입어 표시 중일 때만 `LateUpdate`에서 `CameraController.Instance` 방향으로 회전을 보정합니다.
