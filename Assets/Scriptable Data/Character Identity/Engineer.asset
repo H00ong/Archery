@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53694e3761a9c1e4b842f0b7deba9db3, type: 3}
+  m_Name: Engineer
+  m_EditorClassIdentifier: 
+  characterName: Engineer
+  index: 4
+  characterIcon: {fileID: 21300000, guid: 731d7c0f8f221e548b3461fbe194a22d, type: 3}
+  characterPrefab:
+    m_AssetGUID: e3c5cacd577000b4bbaffc23a8b77b51
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  projectilePrefab:
+    m_AssetGUID: 79cd518be1f4804448bc7d33ef9d0fcf
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  lobbyCharacterDummy:
+    m_AssetGUID: e69b0321e8d3b384eabd50596fd17005
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 1
+  baseStat:
+    maxHP: 1000
+    attackPower: 60
+    moveSpeed: 8
+    armor: 0
+    magicResistance: 0
+    attackSpeed: 1
+    projectileSpeed: 30
+    attackEffectType: 2
+  maxLevel: 10
+  levelStatGrowth:
+    maxHP: 1
+    attackPower: 1
+    moveSpeed: 1
+    armor: 1
+    magicResistance: 1
+    attackSpeed: 1
+    projectileSpeed: 1
+  levelUpCosts: 64000000c80000005e01000026020000200300004c040000dc050000d0070000f00a0000
+  effectConfigs:
+  - effectType: 2
+    baseEffect:
+      duration: 1
+      value: 1
+      dotDamage: 1
+      tickInterval: 1
+  effectGrowths:
+  - effectType: 2
+    durationGrowth: 0.1
+    valueGrowth: 0.1
+    dotDamageGrowth: 0.1
+    tickIntervalGrowth: 0.1
+  purchasePrice: 10

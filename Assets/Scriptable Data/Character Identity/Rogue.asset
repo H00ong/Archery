@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53694e3761a9c1e4b842f0b7deba9db3, type: 3}
+  m_Name: Rogue
+  m_EditorClassIdentifier: 
+  characterName: Rogue
+  index: 3
+  characterIcon: {fileID: 21300000, guid: 105f4239f8f87c14b8bee6f45c6e6a5c, type: 3}
+  characterPrefab:
+    m_AssetGUID: fa5b254ec247ae342a512202ca138640
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  projectilePrefab:
+    m_AssetGUID: ebf2ddf6c213a694890e01a6a545d010
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  lobbyCharacterDummy:
+    m_AssetGUID: e78f410a61d6b694ead689b4dab1c00e
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  baseStat:
+    maxHP: 1000
+    attackPower: 60
+    moveSpeed: 8
+    armor: 0
+    magicResistance: 0
+    attackSpeed: 1
+    projectileSpeed: 30
+    attackEffectType: 4
+  maxLevel: 10
+  levelStatGrowth:
+    maxHP: 1
+    attackPower: 1
+    moveSpeed: 1
+    armor: 1
+    magicResistance: 1
+    attackSpeed: 1
+    projectileSpeed: 1
+  levelUpCosts: 64000000c80000005e01000026020000200300004c040000dc050000d0070000f00a0000
+  effectConfigs:
+  - effectType: 4
+    baseEffect:
+      duration: 1
+      value: 1
+      dotDamage: 1
+      tickInterval: 1
+  effectGrowths:
+  - effectType: 4
+    durationGrowth: 0.1
+    valueGrowth: 0.1
+    dotDamageGrowth: 0.1
+    tickIntervalGrowth: 0.1
+  purchasePrice: 10

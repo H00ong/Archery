@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53694e3761a9c1e4b842f0b7deba9db3, type: 3}
+  m_Name: Ninja
+  m_EditorClassIdentifier: 
+  characterName: Ninja
+  index: 6
+  characterIcon: {fileID: 21300000, guid: 4dedaf52af2ebec41bf14211176fbf60, type: 3}
+  characterPrefab:
+    m_AssetGUID: e7312a9bf67f0a746b9cb730adfbe55e
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  projectilePrefab:
+    m_AssetGUID: 81e94489dd8c0b549b2a2efd07e0b5cb
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  lobbyCharacterDummy:
+    m_AssetGUID: f20e1572a468d15459e26ff4a2948b9d
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  baseStat:
+    maxHP: 1000
+    attackPower: 60
+    moveSpeed: 8
+    armor: 0
+    magicResistance: 0
+    attackSpeed: 1
+    projectileSpeed: 30
+    attackEffectType: 16
+  maxLevel: 10
+  levelStatGrowth:
+    maxHP: 1
+    attackPower: 1
+    moveSpeed: 1
+    armor: 1
+    magicResistance: 1
+    attackSpeed: 1
+    projectileSpeed: 1
+  levelUpCosts: 64000000c80000005e01000026020000200300004c040000dc050000d0070000f00a0000
+  effectConfigs:
+  - effectType: 16
+    baseEffect:
+      duration: 1
+      value: 1
+      dotDamage: 1
+      tickInterval: 1
+  effectGrowths:
+  - effectType: 16
+    durationGrowth: 0.1
+    valueGrowth: 0.1
+    dotDamageGrowth: 0.1
+    tickIntervalGrowth: 0.1
+  purchasePrice: 10
