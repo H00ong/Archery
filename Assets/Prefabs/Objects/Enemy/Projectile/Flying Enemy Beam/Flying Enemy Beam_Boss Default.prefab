@@ -162,6 +162,9 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
   reflectSkinWidth: 0.05
+  isBoss: 1
+  radius: 0.5
+  bossRadius: 1
 --- !u!1 &8324640870092992187
 GameObject:
   m_ObjectHideFlags: 0

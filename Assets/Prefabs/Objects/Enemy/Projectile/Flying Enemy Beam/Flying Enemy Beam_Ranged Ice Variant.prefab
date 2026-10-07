@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 216087173434329026, guid: 50f060f0004ea854d81f6660d1b23911, type: 3}
       propertyPath: m_Name
-      value: Flying Enemy Beam_Boss Ice Variant
+      value: Flying Enemy Beam_Ranged Ice Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1842755683621890304, guid: 50f060f0004ea854d81f6660d1b23911, type: 3}
       propertyPath: m_LocalScale.x
@@ -63,6 +63,14 @@ PrefabInstance:
     - target: {fileID: 1842755683621890304, guid: 50f060f0004ea854d81f6660d1b23911, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535505681419106185, guid: 50f060f0004ea854d81f6660d1b23911, type: 3}
+      propertyPath: isBoss
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535505681419106185, guid: 50f060f0004ea854d81f6660d1b23911, type: 3}
+      propertyPath: radius
+      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

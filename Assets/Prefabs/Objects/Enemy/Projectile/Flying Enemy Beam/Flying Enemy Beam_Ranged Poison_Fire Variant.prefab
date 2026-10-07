@@ -8,6 +8,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1440321512381724608, guid: 7db29b584ee0ac94e83da9aa4f6cec45, type: 3}
+      propertyPath: isBoss
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440321512381724608, guid: 7db29b584ee0ac94e83da9aa4f6cec45, type: 3}
+      propertyPath: radius
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 2972420511570110793, guid: 7db29b584ee0ac94e83da9aa4f6cec45, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.75
@@ -62,7 +70,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3615636307410651019, guid: 7db29b584ee0ac94e83da9aa4f6cec45, type: 3}
       propertyPath: m_Name
-      value: Flying Enemy Beam_Boss Poison_Fire Variant
+      value: Flying Enemy Beam_Ranged Poison_Fire Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

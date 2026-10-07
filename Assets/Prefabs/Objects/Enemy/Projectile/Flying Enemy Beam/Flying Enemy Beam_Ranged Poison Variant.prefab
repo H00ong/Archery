@@ -62,7 +62,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2215070824520909031, guid: 1414a0a58fba5ea478476531fc9bf92e, type: 3}
       propertyPath: m_Name
-      value: Flying Enemy Beam_Boss Poison Variant
+      value: Flying Enemy Beam_Ranged Poison Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4570553244007051436, guid: 1414a0a58fba5ea478476531fc9bf92e, type: 3}
+      propertyPath: isBoss
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4570553244007051436, guid: 1414a0a58fba5ea478476531fc9bf92e, type: 3}
+      propertyPath: radius
+      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
