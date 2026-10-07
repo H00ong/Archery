@@ -42,7 +42,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7380194161578732177}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -284775291732773546, guid: dd7028f27d1d4524f8624c129112b51f, type: 3}
 --- !u!23 &1522487159942376152
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -107,7 +107,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 1.83
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4032325856026832012
 MonoBehaviour:
@@ -123,4 +123,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   magnetRange: 5
   magnetSpeed: 30
-  expAmount: 5
