@@ -2672,6 +2672,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8929094866089535935, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
+      propertyPath: gameOverPopupPrefab
+      value: 
+      objectReference: {fileID: 8184410190701340650, guid: c40bbf552f6d6ad4482384f74433d29a, type: 3}
+    - target: {fileID: 8929094866089535935, guid: 8df0eacae1dd6e042b3087b686bc8234, type: 3}
+      propertyPath: gameClearPopupPrefab
+      value: 
+      objectReference: {fileID: 7044093721040288515, guid: ae2e64b9cd0a7a7408b6ed8be0668eae, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
